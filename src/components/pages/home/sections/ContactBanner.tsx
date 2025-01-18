@@ -13,7 +13,7 @@ const ContactBanner = ({}: IContactBannerProps) => {
         objectFit="cover"
       />
       {/* Right image */}
-      <div className="hidden md:block md:w-[48%] relative h-[400px] lg:h-auto">
+      <div className="hidden md:block md:w-[48%] relative md:h-auto">
         <Image
           src="/right-bg-banner.jpeg"
           alt="banner-right-bg"
@@ -23,12 +23,12 @@ const ContactBanner = ({}: IContactBannerProps) => {
       </div>
 
       {/* left section */}
-      <div className="px-5 py-[50px] lg:p-[50px] space-y-4 lg:max-h-[415px]">
-        <h2 className="mb-5 bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px]">
-          ラクラク査定は Hadisにお任せ♪
+      <div className="px-5 py-[50px] lg:p-[75px] lg:pl-[80px] space-y-4 lg:max-h-[415px]">
+        <h2 className="font-noto bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px]">
+          ラクラク査定はハディズにお任せ♪
         </h2>
         {/* communication information */}
-        <div className="flex justify-center flex-wrap  lg:space-y-[24px]">
+        <div className="flex justify-center flex-wrap space-y-4 lg:space-y-[24px]">
           {/* call button */}
           <div className="w-full">
             <button
@@ -46,7 +46,7 @@ const ContactBanner = ({}: IContactBannerProps) => {
                 className="lg:w-[48px] lg:h-[48px]"
               />
               <span
-                className="font-black text-[32px] lg:text-[40px] leading-[48px] lg:leading-[60px] text-white"
+                className="font-black text-[32px] md:text-[36px] lg:text-[40px] leading-[48px] lg:leading-[60px] text-white"
                 style={{
                   textShadow: `
                   -2px -2px 0 #AD0D1D,
@@ -67,9 +67,9 @@ const ContactBanner = ({}: IContactBannerProps) => {
             </p>
           </div>
           {/* social media buttons */}
-          <div className="space-y-2 md:space-y-0 md:space-x-2 md:flex-nowrap flex w-full">
+          <div className="space-y-2 md:space-y-0 md:space-x-2 flex-wrap md:flex-nowrap flex w-full">
             <button
-              className="h-[54px] p-2  w-full flex justify-evenly items-center rounded-[4px] border-[2px] border-[#017FD4]"
+              className="h-[54px] p-2 w-full flex justify-evenly items-center rounded-[4px] border-[2px] border-[#017FD4]"
               style={{
                 background:
                   "linear-gradient(to bottom right, #0194F7 50%, #008AE6 50%)",
@@ -110,7 +110,7 @@ const ContactBanner = ({}: IContactBannerProps) => {
                 className="font-black text-[20px] leading-[30px] text-white"
                 style={{
                   textShadow: `
-                  -2px -2px 0 #4AC0614,
+                  -2px -2px 0 #4AC061,
                   2px -2px 0 #4AC061,
                   -2px 2px 0 #4AC061,
                   2px 2px 0 #4AC061
