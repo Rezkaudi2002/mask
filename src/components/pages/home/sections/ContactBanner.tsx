@@ -1,8 +1,6 @@
 import Image from "next/image";
 
-interface IContactBannerProps {}
-
-const ContactBanner = ({}: IContactBannerProps) => {
+const ContactBanner = () => {
   return (
     <section className="font-noto object-cover relative flex flex-row-reverse">
       <Image
