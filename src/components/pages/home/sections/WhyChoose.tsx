@@ -23,7 +23,7 @@ const WhyChoose = ({ data }: IWhyChooseProps) => {
             <Image
               src={item.image}
               alt={`Why choose: ${item.title}`}
-              layout="responsive"
+              // layout="responsive"
               width={355}
               height={178}
               quality={100}

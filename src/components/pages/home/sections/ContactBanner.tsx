@@ -4,13 +4,12 @@ interface IContactBannerProps {}
 
 const ContactBanner = ({}: IContactBannerProps) => {
   return (
-    <section className="font-noto relative flex flex-row-reverse">
+    <section className="font-noto object-cover relative flex flex-row-reverse">
       <Image
         className="-z-10 absolute top-0 left-0 opacity-25"
         src={"/banner-bg.png"}
         alt="banner-background-hadis"
         fill
-        objectFit="cover"
       />
       {/* Right image */}
       <div className="hidden md:block md:w-[48%] relative md:h-auto">
@@ -18,7 +17,8 @@ const ContactBanner = ({}: IContactBannerProps) => {
           src="/right-bg-banner.jpeg"
           alt="banner-right-bg"
           fill
-          objectFit="cover"
+          className="object-cover"
+          // objectFit="cover"
         />
       </div>
 
@@ -77,9 +77,10 @@ const ContactBanner = ({}: IContactBannerProps) => {
             >
               <Image
                 src="/computer.svg"
-                alt="phone icon"
+                alt="computer icon"
                 height={32}
                 width={32}
+                className="h-auto w-auto"
               />
               <span
                 className="font-black text-[20px] leading-[30px] text-white"
