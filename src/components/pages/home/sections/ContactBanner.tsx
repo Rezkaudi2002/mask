@@ -5,14 +5,14 @@ const ContactBanner = () => {
     <section className="font-noto object-cover relative flex flex-row-reverse">
       <Image
         className="-z-10 absolute top-0 left-0 opacity-25"
-        src={"/banner-bg.png"}
+        src={"/images/home-page/banner-full-bg.png"}
         alt="banner-background-hadis"
         fill
       />
       {/* Right image */}
       <div className="hidden md:block md:w-[48%] relative md:h-auto">
         <Image
-          src="/right-bg-banner.jpeg"
+          src="/images/home-page/right-bg-banner.jpeg"
           alt="banner-right-bg"
           fill
           className="object-cover"
