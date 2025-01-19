@@ -1,7 +1,10 @@
+import "@/styles/loader.css"
 
 const Loading = () => {
     return (
-        <div>loading</div>
+        <section className="w-full h-[calc(100vh-60px)] flex items-center justify-center">
+            <span className="loader"></span>
+        </section>
     )
 };
 

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
-  subsets: ["latin", "latin-ext"], 
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "700", "900"], // Include the font weights you need
 });
 
@@ -29,9 +29,36 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: {
     template: "%s | Hadis",
-    default: "Hadis",
+    default: "中古機械、電動工具の高額買取のハディズ",
   },
-  description: "Hadis description",
+  description: "中古機械、電動工具の高額買取ならハディズへ。",
+  keywords: "大型UVインクジェットプリンター買取,機械・電動工具の高価買取,簡単！買取の手順,Hadis INTERNATIONAL",
+
+
+  openGraph: {
+    type: "website",
+    title: "中古機械、電動工具の高額買取のハディズ",
+    siteName: "mac-hadis",
+    url: "https://www.mac-hadis.com/",
+    images: [
+      {
+        url: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b",
+        width: 800,
+        height: 600,
+      }
+    ],
+    description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "中古機械、電動工具の高額買取のハディズ",
+    images: ["https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b"],
+    description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+  },
+  alternates: {
+    canonical: "https://www.mac-hadis.com/",
+  }
+
 }
 
 export default function RootLayout({
