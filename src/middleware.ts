@@ -12,7 +12,7 @@ export default function middleware(req: NextRequest) {
         const authValue = basicAuth.split(' ')[1]
         const [user, pwd] = atob(authValue).split(':')
 
-        if (user === 'admin' && pwd === 'admin') {
+        if (user === 'mask' && pwd === 'mask') {
             return NextResponse.next()
         }
     }
