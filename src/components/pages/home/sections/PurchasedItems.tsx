@@ -1,15 +1,17 @@
 import Image from "next/image";
 import data from "@/content/home/purchasedItems.json";
 
-interface IPurchasedItemsProps {}
-
-const PurchasedItems = ({}: IPurchasedItemsProps) => {
+const PurchasedItems = () => {
   return (
-    <section className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[160px]">
+    <section
+      className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[160px]"
+      aria-labelledby="purchased-items-heading"
+    >
       <Image
         src="/images/home-page/bg-items.jpg"
         alt="banner-right-bg"
         fill
+        priority
         className="object-cover opacity-10 -z-10"
       />
       {/* overlay */}
@@ -19,9 +21,9 @@ const PurchasedItems = ({}: IPurchasedItemsProps) => {
       </h2>
       {/* filter */}
       <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] mb-[24px] md:mb-[28px] lg:mb-[32px] w-[75%] md:w-[85%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mx-auto">
-        {data.filter.map((item) => (
+        {data.filter.map((filterItem) => (
           <div
-            key={item.id}
+            key={filterItem.id}
             className="px-[16px] py-[6px] text-center border-[2px] border-[#111111] flex justify-between items-center bg-white relative"
           >
             {/* Separate div for the dotted background */}
@@ -38,14 +40,14 @@ const PurchasedItems = ({}: IPurchasedItemsProps) => {
             {/* Content div with relative positioning to appear above the background */}
             <div className="relative z-10 w-full flex justify-between items-center gap-x-2">
               <Image
-                src={item.image}
-                alt={item.title}
+                src={filterItem.image}
+                alt={filterItem.title}
                 width={40}
                 height={40}
                 className="w-[26px] h-[26px] lg:w-[40px] lg:h-[40px]"
               />
               <h3 className="text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px] font-noto text-[#111111] font-black">
-                {item.title}
+                {filterItem.title}
               </h3>
             </div>
           </div>
