@@ -9,10 +9,9 @@ import "swiper/css/navigation";
 
 import data from "@/content/home/PurchaseResults.json";
 import Image from "next/image";
+import ResultSlider from "../components/ResultSlider";
 
-interface IPurchaseResultsProps {}
-
-const PurchaseResults = ({}: IPurchaseResultsProps) => {
+const PurchaseResults = () => {
   return (
     <section className="py-[50px] lg:py-[120px] bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto relative">
       <h2 className="mb-[40px] lg:mb-[50px] text-[30px] lg:text-[60px] leading-[45px] lg:leading-[90px] text-[#D51A16] text-center font-black">
@@ -57,22 +56,11 @@ const PurchaseResults = ({}: IPurchaseResultsProps) => {
       >
         {data.map((slider) => (
           <SwiperSlide key={slider.id}>
-            <div className="p-4 lg:p-[20px] rounded border-2 bg-[#FFF7F8] border-[#B81122] flex space-x-2">
-              <Image
-                src={slider.image}
-                alt={slider.title}
-                width={150}
-                height={150}
-                className="w-[100px] lg:w-[150px] h-[100px] lg:h-[150px]"
-              />
-              <div className="text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px] text-[#111111] font-bold">
-                <span className="py-[3px] lg:py-1 px-2 mb-1 lg:mb-2 text-[10px] leading-[15px] text-white block w-fit bg-[#B81122]">
-                  カテゴリー1
-                </span>
-                <p>{slider.title}</p>
-                <p>{slider.model}</p>
-              </div>
-            </div>
+            <ResultSlider
+              image={slider.image}
+              title={slider.title}
+              model={slider.model}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
