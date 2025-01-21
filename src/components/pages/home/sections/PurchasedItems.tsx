@@ -1,9 +1,19 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import data from "@/content/home/purchasedItems.json";
 import PurchaseItemsCard from "../components/PurchaseItemsCard";
 import PurchaseItemsCategoryCard from "../components/PurchaseItemsCategoryCard";
 
 const PurchasedItems = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    data.filter[0].title || ""
+  );
+
+  const filteredItems = selectedCategory
+    ? data.items.filter((item) => item.category === selectedCategory)
+    : data.items;
+
   return (
     <section
       className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[160px]"
@@ -29,18 +39,21 @@ const PurchasedItems = () => {
             id={filterItem.id}
             title={filterItem.title}
             image={filterItem.image}
+            activeCategory={selectedCategory}
+            changeCategory={setSelectedCategory}
           />
         ))}
       </div>
       {/* items */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[17px] gap-y-[24px] lg:gap-8">
-        {data.items.map((item) => (
-          <PurchaseItemsCard
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            title={item.title}
-          />
+      <div className="flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
+        {filteredItems.map((item) => (
+          <div className="w-[47%] md:w-[30%] lg:w-[23%]" key={item.id}>
+            <PurchaseItemsCard
+              id={item.id}
+              image={item.image}
+              title={item.title}
+            />
+          </div>
         ))}
       </div>
     </section>
