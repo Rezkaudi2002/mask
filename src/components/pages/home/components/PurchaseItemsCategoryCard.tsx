@@ -17,6 +17,7 @@ const PurchaseItemsCategoryCard = ({
 }: IPurchaseItemsCategoryCardProps) => {
   return (
     <button
+      key={id}
       className={`px-[16px] py-[6px] text-center border-[2px] flex justify-between items-center relative ${
         activeCategory === title
           ? "border-[#990E1C] text-white gradient-red"
