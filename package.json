@@ -11,7 +11,8 @@
   "dependencies": {
     "next": "^15.2.0-canary.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "swiper": "^11.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

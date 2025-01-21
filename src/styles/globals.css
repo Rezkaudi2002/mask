@@ -17,3 +17,7 @@
     background: linear-gradient(to right bottom, #50CB68 50%, #49BF60 50%);
     border: 2px solid #43B058
 }
+
+.gradient-navigation {
+    background: linear-gradient(to right bottom, #B81122 50%, #AC0C1C 50%);
+}

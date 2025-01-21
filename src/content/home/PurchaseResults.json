@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "精和 防音型エンジン高圧洗浄機ジェットクリーン",
+    "model": "JC-1513DPN",
+    "image": "/images_db/product1.png"
+  },
+  {
+    "id": 2,
+    "title": "シンショー パワージェッター 定置型 超高圧洗浄機",
+    "model": "SJD-3533SB",
+    "image": "/images_db/product2.png"
+  },
+  {
+    "id": 3,
+    "title": "brother 業務用刺繍ミシン",
+    "model": "PRT1201 PR1000e",
+    "image": "/images_db/product3.png"
+  },
+  {
+    "id": 4,
+    "title": "精和 防音型エンジン高圧洗浄機ジェットクリーン",
+    "model": "JC-1513DPN",
+    "image": "/images_db/product1.png"
+  },
+  {
+    "id": 5,
+    "title": "シンショー パワージェッター 定置型 超高圧洗浄機",
+    "model": "SJD-3533SB",
+    "image": "/images_db/product2.png"
+  },
+  {
+    "id": 6,
+    "title": "brother 業務用刺繍ミシン",
+    "model": "PRT1201 PR1000e",
+    "image": "/images_db/product3.png"
+  }
+]
