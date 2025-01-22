@@ -1,5 +1,6 @@
 // sections
 import BlogsPost from "./components/BlogsPost";
+import VideoSection from "./components/VideoSection";
 import CompanyProfile from "./sections/CompanyProfile";
 import ContactBanner from "./sections/ContactBanner";
 import ContactFixedBanner from "./sections/ContactFixedBanner";
@@ -20,6 +21,7 @@ const Index = () => {
       <ContactFixedBanner />
       <Flow />
       <WhyChoose />
+      <VideoSection />
       <BlogsPost />
       <ContactBanner />
       <PurchasedItems />
