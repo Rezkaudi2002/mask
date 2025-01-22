@@ -11,7 +11,7 @@ const PostCard = ({ title, image, description }: IPostCardProps) => {
     <div className="w-full md:w-[45%] lg:w-[30%]">
       <Image
         src={image}
-        alt={title}
+        alt="Image for post"
         width={352}
         height={200}
         unoptimized

@@ -1,5 +1,4 @@
 import data from "@/content/home/BlogsPost.json";
-import Image from "next/image";
 import PostCard from "../components/PostCard";
 const BlogsPost = () => {
   return (
@@ -8,7 +7,7 @@ const BlogsPost = () => {
         ブログ記事
       </h2>
       {/* boxes */}
-      <div className="gap-y-8 lg:gap-y-0 md:gap-x-8 flex flex-wrap justify-between">
+      <div className="gap-y-8 md:gap-y-10 lg:gap-y-0 md:gap-x-8 flex flex-wrap justify-between">
         {data.map((blog) => (
           <PostCard
             key={blog.id}
@@ -18,7 +17,7 @@ const BlogsPost = () => {
           />
         ))}
       </div>
-      <button className="mt-[24px] lg:mt-[40px] mx-auto py-[12px] w-[90%] md:w-[50%] lg:w-[27%] text-[24px] lg:text-[28px] leading-[36px] lg:leading-[42px] font-black text-white gradient-red rounded text-center block">
+      <button className="mt-[24px] md:mt-[35px] lg:mt-[40px] mx-auto py-[12px] w-[90%] md:w-[50%] lg:w-[27%] text-[24px] lg:text-[28px] leading-[36px] lg:leading-[42px] font-black text-white gradient-red rounded text-center block">
         すべてみる
       </button>
     </section>
