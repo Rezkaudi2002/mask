@@ -12,8 +12,11 @@ export default {
         noto: ["var(--font-noto-sans-jp)", "sans-serif"], // Use the variable here
       },
       colors: {
-        'light-red': '#D51A16',
-        'dark-red': '#B81122',
+        "light-red": "#D51A16",
+        "dark-red": "#B81122",
+      },
+      textShadow: {
+        red: "-2px -2px 0 #4AC061, 2px -2px 0 #4AC061, -2px 2px 0 #4AC061, 2px 2px 0 #4AC061",
       },
     },
   },
