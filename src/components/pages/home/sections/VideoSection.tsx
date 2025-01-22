@@ -1,6 +1,6 @@
 const VideoSection = () => {
   return (
-    <section className="mb-[80px] md:mb-[100px] lg:mb-[120px]">
+    <section>
       <video controls className="md:mx-auto w-full md:w-[60%] h-full">
         <source
           src="https://www.w3schools.com/html/mov_bbb.mp4"

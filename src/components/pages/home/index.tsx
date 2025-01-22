@@ -1,6 +1,6 @@
 // sections
-import BlogsPost from "./components/BlogsPost";
-import VideoSection from "./components/VideoSection";
+import BlogsPost from "./sections/BlogsPost";
+import VideoSection from "./sections/VideoSection";
 import CompanyProfile from "./sections/CompanyProfile";
 import ContactBanner from "./sections/ContactBanner";
 import ContactFixedBanner from "./sections/ContactFixedBanner";
