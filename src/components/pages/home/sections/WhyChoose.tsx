@@ -1,15 +1,6 @@
 import Image from "next/image";
-
-interface IWhyChooseProps {
-  data: {
-    id: number;
-    image: string;
-    title: string;
-    description: string;
-  }[];
-}
-
-const WhyChoose = ({ data }: IWhyChooseProps) => {
+import data from "@/content/home/whyChoose.json";
+const WhyChoose = () => {
   return (
     <section className="px-5 py-20 md:py-[100px] md:px-[90px] lg:py-[120px] lg:px-[160px]">
       <h2 className="mb-10 lg:mb-[50px] bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-5xl lg:text-[60px] font-noto font-black leading-[48px] lg:leading-[90px]">
@@ -23,9 +14,9 @@ const WhyChoose = ({ data }: IWhyChooseProps) => {
             <Image
               src={item.image}
               alt={`Why choose: ${item.title}`}
-              // layout="responsive"
               width={355}
               height={178}
+              unoptimized
               quality={100}
               priority={true}
               className="w-full lg:max-h-[240px] lg:max-w-[40%]"

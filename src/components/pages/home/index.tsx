@@ -1,4 +1,6 @@
 // sections
+import BlogsPost from "./sections/BlogsPost";
+import VideoSection from "./sections/VideoSection";
 import CompanyProfile from "./sections/CompanyProfile";
 import ContactBanner from "./sections/ContactBanner";
 import ContactFixedBanner from "./sections/ContactFixedBanner";
@@ -11,7 +13,6 @@ import PurchaseProcess from "./sections/PurchaseProcess";
 import PurchaseResults from "./sections/PurchaseResults";
 import ReviewsReceived from "./sections/ReviewsReceived";
 import WhyChoose from "./sections/WhyChoose";
-import whyChoose from "@/content/home/whyChoose.json";
 
 const Index = () => {
   return (
@@ -19,7 +20,9 @@ const Index = () => {
       <Hero />
       <ContactFixedBanner />
       <Flow />
-      <WhyChoose data={whyChoose} />
+      <WhyChoose />
+      <VideoSection />
+      <BlogsPost />
       <ContactBanner />
       <PurchasedItems />
       <PurchaseResults />
