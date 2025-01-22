@@ -13,6 +13,7 @@ import PurchaseProcess from "./sections/PurchaseProcess";
 import PurchaseResults from "./sections/PurchaseResults";
 import ReviewsReceived from "./sections/ReviewsReceived";
 import WhyChoose from "./sections/WhyChoose";
+import BusinessPolicy from "./sections/BusinessPolicy";
 
 const Index = () => {
   return (
@@ -27,6 +28,7 @@ const Index = () => {
       <PurchasedItems />
       <PurchaseResults />
       <PurchaseProcess />
+      <BusinessPolicy />
       <ContactBanner />
       <ReviewsReceived />
       <FrequentlyAskedQuestions />
