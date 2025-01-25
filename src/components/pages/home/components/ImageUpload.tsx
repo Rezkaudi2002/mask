@@ -37,7 +37,7 @@ const ImageUpload = ({ label }: IImageUploadProps) => {
       </label>
       <div className="flex items-center gap-4">
         {/* Image Preview Section */}
-        <div className="w-[300px] h-[150px] border border-gray-300 rounded-md overflow-hidden flex items-center justify-center bg-gray-50">
+        <div className="w-[300px] h-[150px] flex-1 border border-gray-300 rounded-md overflow-hidden flex items-center justify-center bg-gray-50">
           {image ? (
             <Image
               src={image}

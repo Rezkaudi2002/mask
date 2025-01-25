@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const Inquiry = () => {
   return (
-    <section className="py-[50px] px-[20px] bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto">
+    <section className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto">
       <h2 className="mb-[40px] md:mb-[42px] lg:mb-[50px] text-[30px] md:text-[40px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center">
         お問い合わせ
       </h2>
-      <form className="space-y-6">
+      <form className="space-y-6 md:w-[60%] lg:w-[40%] md:mx-auto">
         {/* Input Fields */}
         <InputField
           id="name"
@@ -151,7 +151,7 @@ const Inquiry = () => {
         </div>
         <button
           type="submit"
-          className="w-[90%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red"
+          className="w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red"
         >
           送信する
           <Image

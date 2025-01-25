@@ -2,7 +2,7 @@ interface ISelectFieldProps {
   id: string;
   name: string;
   label: string;
-  required:boolean;
+  required: boolean;
   options: { value: string; label: string }[];
 }
 
@@ -26,7 +26,7 @@ const SelectField = ({
       <select
         id={id}
         name={name}
-        className="px-[17px] py-[9px] gap-2 rounded-md"
+        className="px-[17px] py-[9px] gap-2 rounded-md border-[1px] border-[#D1D5DB]"
         required={required}
         aria-required={required}
       >
