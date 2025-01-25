@@ -1,3 +1,4 @@
+// style
 import "@/styles/loader.css"
 
 const Loading = () => {

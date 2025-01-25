@@ -16,7 +16,7 @@ const ContactBanner = () => {
           alt="banner-right-bg"
           fill
           className="object-cover"
-          // objectFit="cover"
+        // objectFit="cover"
         />
       </div>
 
