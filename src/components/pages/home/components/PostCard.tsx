@@ -1,27 +1,29 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface IPostCardProps {
   title: string;
-  image: string;
+  imageSrc: string;
   description: string;
+  className?: string
 }
 
-const PostCard = ({ title, image, description }: IPostCardProps) => {
+const PostCard = ({ title, imageSrc, description, className }: IPostCardProps) => {
   return (
-    <div className="w-full md:w-[45%] lg:w-[30%]">
+    <Link href={`/blogs/${title}`} className={`w-full md:w-[45%] lg:w-[30%] ${className}`}>
       <Image
-        src={image}
-        alt="Image for post"
+        src={imageSrc}
+        alt={title}
         width={352}
         height={200}
         unoptimized
         className="w-full h-[200px]"
       />
-      <h3 className="my-4 lg:mb-[22px] text-[20px] leading-[30px] text-[#B81122] font-black text-center truncate">
+      <h3 className="my-4 lg:mb-[22px] text-[20px] leading-[30px] text-[#B81122] font-black text-start truncate">
         {title}
       </h3>
-      <p className="text-[16px] leading-[32px]">{description}</p>
-    </div>
+      <p className="text-[16px] leading-[32px] line-clamp-2">{description}</p>
+    </Link>
   );
 };
 

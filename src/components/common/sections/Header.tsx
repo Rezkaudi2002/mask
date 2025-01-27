@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                 >
                     <ul className="flex items-start flex-col justify-center gap-10 font-bold text-sm text-[#111111]">
                         {headerItemsData?.navbarItems?.map((item) => (
-                            <li key={item.id}>
+                            <li key={item.id} onClick={toggleMenu}>
                                 <Link href={item.href} title={`Navigate to ${item.label}`}>
                                     {item.label}
                                 </Link>
