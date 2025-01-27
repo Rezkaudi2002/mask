@@ -1,13 +1,14 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, {  useRef } from "react";
 import Image from "next/image";
 
 interface IImageUploadProps {
   label: string;
+  image: string | null
+  setImage: (image: string | null) => void
 }
 
-const ImageUpload = ({ label }: IImageUploadProps) => {
-  const [image, setImage] = useState<string | null>(null);
+const ImageUpload = ({ label,setImage,image }: IImageUploadProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,6 +68,7 @@ const ImageUpload = ({ label }: IImageUploadProps) => {
           ref={fileInputRef}
           type="file"
           accept="image/*"
+          name="image"
           className="hidden"
           onChange={handleImageChange}
         />

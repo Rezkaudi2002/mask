@@ -1,16 +1,55 @@
+'use client'
 import RadioGroup from "../components/RadioGroup";
 import InputField from "../components/InputField";
 import SelectField from "../components/SelectField";
 import ImageUpload from "../components/ImageUpload";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
 
 const Inquiry = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [image, setImage] = useState<string | null>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = formRef.current;
+    if (!form) return;
+
+    const formData = new FormData(form);
+    if (image) formData.append("image", image); // Attach image
+
+    emailjs
+      .sendForm(
+        "service_p3to9nt", // Replace with your EmailJS Service ID
+        "template_xf3foxn", // Replace with your EmailJS Template ID
+        form,
+        "0xF8VQGwM-H1P-NVr" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          alert("送信しました！");
+          form.reset();
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("送信に失敗しました。もう一度お試しください。");
+        }
+      );
+  };
+
   return (
     <section id="inquiry" className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto">
       <h2 className="mb-[40px] md:mb-[42px] lg:mb-[50px] text-[30px] md:text-[40px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center">
         お問い合わせ
       </h2>
-      <form className="space-y-6 md:w-[60%] lg:w-[40%] md:mx-auto">
+      <form
+        className="space-y-6 md:w-[60%] lg:w-[40%] md:mx-auto"
+        ref={formRef}
+        onSubmit={handleSubmit}
+      >
         {/* Input Fields */}
         <InputField
           id="name"
@@ -126,7 +165,7 @@ const Inquiry = () => {
         />
 
         {/* Image Upload */}
-        <ImageUpload label="買取商品の写真があればこちらに添付してください。" />
+        <ImageUpload label="買取商品の写真があればこちらに添付してください。" setImage={setImage} image={image}/>
 
         {/* Textarea */}
         <div>
