@@ -33,13 +33,12 @@ const PurchasedItems = () => {
         買取品目一覧
       </h2>
       {/* filter */}
-      <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] mb-[24px] md:mb-[28px] lg:mb-[32px] w-[75%] md:w-[85%] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mx-auto">
+      <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] mb-[24px] md:mb-[28px] lg:mb-[32px] w-full flex flex-wrap gap-2">
         {data.filter.map((filterItem) => (
           <PurchaseItemsCategoryCard
             key={filterItem.id}
             id={filterItem.id}
             title={filterItem.title}
-            image={filterItem.image}
             activeCategory={selectedCategory}
             changeCategory={setSelectedCategory}
           />
