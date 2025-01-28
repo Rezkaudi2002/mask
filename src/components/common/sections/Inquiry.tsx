@@ -1,9 +1,9 @@
 "use client";
 
-import RadioGroup from "../components/RadioGroup";
-import InputField from "../components/InputField";
-import SelectField from "../components/SelectField";
-import ImageUpload from "../components/ImageUpload";
+import RadioGroup from "../../pages/home/components/RadioGroup";
+import InputField from "../../pages/home/components/InputField";
+import SelectField from "../../pages/home/components/SelectField";
+import ImageUpload from "../../pages/home/components/ImageUpload";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
@@ -54,20 +54,20 @@ const Inquiry = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
+
     // EmailJS Configuration
     const serviceID = "service_p3to9nt";
     const systemTemplateID = "template_xf3foxn"; // For sending to your system
     const welcomeTemplateID = "template_xf3foxn"; // For sending to the client
     const publicKey = "0xF8VQGwM-H1P-NVr";
-  
+
     // Email parameters for your system (internal email)
     const emailParams = {
       ...formData,
       image: formData.image ? formData.image : "No Image Provided",
       to_email: "hakamha8@gmail.com", // Your system email (hardcoded)
     };
-  
+
     // Email parameters for the client (welcome email)
     const welcomeParams = {
       to_name: formData.name, // Client's name
@@ -75,7 +75,7 @@ const Inquiry = () => {
       message: `Welcome, ${formData.name}! Thank you for registering. Here are your submitted details:`,
       form_data: JSON.stringify(formData, null, 2), // Include all form data
     };
-  
+
     // Send email to your system
     emailjs
       .send(serviceID, systemTemplateID, emailParams, publicKey)
@@ -97,7 +97,7 @@ const Inquiry = () => {
           image: null,
           additional_notes: "",
         });
-  
+
         // Toast notification
         Toast.fire({
           icon: "success",
@@ -111,7 +111,7 @@ const Inquiry = () => {
           title: "送信中にエラーが発生しました: " + error.message,
         });
       });
-  
+
     // Send welcome email to the client
     emailjs
       .send(serviceID, welcomeTemplateID, welcomeParams, publicKey)
@@ -130,7 +130,6 @@ const Inquiry = () => {
         });
       });
   };
-  
 
   return (
     <section id="inquiry" className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto">
