@@ -8,9 +8,10 @@ interface ContactBtnProps {
     label: string;
     href: string;
     variant: "red" | "blue" | "green";
+    onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
-const ContactBtn: React.FC<ContactBtnProps> = ({ children, className = "", variant, label, href }) => {
+const ContactBtn: React.FC<ContactBtnProps> = ({ children, className = "", variant, label, href, onClick }) => {
     // Determine the gradient background class based on the variant
     const gradientBg = {
         red: "gradient-red",
@@ -31,11 +32,12 @@ const ContactBtn: React.FC<ContactBtnProps> = ({ children, className = "", varia
             target={variant === "blue" ? "_self" : "_blank"}
             rel="noopener noreferrer"
             aria-label={`Contact us via ${variant === "red" ? "phone" : variant === "blue" ? "online support" : "Line app"}`}
-            className={`${gradientBg} relative font-black rounded h-14 text-white flex items-center justify-center w-full sm:w-fit px-3 sm:px-14 py-3 gap-3 ${className}`}
+            className={`${gradientBg}  relative font-black rounded h-14 text-white flex items-center justify-center w-full sm:w-fit px-3 sm:px-14 py-3 gap-3 ${className}`}
+            onClick={onClick}
         >
             {children}
             <Image src={iconPaths[variant]} alt={`${variant} contact icon`} width={32} height={32} loading="lazy" />
-            {label}
+            <span className="text-nowrap overflow-hidden">{label}</span>
             <Image
                 src={`/images/icons/arrow-right-${variant}.svg`}
                 alt={`Arrow pointing right, styled in ${variant}`}

@@ -28,7 +28,7 @@ const PurchaseProcess: React.FC = () => {
                 <PurchaseProcessCategoryBtn category="Bring-in purchase" activeCategory={PurchaseProcessCategory} label="持込買取" changeCategory={changeCategory} />
             </div>
 
-            <div className="mx-auto h-[2023px] lg:h-[1930px] flex flex-col justify-between space-y-4 lg:space-y-10 px-10 py-10 lg:px-24 lg:py-20 border-2 border-[#B81122] mt-8  bg-[#FFFFFF99] max-w-[1120px]">
+            <div className="mx-auto h-[2023px] lg:h-[1930px] flex flex-col justify-start space-y-4 lg:space-y-10 px-10 py-10 lg:px-24 lg:py-20 border-2 border-[#B81122] mt-8  bg-[#FFFFFF99] max-w-[1120px]">
                 {PurchaseProcessData[PurchaseProcessCategory].map(item =>
                     <PurchaseProcessCard key={item.id} data={item} steps={PurchaseProcessData[PurchaseProcessCategory].length} />
                 )}
