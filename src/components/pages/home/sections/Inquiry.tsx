@@ -1,43 +1,97 @@
-'use client'
+"use client";
+
 import RadioGroup from "../components/RadioGroup";
 import InputField from "../components/InputField";
 import SelectField from "../components/SelectField";
 import ImageUpload from "../components/ImageUpload";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const Inquiry = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [image, setImage] = useState<string | null>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    phonePermission: "",
+    usageType: "",
+    invoiceRegistration: "",
+    provideRegistrationNumber: "",
+    city: "",
+    product_info: "",
+    inquiry_source: "",
+    product_details: "",
+    product_condition: "",
+    image: null as string | null,
+    additional_notes: "",
+  });
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener("mouseenter", Swal.stopTimer);
+      toast.addEventListener("mouseleave", Swal.resumeTimer);
+    },
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleImageChange = (image: string | null) => {
+    setFormData((prevData) => ({ ...prevData, image }));
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const form = formRef.current;
-    if (!form) return;
+    // EmailJS Configuration
+    const serviceID = "service_p3to9nt";
+    const templateID = "template_xf3foxn";
+    const publicKey = "0xF8VQGwM-H1P-NVr";
 
-    const formData = new FormData(form);
-    if (image) formData.append("image", image); // Attach image
+    const emailParams = {
+      ...formData,
+      image: formData.image ? formData.image : "No Image Provided",
+    };
 
     emailjs
-      .sendForm(
-        "service_p3to9nt", // Replace with your EmailJS Service ID
-        "template_xf3foxn", // Replace with your EmailJS Template ID
-        form,
-        "0xF8VQGwM-H1P-NVr" // Replace with your EmailJS Public Key
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          alert("送信しました！");
-          form.reset();
-        },
-        (error) => {
-          console.error("Error sending email:", error.text);
-          alert("送信に失敗しました。もう一度お試しください。");
-        }
-      );
+      .send(serviceID, templateID, emailParams, publicKey)
+      .then(() => {
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          phonePermission: "",
+          usageType: "",
+          invoiceRegistration: "",
+          provideRegistrationNumber: "",
+          city: "",
+          product_info: "",
+          inquiry_source: "",
+          product_details: "",
+          product_condition: "",
+          image: null,
+          additional_notes: "",
+        });
+
+        Toast.fire({
+          icon: "success",
+          title: "メールが送信されました！",
+        });
+      })
+      .catch((error) => {
+        Toast.fire({
+          icon: "error",
+          title: "送信中にエラーが発生しました: " + error.message,
+        });
+      });
   };
 
   return (
@@ -47,7 +101,6 @@ const Inquiry = () => {
       </h2>
       <form
         className="space-y-6 md:w-[60%] lg:w-[40%] md:mx-auto"
-        ref={formRef}
         onSubmit={handleSubmit}
       >
         {/* Input Fields */}
@@ -56,21 +109,27 @@ const Inquiry = () => {
           name="name"
           label="お名前"
           placeholder="未入力"
+          value={formData.name}
           required
+          onChange={handleInputChange}
         />
         <InputField
           id="email"
           name="email"
           label="メールアドレス"
           placeholder="未入力"
+          value={formData.email}
           required
+          onChange={handleInputChange}
         />
         <InputField
           id="phone"
           name="phone"
           label="電話番号"
           placeholder="半角ハイフンなし"
+          value={formData.phone}
           required
+          onChange={handleInputChange}
         />
 
         {/* Radio Groups */}
@@ -79,6 +138,8 @@ const Inquiry = () => {
           inlineLabels
           question="質問がある場合、こちらからお電話してもよろしいでしょうか？"
           required
+          value={formData.phonePermission}
+          onChange={handleInputChange}
           options={[
             { value: "allow_phone_call", label: "はい" },
             { value: "disallow_phone_call", label: "いいえ" },
@@ -89,16 +150,20 @@ const Inquiry = () => {
           question="使用状況"
           inlineLabels={false}
           required
+          value={formData.usageType}
           options={[
             { value: "business", label: "事業（個人事業者または法人)" },
             { value: "personal", label: "個人で使用" },
           ]}
+          onChange={handleInputChange}
         />
         <RadioGroup
           name="invoiceRegistration"
           inlineLabels
           required={false}
           question="事業で使用していた場合、インボイスの登録はしていますか？"
+          value={formData.invoiceRegistration}
+          onChange={handleInputChange}
           options={[
             { value: "registered", label: "はい" },
             { value: "not_registered", label: "いいえ" },
@@ -109,36 +174,44 @@ const Inquiry = () => {
           inlineLabels
           required={false}
           question="買取が成立しましたら、登録番号をご提供いただけますでしょうか？"
+          value={formData.provideRegistrationNumber}
+          onChange={handleInputChange}
           options={[
             { value: "will_provide", label: "はい" },
             { value: "will_not_provide", label: "いいえ" },
           ]}
         />
-
         {/* Select Fields */}
         <SelectField
           id="city"
           name="city"
           label="市区町村"
           required
+          value={formData.city}
           options={[
             { value: "not_selected", label: "未選択" },
             { value: "tokyo", label: "東京" },
             { value: "osaka", label: "大阪" },
           ]}
+          onChange={handleInputChange}
         />
+
         <InputField
           id="productInfo"
           name="product_info"
           label="市区町村"
           placeholder="未入力"
           required
+          value={formData.product_info}
+          onChange={handleInputChange}
         />
         <SelectField
           id="inquirySource"
           name="inquiry_source"
           required={false}
           label="私たちをどこで知りましたか？"
+          value={formData.inquiry_source}
+          onChange={handleInputChange}
           options={[
             { value: "none", label: "---" },
             { value: "web", label: "ウェブ検索" },
@@ -151,12 +224,16 @@ const Inquiry = () => {
           label="査定希望商品のメーカー名、型番"
           placeholder="(例:リョービ電ノコ(ASK-1000)動作)"
           required
+          value={formData.product_details}
+          onChange={handleInputChange}
         />
         <SelectField
           id="productCondition"
           name="product_condition"
           label="状態を選択してください"
           required={false}
+          value={formData.product_condition}
+          onChange={handleInputChange}
           options={[
             { value: "scrap", label: "00 スクラップ" },
             { value: "used", label: "01 中古" },
@@ -165,29 +242,23 @@ const Inquiry = () => {
         />
 
         {/* Image Upload */}
-        <ImageUpload label="買取商品の写真があればこちらに添付してください。" setImage={setImage} image={image}/>
+        <ImageUpload
+          label="買取商品の写真があればこちらに添付してください。"
+          setImage={handleImageChange}
+          image={formData.image}
+        />
 
         {/* Textarea */}
-        <div>
-          <label htmlFor="additionalNotes" className="block mb-[8px]">
-            <span className="flex items-center space-x-2">
-              <p>その他のご連絡事項 (お問い合わせ)</p>
-              <span
-                className="text-[12px] leading-[20px] font-normal text-[#D91C0B] text-nowrap"
-                aria-required="true"
-              >
-                必須
-              </span>
-            </span>
-          </label>
-          <textarea
-            id="additionalNotes"
-            name="additional_notes"
-            placeholder="ご質問やご連絡事項はこちらにお願いします"
-            required
-            className="py-[9px] px-[16px] w-full h-[100px] border-[1px] border-[#D1D5DB] rounded-md text-[14px] leading-[23px] font-normal"
-          />
-        </div>
+        <textarea
+          id="additionalNotes"
+          name="additional_notes"
+          placeholder="ご質問やご連絡事項はこちらにお願いします"
+          required
+          value={formData.additional_notes}
+          className="py-[9px] px-[16px] w-full h-[100px] border-[1px] border-[#D1D5DB] rounded-md text-[14px] leading-[23px] font-normal"
+          onChange={handleInputChange}
+        />
+
         <button
           type="submit"
           className="w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red"
