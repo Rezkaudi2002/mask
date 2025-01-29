@@ -34,7 +34,7 @@ const initialFormData: TFormData = {
 
 export const useFormHandler = () => {
   const [formData, setFormData] = useState<TFormData>(initialFormData);
-  const [isSubmitting, setIsSubmitting] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // Handle input change
   const handleInputChange = (
     e: React.ChangeEvent<
