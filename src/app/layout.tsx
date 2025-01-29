@@ -7,6 +7,9 @@ import "@/styles/globals.css";
 import Header from "@/components/common/sections/Header";
 import Footer from "@/components/common/sections/Footer";
 
+// baseUrl
+import { baseUrl } from '@/utils/baseUrl';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,38 +30,57 @@ const notoSansJP = Noto_Sans_JP({
 
 // metadata
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Hadis",
-    default: "中古機械、電動工具の高額買取のハディズ",
-  },
-  description: "中古機械、電動工具の高額買取ならハディズへ。",
-  keywords: "大型UVインクジェットプリンター買取,機械・電動工具の高価買取,簡単！買取の手順,Hadis INTERNATIONAL",
 
+  title: {
+    default: "中古機械、電動工具の高額買取のハディズ",
+    template: "%s | mac-hadis",
+  },
+
+  description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします",
+
+  applicationName: "mac-hadis",
+
+  generator: "Next.js",
+
+  keywords: ["大型UVインクジェットプリンター買取", "機械・電動工具の高価買取", "簡単！買取の手順", "Hadis INTERNATIONAL"],
+
+  referrer: "origin",
+
+  creator: "mac-hadis",
+
+  publisher: "mac-hadis",
+
+  // robots: "index, follow",
+
+  alternates: {
+    canonical: baseUrl
+  },
 
   openGraph: {
     type: "website",
+    url: baseUrl,
     title: "中古機械、電動工具の高額買取のハディズ",
-    siteName: "mac-hadis",
-    url: "https://www.mac-hadis.com/",
-    images: [
-      {
-        url: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b",
-        width: 800,
-        height: 600,
-      }
-    ],
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+    siteName: "mac-hadis",
+    images: [
+      { url: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b" }
+    ]
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "中古機械、電動工具の高額買取のハディズ",
-    images: ["https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b"],
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+    title: "中古機械、電動工具の高額買取のハディズ",
+    images: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b"
   },
-  alternates: {
-    canonical: "https://www.mac-hadis.com/",
-  }
 
+  // verification: {
+  //   google: "google-verification-token",
+  // },
+
+  category: "Sells",
+
+  classification: "Sells",
 }
 
 export default function RootLayout({

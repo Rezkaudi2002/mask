@@ -17,6 +17,7 @@ const PostCard = ({ title, imageSrc, description, className }: IPostCardProps) =
         width={352}
         height={200}
         unoptimized
+        loading="lazy"
         className="w-full h-[200px]"
       />
       <h3 className="my-4 lg:mb-[22px] text-[20px] leading-[30px] text-[#B81122] font-black text-start truncate">

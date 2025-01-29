@@ -5,7 +5,7 @@ import FlowCard from "../components/FlowCard";
 const Flow: React.FC = () => {
     return (
         <section className=" relative w-full py-[50px] lg:py-20 text-center px-4">
-            <Image className=" absolute -z-10 top-0 left-0 object-cover" fill src={"/images/home-page/flow-bg.png"} alt="hero-background-hadis" />
+            <Image className=" absolute -z-10 top-0 left-0 object-cover" fill src={"/images/home-page/flow-bg.png"} alt="Background image for flow section" />
 
             <h3 className="font-black text-xl lg:text-2xl">ご自宅にある工具・機械で</h3>
             <h2 className=" mx-auto font-black text-[32px] lg:text-6xl text-[#D51A16] pt-8">
@@ -25,7 +25,7 @@ const Flow: React.FC = () => {
             <div className="mt-10 flex items-center justify-center gap-4 flex-col">
                 <span className="h-0 w-0 border-x-[13px] border-b-[20px] md:border-x-[20px] md:border-b-[30px] border-x-transparent  rotate-180 border-b-[#B81122]"></span>
                 <div className="relative w-[335px] h-[41px] md:w-[670px] md:h-[76px]">
-                    <Image src={"/images/home-page/flow-title.png"} alt="hero-background-hadis" fill />
+                    <Image src={"/images/home-page/flow-title.png"} alt="hadis image" sizes="670,76" fill loading="lazy" />
                 </div>
             </div>
 

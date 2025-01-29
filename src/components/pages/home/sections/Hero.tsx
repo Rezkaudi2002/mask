@@ -7,8 +7,8 @@ const Hero: React.FC = () => {
             <div className="flex lg:w-1/2 2xl:min-w-[1000px] items-start 2xl:items-center justify-center h-full 2xl:h-3/4 space-y-2 lg:space-y-7 flex-col pt-7 2xl:pt-20 sm:pl-12 pb-4">
 
                 {/* image 1 */}
-                <div className="relative xl:w-[800px] xl:h-[64px] w-[355px] h-[26px] sm:h-[50px]">
-                    <Image src="/images/home-page/hero-1.png" alt="Company's legacy image" fill priority />
+                <div className="relative xl:w-[810px] xl:h-[64px] w-[355px] h-[38px] sm:h-[50px]">
+                    <Image src="/images/home-page/hero-1.png" sizes="355,38" alt="Company's legacy image" fill loading="lazy" />
                 </div>
 
                 {/* image 2 */}
@@ -18,11 +18,11 @@ const Hero: React.FC = () => {
 
                 {/* details */}
                 <div className="flex w-full items-start xl:items-center justify-center gap-2 flex-col lg:flex-row text-white flex-wrap">
-                    <h2 className="flex gap-1 lg:gap-2 items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
+                    <h1 className="flex gap-1 lg:gap-2 items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
                         <span className="">創業</span>
                         <span className="text-[60px] lg:text-[100px]">26</span>
                         <span className="mt-auto pb-2">年</span>
-                    </h2>
+                    </h1>
                     <h2 className="flex gap-1 lg:gap-2 items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
                         <span className="flex items-center justify-center flex-col gap-1 lg:gap-2">
                             <span>出張費</span>
