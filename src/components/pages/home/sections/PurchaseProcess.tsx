@@ -17,7 +17,7 @@ const PurchaseProcess: React.FC = () => {
     }
 
     return (
-        <section className=" relative w-full py-[50px] lg:py-[120px] text-center px-4">
+        <section id="purchase-process" className=" relative w-full py-[50px] lg:py-[120px] text-center px-4">
             <Image className=" absolute -z-10 top-0 left-0 object-cover" fill src={"/images/home-page/flow-bg.png"} alt="hero-background-hadis" />
 
             <h2 className="font-black text-3xl lg:text-6xl text-[#D51A16]">カンタン買取の流れ</h2>
@@ -26,10 +26,9 @@ const PurchaseProcess: React.FC = () => {
                 <PurchaseProcessCategoryBtn category="On-site purchase" activeCategory={PurchaseProcessCategory} label="出張買取" changeCategory={changeCategory} />
                 <PurchaseProcessCategoryBtn category="Home delivery purchase" activeCategory={PurchaseProcessCategory} label="宅配買取" changeCategory={changeCategory} />
                 <PurchaseProcessCategoryBtn category="Bring-in purchase" activeCategory={PurchaseProcessCategory} label="持込買取" changeCategory={changeCategory} />
-
             </div>
 
-            <div className="mx-auto space-y-4 lg:space-y-10 px-10 py-10 lg:px-24 lg:py-20 border-2 border-[#B81122] mt-8  bg-[#FFFFFF99] max-w-[1120px]">
+            <div className="mx-auto h-[2023px] lg:h-[1930px] flex flex-col justify-start space-y-4 lg:space-y-10 px-10 py-10 lg:px-24 lg:py-20 border-2 border-[#B81122] mt-8  bg-[#FFFFFF99] max-w-[1120px]">
                 {PurchaseProcessData[PurchaseProcessCategory].map(item =>
                     <PurchaseProcessCard key={item.id} data={item} steps={PurchaseProcessData[PurchaseProcessCategory].length} />
                 )}

@@ -1,19 +1,22 @@
+
+
 // sections
-import BlogsPost from "./sections/BlogsPost";
-import VideoSection from "./sections/VideoSection";
-import CompanyProfile from "./sections/CompanyProfile";
-import ContactBanner from "./sections/ContactBanner";
+import Hero from "./sections/Hero";
 import ContactFixedBanner from "./sections/ContactFixedBanner";
 import Flow from "./sections/Flow";
-import FrequentlyAskedQuestions from "./sections/FrequentlyAskedQuestions";
-import Hero from "./sections/Hero";
-import Inquiry from "./sections/Inquiry";
-import PurchasedItems from "./sections/PurchasedItems";
-import PurchaseProcess from "./sections/PurchaseProcess";
-import PurchaseResults from "./sections/PurchaseResults";
-import ReviewsReceived from "./sections/ReviewsReceived";
 import WhyChoose from "./sections/WhyChoose";
+import VideoSection from "./sections/VideoSection";
+import BlogsPost from "./sections/BlogsPost";
+import ContactBanner from "./sections/ContactBanner";
+import PurchasedItems from "./sections/PurchasedItems";
+import PurchaseResults from "./sections/PurchaseResults";
+import PurchaseProcess from "./sections/PurchaseProcess";
 import BusinessPolicy from "./sections/BusinessPolicy";
+import ReviewsReceived from "./sections/ReviewsReceived";
+import FrequentlyAskedQuestions from "./sections/FrequentlyAskedQuestions";
+import CompanyProfile from "./sections/CompanyProfile";
+import Inquiry from "./sections/Inquiry";
+
 
 const Index = () => {
   return (

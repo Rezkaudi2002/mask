@@ -2,7 +2,7 @@ import Image from "next/image";
 import data from "@/content/home/whyChoose.json";
 const WhyChoose = () => {
   return (
-    <section className="px-5 py-20 md:py-[100px] md:px-[90px] lg:py-[120px] lg:px-[160px]">
+    <section id="why-choose" className="px-5 py-20 md:py-[100px] md:px-[90px] lg:py-[120px] lg:px-[160px]">
       <h2 className="mb-10 lg:mb-[50px] bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-5xl lg:text-[60px] font-noto font-black leading-[48px] lg:leading-[90px]">
         Hadisが選ばれる理由
       </h2>
