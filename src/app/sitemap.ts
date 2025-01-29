@@ -1,11 +1,15 @@
 import { MetadataRoute } from 'next';
+
+// blogs data
 import blogsData from "@/content/blogs/blogs.json";
 
-const baseUrl = "https://hadis-three.vercel.app";
+// baseUrl
+import { baseUrl } from '@/utils/baseUrl';
+
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // Static URLs
-    const urls: MetadataRoute.Sitemap = [
+    const staticUrls: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
             lastModified: new Date().toISOString(),
@@ -18,10 +22,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "daily",
             priority: 0.8,
         },
+        {
+            url: `${baseUrl}/owen-ihe-wase`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: "daily",
+            priority: 0.8,
+        },
     ];
 
     // Dynamic Blog URLs
-    const blogs: MetadataRoute.Sitemap = blogsData.map((blog) => ({
+    const dynamicBlogUrls: MetadataRoute.Sitemap = blogsData.map((blog) => ({
         url: `${baseUrl}/blogs/${encodeURIComponent(blog.title)}`,
         lastModified: new Date().toISOString(), // Use actual lastModified if available
         changeFrequency: "weekly",
@@ -29,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     return [
-        ...urls,
-        ...blogs,
+        ...staticUrls,
+        ...dynamicBlogUrls,
     ];
 }

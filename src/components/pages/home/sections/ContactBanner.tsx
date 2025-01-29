@@ -34,15 +34,15 @@ const ContactBanner = () => {
         <div className="flex justify-center flex-wrap space-y-4 lg:space-y-[24px]">
           {/* call button */}
           <div className="w-full">
-            <ContactBtn label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="text-[32px] lg:text-[40px] h-20 sm:w-full" />
+            <ContactBtn label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="text-[32px] lg:text-[40px] h-20 w-full  sm:w-full" />
             <p className="text-[14px] leading-[21px] mt-1 font-normal w-fit">
               営業時間：10:00 〜 18:00
             </p>
           </div>
           {/* social media buttons */}
           <div className="space-y-2 md:space-y-0 md:space-x-2 flex-wrap md:flex-nowrap flex w-full">
-            <ContactBtn label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="text-xl sm:w-full lg:flex-1 sm:px-3" />
-            <ContactBtn label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="text-xl sm:w-full lg:flex-1 sm:px-3" />
+            <ContactBtn label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="text-xl w-full  sm:w-full lg:flex-1 sm:px-3" />
+            <ContactBtn label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="text-xl w-full  sm:w-full lg:flex-1 sm:px-3" />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from 'next/server'
 
 export const config = {
-    matcher: ['/', '/index'],
+    matcher: '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'
 }
 
 export default function middleware(req: NextRequest) {

@@ -11,6 +11,7 @@ import ContactDetails from "@/content/home/ContactDetails.json"
 // components
 import ContactBtn from "@/components/pages/home/components/ContactBtn";
 
+
 const Header: React.FC = () => {
 
     const [activeMenu, setActiveMenu] = useState(false)
@@ -48,15 +49,14 @@ const Header: React.FC = () => {
                 {/* burger btn */}
                 <div className="burger lg:hidden cursor-pointer" onClick={toggleMenu} aria-label="Toggle menu" role="button" tabIndex={0}>
                     {activeMenu ?
-                        <Image src={"/images/icons/close.svg"} alt="menu-hadis" width={24} height={24} /> :
-                        <Image src={"/images/icons/menu.svg"} alt="menu-hadis" width={24} height={24} />
+                        <Image src={"/images/icons/close.svg"} alt="menu-hadis" width={24} height={24} priority /> :
+                        <Image src={"/images/icons/menu.svg"} alt="menu-hadis" width={24} height={24} priority />
                     }
                 </div>
 
                 {/* mobile menu */}
                 <div
                     className={`bg-white w-full space-y-10 min-h-screen fixed top-10 left-0 z-50 py-7 px-5 lg:hidden transition-transform duration-300 ${activeMenu ? "translate-x-0" : "translate-x-[-100%]"}`}
-                    aria-hidden={!activeMenu}
                 >
                     <ul className="flex items-start flex-col justify-center gap-10 font-bold text-sm text-[#111111]">
                         {navbarLinksData?.navbarItems?.map((item) => (
@@ -70,15 +70,15 @@ const Header: React.FC = () => {
 
                     {/* contact details*/}
                     <div className="flex flex-col items-start justify-center w-full h-full gap-4 ">
-                        <ContactBtn label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="sm:w-full text-3xl" onClick={toggleMenu} />
-                        <ContactBtn label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="sm:w-full text-xl" onClick={toggleMenu} />
-                        <ContactBtn label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="sm:w-full text-xl" onClick={toggleMenu} />
+                        <ContactBtn label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="w-full sm:w-full text-3xl" onClick={toggleMenu} />
+                        <ContactBtn label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
+                        <ContactBtn label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
                     </div>
 
                     {/* sns */}
                     <div className="flex items-center justify-start lg:justify-center w-full gap-4">
                         {navbarLinksData?.snsLinks?.map(item =>
-                            <Link key={item.id} href={item.href} target="_blank">
+                            <Link key={item.id} href={item.href} title={`Navigate to ${item.name}`} target="_blank" >
                                 <Image src={item.menuImageSrc} alt={item.name} width={40} height={40} />
                             </Link>
                         )}

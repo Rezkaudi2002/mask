@@ -16,7 +16,7 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({ data, steps }) =>
             <div className={`flex items-start lg:items-center justify-center gap-6 flex-col lg:flex-row lg:gap-8 ${data.id % 2 !== 0 && "lg:odd:flex-row-reverse"}`}>
                 <div className="w-[256px] lg:flex-1 lg:w-1/2 h-[151px] lg:h-[250px] relative">
                     <Image className=" absolute top-0 left-0 mr-[10px] mb-[10px] lg:mr-[23px] lg:mb-[23px]" fill src={data.imageSrc} alt={data.title} />
-                    <Image unoptimized className=" absolute -z-10 bottom-0 right-0 ml-[10px] mt-[10px] lg:ml-[23px] lg:mt-[23px]" fill src={"/images/home-page/dotted-bg-block.png"} alt="dotted-bg-block" />
+                    <Image unoptimized loading="lazy" className=" absolute -z-10 bottom-0 right-0 ml-[10px] mt-[10px] lg:ml-[23px] lg:mt-[23px]" fill src={"/images/home-page/dotted-bg-block.png"} alt="dotted-bg-block" />
                 </div>
 
                 <div className=" space-y-4 flex-1">
