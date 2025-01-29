@@ -58,7 +58,7 @@ const Inquiry = () => {
     // EmailJS Configuration
     const serviceID = "service_p3to9nt";
     const systemTemplateID = "template_xf3foxn"; // For sending to your system
-    const welcomeTemplateID = "template_xf3foxn"; // For sending to the client
+    const welcomeTemplateID = "template_id6emd5"; // For sending to the client
     const publicKey = "0xF8VQGwM-H1P-NVr";
 
     // Email parameters for your system (internal email)
@@ -68,13 +68,21 @@ const Inquiry = () => {
       to_email: "hakamha8@gmail.com", // Your system email (hardcoded)
     };
 
-    // Email parameters for the client (welcome email)
+    // Email parameters for client (welcome email)
     const welcomeParams = {
-      to_name: formData.name, // Client's name
-      to_email: formData.email, // Client's email
-      message: `Welcome, ${formData.name}! Thank you for registering. Here are your submitted details:`,
-      form_data: JSON.stringify(formData, null, 2), // Include all form data
+      ...formData,
+      image: formData.image ? formData.image : "No Image Provided",
+      name: formData.name,
+      user_email: formData.email,
     };
+
+    // // Email parameters for the client (welcome email)
+    // const welcomeParams = {
+    //   to_name: formData.name, // Client's name
+    //   to_email: formData.email, // Client's email
+    //   message: `Welcome, ${formData.name}! Thank you for registering. Here are your submitted details:`,
+    //   form_data: JSON.stringify(formData, null, 2), // Include all form data
+    // };
 
     // Send email to your system
     emailjs
@@ -103,30 +111,30 @@ const Inquiry = () => {
           icon: "success",
           title: "メールが送信されました！",
         });
+
+        // Send email for client
+        emailjs
+          .send(serviceID, welcomeTemplateID, welcomeParams, publicKey)
+          .then(() => {
+            // Toast notification for welcome email
+            Toast.fire({
+              icon: "success",
+              title: "Welcome email sent to client!",
+            });
+          })
+          .catch((error) => {
+            // Handle welcome email errors
+            Toast.fire({
+              icon: "error",
+              title: "Error sending welcome email: " + error.message,
+            });
+          });
       })
       .catch((error) => {
         // Handle email sending errors
         Toast.fire({
           icon: "error",
           title: "送信中にエラーが発生しました: " + error.message,
-        });
-      });
-
-    // Send welcome email to the client
-    emailjs
-      .send(serviceID, welcomeTemplateID, welcomeParams, publicKey)
-      .then(() => {
-        // Toast notification for welcome email
-        Toast.fire({
-          icon: "success",
-          title: "Welcome email sent to client!",
-        });
-      })
-      .catch((error) => {
-        // Handle welcome email errors
-        Toast.fire({
-          icon: "error",
-          title: "Error sending welcome email: " + error.message,
         });
       });
   };
