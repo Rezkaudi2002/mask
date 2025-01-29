@@ -15,7 +15,7 @@ import BusinessPolicy from "./sections/BusinessPolicy";
 import ReviewsReceived from "./sections/ReviewsReceived";
 import FrequentlyAskedQuestions from "./sections/FrequentlyAskedQuestions";
 import CompanyProfile from "./sections/CompanyProfile";
-import Inquiry from "./sections/Inquiry";
+import Inquiry from "@/components/common/sections/Inquiry";
 
 
 const Index = () => {

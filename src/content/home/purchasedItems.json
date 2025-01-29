@@ -2,113 +2,128 @@
   "filter": [
     {
       "id": 1,
-      "title": "カテゴリー1",
-      "image": "/images_db/item1.png"
+      "title": "工作機械・精密加工機械"
     },
     {
       "id": 2,
-      "title": "カテゴリー2",
-      "image": "/images_db/item2.png"
+      "title": "自動車整備機械・自動車板金機械"
     },
     {
       "id": 3,
-      "title": "カテゴリー3",
-      "image": "/images_db/item3.png"
+      "title": "農業機械・木材破砕機"
     },
     {
       "id": 4,
-      "title": "カテゴリー4",
-      "image": "/images_db/item4.png"
+      "title": "金属加工機械・板金機械"
     },
     {
       "id": 5,
-      "title": "カテゴリー5",
-      "image": "/images_db/item5.png"
+      "title": "管工事機械・工具"
+    },
+    {
+      "id": 6,
+      "title": "住宅工事工具、大工機械"
+    },
+    {
+      "id": 7,
+      "title": "発電機・溶接機・コンプレッサー"
+    },
+    {
+      "id": 8,
+      "title": "望遠鏡・顕微鏡・測定機器"
+    },
+    {
+      "id": 9,
+      "title": "プリンター・ミシン・DIY用機器"
+    },
+    {
+      "id": 10,
+      "title": "その他の業務用機械"
     }
   ],
   "items": [
     {
       "id": 1,
       "title": "溶接機",
-      "category": "カテゴリー1",
+      "category": "工作機械・精密加工機械",
       "image": "/images_db/item1.png"
     },
     {
       "id": 2,
       "title": "発電機",
-      "category": "カテゴリー1",
+      "category": "自動車整備機械・自動車板金機械",
       "image": "/images_db/item2.png"
     },
     {
       "id": 3,
       "title": "望遠鏡・双眼鏡",
-      "category": "カテゴリー2",
+      "category": "農業機械・木材破砕機",
       "image": "/images_db/item3.png"
     },
     {
       "id": 4,
       "title": "マシニング機械",
-      "category":  "カテゴリー3",
+      "category": "金属加工機械・板金機械",
       "image": "/images_db/item4.png"
     },
     {
       "id": 5,
       "title": "顕微鏡",
-      "category": "カテゴリー2",
+      "category": "管工事機械・工具",
       "image": "/images_db/item5.png"
     },
     {
       "id": 6,
       "title": "鉄筋機械",
-      "category":  "カテゴリー3",
+      "category": "住宅工事工具、大工機械",
       "image": "/images_db/item6.png"
     },
     {
       "id": 7,
       "title": "板金機械",
-      "category":  "カテゴリー3",
+      "category": "発電機・溶接機・コンプレッサー",
       "image": "/images_db/item7.png"
     },
     {
       "id": 8,
       "title": "鉄骨機械",
-      "category":  "カテゴリー4",
+      "category": "望遠鏡・顕微鏡・測定機器",
       "image": "/images_db/item8.png"
     },
     {
       "id": 9,
       "title": "水道機械",
-      "category":  "カテゴリー4",
+      "category": "プリンター・ミシン・DIY用機器",
       "image": "/images_db/item9.png"
     },
     {
       "id": 10,
       "title": "大工機械 / 建築機械 / リフォーム機械",
-      "category":  "カテゴリー1",
+      "category": "その他の業務用機械",
       "image": "/images_db/item10.png"
     },
     {
       "id": 11,
       "title": "包装機/梱包機/ラップ機/ラッピングマシーン",
-      "category":  "カテゴリー5",
+      "category": "管工事機械・工具",
       "image": "/images_db/item11.png"
     },
     {
       "id": 12,
       "title": "プレハブ物置・倉庫",
-      "category":  "カテゴリー5",
+      "category": "住宅工事工具、大工機械",
       "image": "/images_db/item12.png"
     },
     {
       "id": 13,
       "title": "工業用ミシン/業務用ミシン/刺繍機",
-      "category":  "カテゴリー5",
+      "category": "発電機・溶接機・コンプレッサー",
       "image": "/images_db/item13.png"
     },
     {
       "id": 14,
       "title": "建設機械・建機",
-      "category": "カテゴリー1",
+      "category": "望遠鏡・顕微鏡・測定機器",
       "image": "/images_db/item14.png"
     }
   ]

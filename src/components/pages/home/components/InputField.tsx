@@ -4,6 +4,8 @@ interface IInputFieldProps {
   label: string;
   placeholder: string;
   required: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputField = ({
@@ -12,6 +14,8 @@ const InputField = ({
   label,
   placeholder,
   required,
+  value,
+  onChange,
 }: IInputFieldProps) => {
   return (
     <div className="space-y-2">
@@ -26,6 +30,8 @@ const InputField = ({
         id={id}
         name={name}
         type="text"
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
         className="px-[16px] py-[10px] w-full rounded-md border-[1px] border-[#D1D5DB]"
         required={required}

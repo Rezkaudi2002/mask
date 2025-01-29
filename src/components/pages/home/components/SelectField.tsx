@@ -3,6 +3,8 @@ interface ISelectFieldProps {
   name: string;
   label: string;
   required: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   options: { value: string; label: string }[];
 }
 
@@ -10,8 +12,10 @@ const SelectField = ({
   id,
   name,
   label,
-  options,
   required,
+  value,
+  onChange,
+  options,
 }: ISelectFieldProps) => {
   return (
     <div>
@@ -26,6 +30,8 @@ const SelectField = ({
       <select
         id={id}
         name={name}
+        value={value}
+        onChange={onChange}
         className="px-[17px] py-[9px] gap-2 rounded-md border-[1px] border-[#D1D5DB]"
         required={required}
         aria-required={required}
