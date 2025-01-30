@@ -611,6 +611,60 @@
       "title": "Denyo デンヨー★防音型エンジンTIG溶接機★DAT-300RS",
       "category": "発電機・溶接機・コンプレッサー",
       "image": "/images_db/item95.jpg"
+    },
+    {
+      "id": 96,
+      "title": "自動貼付機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item96.png"
+    },
+    {
+      "id": 97,
+      "title": "自動計量包装値付機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item97.jpg"
+    },
+    {
+      "id": 98,
+      "title": "自動真空包装機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item98.png"
+    },
+    {
+      "id": 99,
+      "title": "自動包装機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item99.jpg"
+    },
+    {
+      "id": 100,
+      "title": "梱包機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item100.jpg"
+    },
+    {
+      "id": 101,
+      "title": "圧縮梱包機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item101.jpg"
+    },
+    {
+      "id": 102,
+      "title": "ストレッチ包装機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item102.jpg"
+    },
+    {
+      "id": 103,
+      "title": "シュリンク包装機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item103.jpg"
+    },
+    {
+      "id": 104,
+      "title": "シーラー機",
+      "category": "金属加工機械・板金機械",
+      "image": "/images_db/item104.jpg"
     }
   ]
 }
