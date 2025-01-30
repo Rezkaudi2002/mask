@@ -821,6 +821,138 @@
       "title": "3Dプリンター",
       "category": "望遠鏡・顕微鏡・測定機器",
       "image": "/images_db/item130.jpg"
+    },
+    {
+      "id": 131,
+      "title": "製麺機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item131.jpg"
+    },
+    {
+      "id": 132,
+      "title": "製氷機(アイスメーカー)",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item132.jpg"
+    },
+    {
+      "id": 133,
+      "title": "業務用冷蔵庫、冷凍庫",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item133.jpg"
+    },
+    {
+      "id": 134,
+      "title": "業務用ミキサー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item134.jpg"
+    },
+    {
+      "id": 135,
+      "title": "大成機械工業★製麺機 タイセーⅡ型",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item135.jpg"
+    },
+    {
+      "id": 136,
+      "title": "器具洗浄機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item136.jpg"
+    },
+    {
+      "id": 137,
+      "title": "券売機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item137.jpg"
+    },
+    {
+      "id": 138,
+      "title": "分割丸め機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item138.jpg"
+    },
+    {
+      "id": 139,
+      "title": "冷蔵ショーケース",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item139.png"
+    },
+    {
+      "id": 140,
+      "title": "リバースシート(パイローラー)",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item140.png"
+    },
+    {
+      "id": 141,
+      "title": "ゆで麺機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item141.jpg"
+    },
+    {
+      "id": 142,
+      "title": "モルダー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item142.jpg"
+    },
+    {
+      "id": 143,
+      "title": "マルゼン★ゆで麺機 中華レンジ★外管式 スタンダードタイプ★MRS-171E",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item143.jpg"
+    },
+    {
+      "id": 144,
+      "title": "プレハブ冷凍庫、冷蔵庫",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item144.jpg"
+    },
+    {
+      "id": 145,
+      "title": "スライサー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item145.jpg"
+    },
+    {
+      "id": 146,
+      "title": "コーヒー焙煎機",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item146.jpg"
+    },
+    {
+      "id": 147,
+      "title": "ガスフライヤー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item147.png"
+    },
+    {
+      "id": 148,
+      "title": "オーブン",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item148.jpg"
+    },
+    {
+      "id": 149,
+      "title": "エアーシャワー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item149.jpg"
+    },
+    {
+      "id": 150,
+      "title": "アイスクリームフリーザー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item150.png"
+    },
+    {
+      "id": 151,
+      "title": "NISSEI 日世★ソフトクリームサーバー★NA-9226★卓上★フリーザー",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item151.jpg"
+    },
+    {
+      "id": 152,
+      "title": "AICOH 愛工舎★全自動分割丸目機★デバイダー ラウンダー★1 30pcs★60Hz",
+      "category": "その他の業務用機械",
+      "image": "/images_db/item152.jpg"
     }
   ]
 }
