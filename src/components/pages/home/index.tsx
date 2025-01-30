@@ -26,7 +26,6 @@ const Index = () => {
       <Flow />
       <WhyChoose />
       <VideoSection />
-      <BlogsPost />
       <ContactBanner />
       <PurchasedItems />
       <PurchaseResults />
@@ -34,6 +33,7 @@ const Index = () => {
       <BusinessPolicy />
       <ContactBanner />
       <ReviewsReceived />
+      <BlogsPost />
       <FrequentlyAskedQuestions />
       <ContactBanner />
       <CompanyProfile />

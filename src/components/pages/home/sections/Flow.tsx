@@ -7,7 +7,7 @@ const Flow: React.FC = () => {
         <section className=" relative w-full py-[50px] lg:py-20 text-center px-4">
             <Image className=" absolute -z-10 top-0 left-0 object-cover" fill src={"/images/home-page/flow-bg.png"} alt="Background image for flow section" />
 
-            <h3 className="font-black text-xl lg:text-2xl">ご自宅にある工具・機械で</h3>
+            <h3 className="font-black text-xl lg:text-2xl">お持ちの工具・機械で</h3>
             <h2 className=" mx-auto font-black text-[32px] lg:text-6xl text-[#D51A16] pt-8">
                 <span className="relative">
                     こんなお悩み
@@ -17,9 +17,9 @@ const Flow: React.FC = () => {
             </h2>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 mt-12">
-                <FlowCard imageSrc="/images/home-page/mask1.png" title="使い古していて 動くかわからない" />
-                <FlowCard imageSrc="/images/home-page/mask2.png" title="使い古していて 動くかわからない" />
-                <FlowCard imageSrc="/images/home-page/mask3.png" title="使い古していて 動くかわからない" />
+                <FlowCard imageSrc="/images/home-page/mask1.png" title="しばらく使っていなくて動くかわからない" />
+                <FlowCard imageSrc="/images/home-page/mask2.png" title="大型重量物で自分で動かすことができない" />
+                <FlowCard imageSrc="/images/home-page/mask3.png" title="期日までに現金化したい" />
             </div>
 
             <div className="mt-10 flex items-center justify-center gap-4 flex-col">
@@ -29,7 +29,9 @@ const Flow: React.FC = () => {
                 </div>
             </div>
 
-            <p className="max-w-[736px] text-base leading-8 md:text-xl font-normal mt-4 mx-auto md:leading-10">Hadisでは、ご家庭で使用された中古機械や工具、工場・工事現場で使用する大型電動機具などの査定・買取を承っております。他店に負けない正当な価格での 査定に自信があります。まずはお気軽に査定をご依頼ください。</p>
+            <p className="max-w-[736px] text-base leading-8 md:text-xl font-normal mt-4 mx-auto md:leading-10"> ハディズでは、DIY用の工具・電動工具をはじめ、工場で使用する大型機械など、
+                幅広く査定・買取を承っております。他店に負けない正当な価格での
+                査定に自信があります。まずはお気軽に査定をご依頼ください。</p>
         </section>
     )
 };

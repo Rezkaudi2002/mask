@@ -36,28 +36,28 @@
   "snsLinks": [
     {
       "id": "1",
-      "name": "facebook-icon",
+      "name": "facebook",
       "menuImageSrc": "/images/icons/facebook-colored.svg",
       "footerImageSrc": "/images/icons/facebook-white.svg",
       "href": "/"
     },
     {
       "id": "2",
-      "name": "instagram-icon",
+      "name": "instagram",
       "menuImageSrc": "/images/icons/instagram-colored.svg",
       "footerImageSrc": "/images/icons/instagram-white.svg",
       "href": "/"
     },
     {
       "id": "3",
-      "name": "twitter-icon",
+      "name": "twitter",
       "menuImageSrc": "/images/icons/twitter-x-colored.svg",
       "footerImageSrc": "/images/icons/twitter-x-white.svg",
       "href": "/"
     },
     {
       "id": "4",
-      "name": "youtube-icon",
+      "name": "youtube",
       "menuImageSrc": "/images/icons/youtube-colored.svg",
       "footerImageSrc": "/images/icons/youtube-white.svg",
       "href": "/"

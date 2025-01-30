@@ -16,8 +16,8 @@ const Footer: React.FC = () => {
             <div className="bg-gradient-to-r from-[#D51A16] to-[#B81122] py-10 px-4 space-y-5 lg:space-y-6 font-medium text-sm lg:text-base text-white flex items-center justify-center w-full flex-col">
 
                 {/* logo */}
-                <Link href={"/"} className="w-[111px] h-[26px] relative block">
-                    <Image src="/images/hadis-logo.png" alt="Hadis International Logo" fill priority />
+                <Link href={"/"} className="block">
+                    <Image src="/images/hadis-logo.png" alt="Hadis International Logo" unoptimized width={132} height={64} priority />
                 </Link>
 
                 {/* navitems */}
