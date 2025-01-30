@@ -47,7 +47,7 @@ const PurchasedItems = () => {
       {/* items */}
       <div className="flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
         {filteredItems.map((item) => (
-          <div className="w-[47%] md:w-[30%] lg:w-[23%]" key={item.id}>
+          <div className="w-[47%] md:w-[30%] lg:w-[22%]" key={item.id}>
             <PurchaseItemsCard
               id={item.id}
               image={item.image}
