@@ -665,6 +665,162 @@
       "title": "シーラー機",
       "category": "金属加工機械・板金機械",
       "image": "/images_db/item104.jpg"
+    },
+    {
+      "id": 105,
+      "title": "電気式簡易ボイラー",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item105.webp"
+    },
+    {
+      "id": 106,
+      "title": "電動ろくろ",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item106.jpeg"
+    },
+    {
+      "id": 107,
+      "title": "自動転写プレス機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item107.jpg"
+    },
+    {
+      "id": 108,
+      "title": "自動彫刻機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item108.jpeg"
+    },
+    {
+      "id": 109,
+      "title": "腕ミシン",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item109.jpg"
+    },
+    {
+      "id": 110,
+      "title": "穴かがりミシン",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item110.jpg"
+    },
+    {
+      "id": 111,
+      "title": "真空成型機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item111.png"
+    },
+    {
+      "id": 112,
+      "title": "皮漉機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item112.jpg"
+    },
+    {
+      "id": 113,
+      "title": "業務用印刷機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item113.jpg"
+    },
+    {
+      "id": 114,
+      "title": "業務用アイロン台",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item114.jpg"
+    },
+    {
+      "id": 115,
+      "title": "工業用ミシン",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item115.jpg"
+    },
+    {
+      "id": 116,
+      "title": "大判ラミネーター",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item116.jpg"
+    },
+    {
+      "id": 117,
+      "title": "大判プリンター",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item117.png"
+    },
+    {
+      "id": 118,
+      "title": "大判オートトリマー",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item118.png"
+    },
+    {
+      "id": 119,
+      "title": "合鍵複製機(キーマシン)",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item119.png"
+    },
+    {
+      "id": 120,
+      "title": "刺繍ミシン . 刺しゅうミシン. 刺繍機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item120.jpg"
+    },
+    {
+      "id": 121,
+      "title": "レーザー加工機 . レーザー彫刻機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item121.jpg"
+    },
+    {
+      "id": 122,
+      "title": "ラベルプリンタ",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item122.jpg"
+    },
+    {
+      "id": 123,
+      "title": "ミマキ★小型フラットベッドカッティングプロッタ★CFL-605RT★取説 未使用替刃など付属品付",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item123.jpg"
+    },
+    {
+      "id": 124,
+      "title": "ベルトコンベア検針機",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item124.jpg"
+    },
+    {
+      "id": 125,
+      "title": "フラットベッドカッティングプロッタ",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item125.png"
+    },
+    {
+      "id": 126,
+      "title": "UVプリンタ",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item126.jpg"
+    },
+    {
+      "id": 127,
+      "title": "UV-LEDインクジェットプリンタ",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item127.jpg"
+    },
+    {
+      "id": 128,
+      "title": "Tシャツプリンター",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item128.jpg"
+    },
+    {
+      "id": 129,
+      "title": "Mimaki ミマキ★大判オートトリマー★AT-200",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item129.jpg"
+    },
+    {
+      "id": 130,
+      "title": "3Dプリンター",
+      "category": "望遠鏡・顕微鏡・測定機器",
+      "image": "/images_db/item130.jpg"
     }
   ]
 }
