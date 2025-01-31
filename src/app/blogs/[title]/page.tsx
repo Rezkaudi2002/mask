@@ -62,7 +62,6 @@ export async function generateMetadata({ params }: IBlogPage): Promise<Metadata>
 
 }
 
-
 export default async function BlogDetailsPage({ params }: IBlogPage) {
   const { title } = await params
 
