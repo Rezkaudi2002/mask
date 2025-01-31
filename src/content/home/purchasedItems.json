@@ -39,6 +39,10 @@
     {
       "id": 10,
       "title": "その他の業務用機械"
+    },
+    {
+      "id": 11,
+      "title": "望遠鏡。顕微鏡。測定機器"
     }
   ],
   "items": [
@@ -953,6 +957,102 @@
       "title": "AICOH 愛工舎★全自動分割丸目機★デバイダー ラウンダー★1 30pcs★60Hz",
       "category": "その他の業務用機械",
       "image": "/images_db/item152.jpg"
+    },
+    {
+      "id": 153,
+      "title": "電気計測器",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item153.jpg"
+    },
+    {
+      "id": 154,
+      "title": "試験器",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item154.jpeg"
+    },
+    {
+      "id": 155,
+      "title": "計測器",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item155.jpg"
+    },
+    {
+      "id": 156,
+      "title": "画像寸法測定器",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item156.png"
+    },
+    {
+      "id": 157,
+      "title": "測定顕微鏡",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item157.jpg"
+    },
+    {
+      "id": 158,
+      "title": "工業用顕微鏡",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item158.jpg"
+    },
+    {
+      "id": 159,
+      "title": "天体望遠鏡",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item159.jpg"
+    },
+    {
+      "id": 160,
+      "title": "双眼鏡",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item160.png"
+    },
+    {
+      "id": 161,
+      "title": "光学顕微鏡",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item161.jpg"
+    },
+    {
+      "id": 162,
+      "title": "三次元測定器",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item162.jpg"
+    },
+    {
+      "id": 163,
+      "title": "レーザーレベル",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item163.jpg"
+    },
+    {
+      "id": 164,
+      "title": "トランシット",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item164.jpg"
+    },
+    {
+      "id": 165,
+      "title": "トータルステーション",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item165.jpeg"
+    },
+    {
+      "id": 166,
+      "title": "スペクトラムアナライザ",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item166.jpg"
+    },
+    {
+      "id": 167,
+      "title": "オシロスコープ",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item167.png"
+    },
+    {
+      "id": 168,  
+      "title": "オートレベル",
+      "category": "望遠鏡。顕微鏡。測定機器",
+      "image": "/images_db/item168.jpg"
     }
   ]
 }
