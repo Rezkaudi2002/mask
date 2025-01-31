@@ -10,7 +10,7 @@
     },
     {
       "id": 3,
-      "title": "農業機械・木材破砕機"
+      "title": "農業機械"
     },
     {
       "id": 4,
@@ -185,103 +185,103 @@
     {
       "id": 23,
       "title": "除雪機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item23.png"
     },
     {
       "id": 24,
       "title": "遠赤乾燥機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item24.jpg"
     },
     {
       "id": 25,
       "title": "運搬車 (トレーラー)",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item25.jpg"
     },
     {
       "id": 26,
       "title": "耕運機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item26.jpg"
     },
     {
       "id": 27,
       "title": "籾すり機（もみすり機）",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item27.png"
     },
     {
       "id": 28,
       "title": "稲刈り機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item28.jpeg"
     },
     {
       "id": 29,
       "title": "破砕機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item29.png"
     },
     {
       "id": 30,
       "title": "田植機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item30.jpg"
     },
     {
       "id": 31,
       "title": "山本ハイパー乾燥機★Pro-win★ウィンディ ネックス★HD-25MR2",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item31.jpg"
     },
     {
       "id": 32,
       "title": "ホイールローダー",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item32.jpg"
     },
     {
       "id": 33,
       "title": "ハーベスター 自動脱穀機",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item33.jpg"
     },
     {
       "id": 34,
       "title": "トラクター",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item34.jpg"
     },
     {
       "id": 35,
       "title": "サタケ★ネオライスマスター★もみすり機★NRZ350FAK",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item35.jpg"
     },
     {
       "id": 36,
       "title": "コンバイン",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item36.jpg"
     },
     {
       "id": 37,
       "title": "YANMAR ヤンマー★自動脱穀機★PKG85",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item37.jpg"
     },
     {
       "id": 38,
       "title": "YANMAR ヤンマー★バインダー★動力刈取機★Be214★2輪1条",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item38.jpg"
     },
     {
       "id": 39,
       "title": "YANMAR ヤンマー★コンバイン★3条刈り★YH323",
-      "category": "農業機械・木材破砕機",
+      "category": "農業機械",
       "image": "/images_db/item39.jpg"
     },
     {
