@@ -43,6 +43,10 @@
     {
       "id": 11,
       "title": "望遠鏡。顕微鏡。測定機器"
+    },
+    {
+      "id" : 12,
+      "title": "その他の買取対応"
     }
   ],
   "items": [
@@ -1053,6 +1057,138 @@
       "title": "オートレベル",
       "category": "望遠鏡。顕微鏡。測定機器",
       "image": "/images_db/item168.jpg"
+    },
+    {
+      "id": 169,
+      "title": "靴修理フィニッシャー",
+      "category": "その他の買取対応",
+      "image": "/images_db/item169.jpg"
+    },
+    {
+      "id": 170,
+      "title": "金属検出機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item170.jpg"
+    },
+    {
+      "id": 171,
+      "title": "遠心機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item171.jpeg"
+    },
+    {
+      "id": 172,
+      "title": "船外機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item172.jpg"
+    },
+    {
+      "id": 173,
+      "title": "自動販売機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item173.jpg"
+    },
+    {
+      "id": 174,
+      "title": "粉砕機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item174.png"
+    },
+    {
+      "id": 175,
+      "title": "物置",
+      "category": "その他の買取対応",
+      "image": "/images_db/item175.jpg"
+    },
+    {
+      "id": 176,
+      "title": "焼却炉",
+      "category": "その他の買取対応",
+      "image": "/images_db/item176.jpg"
+    },
+    {
+      "id": 177,
+      "title": "油圧クリッカー",
+      "category": "その他の買取対応",
+      "image": "/images_db/item177.png"
+    },
+    {
+      "id": 178,
+      "title": "恒温器",
+      "category": "その他の買取対応",
+      "image": "/images_db/item178.png"
+    },
+    {
+      "id": 179,
+      "title": "屋外風呂シャワーユニット",
+      "category": "その他の買取対応",
+      "image": "/images_db/item179.jpg"
+    },
+    {
+      "id": 180,
+      "title": "大型シュレッダー",
+      "category": "その他の買取対応",
+      "image": "/images_db/item180.jpg"
+    },
+    {
+      "id": 181,
+      "title": "冷却水循環装置 チラー",
+      "category": "その他の買取対応",
+      "image": "/images_db/item181.jpg"
+    },
+    {
+      "id": 182,
+      "title": "全自動線切断皮剥装置",
+      "category": "その他の買取対応",
+      "image": "/images_db/item182.jpg"
+    },
+    {
+      "id": 183,
+      "title": "仮設トイレ",
+      "category": "その他の買取対応",
+      "image": "/images_db/item183.jpg"
+    },
+    {
+      "id": 184,
+      "title": "乾燥器",
+      "category": "その他の買取対応",
+      "image": "/images_db/item184.png"
+    },
+    {
+      "id": 185,
+      "title": "両替機",
+      "category": "その他の買取対応",
+      "image": "/images_db/item185.jpg"
+    },
+    {
+      "id": 186,
+      "title": "ホイスト",
+      "category": "その他の買取対応",
+      "image": "/images_db/item186.jpg"
+    },
+    {
+      "id": 187,
+      "title": "プレハブ",
+      "category": "その他の買取対応",
+      "image": "/images_db/item187.jpg"
+    },
+    {
+      "id": 188,
+      "title": "フォークリフト",
+      "category": "その他の買取対応",
+      "image": "/images_db/item188.jpg"
+    },
+    {
+      "id": 189,
+      "title": "オートクレーブ",
+      "category": "その他の買取対応",
+      "image": "/images_db/item189.jpg"
+    },
+    {
+      "id": 190,
+      "title": "Anritsu★コンベア式 金属検出機 金属探知機★ ★スーパーメポリⅡ★KD8013AW★ベルト交換済み 取説付",
+      "category": "その他の買取対応",
+      "image": "/images_db/item190.jpg"
     }
   ]
 }
