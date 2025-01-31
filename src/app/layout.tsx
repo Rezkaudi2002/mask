@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Noto_Sans_JP } from "next/font/google";
 import "@/styles/globals.css";
 
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
     siteName: "mac-hadis",
     images: [
-      { url: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b" }
+      { url: "/images/hadis-logo.png" }
     ]
   },
 
@@ -59,12 +60,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
     title: "中古機械、電動工具の高額買取のハディズ",
-    images: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b"
+    images: "/images/hadis-logo.png"
   },
 
-  // verification: {
-  //   google: "google-verification-token",
-  // },
+  verification: {
+    google: "id",
+  },
 
   category: "Sells",
 
@@ -78,6 +79,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth ">
+      <GoogleTagManager gtmId="G-id" />
       <body
         className={`${notoSansJP.variable} font-noto`}
       >
