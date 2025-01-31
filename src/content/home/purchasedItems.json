@@ -2,7 +2,7 @@
   "filter": [
     {
       "id": 1,
-      "title": "工作機械・精密加工機械"
+      "title": "工作機械。精密加工機械"
     },
     {
       "id": 2,
@@ -53,49 +53,49 @@
     {
       "id": 1,
       "title": "鋸盤 (バンドソー)",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item1.jpg"
     },
     {
       "id": 2,
       "title": "研削盤。研磨機",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item2.jpg"
     },
     {
       "id": 3,
       "title": "汎用旋盤",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item3.jpg"
     },
     {
       "id": 4,
       "title": "マシニングセンタ",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item4.jpg"
     },
     {
       "id": 5,
       "title": "ボール盤",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item5.jpg"
     },
     {
       "id": 6,
       "title": "プレス機械",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item6.png"
     },
     {
       "id": 7,
       "title": "フライス盤",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item7.jpg"
     },
     {
       "id": 8,
       "title": "NC旋盤",
-      "category": "工作機械・精密加工機械",
+      "category": "工作機械。精密加工機械",
       "image": "/images_db/item8.png"
     },
     {
@@ -671,7 +671,7 @@
     {
       "id": 104,
       "title": "シーラー機",
-      "category": "金属加工機械・板金機械",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item104.jpg"
     },
     {
