@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             <div className=" px-4 lg:px-7 flex overflow-y-auto items-center justify-between lg:justify-start gap-8 h-full relative ">
 
                 {/* logo */}
-                <Link href={"/"} className="w-[80px] h-[40px] lg:w-[132px] lg:h-[64px] relative block">
+                <Link href={"/"} className="w-[52px] h-[33px] lg:w-[101px] lg:h-[64px] relative block">
                     <Image src="/images/hadis-logo.png" alt="Hadis Company Logo" fill unoptimized priority />
                 </Link>
 
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
                     <div className=" hidden xl:flex items-center justify-start lg:justify-center gap-4">
                         {navbarLinksData?.snsLinks?.map(item =>
                             <Link key={item.id} href={item.href} title={`Navigate to ${item.name}`} target="_blank" >
-                                <Image src={item.menuImageSrc} alt={item.name} width={40} height={40} />
+                                <Image src={item.iconSrc} alt={item.name} width={40} height={40} />
                             </Link>
                         )}
                     </div>
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                     <div className="flex items-center justify-start lg:justify-center w-full gap-4">
                         {navbarLinksData?.snsLinks?.map(item =>
                             <Link key={item.id} href={item.href} title={`Navigate to ${item.name}`} target="_blank" >
-                                <Image src={item.menuImageSrc} alt={item.name} width={40} height={40} />
+                                <Image src={item.iconSrc} alt={item.name} width={40} height={40} />
                             </Link>
                         )}
                     </div>
