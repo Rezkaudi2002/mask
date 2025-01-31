@@ -30,11 +30,11 @@
     },
     {
       "id": 8,
-      "title": "望遠鏡・顕微鏡・測定機器"
+      "title": "プリンター。ミシン。DIY用機器"
     },
     {
       "id": 9,
-      "title": "プリンター。ミシン。DIY用機器"
+      "title": "業務用厨房機器､ベーカリー機器"
     },
     {
       "id": 10,
@@ -45,7 +45,7 @@
       "title": "望遠鏡。顕微鏡。測定機器"
     },
     {
-      "id" : 12,
+      "id": 12,
       "title": "その他の買取対応"
     }
   ],
@@ -833,25 +833,25 @@
     {
       "id": 131,
       "title": "製麺機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item131.jpg"
     },
     {
       "id": 132,
       "title": "製氷機(アイスメーカー)",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item132.jpg"
     },
     {
       "id": 133,
       "title": "業務用冷蔵庫、冷凍庫",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item133.jpg"
     },
     {
       "id": 134,
       "title": "業務用ミキサー",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item134.jpg"
     },
     {
@@ -863,43 +863,43 @@
     {
       "id": 136,
       "title": "器具洗浄機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item136.jpg"
     },
     {
       "id": 137,
       "title": "券売機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item137.jpg"
     },
     {
       "id": 138,
       "title": "分割丸め機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item138.jpg"
     },
     {
       "id": 139,
       "title": "冷蔵ショーケース",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item139.png"
     },
     {
       "id": 140,
       "title": "リバースシート(パイローラー)",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item140.png"
     },
     {
       "id": 141,
       "title": "ゆで麺機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item141.jpg"
     },
     {
       "id": 142,
       "title": "モルダー",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item142.jpg"
     },
     {
@@ -911,43 +911,43 @@
     {
       "id": 144,
       "title": "プレハブ冷凍庫、冷蔵庫",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item144.jpg"
     },
     {
       "id": 145,
       "title": "スライサー",
-      "category": "梱包機 . 包装機",
+      "category": "リバースシート(パイローラー)",
       "image": "/images_db/item145.jpg"
     },
     {
       "id": 146,
       "title": "コーヒー焙煎機",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item146.jpg"
     },
     {
       "id": 147,
       "title": "ガスフライヤー",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item147.png"
     },
     {
       "id": 148,
       "title": "オーブン",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item148.jpg"
     },
     {
       "id": 149,
       "title": "エアーシャワー",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item149.jpg"
     },
     {
       "id": 150,
       "title": "アイスクリームフリーザー",
-      "category": "梱包機 . 包装機",
+      "category": "業務用厨房機器､ベーカリー機器",
       "image": "/images_db/item150.png"
     },
     {
@@ -1053,7 +1053,7 @@
       "image": "/images_db/item167.png"
     },
     {
-      "id": 168,  
+      "id": 168,
       "title": "オートレベル",
       "category": "望遠鏡。顕微鏡。測定機器",
       "image": "/images_db/item168.jpg"
