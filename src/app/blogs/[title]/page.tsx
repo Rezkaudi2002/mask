@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import { getBlogByTitle } from "@/services/blogs/getBlogByTitle";
 import { Metadata } from "next";
 
+// baseUrl
+import { baseUrl } from '@/utils/baseUrl';
+
 
 interface IBlogPage {
   params: Promise<{
@@ -22,21 +25,42 @@ export async function generateMetadata({ params }: IBlogPage): Promise<Metadata>
 
   if (!data) {
     return {
-      title: "Not found blog",
-      description: "Not found blog"
+      title: "Blog Not Found",
     }
   }
 
   else {
     return {
       title: data?.title,
-      description: data?.description
+      description: data?.description,
+      // keywords: "",
+      openGraph: {
+        type: "article",
+        url: `${baseUrl}/blogs/${data?.title}`,
+        title: data?.title,
+        description: data?.description,
+        siteName: "mac-hadis",
+        images: [
+          { url: data?.imageSrc }
+        ]
+      },
+
+      twitter: {
+        card: "summary_large_image",
+        title: data?.title,
+        description: data?.description,
+        images: data?.imageSrc
+      },
+      alternates: {
+        canonical: `${baseUrl}/blogs/${data?.title}`
+      },
+      // robots: "index, follow",
+
     }
   }
 
 
 }
-
 
 export default async function BlogDetailsPage({ params }: IBlogPage) {
   const { title } = await params

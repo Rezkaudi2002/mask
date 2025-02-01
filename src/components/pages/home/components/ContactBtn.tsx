@@ -32,7 +32,7 @@ const ContactBtn: React.FC<ContactBtnProps> = ({ children, className = "", varia
             target={variant === "blue" ? "_self" : "_blank"}
             rel="noopener noreferrer"
             aria-label={`Contact us via ${variant === "red" ? "phone" : variant === "blue" ? "online support" : "Line app"}`}
-            className={`${gradientBg}  relative font-black rounded h-14 text-white flex items-center justify-center w-full sm:w-fit px-3 sm:px-14 py-3 gap-3 ${className}`}
+            className={`${gradientBg}  relative font-black rounded h-14 text-white flex items-center justify-center sm:w-fit px-3 sm:px-14 py-3 gap-3 ${className}`}
             onClick={onClick}
         >
             {children}

@@ -3,11 +3,17 @@ import { Metadata } from "next"
 // page
 import Blogs from "@/components/pages/blogs"
 
+// baseUrl
+import { baseUrl } from '@/utils/baseUrl';
+
 // metadata
 export const metadata: Metadata = {
-  title: "All Blogs",
-  description: "中古機械、電動工具の高額買取ならハディズへ。",
-  keywords: "大型UVインクジェットプリンター買取,機械・電動工具の高価買取,簡単！買取の手順,Hadis INTERNATIONAL",
+  title: "私たちのブログ ",
+  description: "ツールや機械に関する情報が必要な場合は、ここでヒントをいくつか紹介します。また、購入した製品の分解と更新のプロセスについても説明します。",
+  keywords: "ブログ",
+  alternates: {
+    canonical: `${baseUrl}/blogs`
+  },
 }
 
 export default function BlogsPage() {

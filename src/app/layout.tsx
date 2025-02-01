@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Noto_Sans_JP } from "next/font/google";
 import "@/styles/globals.css";
 
@@ -7,21 +7,13 @@ import "@/styles/globals.css";
 import Header from "@/components/common/sections/Header";
 import Footer from "@/components/common/sections/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// baseUrl
+import { baseUrl } from '@/utils/baseUrl';
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "700", "900"], // Include the font weights you need
+  weight: ["400", "500", "700", "900"], // Include the font weights you need
 });
 
 
@@ -29,37 +21,55 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   icons: "/favicon.ico",
   title: {
-    template: "%s | Hadis",
     default: "中古機械、電動工具の高額買取のハディズ",
+    template: "%s | mac-hadis",
   },
-  description: "中古機械、電動工具の高額買取ならハディズへ。",
-  keywords: "大型UVインクジェットプリンター買取,機械・電動工具の高価買取,簡単！買取の手順,Hadis INTERNATIONAL",
 
+  description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします",
+
+  applicationName: "mac-hadis",
+
+  generator: "Next.js",
+
+  keywords: ["大型UVインクジェットプリンター買取", "機械・電動工具の高価買取", "簡単！買取の手順", "Hadis INTERNATIONAL"],
+
+  referrer: "origin",
+
+  creator: "mac-hadis",
+
+  publisher: "mac-hadis",
+
+  // robots: "index, follow",
+
+  alternates: {
+    canonical: baseUrl
+  },
 
   openGraph: {
     type: "website",
+    url: baseUrl,
     title: "中古機械、電動工具の高額買取のハディズ",
-    siteName: "mac-hadis",
-    url: "https://www.mac-hadis.com/",
-    images: [
-      {
-        url: "https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b",
-        width: 800,
-        height: 600,
-      }
-    ],
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+    siteName: "mac-hadis",
+    images: [
+      { url: "/images/hadis-logo.png" }
+    ]
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "中古機械、電動工具の高額買取のハディズ",
-    images: ["https://remocolla.odoo.com/web/image/website/1/logo?unique=825752b"],
     description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします！",
+    title: "中古機械、電動工具の高額買取のハディズ",
+    images: "/images/hadis-logo.png"
   },
-  alternates: {
-    canonical: "https://www.mac-hadis.com/",
-  }
 
+  verification: {
+    google: "id",
+  },
+
+  category: "Sells",
+
+  classification: "Sells",
 }
 
 export default function RootLayout({
@@ -69,8 +79,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth ">
+      <GoogleTagManager gtmId="G-id" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}
+        className={`${notoSansJP.variable} font-noto`}
       >
         <main>
           <Header />
