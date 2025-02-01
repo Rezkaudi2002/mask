@@ -14,19 +14,19 @@
     },
     {
       "id": 4,
-      "title": "梱包機 . 包装機"
+      "title": "金属加工機械。板金機械 (建築板金機械)"
     },
     {
       "id": 5,
-      "title": "管工事機械・工具"
+      "title": "発電機。溶接機。エアコンプレッサ"
     },
     {
       "id": 6,
-      "title": "住宅工事工具、大工機械"
+      "title": "管工事機械・工具"
     },
     {
       "id": 7,
-      "title": "発電機。溶接機。エアコンプレッサ"
+      "title": "住宅工事工具。大工機械"
     },
     {
       "id": 8,
@@ -34,11 +34,11 @@
     },
     {
       "id": 9,
-      "title": "業務用厨房機器､ベーカリー機器"
+      "title": "梱包機 . 包装機"
     },
     {
       "id": 10,
-      "title": "梱包機 . 包装機"
+      "title": "業務用厨房機器､ベーカリー機器"
     },
     {
       "id": 11,
@@ -113,7 +113,7 @@
     {
       "id": 11,
       "title": "油圧プレス",
-      "category": "自動車整備機械。自動車板金機械",
+      "category": "金属加工機械。板金機械 (建築板金機械)",
       "image": "/images_db/item11.jpg"
     },
     {
@@ -389,145 +389,145 @@
     {
       "id": 57,
       "title": "集じん機",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item57.jpg"
     },
     {
       "id": 58,
       "title": "足場 . ローリングタワー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item58.jpg"
     },
     {
       "id": 59,
       "title": "アルミ矢板 .アルミブリッジ",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item59.jpeg"
     },
     {
       "id": 60,
       "title": "アルミ矢板 .アルミブリッジ",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item60.jpg"
     },
     {
       "id": 61,
       "title": "自動カンナ . 手押しかんな",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item61.jpg"
     },
     {
       "id": 62,
       "title": "気圧リフター",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item62.jpg"
     },
     {
       "id": 63,
       "title": "木工旋盤",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item63.jpg"
     },
     {
       "id": 64,
       "title": "日立工機★継手・仕口加工機★M25F",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item64.jpg"
     },
     {
       "id": 65,
       "title": "帯のこ盤(バンドソー)",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item65.jpg"
     },
     {
       "id": 66,
       "title": "伊藤産業★木工用フラッシュプレス ホットプレス★PL2400W4枚定盤",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item66.jpg"
     },
     {
       "id": 67,
       "title": "仕上かんな盤",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item67.jpg"
     },
     {
       "id": 68,
       "title": "丸のこ盤 . 横切盤",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item68.jpg"
     },
     {
       "id": 69,
       "title": "万能木工機",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item69.jpg"
     },
     {
       "id": 70,
       "title": "モルタルミキサー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item70.jpg"
     },
     {
       "id": 71,
       "title": "ホゾキリ",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item71.jpg"
     },
     {
       "id": 72,
       "title": "ベルトサンダー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item72.jpg"
     },
     {
       "id": 73,
       "title": "フロアスクレーパー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item73.webp"
     },
     {
       "id": 74,
       "title": "フラッシュプレス",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item74.jpg"
     },
     {
       "id": 75,
       "title": "パネルソー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item75.jpg"
     },
     {
       "id": 76,
       "title": "エンジンコンプレッサー",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item76.jpg"
     },
     {
       "id": 77,
       "title": "エアレス塗装機",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item77.jpg"
     },
     {
       "id": 78,
       "title": "エアコンプレッサ",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item78.jpg"
     },
     {
       "id": 79,
       "title": "TOKIWA 常盤工業★角のみ盤 木工 ほぞ穴 フライス★MH-30",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item79.jpg"
     },
     {
       "id": 80,
       "title": "SHINX シンクス★全自動型・パネルソー★切断長さ210cm",
-      "category": "住宅工事工具、大工機械",
+      "category": "住宅工事工具。大工機械",
       "image": "/images_db/item80.jpg"
     },
     {
@@ -653,7 +653,7 @@
     {
       "id": 101,
       "title": "圧縮梱包機",
-      "category": "梱包機 . 包装機",
+      "category": "梱包機 。包装機",
       "image": "/images_db/item101.jpg"
     },
     {
