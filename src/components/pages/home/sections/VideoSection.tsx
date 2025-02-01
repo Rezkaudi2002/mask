@@ -1,6 +1,6 @@
 const VideoSection = () => {
   return (
-    <section className=" py-[80px] lg:py-[120px]">
+    <section className="hidden py-[80px] lg:py-[120px]">
       <video
         controls
         className="md:mx-auto w-full md:w-[80%] lg:max-w-[928px] h-full"
