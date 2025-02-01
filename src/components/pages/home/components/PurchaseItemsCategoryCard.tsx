@@ -15,8 +15,8 @@ const PurchaseItemsCategoryCard = ({
     <button
       key={id}
       className={`
-    px-[16px] py-[11px] lg:p-[15px] text-center border-[2px] relative w-fit md:max-w-[24%] 
-    text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px] font-noto font-black min-w-[215px] lg:min-w-[275px]
+    px-[16px] py-[11px] lg:p-[15px] text-center border-[2px] relative w-fit md:max-w-[27%] 
+    text-[12px] lg:text-[16px] leading-[18px] lg:leading-[24px] font-noto font-black min-w-[252px] lg:min-w-[325px]
     ${
       activeCategory === title
         ? "border-[#990E1C] text-white gradient-red text-shadow-red"

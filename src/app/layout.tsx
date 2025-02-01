@@ -19,7 +19,7 @@ const notoSansJP = Noto_Sans_JP({
 
 // metadata
 export const metadata: Metadata = {
-
+  icons: "/favicon.ico",
   title: {
     default: "中古機械、電動工具の高額買取のハディズ",
     template: "%s | mac-hadis",
