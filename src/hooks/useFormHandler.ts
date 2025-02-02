@@ -65,7 +65,6 @@ export const useFormHandler = () => {
       ...formData,
       image: formData.image || "No Image Provided",
       from_name: formData.name,
-      to_email: "hakamha8@gmail.com",
     };
 
     const welcomeParams = {

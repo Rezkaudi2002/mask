@@ -3,40 +3,47 @@ import Image from "next/image";
 
 interface IImageUploadProps {
   label: string;
-  image: string | null; // Base64 image string or null
-  setImage: (image: string | null) => void; // Callback to update Base64 string in parent state
+  image: string | null;
+  setImage: (image: string | null) => void;
 }
 
 const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
-  const compressImage = (file: File, maxWidth: number, maxHeight: number, quality: number): Promise<string> => {
+  const compressImage = (
+    file: File,
+    maxWidth: number,
+    maxHeight: number
+  ): Promise<string> => {
     return new Promise((resolve, reject) => {
-      const img = new window.Image(); // Use the DOM Image class via window
+      const img = new window.Image();
       const canvas = document.createElement("canvas");
       const reader = new FileReader();
 
       reader.onload = (event) => {
         img.src = event.target?.result as string;
-        img.onload = () => {
+        img.onload = async () => {
           let width = img.width;
           let height = img.height;
 
-          // Resize the image if it exceeds the maximum dimensions
           if (width > maxWidth || height > maxHeight) {
             const ratio = Math.min(maxWidth / width, maxHeight / height);
             width *= ratio;
             height *= ratio;
           }
 
-          // Draw the image on the canvas with the new dimensions
           canvas.width = width;
           canvas.height = height;
           const ctx = canvas.getContext("2d");
           ctx?.drawImage(img, 0, 0, width, height);
 
-          // Convert the canvas to a Base64 image with the specified quality
-          const base64 = canvas.toDataURL("image/jpeg", quality / 100);
+          let quality = 0.7;
+          let base64 = "";
+          do {
+            base64 = canvas.toDataURL("image/jpeg", quality);
+            quality -= 0.05;
+          } while (base64.length > 50 * 1024 && quality > 0.1);
+
           resolve(base64);
         };
       };
@@ -46,12 +53,13 @@ const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
     });
   };
 
-  const handleImageChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = event.target.files?.[0];
     if (file) {
       try {
-        // Compress the image to a maximum width/height of 800px and 70% quality
-        const base64Image = await compressImage(file, 800, 800, 70);
+        const base64Image = await compressImage(file, 800, 800);
         setImage(base64Image);
       } catch (error) {
         console.error("Error compressing image:", error);
@@ -62,7 +70,6 @@ const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
   };
 
   const handleDelete = () => setImage(null);
-
   const triggerFileInput = () => fileInputRef.current?.click();
 
   return (
@@ -71,11 +78,10 @@ const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
         {label}
       </label>
       <div className="flex items-center gap-4">
-        {/* Image Preview Section */}
         <div className="w-[300px] h-[150px] flex-1 border border-gray-300 rounded-md overflow-hidden flex items-center justify-center bg-gray-50">
           {image ? (
             <Image
-              src={image} // Use the Base64 string as the source
+              src={image}
               alt="Uploaded"
               width={300}
               height={150}
@@ -96,7 +102,6 @@ const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
           )}
         </div>
 
-        {/* File Input */}
         <input
           id="file-input"
           ref={fileInputRef}
@@ -107,7 +112,6 @@ const ImageUpload = ({ label, setImage, image }: IImageUploadProps) => {
           onChange={handleImageChange}
         />
 
-        {/* Action Buttons */}
         <div className="flex flex-col self-end gap-2">
           <button
             type="button"
