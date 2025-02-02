@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero: React.FC = () => {
     return (
-        <section aria-label="Hero section with business highlights" className="relative px-4 w-full h-[410px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] bg-[url(/images/home-page/hero-background-mobile.png)] sm:bg-[url(/images/home-page/hero-background.png)] bg-cover bg-no-repeat bg-right-bottom  sm:bg-right-top">
+        <section aria-label="Hero section with business highlights" className="relative px-4 w-full h-[410px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] bg-[url(/images/home-page/hero-background-mobile.png)] sm:bg-[url(/images/home-page/hero-background.png)] bg-cover bg-no-repeat bg-center sm:bg-right-top">
 
             <div className="flex lg:w-1/2 2xl:min-w-[1000px] items-start 2xl:items-center justify-center h-full 2xl:h-3/4 space-y-2 lg:space-y-7 flex-col pt-7 2xl:pt-20 sm:pl-12 pb-4">
 
