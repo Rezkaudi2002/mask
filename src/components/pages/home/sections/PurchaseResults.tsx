@@ -58,7 +58,9 @@ const PurchaseResults = () => {
           <SwiperSlide key={slider.id}>
             <ResultSlider
               image={slider.image}
-              title={slider.title}
+              title1={slider.title1}
+              title2={slider.title2}
+              title3={slider.title3}
               model={slider.model}
             />
           </SwiperSlide>
