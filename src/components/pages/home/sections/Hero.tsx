@@ -18,20 +18,20 @@ const Hero: React.FC = () => {
 
                 {/* details */}
                 <div className="flex w-full items-start xl:items-center justify-center gap-2 flex-col lg:flex-row text-white flex-wrap">
-                    <h1 className="flex gap-1 items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
+                    <h1 className="flex gap-1 items-center justify-center w-[158px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
                         <span className="text-[18px] lg:text-[28px]">創業</span>
-                        <span className="text-[58px] lg:text-[100px]">25</span>
+                        <span className="text-[46px] lg:text-[100px]">25</span>
                         <span className="mt-auto pb-2 text-[18px] lg:text-[28px]">年以上</span>
                     </h1>
-                    <h2 className="flex gap-1 lg:gap-2 items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
+                    <h2 className="flex gap-1 lg:gap-2 items-center justify-center w-[158px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black lg:text-[32px] text-xl">
                         <span className="flex items-center justify-center flex-col gap-1 lg:gap-2">
                             <span>出張費</span>
                             <span>査定費</span>
                         </span>
-                        <span className="text-[58px] lg:text-[100px]">0</span>
+                        <span className="text-[46px] lg:text-[100px]">0</span>
                         <span className="mt-auto pb-2">円</span>
                     </h2>
-                    <h2 className="flex items-center justify-center w-[175px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black text-3xl lg:text-[50px]">
+                    <h2 className="flex items-center justify-center w-[158px] h-[66px] lg:w-[276px] lg:h-[102px] gradient-red rounded-lg font-black text-3xl lg:text-[50px]">
                         全国対応
                     </h2>
                 </div>
