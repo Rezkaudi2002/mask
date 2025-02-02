@@ -126,7 +126,7 @@ const Inquiry = () => {
           value={formData.product_info}
           onChange={handleInputChange}
         />
-        <SelectField
+        {/* <SelectField
           id="inquirySource"
           name="inquiry_source"
           required={false}
@@ -138,7 +138,7 @@ const Inquiry = () => {
             { value: "web", label: "ウェブ検索" },
             { value: "ad", label: "広告" },
           ]}
-        />
+        /> */}
         <InputField
           id="productDetails"
           name="product_details"
