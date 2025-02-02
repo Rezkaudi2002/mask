@@ -70,7 +70,7 @@ export default async function BlogDetailsPage({ params }: IBlogPage) {
   // console.log(blogs[29].title)
   // console.log(decodeURI(title) === blogs[29].title)
 
-  const data = await getBlogByTitle(title)
+  const data: BlogPost | undefined = await getBlogByTitle(title)
 
   if (!data) {
     notFound()
