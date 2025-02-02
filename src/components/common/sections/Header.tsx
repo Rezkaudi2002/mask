@@ -78,9 +78,9 @@ const Header: React.FC = () => {
 
                     {/* contact details*/}
                     <div className="flex flex-col items-start justify-center w-full gap-4 ">
-                        <ContactBtn label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="w-full sm:w-full text-3xl" onClick={toggleMenu} />
-                        <ContactBtn label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
-                        <ContactBtn label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
+                        <ContactBtn mobileLabel={ContactDetails.phoneNumber.label} label={ContactDetails.phoneNumber.label} href={ContactDetails.phoneNumber.href} variant="red" className="w-full sm:w-full text-3xl" onClick={toggleMenu} />
+                        <ContactBtn mobileLabel={ContactDetails.support.label} label={ContactDetails.support.label} href={ContactDetails.support.href} variant="blue" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
+                        <ContactBtn mobileLabel={ContactDetails.line.label} label={ContactDetails.line.label} href={ContactDetails.line.href} variant="green" className="w-full sm:w-full text-xl" onClick={toggleMenu} />
                     </div>
 
                     {/* sns */}
