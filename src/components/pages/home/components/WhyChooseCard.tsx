@@ -20,7 +20,7 @@ const WhyChooseCard: React.FC<IWhyChooseCard> = ({ data }) => {
                 height={178}
                 unoptimized
                 loading="lazy"
-                className="w-full lg:max-h-[240px] lg:max-w-[40%]"
+                className="w-full lg:max-h-[240px] lg:max-w-[40%] object-contain"
             />
             {/* text side */}
             <div className="ml-0 lg:ml-8 flex-1">
