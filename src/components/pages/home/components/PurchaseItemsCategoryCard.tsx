@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 interface IPurchaseItemsCategoryCardProps {
   id: number;
   title: string;
@@ -11,6 +13,18 @@ const PurchaseItemsCategoryCard = ({
   activeCategory,
   changeCategory,
 }: IPurchaseItemsCategoryCardProps) => {
+  
+  const handleCategoryClick = () => {
+    changeCategory(title);
+
+    if (window.innerWidth < 600) {
+      const purchasedItemsSection = document.getElementById('scroll-to-items');
+      if (purchasedItemsSection) {
+        purchasedItemsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <button
       key={id}
@@ -23,7 +37,7 @@ const PurchaseItemsCategoryCard = ({
         : "text-[#111111] bg-white bg-[url(/images/home-page/doted-bg-btn.svg)] bg-cover border-[#111111]"
     }
   `}
-      onClick={() => changeCategory(title)}
+      onClick={handleCategoryClick}
     >
       {title}
     </button>
