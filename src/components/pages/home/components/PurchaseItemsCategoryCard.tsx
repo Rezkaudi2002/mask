@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 interface IPurchaseItemsCategoryCardProps {
   id: number;
   title: string;
