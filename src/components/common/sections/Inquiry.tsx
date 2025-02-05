@@ -21,7 +21,7 @@ const Inquiry = () => {
         お問い合わせ
       </h2>
       <form
-        className="space-y-6 md:w-[60%] lg:w-[40%] md:mx-auto"
+        className="space-y-6 max-w-[800px] md:mx-auto"
         onSubmit={handleSubmit}
       >
         {/* Input Fields */}
@@ -185,6 +185,8 @@ const Inquiry = () => {
             { value: "ad", label: "広告" },
           ]}
         /> */}
+
+        {/* new product */}
         <InputField
           id="productDetails"
           name="product_details"
@@ -216,9 +218,10 @@ const Inquiry = () => {
         {/* Image Upload */}
         <ImageUpload
           label="買取商品の写真があればこちらに添付してください。"
-          setImage={handleImageChange}
-          image={formData.image ?? null}
+          setImages={handleImageChange}
+          images={formData.images ?? new Array(3).fill(null)}
         />
+        {/*  */}
 
         {/* Textarea */}
         <textarea

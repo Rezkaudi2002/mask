@@ -17,8 +17,7 @@ export async function POST(req: Request) {
     product_details,
     product_condition,
     additional_notes,
-    attachment,
-    fileName,
+    images
   } = body;
 
   const transporter = nodemailer.createTransport({
@@ -30,33 +29,40 @@ export async function POST(req: Request) {
   });
 
   try {
-    const systemAttachments = attachment
-      ? [
-          {
-            filename: `${fileName || "attachment"}.png`,
-            content: Buffer.from(attachment.split(",")[1], "base64"),
-            cid: "attached-image",
-          },
-        ]
-      : [];
+    const systemAttachments = images
+      .filter((image: string): image is string => image !== null) // Remove null values
+      .map((image: string, index: number) => ({
+        filename: `attachment_${index + 1}.png`,
+        content: Buffer.from(image.split(",")[1], "base64"),
+        cid: `attached-image-${index}`,
+      }));
 
     // Email to system
     const systemEmailContent = `
-      <h2>新しいお問い合わせが届きました</h2>
-      <p><strong>お名前:</strong> ${name}</p>
-      <p><strong>メールアドレス:</strong> ${email}</p>
-      <p><strong>電話番号:</strong> ${phone}</p>
-      <p><strong>電話の許可:</strong> ${phonePermission === "allow_phone_call" ? "はい" : "いいえ"}</p>
-      <p><strong>使用状況:</strong> ${usageType === "business" ? "事業（個人事業者または法人）" : "個人で使用"}</p>
-      <p><strong>インボイス登録:</strong> ${invoiceRegistration === "registered" ? "はい" : "いいえ"}</p>
-      <p><strong>登録番号の提供:</strong> ${provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"}</p>
-      <p><strong>都道府県:</strong> ${city}</p>
-      <p><strong>商品情報:</strong> ${product_info}</p>
-      <p><strong>査定希望商品の詳細:</strong> ${product_details}</p>
-      <p><strong>商品の状態:</strong> ${product_condition === "scrap" ? "スクラップ" : product_condition === "used" ? "中古" : "新品"}</p>
-      <p><strong>追加のメモ:</strong> ${additional_notes}</p>
-      ${attachment ? `<p><strong>添付ファイル:</strong> ${fileName}.png</p><img src="cid:attached-image" alt="Attachment" />` : "<p>添付ファイルはありません。</p>"}
-    `;
+            <h2>新しいお問い合わせが届きました</h2>
+            <p><strong>お名前:</strong> ${name}</p>
+            <p><strong>メールアドレス:</strong> ${email}</p>
+            <p><strong>電話番号:</strong> ${phone}</p>
+            <p><strong>電話の許可:</strong> ${phonePermission === "allow_phone_call" ? "はい" : "いいえ"}</p>
+            <p><strong>使用状況:</strong> ${usageType === "business" ? "事業（個人事業者または法人）" : "個人で使用"}</p>
+            <p><strong>インボイス登録:</strong> ${invoiceRegistration === "registered" ? "はい" : "いいえ"}</p>
+            <p><strong>登録番号の提供:</strong> ${provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"}</p>
+            <p><strong>都道府県:</strong> ${city}</p>
+            <p><strong>商品情報:</strong> ${product_info}</p>
+            <p><strong>査定希望商品の詳細:</strong> ${product_details}</p>
+            <p><strong>商品の状態:</strong> ${product_condition === "scrap" ? "スクラップ" : product_condition === "used" ? "中古" : "新品"}</p>
+            <p><strong>追加のメモ:</strong> ${additional_notes}</p>
+     ${images.length
+        ? images
+          .filter((image: string): image is string => image !== null)
+          .map(
+            (image: string, index: number) => `<p><strong>添付ファイル ${index + 1}:</strong> attachment_${index + 1}.png</p>
+        <img src="cid:attached-image-${index}" alt="Attachment ${index + 1}" />`
+          )
+          .join("")
+        : "<p>添付ファイルはありません。</p>"
+      }
+`;
 
     await transporter.sendMail({
       from: `"Website Form" <${process.env.GMAIL_USER}>`,

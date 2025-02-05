@@ -27,7 +27,7 @@ const initialFormData: TFormData = {
   inquiry_source: "",
   product_details: "",
   product_condition: "",
-  image: null,
+  images: new Array(3).fill(null),
   additional_notes: "",
 };
 
@@ -44,24 +44,25 @@ export const useFormHandler = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleImageChange = (base64Image: string | null) => {
-    setFormData((prevData) => ({ ...prevData, image: base64Image }));
+  const handleImageChange = (images: (string | null)[]) => {
+    setFormData((prevData) => ({ ...prevData, images: images }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log(formData)
     setIsSubmitting(true);
 
     try {
       // Send only the Base64 image in `attachment`, and exclude it from `formData`
       const emailData = {
         ...formData,
-        attachment: formData.image || null, // Send Base64 image as attachment
-        fileName: formData.fileName || "attachment", // Include file name
+        // attachment: formData.image || null, // Send Base64 image as attachment
+        // fileName: formData.fileName || "attachment", // Include file name
       };
 
       // Remove the image field from the email's context
-      delete emailData.image;
+      // delete emailData.image;
 
       const response = await fetch("/api/send-email", {
         method: "POST",
