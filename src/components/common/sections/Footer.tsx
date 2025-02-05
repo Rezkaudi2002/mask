@@ -59,6 +59,7 @@ const Footer: React.FC = () => {
               <a
                 key={item.id}
                 href={item.href}
+                target="_blank"
                 title={`Navigate to ${item.name}`}
               >
                 <Image
