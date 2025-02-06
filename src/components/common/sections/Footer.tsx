@@ -59,6 +59,7 @@ const Footer: React.FC = () => {
               <a
                 key={item.id}
                 href={item.href}
+                target="_blank"
                 title={`Navigate to ${item.name}`}
               >
                 <Image
@@ -73,8 +74,8 @@ const Footer: React.FC = () => {
               <Link
                 key={item.id}
                 href={item.href}
-                title={`Navigate to ${item.name}`}
                 target="_blank"
+                title={`Navigate to ${item.name}`}
               >
                 <Image
                   src={item.iconSrc}
