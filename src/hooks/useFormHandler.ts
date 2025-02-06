@@ -25,9 +25,13 @@ const initialFormData: TFormData = {
   city: "",
   product_info: "",
   inquiry_source: "",
-  product_details: "",
-  product_condition: "",
-  images: new Array(3).fill(null),
+  productsList: [
+    {
+      product_details: "",
+      product_condition: "",
+      images: new Array(3).fill(null),
+    }
+  ],
   additional_notes: "",
 };
 
@@ -44,13 +48,53 @@ export const useFormHandler = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleImageChange = (images: (string | null)[]) => {
-    setFormData((prevData) => ({ ...prevData, images: images }));
+  const addProduct = () => {
+    setFormData((prevData) => ({
+      ...prevData,
+      productsList: [
+        ...prevData.productsList,
+        {
+          product_details: "",
+          product_condition: "",
+          images: new Array(3).fill(null),
+        },
+      ],
+    }));
+  };
+
+  const handleProductInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+    index?: number
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      productsList: prevData.productsList.map((product, i) =>
+        i === index ? { ...product, [name]: value } : product
+      ),
+    }));
+  };
+
+
+  const deleteProduct = (index: number) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      productsList: prevData.productsList.filter((_, i) => i !== index),
+    }));
+  };
+
+  const handleImageChange = (images: (string | null)[], index: number) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      productsList: prevData.productsList.map((product, i) =>
+        i === index ? { ...product, images } : product
+      ),
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData)
     setIsSubmitting(true);
 
     try {
@@ -97,6 +141,9 @@ export const useFormHandler = () => {
     handleInputChange,
     handleImageChange,
     handleSubmit,
+    addProduct,
+    deleteProduct,
+    handleProductInputChange
   };
 };
 
