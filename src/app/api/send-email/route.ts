@@ -20,6 +20,75 @@ export async function POST(req: Request) {
     images
   } = body;
 
+  // Mapping from the English value to the Japanese label for 都道府県
+  const cityMapping: { [key: string]: string } = {
+    not_selected: "選択してください",
+    hokkaido: "北海道",
+    aomori: "青森県",
+    iwate: "岩手県",
+    miyagi: "宮城県",
+    akita: "秋田県",
+    yamagata: "山形県",
+    fukushima: "福島県",
+    ibaraki: "茨城県",
+    tochigi: "栃木県",
+    gunma: "群馬県",
+    saitama: "埼玉県",
+    chiba: "千葉県",
+    tokyo: "東京都",
+    kanagawa: "神奈川県",
+    niigata: "新潟県",
+    toyama: "富山県",
+    ishikawa: "石川県",
+    fukui: "福井県",
+    yamanashi: "山梨県",
+    nagano: "長野県",
+    gifu: "岐阜県",
+    shizuoka: "静岡県",
+    aichi: "愛知県",
+    mie: "三重県",
+    shiga: "滋賀県",
+    kyoto: "京都府",
+    osaka: "大阪府",
+    hyogo: "兵庫県",
+    nara: "奈良県",
+    wakayama: "和歌山県",
+    tottori: "鳥取県",
+    shimane: "島根県",
+    okayama: "岡山県",
+    hiroshima: "広島県",
+    yamaguchi: "山口県",
+    tokushima: "徳島県",
+    kagawa: "香川県",
+    ehime: "愛媛県",
+    kochi: "高知県",
+    fukuoka: "福岡県",
+    saga: "佐賀県",
+    nagasaki: "長崎県",
+    kumamoto: "熊本県",
+    ooita: "大分県",
+    miyazaki: "宮崎県",
+    kagoshima: "鹿児島県",
+    okinawa: "沖縄県",
+  };
+
+  // Mapping for all product_condition options
+  const productConditionMapping: { [key: string]: string } = {
+    not_selected: "選択してください",
+    unused: "未使用品",
+    excellent: "極上美品",
+    good: "美品",
+    used: "中古なり",
+    damaged: "キズ汚れ破損あり",
+    junk: "ジャンク",
+    scrap: "スクラップ",
+  };
+
+  // Convert city and product condition values
+  const cityJP = cityMapping[city] || city;
+  const productConditionJP =
+    productConditionMapping[product_condition] || product_condition;
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -39,30 +108,30 @@ export async function POST(req: Request) {
 
     // Email to system
     const systemEmailContent = `
-            <h2>新しいお問い合わせが届きました</h2>
-            <p><strong>お名前:</strong> ${name}</p>
-            <p><strong>メールアドレス:</strong> ${email}</p>
-            <p><strong>電話番号:</strong> ${phone}</p>
-            <p><strong>電話の許可:</strong> ${phonePermission === "allow_phone_call" ? "はい" : "いいえ"}</p>
-            <p><strong>使用状況:</strong> ${usageType === "business" ? "事業（個人事業者または法人）" : "個人で使用"}</p>
-            <p><strong>インボイス登録:</strong> ${invoiceRegistration === "registered" ? "はい" : "いいえ"}</p>
-            <p><strong>登録番号の提供:</strong> ${provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"}</p>
-            <p><strong>都道府県:</strong> ${city}</p>
-            <p><strong>商品情報:</strong> ${product_info}</p>
-            <p><strong>査定希望商品の詳細:</strong> ${product_details}</p>
-            <p><strong>商品の状態:</strong> ${product_condition === "scrap" ? "スクラップ" : product_condition === "used" ? "中古" : "新品"}</p>
-            <p><strong>追加のメモ:</strong> ${additional_notes}</p>
-     ${images.length
+              <h2>新しいお問い合わせが届きました</h2>
+              <p><strong>お名前:</strong> ${name}</p>
+              <p><strong>メールアドレス:</strong> ${email}</p>
+              <p><strong>電話番号:</strong> ${phone}</p>
+              <p><strong>電話の許可:</strong> ${phonePermission === "allow_phone_call" ? "はい" : "いいえ"}</p>
+              <p><strong>使用状況:</strong> ${usageType === "business" ? "事業（個人事業者または法人）" : "個人で使用"}</p>
+              <p><strong>インボイス登録:</strong> ${invoiceRegistration === "registered" ? "はい" : "いいえ"}</p>
+              <p><strong>登録番号の提供:</strong> ${provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"}</p>
+              <p><strong>都道府県:</strong> ${city}</p>
+              <p><strong>商品情報:</strong> ${product_info}</p>
+              <p><strong>査定希望商品の詳細:</strong> ${product_details}</p>
+              <p><strong>商品の状態:</strong> ${product_condition === "scrap" ? "スクラップ" : product_condition === "used" ? "中古" : "新品"}</p>
+              <p><strong>追加のメモ:</strong> ${additional_notes}</p>
+       ${images.length
         ? images
           .filter((image: string): image is string => image !== null)
           .map(
             (image: string, index: number) => `<p><strong>添付ファイル ${index + 1}:</strong> attachment_${index + 1}.png</p>
-        <img src="cid:attached-image-${index}" alt="Attachment ${index + 1}" />`
+          <img src="cid:attached-image-${index}" alt="Attachment ${index + 1}" />`
           )
           .join("")
         : "<p>添付ファイルはありません。</p>"
       }
-`;
+  `;
 
     await transporter.sendMail({
       from: `"Website Form" <${process.env.GMAIL_USER}>`,
@@ -86,9 +155,9 @@ export async function POST(req: Request) {
         <li><strong>お名前:</strong> ${name}</li>
         <li><strong>メールアドレス:</strong> ${email}</li>
         <li><strong>電話番号:</strong> ${phone}</li>
-        <li><strong>都道府県:</strong> ${city}</li>
+        <li><strong>都道府県:</strong> ${cityJP}</li>
         <li><strong>商品情報:</strong> ${product_info}</li>
-        <li><strong>商品の状態:</strong> ${product_condition === "scrap" ? "スクラップ" : product_condition === "used" ? "中古" : "新品"}</li>
+        <li><strong>商品の状態:</strong> ${productConditionJP}</li>
       </ul>
       <p>よろしくお願いいたします。<br />ハディズ</p>
     `;
@@ -105,7 +174,8 @@ export async function POST(req: Request) {
     console.error("Error sending email:", error);
     return NextResponse.json(
       {
-        message: error instanceof Error ? error.message : "Error sending email",
+        message:
+          error instanceof Error ? error.message : "Error sending email",
       },
       { status: 500 }
     );
