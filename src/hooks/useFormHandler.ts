@@ -28,7 +28,7 @@ const initialFormData: TFormData = {
   productsList: [
     {
       product_details: "",
-      product_condition: "",
+      product_condition: "not_selected",
       images: new Array(3).fill(null),
     }
   ],
