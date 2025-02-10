@@ -32,7 +32,7 @@ const Inquiry = () => {
         </h2>
         <p className="mb-10 md:mb-12 lg:mb-14 mt-2 lg:mt-5 text-center text-xs lg:text-sm font-medium text-gray-700">
           <span className="text-red-600 pr-1 text-lg">*</span>
-          商業目的での使用は禁止されています
+          営業目的での利用はお断りします
         </p>
       </div>
       <form
@@ -176,30 +176,15 @@ const Inquiry = () => {
           ]}
           onChange={handleInputChange}
         />
-
         <InputField
           id="productInfo"
           name="product_info"
           label="市区町村"
           placeholder="未入力"
-          required
+          required={false}
           value={formData.product_info}
           onChange={handleInputChange}
         />
-        {/* <SelectField
-          id="inquirySource"
-          name="inquiry_source"
-          required={false}
-          label="私たちをどこで知りましたか？"
-          value={formData.inquiry_source}
-          onChange={handleInputChange}
-          options={[
-            { value: "none", label: "---" },
-            { value: "web", label: "ウェブ検索" },
-            { value: "ad", label: "広告" },
-          ]}
-        /> */}
-
         {/* products list */}
         {formData.productsList.map((item, index) => (
           <div key={index} className="bg-[#fcf7f7] px-1 py-2 border">
@@ -232,7 +217,7 @@ const Inquiry = () => {
               id={`productCondition-${index}`}
               name="product_condition"
               label="状態を選択してください"
-              required={false}
+              required={true}
               value={item.product_condition}
               onChange={(e) => handleProductInputChange(e, index)}
               options={[
@@ -246,7 +231,6 @@ const Inquiry = () => {
                 { value: "scrap", label: "スクラップ" },
               ]}
             />
-
             {/* Image Upload */}
             <ImageUpload
               label="買取商品の写真があればこちらに添付してください。"
