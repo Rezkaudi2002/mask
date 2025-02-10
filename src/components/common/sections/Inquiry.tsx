@@ -6,6 +6,7 @@ import ImageUpload from "../../pages/home/components/ImageUpload";
 import Image from "next/image";
 import React from "react";
 import { useFormHandler } from "@/hooks/useFormHandler";
+import PrivacyPolicy from "@/components/pages/home/components/PrivacyPolicy";
 
 const Inquiry = () => {
   const {
@@ -17,6 +18,8 @@ const Inquiry = () => {
     addProduct,
     deleteProduct,
     handleProductInputChange,
+    agreePrivacy,
+    setAgreePrivacy,
   } = useFormHandler();
 
   const numberOfProduct = 3;
@@ -258,12 +261,18 @@ const Inquiry = () => {
           onChange={handleInputChange}
         />
 
+        <PrivacyPolicy setAgreePrivacy={setAgreePrivacy} />
+
         <button
-        disabled={isSubmitting}
+          disabled={isSubmitting || !agreePrivacy}
           type="submit"
           className={`w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] 
             text-center text-white font-black rounded flex items-start justify-center 
-            gap-x-4 gradient-red ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+            gap-x-4 gradient-red ${
+              isSubmitting || !agreePrivacy
+                ? "opacity-50 cursor-not-allowed"
+                : ""
+            }`}
         >
           {isSubmitting === true ? (
             "送信..."

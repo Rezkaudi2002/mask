@@ -38,6 +38,7 @@ const initialFormData: TFormData = {
 export const useFormHandler = () => {
   const [formData, setFormData] = useState<TFormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [agreePrivacy, setAgreePrivacy] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -170,5 +171,7 @@ export const useFormHandler = () => {
     addProduct,
     deleteProduct,
     handleProductInputChange,
+    agreePrivacy,
+    setAgreePrivacy,
   };
 };
