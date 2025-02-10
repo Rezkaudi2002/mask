@@ -140,6 +140,7 @@ export const useFormHandler = () => {
       }
 
       setFormData(initialFormData);
+      setAgreePrivacy(false);
 
       // Close loading and show success
       Swal.close();
@@ -159,6 +160,7 @@ export const useFormHandler = () => {
       });
     } finally {
       setIsSubmitting(false);
+      setAgreePrivacy(false);
     }
   };
 

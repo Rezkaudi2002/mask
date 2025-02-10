@@ -261,7 +261,10 @@ const Inquiry = () => {
           onChange={handleInputChange}
         />
 
-        <PrivacyPolicy setAgreePrivacy={setAgreePrivacy} />
+        <PrivacyPolicy
+          setAgreePrivacy={setAgreePrivacy}
+          agreePrivacy={agreePrivacy}
+        />
 
         <button
           disabled={isSubmitting || !agreePrivacy}

@@ -61,14 +61,19 @@ const showPrivacyPolicy = () => {
 
 interface IPrivacyPolicyProps {
   setAgreePrivacy: (value: boolean) => void;
+  agreePrivacy: boolean;
 }
 
-const PrivacyPolicy = ({ setAgreePrivacy }: IPrivacyPolicyProps) => {
+const PrivacyPolicy = ({
+  setAgreePrivacy,
+  agreePrivacy,
+}: IPrivacyPolicyProps) => {
   return (
     <div className="flex items-center justify-center gap-2 p-2 sm:p-4">
       {/* Checkbox */}
       <input
         type="checkbox"
+        checked={agreePrivacy}
         className="w-4 h-4 sm:w-5 sm:h-5 accent-red-500 cursor-pointer"
         onChange={(e) => setAgreePrivacy(e.target.checked)}
       />
