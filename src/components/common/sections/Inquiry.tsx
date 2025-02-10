@@ -259,8 +259,11 @@ const Inquiry = () => {
         />
 
         <button
+        disabled={isSubmitting}
           type="submit"
-          className="w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red"
+          className={`w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] 
+            text-center text-white font-black rounded flex items-start justify-center 
+            gap-x-4 gradient-red ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
         >
           {isSubmitting === true ? (
             "送信..."

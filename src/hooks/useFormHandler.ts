@@ -30,7 +30,7 @@ const initialFormData: TFormData = {
       product_details: "",
       product_condition: "not_selected",
       images: new Array(3).fill(null),
-    }
+    },
   ],
   additional_notes: "",
 };
@@ -63,7 +63,9 @@ export const useFormHandler = () => {
   };
 
   const handleProductInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
     index?: number
   ) => {
     const { name, value } = e.target;
@@ -75,7 +77,6 @@ export const useFormHandler = () => {
       ),
     }));
   };
-
 
   const deleteProduct = (index: number) => {
     setFormData((prevData) => ({
@@ -97,52 +98,63 @@ export const useFormHandler = () => {
     e.preventDefault();
 
     if (formData.city === "not_selected") {
-      alert("都道府県を選択してください。");
+      Toast.fire({ icon: "warning", title: "都道府県を選択してください。" });
       return;
     }
 
-    // Check if any product's condition is not selected
-    const hasInvalidProductCondition = formData.productsList.some((product) => product.product_condition === "not_selected");
-    
+    const hasInvalidProductCondition = formData.productsList.some(
+      (product) =>
+        !product.product_condition ||
+        product.product_condition === "not_selected"
+    );
+
     if (hasInvalidProductCondition) {
-      alert("商品の状態を選択してください。");
+      Toast.fire({ icon: "warning", title: "商品の状態を選択してください。" });
       return;
     }
 
     setIsSubmitting(true);
 
+    // Show loading toast
+    Swal.fire({
+      title: "送信中...",
+      html: "しばらくお待ちください。",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+
     try {
-      // Send only the Base64 image in `attachment`, and exclude it from `formData`
-      const emailData = {
-        ...formData,
-        // attachment: formData.image || null, // Send Base64 image as attachment
-        // fileName: formData.fileName || "attachment", // Include file name
-      };
-
-      // Remove the image field from the email's context
-      // delete emailData.image;
-
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(emailData),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Email sending failed");
+        throw new Error(
+          "サーバーエラーが発生しました。もう一度お試しください。"
+        );
       }
 
       setFormData(initialFormData);
-      Toast.fire({
+
+      // Close loading and show success
+      Swal.close();
+      await Swal.fire({
         icon: "success",
-        title: "メールが送信されました！確認メールをお送りしました。",
+        title: "送信完了！",
+        text: "メールが送信されました！確認メールをお送りしました。",
       });
     } catch (error: unknown) {
+      Swal.close(); // Ensure loading closes if an error occurs
+
       const errMsg = error instanceof Error ? error.message : "Unknown error";
-      Toast.fire({
+      Swal.fire({
         icon: "error",
-        title: `送信中にエラーが発生しました: ${errMsg}`,
+        title: "エラー発生！",
+        text: `送信中にエラーが発生しました: ${errMsg}`,
       });
     } finally {
       setIsSubmitting(false);
@@ -157,7 +169,6 @@ export const useFormHandler = () => {
     handleSubmit,
     addProduct,
     deleteProduct,
-    handleProductInputChange
+    handleProductInputChange,
   };
 };
-
