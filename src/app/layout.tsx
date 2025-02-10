@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   icons: "/favicon.ico",
   title: {
     default: "中古機械、電動工具の高額買取のハディズ",
-    template: "%s | mac-hadis",
+    template: "%s | 機械工具買取ハディズ",
   },
 
   description: "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。専門のバイヤーが購入するので、高値で売却が可能です。ぜひ、1度御見積りをお願いします",
