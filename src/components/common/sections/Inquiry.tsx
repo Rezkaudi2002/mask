@@ -16,17 +16,25 @@ const Inquiry = () => {
     handleSubmit,
     addProduct,
     deleteProduct,
-    handleProductInputChange
+    handleProductInputChange,
   } = useFormHandler();
 
-  const numberOfProduct = 3
-
+  const numberOfProduct = 3;
 
   return (
-    <section id="inquiry" className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto">
-      <h2 className="mb-[40px] md:mb-[42px] lg:mb-[50px] text-[30px] md:text-[40px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center">
-        お問い合わせ
-      </h2>
+    <section
+      id="inquiry"
+      className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto"
+    >
+      <div>
+        <h2 className="text-[30px] md:text-[40px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center">
+          お問い合わせ
+        </h2>
+        <p className="mb-10 md:mb-12 lg:mb-14 mt-2 lg:mt-5 text-center text-xs lg:text-sm font-medium text-gray-700">
+          <span className="text-red-600 pr-1 text-lg">*</span>
+          営業目的での利用はお断りします
+        </p>
+      </div>
       <form
         className="space-y-6 max-w-[900px] md:mx-auto"
         onSubmit={handleSubmit}
@@ -168,36 +176,19 @@ const Inquiry = () => {
           ]}
           onChange={handleInputChange}
         />
-
-
         <InputField
           id="productInfo"
           name="product_info"
           label="市区町村"
           placeholder="未入力"
-          required
+          required={false}
           value={formData.product_info}
           onChange={handleInputChange}
         />
-        {/* <SelectField
-          id="inquirySource"
-          name="inquiry_source"
-          required={false}
-          label="私たちをどこで知りましたか？"
-          value={formData.inquiry_source}
-          onChange={handleInputChange}
-          options={[
-            { value: "none", label: "---" },
-            { value: "web", label: "ウェブ検索" },
-            { value: "ad", label: "広告" },
-          ]}
-        /> */}
-
         {/* products list */}
-        {formData.productsList.map((item, index) =>
+        {formData.productsList.map((item, index) => (
           <div key={index} className="bg-[#fcf7f7] px-1 py-2 border">
-
-            {index !== 0 &&
+            {index !== 0 && (
               <button
                 type="button"
                 onClick={() => deleteProduct(index)}
@@ -211,7 +202,7 @@ const Inquiry = () => {
                   height={11}
                 />
               </button>
-            }
+            )}
 
             <InputField
               id={`productDetails-${index}`}
@@ -226,7 +217,7 @@ const Inquiry = () => {
               id={`productCondition-${index}`}
               name="product_condition"
               label="状態を選択してください"
-              required={false}
+              required={true}
               value={item.product_condition}
               onChange={(e) => handleProductInputChange(e, index)}
               options={[
@@ -240,7 +231,6 @@ const Inquiry = () => {
                 { value: "scrap", label: "スクラップ" },
               ]}
             />
-
             {/* Image Upload */}
             <ImageUpload
               label="買取商品の写真があればこちらに添付してください。"
@@ -249,12 +239,14 @@ const Inquiry = () => {
               productIndex={index}
             />
           </div>
-        )}
-
+        ))}
 
         {/* add product btn */}
-        {formData.productsList.length < numberOfProduct && <button type="button" onClick={addProduct}>＋商品追加</button>}
-
+        {formData.productsList.length < numberOfProduct && (
+          <button type="button" onClick={addProduct}>
+            ＋商品追加
+          </button>
+        )}
 
         {/* Textarea */}
         <textarea

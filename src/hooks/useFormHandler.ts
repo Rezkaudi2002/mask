@@ -28,7 +28,7 @@ const initialFormData: TFormData = {
   productsList: [
     {
       product_details: "",
-      product_condition: "",
+      product_condition: "not_selected",
       images: new Array(3).fill(null),
     }
   ],
@@ -95,6 +95,20 @@ export const useFormHandler = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (formData.city === "not_selected") {
+      alert("都道府県を選択してください。");
+      return;
+    }
+
+    // Check if any product's condition is not selected
+    const hasInvalidProductCondition = formData.productsList.some((product) => product.product_condition === "not_selected");
+    
+    if (hasInvalidProductCondition) {
+      alert("商品の状態を選択してください。");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
