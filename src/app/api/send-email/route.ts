@@ -130,7 +130,7 @@ export async function POST(req: Request) {
       provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"
     }</p>
 <p><strong>都道府県:</strong> ${cityJP}</p>
-<p><strong>商品情報:</strong> ${product_info}</p>
+<p><strong>市区町村:</strong> ${product_info}</p>
 <p><strong>追加のメモ:</strong> ${additional_notes}</p>
 
 ${productsList
@@ -191,7 +191,7 @@ ${productsList
         <li><strong>メールアドレス:</strong> ${email}</li>
         <li><strong>電話番号:</strong> ${phone}</li>
         <li><strong>都道府県:</strong> ${cityJP}</li>
-        <li><strong>商品情報:</strong> ${product_info}</li>
+        <li><strong>市区町村:</strong> ${product_info}</li>
         ${productsList
           .map(
             (product: Product, index: number) => `
