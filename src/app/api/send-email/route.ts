@@ -95,6 +95,23 @@ export async function POST(req: Request) {
     },
   });
 
+  // Helper function to conditionally add non-empty fields
+  const addField = (
+    label: string,
+    value: string | undefined,
+    user?: boolean
+  ) => {
+    if (user === true) {
+      return value && value.trim() !== ""
+        ? `<li><strong>${label}:</strong> ${value}</li>`
+        : "";
+    } else {
+      return value && value.trim() !== ""
+        ? `<p><strong>${label}:</strong> ${value}</p>`
+        : "";
+    }
+  };
+
   try {
     // Process all product images
     const systemAttachments = productsList.flatMap(
@@ -114,35 +131,56 @@ export async function POST(req: Request) {
     // Email content for system
     const systemEmailContent = `
 <h2>新しいお問い合わせが届きました</h2>
-<p><strong>お名前:</strong> ${name}</p>
-<p><strong>メールアドレス:</strong> ${email}</p>
-<p><strong>電話番号:</strong> ${phone}</p>
-<p><strong>電話の許可:</strong> ${
-      phonePermission === "allow_phone_call" ? "はい" : "いいえ"
-    }</p>
-<p><strong>使用状況:</strong> ${
-      usageType === "business" ? "事業（個人事業者または法人）" : "個人で使用"
-    }</p>
-<p><strong>インボイス登録:</strong> ${
-      invoiceRegistration === "registered" ? "はい" : "いいえ"
-    }</p>
-<p><strong>登録番号の提供:</strong> ${
-      provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"
-    }</p>
-<p><strong>都道府県:</strong> ${cityJP}</p>
-<p><strong>市区町村:</strong> ${product_info}</p>
-<p><strong>追加のメモ:</strong> ${additional_notes}</p>
+${addField("お名前", name)}
+${addField("メールアドレス", email)}
+${addField("電話番号", phone)}
+${addField(
+  "電話の許可",
+  phonePermission === "allow_phone_call"
+    ? "はい"
+    : phonePermission === "deny_phone_call"
+    ? "いいえ"
+    : ""
+)}
+${addField(
+  "使用状況",
+  usageType === "business"
+    ? "事業（個人事業者または法人）"
+    : usageType === "personal"
+    ? "個人で使用"
+    : ""
+)}
+${
+  invoiceRegistration && invoiceRegistration !== ""
+    ? addField(
+        "インボイス登録",
+        invoiceRegistration === "registered" ? "はい" : "いいえ"
+      )
+    : ""
+}
+${
+  provideRegistrationNumber && provideRegistrationNumber !== ""
+    ? addField(
+        "登録番号の提供",
+        provideRegistrationNumber === "will_provide" ? "はい" : "いいえ"
+      )
+    : ""
+}
+${addField("都道府県", cityJP)}
+${product_info && product_info !== "" ? addField("市区町村", product_info) : ""}
+${addField("追加のメモ", additional_notes)}
 
 ${productsList
   .map(
     (product: Product, productIndex: number) => `
     <hr>
     <h3>商品 ${productIndex + 1}</h3>
-    <p><strong>商品の詳細:</strong> ${product.product_details}</p>
-    <p><strong>商品の状態:</strong> ${
+    ${addField("商品の詳細", product.product_details)}
+    ${addField(
+      "商品の状態",
       productConditionMapping[product.product_condition] ||
-      product.product_condition
-    }</p>
+        product.product_condition
+    )}
     
     ${
       (product.images ?? []).length
@@ -187,11 +225,15 @@ ${productsList
       なお、本メールへの返信は受け付けておりませんのでご了承ください。</p>
       <p><strong>お問い合わせ内容:</strong></p>
       <ul>
-        <li><strong>お名前:</strong> ${name}</li>
-        <li><strong>メールアドレス:</strong> ${email}</li>
-        <li><strong>電話番号:</strong> ${phone}</li>
-        <li><strong>都道府県:</strong> ${cityJP}</li>
-        <li><strong>市区町村:</strong> ${product_info}</li>
+        ${addField("お名前", name, true)}
+        ${addField("メールアドレス", email, true)}
+        ${addField("電話番号", phone, true)}
+        ${addField("都道府県", cityJP, true)}
+        ${
+          product_info &&
+          product_info !== "" &&
+          addField("市区町村", product_info, true)
+        }</li>
         ${productsList
           .map(
             (product: Product, index: number) => `
