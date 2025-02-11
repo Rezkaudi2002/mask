@@ -45,16 +45,27 @@ const showPrivacyPolicy = () => {
         </p>
       </div>
     `,
-    icon: "info",
     position: "center",
+    backdrop: "swal2-noanimation",
     showConfirmButton: true,
     confirmButtonText: "OK",
     confirmButtonColor: "#d33",
-    width: "95%", // Adjust modal width for responsiveness
+    width: "95%",
     customClass: {
-      popup: "privacy-modal", // Apply global CSS styles
+      popup: "privacy-modal",
       title: "privacy-title",
       confirmButton: "privacy-button",
+    },
+    didOpen: () => {
+      const modalContent = document.querySelector(".privacy-modal");
+      if (modalContent) {
+        modalContent.scrollTo(0, 0); // Scroll to top on open
+        modalContent.addEventListener(
+          "touchstart",
+          (e) => e.stopPropagation(),
+          { passive: true }
+        );
+      }
     },
   });
 };
@@ -70,15 +81,12 @@ const PrivacyPolicy = ({
 }: IPrivacyPolicyProps) => {
   return (
     <div className="flex items-center justify-center gap-2 p-2 sm:p-4">
-      {/* Checkbox */}
       <input
         type="checkbox"
         checked={agreePrivacy}
         className="w-4 h-4 sm:w-5 sm:h-5 accent-red-500 cursor-pointer"
         onChange={(e) => setAgreePrivacy(e.target.checked)}
       />
-
-      {/* Text with Link */}
       <p className="leading-5 text-xs sm:text-sm md:text-base text-gray-700">
         <span
           className="underline cursor-pointer text-blue-600 hover:text-blue-800"
