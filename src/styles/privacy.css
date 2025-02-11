@@ -17,6 +17,16 @@
   }
 }
 
+.privacy-title {
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .privacy-title {
+    font-size: 24px;
+  }
+}
+
 /* Content Inside the Modal */
 .privacy-modal-content {
   text-align: left;
@@ -40,6 +50,7 @@
 /* List Styling */
 .privacy-modal-content ul {
   padding-left: 20px;
+  margin-bottom: 20px !important;
 }
 
 .privacy-modal-content ul li {
