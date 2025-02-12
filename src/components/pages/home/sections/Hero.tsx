@@ -1,4 +1,5 @@
 import Image from "next/image";
+import '@/styles/hero.css'
 
 const Hero: React.FC = () => {
     return (
@@ -12,7 +13,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* image 2 */}
-                <div className="relative w-[340px] h-[88px] sm:h-[130px] xl:w-[1000px] xl:h-[250px]">
+                <div className="text-hero relative w-[340px] h-[88px] sm:h-[130px] lg:[50%] xl:w-[1000px] xl:h-[250px]">
                     <Image src="/images/home-page/hero-2.png" alt="Hero promotional banner with details" fill priority />
                 </div>
 
