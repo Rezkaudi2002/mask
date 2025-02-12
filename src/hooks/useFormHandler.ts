@@ -116,10 +116,9 @@ export const useFormHandler = () => {
 
     setIsSubmitting(true);
 
-    // Show loading toast
     Swal.fire({
-      title: "送信中...",
-      html: "しばらくお待ちください。",
+      title: "送信しています...",
+      html: "そのままお待ちください。",
       allowOutsideClick: false,
       didOpen: () => {
         Swal.showLoading();
@@ -138,19 +137,29 @@ export const useFormHandler = () => {
           "サーバーエラーが発生しました。もう一度お試しください。"
         );
       }
-
       setFormData(initialFormData);
       setAgreePrivacy(false);
-
-      // Close loading and show success
       Swal.close();
       await Swal.fire({
         icon: "success",
-        title: "送信完了！",
-        text: "メールが送信されました！確認メールをお送りしました。",
+        title: "送信が完了しました",
+        html: `メールを送信しました。<br />確認メールをお送りしましたので、<br />ご確認ください。<br /> <br />
+          <button id="close-modal" class="close-button">x</button>`,
+        showConfirmButton: false,
+        customClass: {
+          popup: "custom-popup",
+        },
+        didOpen: () => {
+          const closeButton = document.getElementById("close-modal");
+          if (closeButton) {
+            closeButton.addEventListener("click", () => {
+              Swal.close();
+            });
+          }
+        },
       });
     } catch (error: unknown) {
-      Swal.close(); // Ensure loading closes if an error occurs
+      Swal.close();
 
       const errMsg = error instanceof Error ? error.message : "Unknown error";
       Swal.fire({
