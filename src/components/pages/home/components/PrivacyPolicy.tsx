@@ -3,7 +3,7 @@ import "@/styles/privacy.css";
 
 const showPrivacyPolicy = () => {
   Swal.fire({
-    title: "プライバシーポリシー（個人情報保護方針）",
+    title: "プライバシーポリシー<br />（個人情報保護方針）",
     html: `
       <div class="privacy-modal-content">
         <p><strong>1. 事業者情報</strong>
@@ -44,27 +44,31 @@ const showPrivacyPolicy = () => {
           お問い合わせフォームを利用した営業の一切を禁止いたします。
         </p>
       </div>
+      <button id="close-modal" class="close-button">✕</button>
     `,
     position: "center",
     backdrop: "swal2-noanimation",
-    showConfirmButton: true,
-    confirmButtonText: "OK",
-    confirmButtonColor: "#d33",
+    showConfirmButton: false,
     width: "95%",
     customClass: {
       popup: "privacy-modal",
       title: "privacy-title",
-      confirmButton: "privacy-button",
     },
     didOpen: () => {
       const modalContent = document.querySelector(".privacy-modal");
       if (modalContent) {
-        modalContent.scrollTo(0, 0); // Scroll to top on open
+        modalContent.scrollTo(0, 0);
         modalContent.addEventListener(
           "touchstart",
           (e) => e.stopPropagation(),
           { passive: true }
         );
+      }
+      const closeButton = document.getElementById("close-modal");
+      if (closeButton) {
+        closeButton.addEventListener("click", () => {
+          Swal.close();
+        });
       }
     },
   });

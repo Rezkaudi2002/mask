@@ -67,26 +67,6 @@
   list-style-type: disc;
 }
 
-/* Confirm Button */
-.privacy-button {
-  background-color: #d33 !important;
-  color: white !important;
-  padding: clamp(6px, 2vw, 12px) clamp(10px, 2vw, 20px) !important;
-  border-radius: 6px !important;
-  font-size: clamp(13px, 1.8vw, 15px) !important;
-  width: 160px;
-  cursor: pointer;
-  border: none;
-  display: block;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  margin: auto;
-}
-
 .privacy-modal .swal2-actions {
   margin: 0;
-}
-
-.privacy-button:hover {
-  background-color: #b02a2a !important;
 }
