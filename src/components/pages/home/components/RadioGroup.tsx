@@ -71,7 +71,9 @@ const RadioGroup = ({
               onChange={onChange}
               className="mr-[8px] w-4 h-4"
               required={required}
-              ref={(el) => (radioRefs.current[index] = el)}
+              ref={(el) => {
+                radioRefs.current[index] = el;
+              }}
             />
             <label htmlFor={`${name}-${option.value}`} className="mr-[24px]">
               {option.label}
