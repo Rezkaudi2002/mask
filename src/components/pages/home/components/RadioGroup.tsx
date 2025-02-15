@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 interface IRadioGroupProps {
   name: string;
@@ -23,28 +23,20 @@ const RadioGroup = ({
   click,
 }: IRadioGroupProps) => {
   const radioRefs = useRef<(HTMLInputElement | null)[]>([]);
-  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     if (required && !value && click) {
-      setIsError(true);
       const firstRadio = radioRefs.current.find((ref) => ref !== null);
       if (firstRadio) {
         firstRadio.scrollIntoView({ behavior: "smooth", block: "center" });
         firstRadio.focus();
       }
-    } else {
-      setIsError(false);
-      // setClick(false)
     }
   }, [click, required]);
 
   return (
     <div
-      className={`text-[14px] leading-[21px] text-[#111111] p-3 rounded-md ${
-        isError ? "border-2 border-red-500 bg-red-100" : ""
-      }`}
-    >
+      className="text-[14px] leading-[21px] text-[#111111] p-3 rounded-md">
       {/* Question */}
       <div className="flex items-center space-x-2 mb-[8px]">
         <p>{question}</p>
