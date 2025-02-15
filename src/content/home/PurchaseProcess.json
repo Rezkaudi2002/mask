@@ -52,14 +52,8 @@
       },
       {
         "id": 4,
-        "title": "査定金額のご連絡",
-        "content": "お客様に査定金額をご連絡いたします。",
-        "imageSrc": "/images/home-page/on-site-purchase4.jpg"
-      },
-      {
-        "id": 5,
         "title": "代金のお振込",
-        "content": "査定金額にご納得いただけた場合には、翌営業日以内に代金をお振込みいたします。",
+        "content": "商品の状態を確認し、査定いたします。査定金額にご納得いただけた場合には、翌営業日以内に代金をお振込いたします。",
         "imageSrc": "/images/home-page/on-site-purchase7.jpg"
       }
     ]
