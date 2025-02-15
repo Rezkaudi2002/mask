@@ -10,7 +10,7 @@ interface IPostCardProps {
 
 const PostCard = ({ title, imageSrc, description, className }: IPostCardProps) => {
   return (
-    <Link href={`/blogs/${title}`} className={`w-full md:w-[45%] lg:w-[30%] ${className}`}>
+    <Link href={`/blogs/${title}`} className={`w-[325px] ${className}`}>
       <Image
         src={imageSrc}
         alt={title}
