@@ -41,11 +41,13 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                                     );
                                 case "image":
                                     return (
-                                        <div key={item.id} className="border-t pt-5">
-                                            <div className=" relative w-full h-[250px] lg:w-[544px] lg:h-[307px] mx-auto" >
+                                        <div key={item.id} className="pt-5">
+                                            <div className=" relative w-full h-[250px] lg:w-[544px] lg:h-[307px] mx-auto mb-4" >
                                                 <Image className="object-contain" src={item.imageSrc} alt={item.title} fill />
                                             </div>
-                                            <p className="text-center">{item.title}</p>
+                                            {item.title.split("\n").map((paragraph, index) =>
+                                                <p className="text-center" key={index}>{paragraph}</p>
+                                            )}
                                         </div>
                                     );
                                 case "numberedList":
@@ -55,7 +57,8 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                                             {item.description && <p className="font-normal text-base leading-8 inline">{item?.description}</p>}
                                             {item.items?.map((item, index) =>
                                                 <div className="ml-5" key={index}>
-                                                    <h3 className="font-black text-base leading-[48px] inline">{item.id}. {item.title}:</h3>
+                                                    <h3 className="font-black text-base leading-[48px] inline">{item.title}:</h3>
+                                                    <br />
                                                     <p className="font-normal text-base leading-8 inline" key={index}>{item.description}</p>
                                                 </div>
                                             )}
@@ -81,9 +84,9 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                                         <div key={item.id} className="border-t pt-5">
                                             <h2 className="font-black text-[18px] lg:text-[25px] leading-[48px]">{item.title}</h2>
                                             {item.items?.map((item, index) =>
-                                                <div className="ml-5" key={index}>
-                                                    <h3 className="font-black text-[16px] leading-[48px]">{item.id}. <span className="font-black">Q:</span>{item.question}:</h3>
-                                                    <p className="font-normal text-base leading-8 ml-5" key={index}> <span className="font-black">A:</span>{item.answer}</p>
+                                                <div className="ml-5 pb-3" key={index}>
+                                                    <h3 className="font-black text-[16px] leading-[48px]"><span className="font-black">Q{item.id}:</span>{item.question}:</h3>
+                                                    <p className="font-normal text-base leading-8" key={index}> <span className="font-black">A{item.id}:</span>{item.answer}</p>
                                                 </div>
                                             )}
                                         </div>
