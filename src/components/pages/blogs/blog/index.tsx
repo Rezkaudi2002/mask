@@ -23,13 +23,11 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                     <div className=" bg-white px-4 lg:px-24 py-[60px] space-y-9 lg:space-y-12">
                         <h1 className="font-black text-xl lg:text-[32px] leading-[48px]">{data.title}</h1>
                         <div className=" relative w-[335px] h-[173px] lg:w-[544px] lg:h-[307px] mx-auto" >
-                            <Image src={data.imageSrc} alt={data.title} fill />
+                            <Image className="object-cover" src={data.imageSrc} alt={data.title} fill />
                         </div>
                         {data.description.split("\n").map((item, index) =>
                             <p className="font-normal text-base leading-8" key={index}>{item}</p>
                         )}
-
-
                         {data.subContent.map(item => {
                             switch (item.type) {
                                 case "simple":
@@ -41,10 +39,20 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                                             )}
                                         </div>
                                     );
+                                case "image":
+                                    return (
+                                        <div key={item.id} className="border-t pt-5">
+                                            <div className=" relative w-full h-[250px] lg:w-[544px] lg:h-[307px] mx-auto" >
+                                                <Image className="object-contain" src={item.imageSrc} alt={item.title} fill />
+                                            </div>
+                                            <p className="text-center">{item.title}</p>
+                                        </div>
+                                    );
                                 case "numberedList":
                                     return (
                                         <div key={item.id} className="border-t pt-5">
                                             <h2 className="font-black text-[18px] lg:text-[25px] leading-[48px]">{item.title}</h2>
+                                            {item.description && <p className="font-normal text-base leading-8 inline">{item?.description}</p>}
                                             {item.items?.map((item, index) =>
                                                 <div className="ml-5" key={index}>
                                                     <h3 className="font-black text-base leading-[48px] inline">{item.id}. {item.title}:</h3>
