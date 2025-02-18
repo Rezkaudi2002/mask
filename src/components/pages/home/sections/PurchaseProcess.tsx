@@ -19,7 +19,7 @@ const PurchaseProcess: React.FC = () => {
     return undefined;
   };
 
-  const [purchaseCategoryDate] = useState([
+  const purchaseCategoryData = [
     {
       category: "On-site purchase" as PurchaseProcessCategoryType,
       label: "出張買取",
@@ -32,7 +32,7 @@ const PurchaseProcess: React.FC = () => {
       category: "Bring-in purchase" as PurchaseProcessCategoryType,
       label: "持込買取",
     },
-  ]);
+  ];
 
   return (
     <section
@@ -51,7 +51,7 @@ const PurchaseProcess: React.FC = () => {
       </h2>
 
       <div className="flex items-center justify-center gap-2 pt-[40px] lg:pt-[50px]">
-        {purchaseCategoryDate.map((item, index) => (
+        {purchaseCategoryData.map((item, index) => (
           <PurchaseProcessCategoryBtn
             key={index}
             category={item.category}
