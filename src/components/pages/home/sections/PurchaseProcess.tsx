@@ -19,6 +19,21 @@ const PurchaseProcess: React.FC = () => {
     return undefined;
   };
 
+  const [purchaseCategoryDate] = useState([
+    {
+      category: "On-site purchase" as PurchaseProcessCategoryType,
+      label: "出張買取",
+    },
+    {
+      category: "Home delivery purchase" as PurchaseProcessCategoryType,
+      label: "宅配買取",
+    },
+    {
+      category: "Bring-in purchase" as PurchaseProcessCategoryType,
+      label: "持込買取",
+    },
+  ]);
+
   return (
     <section
       id="purchase-process"
@@ -36,24 +51,15 @@ const PurchaseProcess: React.FC = () => {
       </h2>
 
       <div className="flex items-center justify-center gap-2 pt-[40px] lg:pt-[50px]">
-        <PurchaseProcessCategoryBtn
-          category="On-site purchase"
-          activeCategory={PurchaseProcessCategory}
-          label="出張買取"
-          changeCategory={changeCategory}
-        />
-        <PurchaseProcessCategoryBtn
-          category="Home delivery purchase"
-          activeCategory={PurchaseProcessCategory}
-          label="宅配買取"
-          changeCategory={changeCategory}
-        />
-        <PurchaseProcessCategoryBtn
-          category="Bring-in purchase"
-          activeCategory={PurchaseProcessCategory}
-          label="持込買取"
-          changeCategory={changeCategory}
-        />
+        {purchaseCategoryDate.map((item, index) => (
+          <PurchaseProcessCategoryBtn
+            key={index}
+            category={item.category}
+            activeCategory={PurchaseProcessCategory}
+            label={item.label}
+            changeCategory={changeCategory}
+          />
+        ))}
       </div>
 
       <div className="mx-auto flex flex-col justify-start space-y-4 lg:space-y-10 px-7 py-10 lg:px-24 lg:py-20 border-2 border-[#B81122] mt-8  bg-[#FFFFFF99] max-w-[1120px]">
