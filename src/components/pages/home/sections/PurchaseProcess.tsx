@@ -44,6 +44,7 @@ const PurchaseProcess: React.FC = () => {
         fill
         src={"/images/home-page/flow-bg.png"}
         alt="hero-background-hadis"
+        loading="lazy"
       />
 
       <h2 className="font-black text-3xl lg:text-6xl text-[#D51A16]">
