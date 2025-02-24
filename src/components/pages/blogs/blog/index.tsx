@@ -20,6 +20,7 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                 src={"/images/icons/right-arrow.svg"}
                 width={16}
                 height={16}
+                loading="lazy"
                 alt="right arrow icon"
               />
             </Link>
@@ -35,6 +36,7 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                 src={data.imageSrc}
                 alt={data.title}
                 fill
+                loading='lazy'
               />
             </div>
             {data.description.split("\n").map((item, index) => (

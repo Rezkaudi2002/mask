@@ -30,6 +30,7 @@ const Flow: React.FC = () => {
         src="/images/home-page/flow-bg.png"
         alt="Background image for flow section"
         fill
+        loading='lazy'
       />
 
       <h3 className="font-black text-xl lg:text-2xl">お持ちの工具・機械で</h3>
