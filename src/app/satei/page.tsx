@@ -22,7 +22,7 @@ const page = () => {
   return (
     <>
       <Inquiry />
-      <ContactBanner />
+      <ContactBanner showFormBtn={false} />
     </>
   );
 };
