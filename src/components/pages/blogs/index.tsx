@@ -10,7 +10,7 @@ import ContactBanner from "../home/sections/ContactBanner";
 import { useBlog } from "@/hooks/useBlog";
 
 const Index = () => {
-  const { currentBlogs, itemsPerPage, currentPage, handlePageChange } =
+  const { currentBlogs, postsPerPage, currentPage, handlePageChange } =
     useBlog();
 
   return (
@@ -33,7 +33,7 @@ const Index = () => {
           </div>
           <Pagination
             totalItems={blogsData.length}
-            itemsPerPage={itemsPerPage}
+            postsPerPage={postsPerPage}
             currentPage={currentPage}
             onPageChange={handlePageChange}
           />
