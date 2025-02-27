@@ -24,6 +24,7 @@ const SubContent: React.FC<{ content: BlogSubContent }> = ({ content }) => {
               src={content.imageSrc}
               alt={content.title}
               fill
+              loading="lazy"
             />
           </div>
           {content.title.split("\n").map((paragraph, index) => (
