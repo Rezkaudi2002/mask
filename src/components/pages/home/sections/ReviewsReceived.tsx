@@ -9,6 +9,7 @@ const ReviewsReceived: React.FC = () => {
       <Image
         className=" absolute -z-10 top-0 left-0 object-cover"
         fill
+        loading="lazy"
         src={"/images/home-page/flow-bg.png"}
         alt="hero-background-hadis"
       />

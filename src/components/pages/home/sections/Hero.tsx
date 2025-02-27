@@ -6,35 +6,34 @@ const Hero: React.FC = () => {
     <>
       <section
         aria-label="Hero section with business highlights"
-        className="relative px-4 w-full h-[410px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] sm:bg-right-top"
+        className="relative px-4 w-full h-[410px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] sm:bg-right-top overflow-hidden"
       >
-        <Image
-          src='/images/home-page/hero-background-mobile.webp'
-          alt="Company's legacy image"
-          sizes=" 100vw"
-          quality={50}
-          fill
-          priority
-          style={{
-            objectFit: "cover",
-          }}
-          className='-z-10 block lg:hidden'
-        />
-        <Image
-          src='/images/home-page/hero-background.webp'
-          alt="Company's legacy image"
-          sizes=" 100vw"
-          quality={50}
-          fill
-          priority
-          style={{
-            objectFit: "cover",
-          }}
-          className='-z-10 hidden lg:block'
-        />
+        {/* Background wrapper to ensure correct positioning */}
+        <div className="absolute inset-0 -z-30">
+          {/* Mobile Background */}
+          <Image
+            src="/images/home-page/hero-background-mobile.webp"
+            alt="Company's legacy image"
+            sizes="100vw"
+            quality={100}
+            fill
+            priority
+            className="object-cover object-center block lg:hidden"
+          />
+          {/* Desktop Background */}
+          <Image
+            src="/images/home-page/hero-background.webp"
+            alt="Company's legacy image"
+            sizes="100vw"
+            quality={100}
+            fill
+            priority
+            className="object-cover lg:object-right-top hidden lg:block"
+          />
+        </div>
         <div className="flex lg:w-1/2 2xl:min-w-[1000px] items-start 2xl:items-center justify-center h-full 2xl:h-3/4 space-y-2 lg:space-y-7 flex-col pt-7 2xl:pt-20 sm:pl-12 pb-4">
           {/* image 1  */}
-          <div className="text-hero relative xl:w-[810px] xl:h-[64px] w-[335px] h-[38px] sm:h-[50px] lg:h-[70px]">
+          <div className="text-hero relative xl:w-[810px] xl:h-[64px] w-[335px] h-[38px] sm:h-[50px] lg:h-[70px] z-10">
             <Image
               src="/images/home-page/hero-1.webp"
               alt="Company's legacy image"
@@ -44,7 +43,7 @@ const Hero: React.FC = () => {
             />
           </div>
           {/* image 2 */}
-          <div className="text-hero relative w-[340px] h-[88px] sm:h-[130px] lg:h-[300px] xl:w-[810px] xl:h-[350px]">
+          <div className="text-hero relative w-[340px] h-[88px] sm:h-[130px] lg:h-[300px] xl:w-[810px] xl:h-[350px] z-10">
             <Image
               src="/images/home-page/hero-2.webp"
               alt="Hero promotional banner with details"

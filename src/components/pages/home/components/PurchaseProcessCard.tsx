@@ -27,9 +27,10 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
           <Image
             className=" absolute top-0 left-0 pr-[10px] pb-[10px] lg:pr-[23px] lg:pb-[23px]"
             fill
+            loading="lazy"
             src={data.imageSrc}
             alt={data.title}
-          />
+            />
           <Image
             unoptimized
             loading="lazy"
@@ -62,6 +63,7 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
           className="mx-auto"
           width={41}
           height={49}
+          loading="lazy"
           src={"/images/icons/next-step-arrow.svg"}
           alt="next-step-arrow-hadis"
         />
