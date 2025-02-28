@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Noto_Sans_JP } from "next/font/google";
 import "@/styles/globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 // sections
 import Header from "@/components/common/sections/Header";
 import Footer from "@/components/common/sections/Footer";
@@ -80,7 +79,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth ">
       <GoogleTagManager gtmId="G-id" />
-      <SpeedInsights />
       <body
         className={`${notoSansJP.variable} font-noto`}
       >
