@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: IPageProps): Promise<Metadata
   const { title, category } = await params;
 
   return {
-    title: `${decodeURIComponent(title)} - ${decodeURIComponent(category)} | My Store`,
-    description: `Explore ${decodeURIComponent(title)} from our ${decodeURIComponent(category)} collection.`,
+    title: `${decodeURIComponent(title)} - ${decodeURIComponent(category)} | hadis`,
+    description: `私たちの${decodeURIComponent(category)}コレクションから、${decodeURIComponent(title)}を探索しましょう。`,
   };
 }
 
