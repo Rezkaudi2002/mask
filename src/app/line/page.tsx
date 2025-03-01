@@ -9,7 +9,7 @@ const Page = () => {
 
   useEffect(() => {
     router.push("https://line.me/R/ti/p/@kikaikaitori");
-  }, []);
+  }, [router]);
 
   return <Loading />;
 };

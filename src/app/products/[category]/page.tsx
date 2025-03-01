@@ -1,12 +1,14 @@
 interface IPageProps {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 }
 
-const page = ({ params }: IPageProps) => {
-  const category = decodeURIComponent(params.category);
-  return <div>{category}</div>;
+const page = async ({ params }: IPageProps) => {
+  const {category } = await params
+
+  const categoryDecoded = decodeURIComponent(category);
+  return <div>{categoryDecoded}</div>;
 };
 
 export default page;
