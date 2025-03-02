@@ -1,7 +1,35 @@
-interface ICategoryProductsProps {}
+import { TProduct } from "@/types/product.type";
+import PurchaseItemsCard from "../../home/components/PurchaseItemsCard";
 
-const CategoryProducts = ({}: ICategoryProductsProps) => {
-  return <section>Category Products</section>;
+interface ICategoryProductsProps {
+  products: TProduct[];
+  categoryName: string;
+}
+
+const CategoryProducts = ({
+  products,
+  categoryName,
+}: ICategoryProductsProps) => {
+  return (
+    <section className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[80px]">
+      <h2 className="text-[30px] md:text-[50px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black text-center font-noto bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent">
+        {categoryName}
+      </h2>
+      <p className="my-2 lg:my-4 text-[20px] lg:text-[40px] leading-[30px] lg:leading-[60px] font-black text-center bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent">
+        のカテゴリー商品一覧
+      </p>
+      <p className="text-[16px] lg:text-[20px] leading-[20px] lg:leading-[30px] text-center">
+        記載のないメーカー製品もお問い合わせください
+      </p>
+      <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
+        {products.map((item) => (
+          <div className="w-[47%] md:w-[30%] lg:w-[22%]" key={item.id}>
+            <PurchaseItemsCard image={item.image} title={item.title} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default CategoryProducts;

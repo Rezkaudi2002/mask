@@ -1,4 +1,4 @@
-// import { TProduct } from "@/types/product.type";
+import { TProduct } from "@/types/product.type";
 import CategoryHero from "../components/CategoryHero";
 import CategoryProducts from "../components/CategoryProducts";
 import Flow from "../../home/sections/Flow";
@@ -12,15 +12,15 @@ import MajorList from "../components/MajorList";
 import HadisReason from "../components/HadisReason";
 
 interface IIndexProps {
-  // products: TProduct[];
+  products: TProduct[];
   category: string;
 }
 
-const index = ({ category }: IIndexProps) => {
+const index = ({ category, products }: IIndexProps) => {
   return (
     <>
       <CategoryHero categoryName={category} />
-      <CategoryProducts />
+      <CategoryProducts categoryName={category} products={products} />
       <Flow />
       <WhyChoose />
       <ContactBanner />
