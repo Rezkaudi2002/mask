@@ -96,7 +96,7 @@ const MajorList = ({ categoryName }: IMajorListProps) => {
         の主なメーカー一覧
       </p>
       {/* companies wrapper */}
-      <div className="w-full md:w-[90%] lg:w-[70%] md:mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[7px] lg:gap-x-[32px] lg:gap-y-4 mt-10">
+      <div className="w-full md:w-[90%] lg:w-[80%] md:mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[7px] lg:gap-x-[32px] lg:gap-y-4 mt-10">
         {companies.map((item, index) => (
           <div
             key={index}
