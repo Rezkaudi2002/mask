@@ -24,7 +24,7 @@ const index = ({ category, products }: IIndexProps) => {
       <Flow />
       <WhyChoose />
       <ContactBanner />
-      <CategoryPurchaseResults />
+      <CategoryPurchaseResults categoryName={category} />
       <HadisReason />
       <MajorList categoryName={category} />
       <ContactBanner />
