@@ -25,8 +25,6 @@ const page = async ({ params }: IPageProps) => {
     return <NotFound />;
   }
 
-  console.log(products);
-
   return (
     <div>
       <CategoryPage category={categoryDecoded} products={products} />
