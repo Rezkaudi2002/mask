@@ -25,7 +25,7 @@ const index = ({ category }: IIndexProps) => {
       <ContactBanner />
       <CategoryPurchaseResults />
       {/* PurcheseResult */}
-      <MajorList />
+      <MajorList categoryName={category}  />
       <ContactBanner />
       <PurchaseProcess />
       <CompanyProfile />
