@@ -12,7 +12,7 @@ const page = async ({ params }: IPageProps) => {
   const categoryDecoded = decodeURIComponent(category);
   return (
     <div>
-      <CategoryPage  />
+      <CategoryPage category={categoryDecoded} />
     </div>
   );
 };

@@ -9,15 +9,15 @@ import PurchaseProcess from "../../home/sections/PurchaseProcess";
 import CompanyProfile from "../../home/sections/CompanyProfile";
 import Inquiry from "@/components/common/sections/Inquiry";
 
-// interface IIndexProps {
-//   products: TProduct[]
-// }
+interface IIndexProps {
+  // products: TProduct[],
+  category: string;
+}
 
-// const index = ({}: IIndexProps) => {
-const index = () => {
+const index = ({ category }: IIndexProps) => {
   return (
     <>
-      <CategoryHero />
+      <CategoryHero categoryName={category} />
       <CategoryProducts />
       <Flow />
       <WhyChoose />

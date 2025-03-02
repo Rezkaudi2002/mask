@@ -5,9 +5,9 @@
 // const CategoryPurchaseResults = ({}: ICategoryPurchaseResultsProps) => {
 const CategoryPurchaseResults = () => {
   return (
-    <div>
+    <section>
       CategoryPurchaseResults
-    </div>
+    </section>
   );
 };
 

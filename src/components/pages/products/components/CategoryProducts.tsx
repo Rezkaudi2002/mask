@@ -1,11 +1,7 @@
 interface ICategoryProductsProps {}
 
 const CategoryProducts = ({}: ICategoryProductsProps) => {
-  return (
-    <div>
-      Category Products
-    </div>
-  );
+  return <section>Category Products</section>;
 };
 
 export default CategoryProducts;
