@@ -6,7 +6,7 @@ interface ICategoryHeroProps {
 
 const CategoryHero = ({ categoryName }: ICategoryHeroProps) => {
   return (
-    <section className="relative px-4 w-full h-[410px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] sm:bg-right-top overflow-hidden">
+    <section className="relative px-4 w-full h-[510px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] sm:bg-right-top overflow-hidden">
       {/* Background wrapper */}
       <div className="absolute -z-10 inset-0">
         <Image
