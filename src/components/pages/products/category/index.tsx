@@ -8,6 +8,7 @@ import CategoryPurchaseResults from "../components/CategoryPurchaseResults";
 import PurchaseProcess from "../../home/sections/PurchaseProcess";
 import CompanyProfile from "../../home/sections/CompanyProfile";
 import Inquiry from "@/components/common/sections/Inquiry";
+import MajorList from "../components/MajorList";
 
 interface IIndexProps {
   // products: TProduct[],
@@ -24,7 +25,7 @@ const index = ({ category }: IIndexProps) => {
       <ContactBanner />
       <CategoryPurchaseResults />
       {/* PurcheseResult */}
-      {/* Noname section */}
+      <MajorList />
       <ContactBanner />
       <PurchaseProcess />
       <CompanyProfile />
