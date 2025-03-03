@@ -21,10 +21,10 @@ const index = ({ category, products }: IIndexProps) => {
     <>
       <CategoryHero categoryName={category} />
       <CategoryProducts categoryName={category} products={products} />
+      <CategoryPurchaseResults categoryName={category} products={products} />
       <Flow />
       <WhyChoose />
       <ContactBanner />
-      <CategoryPurchaseResults categoryName={category} />
       <HadisReason />
       <MajorList categoryName={category} />
       <ContactBanner />
