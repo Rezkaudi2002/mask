@@ -49,7 +49,7 @@ const PurchasedItems = () => {
       </div>
       {/* show more button */}
       {selectedCategory === "自動車整備機械・自動車板金機械" && (
-        <div className="w-full mt-8 flex justify-center">
+        <div className="w-full mt-10 md:mt-12 flex justify-center">
           <Link
             href={`/products/${selectedCategory}`}
             className="block w-full md:w-[50%] lg:w-[30%] px-[16px] py-[11px] lg:p-[15px] text-center text-[14px] lg:text-[18px] leading-[18px] lg:leading-[24px] font-noto font-semibold border-[2px] border-[#990E1C] text-white gradient-red text-shadow-red"
