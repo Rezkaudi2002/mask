@@ -1,5 +1,5 @@
-import PurchaseCategoryCard from "./PurchaseCategorycard";
 import { TProduct } from "@/types/product.type";
+import PurchaseCategoryCard from "./PurchaseCategoryCard";
 
 interface ICategoryPurchaseResultsProps {
   categoryName: string;
@@ -20,11 +20,7 @@ const CategoryPurchaseResults = ({
       </p>
       <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
         {products.slice(0, 2).map((item) => (
-          <PurchaseCategoryCard
-            key={item.id}
-            title={item.title}
-            image={item.image}
-          />
+          <PurchaseCategoryCard key={item.id} title={item.title} image={item.image}/>
         ))}
       </div>
     </section>
