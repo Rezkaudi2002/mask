@@ -1,8 +1,11 @@
 import { useState } from "react";
-import blogsData from "@/content/blogs/blogs.json";
+
+// services
+import { getAllBlogs } from "@/services/blogs";
 
 export const useBlog = () => {
   const postsPerPage = 15;
+  const blogsData = getAllBlogs()
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (page: number) => {
@@ -12,6 +15,7 @@ export const useBlog = () => {
   // Calculate the range of blogs to display
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentBlogs = blogsData.slice(startIndex, startIndex + postsPerPage);
+  const numberOfBlogs = blogsData.length
 
-  return { currentBlogs, postsPerPage, currentPage, handlePageChange };
+  return { currentBlogs, postsPerPage, currentPage, handlePageChange, numberOfBlogs };
 };
