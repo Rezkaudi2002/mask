@@ -115,10 +115,10 @@ const MajorList = ({ categoryName }: IMajorListProps) => {
             key={index}
             target="_blank"
             href={item.link}
-            className="px-4 py-3 space-y-1 bg-white border-[3px] border-[#B81122] flex justify-center items-center min-h-[155px]"
+            className="px-4 py-3 space-y-1 bg-white border-[3px] border-[#B81122] flex justify-center items-center min-h-[100px] max-h-[100px] lg:min-h-[150px] lg:max-h-[150px] overflow-hidden"
           >
             {/* <p>{item.jp}</p> */}
-            <Image src={item.imageSrc} alt={item.en} width={150} height={150} />
+            <Image src={item.imageSrc} alt={item.en} width={200} height={200} />
             {/* {item.en} */}
           </Link>
         ))}
