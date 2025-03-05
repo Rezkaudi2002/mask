@@ -115,17 +115,16 @@ const MajorList = ({ categoryName }: IMajorListProps) => {
             key={index}
             target="_blank"
             href={item.link}
-            className="px-4 py-3 space-y-1 bg-white border-[3px] border-[#B81122] flex justify-center items-center min-h-[100px] max-h-[100px] lg:min-h-[150px] lg:max-h-[150px] overflow-hidden"
+            className="px-4 py-3 bg-white border-[3px] border-[#B81122] flex justify-center items-center min-h-[100px] max-h-[100px] lg:min-h-[150px] lg:max-h-[150px] overflow-hidden"
           >
-            {/* <p>{item.jp}</p> */}
             <Image
               src={item.imageSrc}
               alt={item.en}
               width={200}
               height={200}
               loading="lazy"
+              className="w-full h-full object-contain"
             />
-            {/* {item.en} */}
           </Link>
         ))}
       </div>
