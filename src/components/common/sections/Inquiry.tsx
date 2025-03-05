@@ -83,8 +83,8 @@ const Inquiry = () => {
           click={click}
           setClick={setClick}
           options={[
-            { value: "allow_phone_call", label: "はい" },
-            { value: "disallow_phone_call", label: "いいえ" },
+            { value: "はい", label: "はい" }, // allow_phone_call
+            { value: "いいえ", label: "いいえ" }, // disallow_phone_call
           ]}
         />
         <RadioGroup
@@ -96,8 +96,11 @@ const Inquiry = () => {
           click={click}
           setClick={setClick}
           options={[
-            { value: "business", label: "事業（個人事業者または法人)" },
-            { value: "personal", label: "個人で使用" },
+            {
+              value: "事業（個人事業者または法人)",
+              label: "事業（個人事業者または法人)",
+            }, // business
+            { value: "個人で使用", label: "個人で使用" }, // personal
           ]}
           onChange={handleInputChange}
         />
@@ -111,8 +114,8 @@ const Inquiry = () => {
           click={click}
           setClick={setClick}
           options={[
-            { value: "registered", label: "はい" },
-            { value: "not_registered", label: "いいえ" },
+            { value: "はい", label: "はい" }, // registered
+            { value: "いいえ", label: "いいえ" }, // not registered
           ]}
         />
         <RadioGroup
@@ -125,8 +128,8 @@ const Inquiry = () => {
           click={click}
           setClick={setClick}
           options={[
-            { value: "will_provide", label: "はい" },
-            { value: "will_not_provide", label: "いいえ" },
+            { value: "はい", label: "はい" }, // will_provide
+            { value: "いいえ", label: "いいえ" }, // will_not_provide
           ]}
         />
         {/* Select Fields */}
@@ -137,54 +140,54 @@ const Inquiry = () => {
           required
           value={formData.city}
           options={[
-            { value: "not_selected", label: "選択してください" },
-            { value: "hokkaido", label: "北海道" },
-            { value: "aomori", label: "青森県" },
-            { value: "iwate", label: "岩手県" },
-            { value: "miyagi", label: "宮城県" },
-            { value: "akita", label: "秋田県" },
-            { value: "yamagata", label: "山形県" },
-            { value: "fukushima", label: "福島県" },
-            { value: "ibaraki", label: "茨城県" },
-            { value: "tochigi", label: "栃木県" },
-            { value: "gunma", label: "群馬県" },
-            { value: "saitama", label: "埼玉県" },
-            { value: "chiba", label: "千葉県" },
-            { value: "tokyo", label: "東京都" },
-            { value: "kanagawa", label: "神奈川県" },
-            { value: "niigata", label: "新潟県" },
-            { value: "toyama", label: "富山県" },
-            { value: "ishikawa", label: "石川県" },
-            { value: "fukui", label: "福井県" },
-            { value: "yamanashi", label: "山梨県" },
-            { value: "nagano", label: "長野県" },
-            { value: "gifu", label: "岐阜県" },
-            { value: "shizuoka", label: "静岡県" },
-            { value: "aichi", label: "愛知県" },
-            { value: "mie", label: "三重県" },
-            { value: "shiga", label: "滋賀県" },
-            { value: "kyoto", label: "京都府" },
-            { value: "osaka", label: "大阪府" },
-            { value: "hyogo", label: "兵庫県" },
-            { value: "nara", label: "奈良県" },
-            { value: "wakayama", label: "和歌山県" },
-            { value: "tottori", label: "鳥取県" },
-            { value: "shimane", label: "島根県" },
-            { value: "okayama", label: "岡山県" },
-            { value: "hiroshima", label: "広島県" },
-            { value: "yamaguchi", label: "山口県" },
-            { value: "tokushima", label: "徳島県" },
-            { value: "kagawa", label: "香川県" },
-            { value: "ehime", label: "愛媛県" },
-            { value: "kochi", label: "高知県" },
-            { value: "fukuoka", label: "福岡県" },
-            { value: "saga", label: "佐賀県" },
-            { value: "nagasaki", label: "長崎県" },
-            { value: "kumamoto", label: "熊本県" },
-            { value: "ooita", label: "大分県" },
-            { value: "miyazaki", label: "宮崎県" },
-            { value: "kagoshima", label: "鹿児島県" },
-            { value: "okinawa", label: "沖縄県" },
+            { value: "選択してください", label: "選択してください" }, // not selected
+            { value: "北海道", label: "北海道" }, // hokkaido
+            { value: "青森県", label: "青森県" }, // aomori
+            { value: "岩手県", label: "岩手県" }, // iwate
+            { value: "宮城県", label: "宮城県" }, // miyagi
+            { value: "秋田県", label: "秋田県" }, // akita
+            { value: "山形県", label: "山形県" }, // yamagata
+            { value: "福島県", label: "福島県" }, // fukushima
+            { value: "茨城県", label: "茨城県" }, // ibaraki
+            { value: "栃木県", label: "栃木県" }, // tochigi
+            { value: "群馬県", label: "群馬県" }, // gunma
+            { value: "埼玉県", label: "埼玉県" }, // saitama
+            { value: "千葉県", label: "千葉県" }, // chiba
+            { value: "東京都", label: "東京都" }, // tokyo
+            { value: "神奈川県", label: "神奈川県" }, // kanagawa
+            { value: "新潟県", label: "新潟県" }, // niigata
+            { value: "富山県", label: "富山県" }, // toyama
+            { value: "石川県", label: "石川県" }, // ishikawa
+            { value: "福井県", label: "福井県" }, // fukui
+            { value: "山梨県", label: "山梨県" }, // yamanashi
+            { value: "長野県", label: "長野県" }, // nagano
+            { value: "岐阜県", label: "岐阜県" }, // gifu
+            { value: "静岡県", label: "静岡県" }, // shizuoka
+            { value: "愛知県", label: "愛知県" }, // aichi
+            { value: "三重県", label: "三重県" }, // mie
+            { value: "滋賀県", label: "滋賀県" }, // shiga
+            { value: "京都府", label: "京都府" }, // kyoto
+            { value: "大阪府", label: "大阪府" }, // osaka
+            { value: "兵庫県", label: "兵庫県" }, // hyogo
+            { value: "奈良県", label: "奈良県" }, // nara
+            { value: "和歌山県", label: "和歌山県" }, // wakayama
+            { value: "鳥取県", label: "鳥取県" }, // tottori
+            { value: "島根県", label: "島根県" }, // shimane
+            { value: "岡山県", label: "岡山県" }, // okayama
+            { value: "広島県", label: "広島県" }, // hiroshima
+            { value: "山口県", label: "山口県" }, // yamaguchi
+            { value: "徳島県", label: "徳島県" }, // tokushima
+            { value: "香川県", label: "香川県" }, // kagawa
+            { value: "愛媛県", label: "愛媛県" }, // ehime
+            { value: "高知県", label: "高知県" }, // kochi
+            { value: "福岡県", label: "福岡県" }, // fukuoka
+            { value: "佐賀県", label: "佐賀県" }, // saga
+            { value: "長崎県", label: "長崎県" }, // nagasaki
+            { value: "熊本県", label: "熊本県" }, // kumamoto
+            { value: "大分県", label: "大分県" }, // oita
+            { value: "宮崎県", label: "宮崎県" }, // miyazaki
+            { value: "鹿児島県", label: "鹿児島県" }, // kagoshima
+            { value: "沖縄県", label: "沖縄県" }, // okinawa
           ]}
           onChange={handleInputChange}
         />
@@ -234,14 +237,14 @@ const Inquiry = () => {
               value={item.product_condition}
               onChange={(e) => handleProductInputChange(e, index)}
               options={[
-                { value: "not_selected", label: "選択してください" },
-                { value: "unused", label: "未使用品" },
-                { value: "excellent", label: "極上美品" },
-                { value: "good", label: "美品" },
-                { value: "used", label: "中古なり" },
-                { value: "damaged", label: "キズ汚れ破損あり" },
-                { value: "junk", label: "ジャンク" },
-                { value: "scrap", label: "スクラップ" },
+                { value: "選択してください", label: "選択してください" }, // not selected
+                { value: "未使用品", label: "未使用品" }, // unused
+                { value: "極上美品", label: "極上美品" }, // excellent
+                { value: "美品", label: "美品" }, // good
+                { value: "中古なり", label: "中古なり" }, // used
+                { value: "キズ汚れ破損あり", label: "キズ汚れ破損あり" }, // damaged
+                { value: "ジャンク", label: "ジャンク" }, // junk
+                { value: "スクラップ", label: "スクラップ" }, // scrap
               ]}
             />
             {/* Image Upload */}
