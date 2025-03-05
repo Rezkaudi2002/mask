@@ -34,7 +34,7 @@ const companies = [
     jp: "オノダニ",
     en: "ONODANI",
     link: "https://www.onodani.co.jp/",
-    imageSrc: "/images/category/companies/onodani-logo.svg",
+    imageSrc: "/images/category/companies/onodani-logo.jpg",
   },
   {
     jp: "イヤサカ",
@@ -118,7 +118,13 @@ const MajorList = ({ categoryName }: IMajorListProps) => {
             className="px-4 py-3 space-y-1 bg-white border-[3px] border-[#B81122] flex justify-center items-center min-h-[100px] max-h-[100px] lg:min-h-[150px] lg:max-h-[150px] overflow-hidden"
           >
             {/* <p>{item.jp}</p> */}
-            <Image src={item.imageSrc} alt={item.en} width={200} height={200} />
+            <Image
+              src={item.imageSrc}
+              alt={item.en}
+              width={200}
+              height={200}
+              loading="lazy"
+            />
             {/* {item.en} */}
           </Link>
         ))}
