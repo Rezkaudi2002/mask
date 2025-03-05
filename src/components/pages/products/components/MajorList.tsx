@@ -46,7 +46,7 @@ const companies = [
     jp: "ビシャモン",
     en: "Bishamon",
     link: "http://www.bishamon.co.jp/",
-    imageSrc: "/images/category/companies/bishamon-logo.png",
+    imageSrc: "/images/category/companies/bishamon-logo.jpg",
   },
   {
     jp: "スパネージ",
