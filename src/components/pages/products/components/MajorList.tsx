@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface IMajorListProps {
   categoryName: string;
@@ -6,76 +7,74 @@ interface IMajorListProps {
 
 const companies = [
   {
-    jp: "アマダ",
-    en: "AMADA",
+    jp: "スナップオン",
+    en: "Snap-on",
+    link: "https://www.snapon.co.jp/",
   },
   {
-    jp: "アポロ",
-    en: "APOLLO",
+    jp: "バンザイ",
+    en: "BANZAI",
+    link: "https://www.banzai.co.jp/",
   },
   {
-    jp: "大栄 ダイエイ	",
-    en: "DAIEI",
-  },
-  {
-    jp: "ダイヘン",
-    en: "DAIHEN",
-  },
-  {
-    jp: "栄和 エイワ",
+    jp: "エイワ",
     en: "EIWA",
+    link: "https://circuit-eiwa.co.jp/",
   },
   {
-    jp: "富士　フジ",
-    en: "FUJI",
+    jp: "小野谷機工",
+    en: "EXCEED",
+    link: "https://www.onodani.co.jp/",
   },
   {
-    jp: "イノエ",
-    en: "INOE",
+    jp: "オノダニ",
+    en: "ONODANI",
+    link: "https://linkout.aucfan.com/?to=https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=2015148&pid=884896608&vc_url=https%3A%2F%2Fpage.auctions.yahoo.co.jp%2Fjp%2Fauction%2Fs755148093",
   },
   {
-    jp: "カネテック",
-    en: "KANETEC",
+    jp: "イヤサカ",
+    en: "IYASAKA",
+    link: "https://www.iyasaka.co.jp/",
   },
   {
-    jp: "コマツ",
-    en: "KOMATSU",
+    jp: "ビシャモン",
+    en: "Bishamon",
+    link: "http://www.bishamon.co.jp/",
   },
   {
-    jp: "マツモト",
-    en: "MATSUMOTO",
+    jp: "スパネージ",
+    en: "SPANESI",
+    link: "https://www.maru-t.co.jp/products_lp/spanesi/",
   },
   {
-    jp: "三菱 ミツビシ",
-    en: "MITSUBISHI",
+    jp: "セレット",
+    en: "CELETTE",
+    link: "https://www.ipec-j.co.jp/products/frame/",
   },
   {
-    jp: "ノリミツ",
-    en: "NORIMITSU",
+    jp: "カーベンチ",
+    en: "CAR BENCH",
+    link: "https://www.carbench.it/en",
   },
   {
-    jp: "パナソニック",
-    en: "PANASONIC",
-  },
-  {
-    jp: "タケダ",
-    en: "TAKEDA",
-  },
-  {
-    jp: "トップジャパン",
-    en: "TOP JAPAN",
-  },
-  {
-    jp: "ヤマダ",
-    en: "YAMADA",
-  },
-  {
-    jp: "山本　ヤマモト",
-    en: "YAMAMOTO",
+    jp: "キュービック",
+    en: "CUBIC SYSTEM ",
+    link: "http://www.cubicsystem.co.jp/system1",
   },
   {
     jp: "ヤシマ",
-    en: "YASHIMA",
+    en: "Yashima",
+    link: "https://www.yashima-corp.jp/yousetsuki/spot-welder/",
+  },
+  {
+    jp: "栄和",
+    en: "EIWA",
+    link: " http://www.eiwanet.co.jp/publics/index/17/",
+  },
+  {
+    jp: "堀場",
+    en: "HORIBA",
+    link: "https://www.horiba.com/jpn/",
   },
 ];
 const MajorList = ({ categoryName }: IMajorListProps) => {
@@ -103,7 +102,9 @@ const MajorList = ({ categoryName }: IMajorListProps) => {
             className="px-4 py-3 space-y-1 bg-white border-[3px] border-[#B81122]"
           >
             <p>{item.jp}</p>
-            <p className="text-[18px] font-bold underline">{item.en}</p>
+            <Link href={item.link} className="text-[18px] font-bold underline">
+              {item.en}
+            </Link>
           </div>
         ))}
       </div>
