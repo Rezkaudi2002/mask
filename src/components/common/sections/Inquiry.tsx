@@ -6,6 +6,10 @@ import ImageUpload from "../../pages/home/components/ImageUpload";
 import Image from "next/image";
 import { useFormHandler } from "@/hooks/useFormHandler";
 import PrivacyPolicy from "@/components/pages/home/components/PrivacyPolicy";
+import usageOptions from "@/content/home/usageOptions";
+import japanRegions from "@/content/home/japanRegions";
+import conditionOptions from "@/content/home/conditionOptions";
+import confirmationOptions from "@/content/home/confirmationOptions";
 
 const Inquiry = () => {
   const {
@@ -82,10 +86,7 @@ const Inquiry = () => {
           onChange={handleInputChange}
           click={click}
           setClick={setClick}
-          options={[
-            { value: "はい", label: "はい" }, // allow_phone_call
-            { value: "いいえ", label: "いいえ" }, // disallow_phone_call
-          ]}
+          options={confirmationOptions}
         />
         <RadioGroup
           name="usageType"
@@ -95,13 +96,7 @@ const Inquiry = () => {
           value={formData.usageType}
           click={click}
           setClick={setClick}
-          options={[
-            {
-              value: "事業（個人事業者または法人)",
-              label: "事業（個人事業者または法人)",
-            }, // business
-            { value: "個人で使用", label: "個人で使用" }, // personal
-          ]}
+          options={usageOptions}
           onChange={handleInputChange}
         />
         <RadioGroup
@@ -113,10 +108,7 @@ const Inquiry = () => {
           onChange={handleInputChange}
           click={click}
           setClick={setClick}
-          options={[
-            { value: "はい", label: "はい" }, // registered
-            { value: "いいえ", label: "いいえ" }, // not registered
-          ]}
+          options={confirmationOptions}
         />
         <RadioGroup
           name="provideRegistrationNumber"
@@ -127,10 +119,7 @@ const Inquiry = () => {
           onChange={handleInputChange}
           click={click}
           setClick={setClick}
-          options={[
-            { value: "はい", label: "はい" }, // will_provide
-            { value: "いいえ", label: "いいえ" }, // will_not_provide
-          ]}
+          options={confirmationOptions}
         />
         {/* Select Fields */}
         <SelectField
@@ -139,56 +128,7 @@ const Inquiry = () => {
           label="都道府県"
           required
           value={formData.city}
-          options={[
-            { value: "選択してください", label: "選択してください" }, // not selected
-            { value: "北海道", label: "北海道" }, // hokkaido
-            { value: "青森県", label: "青森県" }, // aomori
-            { value: "岩手県", label: "岩手県" }, // iwate
-            { value: "宮城県", label: "宮城県" }, // miyagi
-            { value: "秋田県", label: "秋田県" }, // akita
-            { value: "山形県", label: "山形県" }, // yamagata
-            { value: "福島県", label: "福島県" }, // fukushima
-            { value: "茨城県", label: "茨城県" }, // ibaraki
-            { value: "栃木県", label: "栃木県" }, // tochigi
-            { value: "群馬県", label: "群馬県" }, // gunma
-            { value: "埼玉県", label: "埼玉県" }, // saitama
-            { value: "千葉県", label: "千葉県" }, // chiba
-            { value: "東京都", label: "東京都" }, // tokyo
-            { value: "神奈川県", label: "神奈川県" }, // kanagawa
-            { value: "新潟県", label: "新潟県" }, // niigata
-            { value: "富山県", label: "富山県" }, // toyama
-            { value: "石川県", label: "石川県" }, // ishikawa
-            { value: "福井県", label: "福井県" }, // fukui
-            { value: "山梨県", label: "山梨県" }, // yamanashi
-            { value: "長野県", label: "長野県" }, // nagano
-            { value: "岐阜県", label: "岐阜県" }, // gifu
-            { value: "静岡県", label: "静岡県" }, // shizuoka
-            { value: "愛知県", label: "愛知県" }, // aichi
-            { value: "三重県", label: "三重県" }, // mie
-            { value: "滋賀県", label: "滋賀県" }, // shiga
-            { value: "京都府", label: "京都府" }, // kyoto
-            { value: "大阪府", label: "大阪府" }, // osaka
-            { value: "兵庫県", label: "兵庫県" }, // hyogo
-            { value: "奈良県", label: "奈良県" }, // nara
-            { value: "和歌山県", label: "和歌山県" }, // wakayama
-            { value: "鳥取県", label: "鳥取県" }, // tottori
-            { value: "島根県", label: "島根県" }, // shimane
-            { value: "岡山県", label: "岡山県" }, // okayama
-            { value: "広島県", label: "広島県" }, // hiroshima
-            { value: "山口県", label: "山口県" }, // yamaguchi
-            { value: "徳島県", label: "徳島県" }, // tokushima
-            { value: "香川県", label: "香川県" }, // kagawa
-            { value: "愛媛県", label: "愛媛県" }, // ehime
-            { value: "高知県", label: "高知県" }, // kochi
-            { value: "福岡県", label: "福岡県" }, // fukuoka
-            { value: "佐賀県", label: "佐賀県" }, // saga
-            { value: "長崎県", label: "長崎県" }, // nagasaki
-            { value: "熊本県", label: "熊本県" }, // kumamoto
-            { value: "大分県", label: "大分県" }, // oita
-            { value: "宮崎県", label: "宮崎県" }, // miyazaki
-            { value: "鹿児島県", label: "鹿児島県" }, // kagoshima
-            { value: "沖縄県", label: "沖縄県" }, // okinawa
-          ]}
+          options={japanRegions}
           onChange={handleInputChange}
         />
         <InputField
@@ -236,16 +176,7 @@ const Inquiry = () => {
               required={true}
               value={item.product_condition}
               onChange={(e) => handleProductInputChange(e, index)}
-              options={[
-                { value: "選択してください", label: "選択してください" }, // not selected
-                { value: "未使用品", label: "未使用品" }, // unused
-                { value: "極上美品", label: "極上美品" }, // excellent
-                { value: "美品", label: "美品" }, // good
-                { value: "中古なり", label: "中古なり" }, // used
-                { value: "キズ汚れ破損あり", label: "キズ汚れ破損あり" }, // damaged
-                { value: "ジャンク", label: "ジャンク" }, // junk
-                { value: "スクラップ", label: "スクラップ" }, // scrap
-              ]}
+              options={conditionOptions}
             />
             {/* Image Upload */}
             <ImageUpload
