@@ -17,9 +17,7 @@ const page = async ({ params }: IPageProps) => {
 
   const categoryDecoded = decodeURIComponent(category);
   const categoryData = categories.find((c) => c.title === categoryDecoded);
-  const products = categoryData?.items.filter(
-    (product) => product.category === categoryDecoded
-  );
+  const products = categoryData?.items;
 
   if (!categoryData || !products || products?.length === 0) {
     return <NotFound />;

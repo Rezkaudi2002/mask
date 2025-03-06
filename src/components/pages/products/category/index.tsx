@@ -32,7 +32,7 @@ const index = ({ categoryData }: IIndexProps) => {
       <HadisReason />
       <MajorList
         categoryName={categoryData.title}
-        companies={categoryData?.companies}
+        companies={categoryData?.makers}
       />
       <ContactBanner />
       <PurchaseProcess />

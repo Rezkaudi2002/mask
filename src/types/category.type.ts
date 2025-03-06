@@ -4,11 +4,11 @@ export type TCategory = {
   id: number;
   title: string;
   items: TProduct[];
-  companies: TCompany[];
+  makers: TMaker[];
   purchaseItems: TPurchaseItem[];
 };
 
-export type TCompany = {
+export type TMaker = {
   jp: string;
   en: string;
   link: string;
