@@ -20,10 +20,11 @@ const CategoryHero = ({ categoryName }: ICategoryHeroProps) => {
         />
     </div>
       {/* content wrapper */}
-      <div className="w-[74%] lg:w-[65%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-[#ffffffbf] lg:bg-white absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-[#B81122]">            <h2 className="text-[32px] leading-[36px] lg:text-[65px] lg:leading-[90px] font-bold">
+      <div className="w-[74%] lg:w-[65%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-[#ffffffbf] lg:bg-white absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-[#B81122]">
+        <h2 className="text-[32px] leading-[36px] lg:text-[65px] lg:leading-[90px] font-bold text-left lg:text-center">
           {categoryName}
         </h2>
-        <p className="text-[24px] leading-[36px] lg:text-[48px] lg:leading-[90px] font-semibold">
+        <p className="text-[24px] leading-[36px] lg:text-[48px] lg:leading-[90px] font-semibold text-left lg:text-center">
           買取はハディスに お任せ！
         </p>
         {/* details */}
