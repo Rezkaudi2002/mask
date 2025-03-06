@@ -1,10 +1,10 @@
-import { TCompany } from "@/types/category.type";
+import { TMaker } from "@/types/category.type";
 import Image from "next/image";
 import Link from "next/link";
 
 interface IMajorListProps {
   categoryName: string;
-  companies?: TCompany[];
+  companies: TMaker[];
 }
 
 const MajorList = ({ categoryName, companies }: IMajorListProps) => {
