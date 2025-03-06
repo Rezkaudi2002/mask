@@ -1,4 +1,3 @@
-import { TProduct } from "@/types/product.type";
 import CategoryHero from "../components/CategoryHero";
 import CategoryProducts from "../components/CategoryProducts";
 import Flow from "../../home/sections/Flow";
@@ -9,23 +8,32 @@ import PurchaseProcess from "../../home/sections/PurchaseProcess";
 import Inquiry from "@/components/common/sections/Inquiry";
 import MajorList from "../components/MajorList";
 import HadisReason from "../components/HadisReason";
+import { TCategory } from "@/types/category.type";
 
 interface IIndexProps {
-  products: TProduct[];
-  category: string;
+  categoryData: TCategory;
 }
 
-const index = ({ category, products }: IIndexProps) => {
+const index = ({ categoryData }: IIndexProps) => {
   return (
     <>
-      <CategoryHero categoryName={category} />
-      <CategoryProducts categoryName={category} products={products} />
-      <CategoryPurchaseResults categoryName={category} />
+      <CategoryHero categoryName={categoryData.title} />
+      <CategoryProducts
+        categoryName={categoryData.title}
+        products={categoryData?.items}
+      />
+      <CategoryPurchaseResults
+        categoryName={categoryData.title}
+        purchaseItems={categoryData?.purchaseItems}
+      />
       <Flow />
       <WhyChoose />
       <ContactBanner />
       <HadisReason />
-      <MajorList categoryName={category} />
+      <MajorList
+        categoryName={categoryData.title}
+        companies={categoryData?.companies}
+      />
       <ContactBanner />
       <PurchaseProcess />
       <Inquiry />
