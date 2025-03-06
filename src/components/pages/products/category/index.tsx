@@ -6,7 +6,6 @@ import WhyChoose from "../../home/sections/WhyChoose";
 import ContactBanner from "../../home/sections/ContactBanner";
 import CategoryPurchaseResults from "../components/CategoryPurchaseResults";
 import PurchaseProcess from "../../home/sections/PurchaseProcess";
-import CompanyProfile from "../../home/sections/CompanyProfile";
 import Inquiry from "@/components/common/sections/Inquiry";
 import MajorList from "../components/MajorList";
 import HadisReason from "../components/HadisReason";
