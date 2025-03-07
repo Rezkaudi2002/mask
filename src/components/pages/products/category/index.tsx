@@ -26,14 +26,14 @@ const index = ({ categoryData }: IIndexProps) => {
         categoryName={categoryData.title}
         purchaseItems={categoryData?.purchaseItems}
       />
-      <Flow />
-      <WhyChoose />
-      <ContactBanner />
-      <HadisReason />
       <MajorList
         categoryName={categoryData.title}
         companies={categoryData?.makers}
       />
+      <Flow />
+      <WhyChoose />
+      <ContactBanner />
+      <HadisReason />
       <ContactBanner />
       <PurchaseProcess />
       <Inquiry />
