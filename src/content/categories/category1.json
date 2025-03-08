@@ -53,118 +53,164 @@
   ],
   "makers": [
     {
-      "jp": "スナップオン",
-      "en": "Snap-on",
-      "link": "https://www.snapon.co.jp/",
-      "imageSrc": "/images/category/companies/snapon-logo.gif"
+      "jp": "",
+      "en": "TAKISAWA",
+      "link": "https://www.takisawa.co.jp/index.html",
+      "imageSrc": "/images/category/category1/makers/tadisawa.gif"
     },
     {
-      "jp": "バンザイ",
-      "en": "BANZAI",
-      "link": "https://www.banzai.co.jp/",
-      "imageSrc": "/images/category/companies/banzai-logo.svg"
+      "jp": "",
+      "en": "MORISEIKI",
+      "link": "https://www.dmgmori.co.jp/",
+      "imageSrc": "/images/category/category1/makers/dmg.png"
     },
     {
-      "jp": "エイワ",
-      "en": "EIWA",
-      "link": "https://circuit-eiwa.co.jp/",
-      "imageSrc": "/images/category/companies/eiwa-logo.jpg"
+      "jp": "",
+      "en": "Mazak",
+      "link": "https://www.mazak.com/jp-ja/",
+      "imageSrc": "/images/category/category1/makers/mazak.jpg"
     },
     {
-      "jp": "オノダニ",
-      "en": "ONODANI",
-      "link": "https://www.onodani.co.jp/",
-      "imageSrc": "/images/category/companies/onodani-logo.jpg"
+      "jp": "",
+      "en": "HASEGAWA",
+      "link": "http://www.hasegawa-m.co.jp/",
+      "imageSrc": "/images/category/category1/makers/hasegawa.JPG"
     },
     {
-      "jp": "イヤサカ",
-      "en": "IYASAKA",
-      "link": "https://www.iyasaka.co.jp/",
-      "imageSrc": "/images/category/companies/iyasaka-logo.png"
+      "jp": "",
+      "en": "DAINICHI",
+      "link": "https://www.dainichikinzoku.co.jp/",
+      "imageSrc": "/images/category/category1/makers/dainichi.png"
     },
     {
-      "jp": "ビシャモン",
-      "en": "Bishamon",
-      "link": "http://www.bishamon.co.jp/",
-      "imageSrc": "/images/category/companies/bishamon-logo.jpg"
+      "jp": "",
+      "en": "TSUDA",
+      "link": "https://www.tsudass.co.jp/",
+      "imageSrc": "/images/category/category1/makers/tsuda.png"
     },
     {
-      "jp": "スパネージ",
-      "en": "SPANESI",
-      "link": "https://www.maru-t.co.jp/products_lp/spanesi/",
-      "imageSrc": "/images/category/companies/spanesi-logo.png"
+      "jp": "",
+      "en": "HOWA",
+      "link": "https://www.howa.co.jp/",
+      "imageSrc": "/images/category/category1/makers/howa_logo.png"
     },
     {
-      "jp": "セレット",
-      "en": "CELETTE",
-      "link": "https://www.ipec-j.co.jp/products/frame/",
-      "imageSrc": "/images/category/companies/celette-logo.png"
+      "jp": "",
+      "en": "IKEGAI",
+      "link": "https://www.ikegai.co.jp/",
+      "imageSrc": "/images/category/category1/makers/ikegai.png"
     },
     {
-      "jp": "カーベンチ",
-      "en": "CAR BENCH",
-      "link": "https://www.carbench.it/en",
-      "imageSrc": "/images/category/companies/carbench-logo.png"
+      "jp": "",
+      "en": "OKUMA",
+      "link": "https://www.okuma.co.jp/",
+      "imageSrc": "/images/category/category1/makers/okuma.gif"
     },
     {
-      "jp": "キュービック",
-      "en": "CUBIC SYSTEM ",
-      "link": "http://www.cubicsystem.co.jp/system1",
-      "imageSrc": "/images/category/companies/cubic-system-logo.png"
+      "jp": "",
+      "en": "Kotobuki Mecanix",
+      "link": "https://www.kotobuki-mecanix.co.jp/",
+      "imageSrc": "/images/category/category1/makers/kotobuki.png"
     },
     {
-      "jp": "ヤシマ",
-      "en": "Yashima",
-      "link": "https://www.yashima-corp.jp/yousetsuki/spot-welder/",
-      "imageSrc": "/images/category/companies/yashima-logo.jpg"
+      "jp": "",
+      "en": "AMADA",
+      "link": "https://www.amada.co.jp/ja/",
+      "imageSrc": "/images/category/category1/makers/amada.png"
     },
     {
-      "jp": "栄和",
-      "en": "EIWA",
-      "link": " http://www.eiwanet.co.jp/publics/index/17/",
-      "imageSrc": "/images/category/companies/logo-trans.png"
+      "jp": "",
+      "en": "Mitsutoyo",
+      "link": "https://www.mitutoyo.co.jp/",
+      "imageSrc": "/images/category/category1/makers/Mitutoyo.png"
+    },
+    {
+      "jp": "",
+      "en": "SHIZUOKA",
+      "link": "https://www.shizuokatekko.co.jp/",
+      "imageSrc": "/images/category/category1/makers/shizuoka.jpg"
+    },
+    {
+      "jp": "",
+      "en": "OKAMOTO",
+      "link": "https://www.okamoto.co.jp/",
+      "imageSrc": "/images/category/category1/makers/okamoto.jpg"
+    },
+    {
+      "jp": "",
+      "en": "MAKINO",
+      "link": "https://www.makino.co.jp/ja-jp/",
+      "imageSrc": "/images/category/category1/makers/makino.webp"
     }
   ],
   "purchaseItems": [
     {
-      "title": "BIC TOOL★イオンシャワーブース★WX-700★  ★自動車板金 塗装",
-      "imageSrc": "/images/category/purchaseItems/item1.jpg"
+      "title": "ENKOH_S 遠州★タッピング兼用ボール盤★ESD350NTA",
+      "imageSrc": "/images/category/category1/purchaseItems/item1.jpg"
     },
     {
-      "title": "BIC TOOL★イオンシャワーブース★WX-700★  ★自動車板金 塗装",
-      "imageSrc": "/images/category/purchaseItems/item2.jpg"
+      "title": "KIWA 紀和★直立ボール盤★KUD-550FP",
+      "imageSrc": "/images/category/category1/purchaseItems/item2.jpg"
     },
     {
-      "title": "FuYo 芙蓉商事★サンドブラスト★SGW",
-      "imageSrc": "/images/category/purchaseItems/item3.jpg"
+      "title": "nc旋盤",
+      "imageSrc": "/images/category/category1/purchaseItems/item4.jpg"
     },
     {
-      "title": "IYASAKA イヤサカ★CO_HCアナライザ★ALTAS-300★自動車 排気ガステスター",
-      "imageSrc": "/images/category/purchaseItems/item4.jpg"
+      "title": "OKAMOTO 岡本工作機械★精密成形研削盤(平面研磨機)★PFG-450C",
+      "imageSrc": "/images/category/category1/purchaseItems/item5.jpg"
     },
     {
-      "title": "IYASAKA イヤサカ★HESHBON ヘスボン★  ★ホイールバランサー★HW-103★24インチ対応",
-      "imageSrc": "/images/category/purchaseItems/item5.jpg"
+      "title": "OOYA 大矢製作所★ラジアルボール盤★RE2-1300A",
+      "imageSrc": "/images/category/category1/purchaseItems/item6.jpg"
     },
     {
-      "title": "KTC★チェスト&ローラーキャビネット★  ★SKX3206Y SKX3705Y★コーンウェルイエロー",
-      "imageSrc": "/images/category/purchaseItems/item6.jpg"
+      "title": "TAKISAWA 滝沢★4尺 旋盤★TSL-DELUXE",
+      "imageSrc": "/images/category/category1/purchaseItems/item7.jpg"
     },
     {
-      "title": "Snap-on スナップオン★工具箱 ツールキャビネット ロールキャブ★KRA4813D",
-      "imageSrc": "/images/category/purchaseItems/item7.jpg"
+      "title": "アマダ　AMADA プレス機　60ton",
+      "imageSrc": "/images/category/category1/purchaseItems/item8.jpg"
     },
     {
-      "title": "SPEEDY★キュアマックス★塗装乾燥機 ヒーター★N2C",
-      "imageSrc": "/images/category/purchaseItems/item8.jpg"
+      "title": "アマダ　AMADA プレス機　80ton",
+      "imageSrc": "/images/category/category1/purchaseItems/item9.jpg"
     },
     {
-      "title": "SUPER スーパーツール★ポータブル門型クレーン 伸縮式★PMC480BN",
-      "imageSrc": "/images/category/purchaseItems/item9.jpg"
+      "title": "ワシノ★高速精密旋盤★LEO-80A★6尺旋盤★  ★ミツトヨ DRO付き",
+      "imageSrc": "/images/category/category1/purchaseItems/item10.jpg"
     },
     {
-      "title": "YAMADA ヤマダ★オイルドレン★OD-700PG",
-      "imageSrc": "/images/category/purchaseItems/item10.jpg"
+      "title": "光畑製作所★COSMO ACE★卓上フライス盤★BM-1000★  ★電動YXテーブル カウンタ 取説付",
+      "imageSrc": "/images/category/category1/purchaseItems/item11.jpg"
+    },
+    {
+      "title": "大和工機 NEWS★PROFIT★工具研削盤★  ★CG-200-N",
+      "imageSrc": "/images/category/category1/purchaseItems/item12.jpg"
+    },
+    {
+      "title": "山崎鉄工所★旋盤★焼入ベッド★MAZAK-860",
+      "imageSrc": "/images/category/category1/purchaseItems/item13.jpg"
+    },
+    {
+      "title": "日立工機★180mmロータリーバンドソー★CB18FA3",
+      "imageSrc": "/images/category/category1/purchaseItems/item14.jpg"
+    },
+    {
+      "title": "日立工機★220mm ロータリバンドソー★CB22FA",
+      "imageSrc": "/images/category/category1/purchaseItems/item15.jpg"
+    },
+    {
+      "title": "松浦機械★立フライス盤★FVR-1B",
+      "imageSrc": "/images/category/category1/purchaseItems/item16.jpg"
+    },
+    {
+      "title": "牧野フライス精機 マキノ★小型フライス盤★  ★MH-20★三相200V",
+      "imageSrc": "/images/category/category1/purchaseItems/item17.jpg"
+    },
+    {
+      "title": "飯田鉄工所★工具研削盤★GT-200FR",
+      "imageSrc": "/images/category/category1/purchaseItems/item18.jpg"
     }
   ]
 }
