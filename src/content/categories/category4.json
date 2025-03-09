@@ -114,57 +114,123 @@
   "makers": [
     {
       "jp": "",
-      "en": "ISEKI",
-      "link": "https://www.iseki.co.jp/",
-      "imageSrc": "/images/category/category3/makers/ISEKI.svg"
+      "en": "TOYO",
+      "link": "https://www.toyokensetsukohki.co.jp/",
+      "imageSrc": "/images/category/category4/makers/toyo.png"
     },
     {
       "jp": "",
-      "en": "KUBOTA",
-      "link": "https://agriculture.kubota.co.jp/",
-      "imageSrc": "/images/category/category3/makers/KUBOTA.png"
+      "en": "TANAKA",
+      "link": "https://www.nissantanaka.com/",
+      "imageSrc": "/images/category/category4/makers/tanaka.png"
     },
     {
       "jp": "",
-      "en": "KOMATSU",
-      "link": "https://www.komatsu.jp/ja",
-      "imageSrc": "/images/category/category3/makers/KOMATSU.svg"
+      "en": "TAKEDA",
+      "link": "https://www.takeda-mc.co.jp/",
+      "imageSrc": "/images/category/category4/makers/takeda.jpg"
     },
     {
       "jp": "",
-      "en": "YANMAR",
-      "link": "https://www.yanmar.com/jp/",
-      "imageSrc": "/images/category/category3/makers/YANMAR.png"
+      "en": "OGURA",
+      "link": "https://ogura-web.com/",
+      "imageSrc": "/images/category/category4/makers/ogura.png"
     },
     {
       "jp": "",
-      "en": "MITSUBISHI",
-      "link": "https://www.mam.co.jp/",
-      "imageSrc": "/images/category/category3/makers/MITSUBISHI.jpg"
+      "en": "MAX",
+      "link": "https://www.max-ltd.co.jp/",
+      "imageSrc": "/images/category/category4/makers/max.jpg"
     },
     {
       "jp": "",
-      "en": "HITACHI",
-      "link": "https://japan.hitachi-kenki.co.jp/products/industry/agriculture/",
-      "imageSrc": "/images/category/category3/makers/HITACHI.svg"
+      "en": "MAKITA",
+      "link": "https://www.makita.co.jp/",
+      "imageSrc": "/images/category/category4/makers/makita.jpg"
     },
     {
       "jp": "",
-      "en": "IHI",
-      "link": "https://www.ihi.co.jp/iat/",
-      "imageSrc": "/images/category/category3/makers/IHI.png"
+      "en": "IKURA",
+      "link": "http://www.ikuratools.com/entrance_b.html",
+      "imageSrc": "/images/category/category4/makers/ikura.jpg"
     },
     {
       "jp": "",
-      "en": "MAMETORA",
-      "link": "https://mametora.co.jp/",
-      "imageSrc": "/images/category/category3/makers/MAMETORA.svg"
+      "en": "HILTI",
+      "link": "https://www.hilti.co.jp/",
+      "imageSrc": "/images/category/category4/makers/hilti.png"
     },
     {
       "jp": "",
-      "en": "HONDA",
-      "link": "https://www.honda.co.jp/tiller/",
-      "imageSrc": "/images/category/category3/makers/HONDA.jpg"
+      "en": "ASADA",
+      "link": "https://www.asada.co.jp/index.html",
+      "imageSrc": "/images/category/category4/makers/asada.jpg"
+    },
+    {
+      "jp": "",
+      "en": "DAIA",
+      "link": "https://www.daia-net.co.jp/",
+      "imageSrc": "/images/category/category4/makers/daia.png"
+    },
+    {
+      "jp": "",
+      "en": "AMADA",
+      "link": "https://www.amada.co.jp/ja/products/",
+      "imageSrc": "/images/category/category4/makers/amada.png"
+    },
+    {
+      "jp": "",
+      "en": "DAIHEN",
+      "link": "https://www.daihen.co.jp/",
+      "imageSrc": "/images/category/category4/makers/daihen.jpg"
+    },
+    {
+      "jp": "",
+      "en": "PANASONIC",
+      "link": "https://www2.panasonic.biz/jp/",
+      "imageSrc": "/images/category/category4/makers/panasonic.svg"
+    },
+    {
+      "jp": "",
+      "en": "MARUNAKA",
+      "link": "https://www.marunaka-japan.co.jp/",
+      "imageSrc": "/images/category/category4/makers/MARUNAKA.png"
+    },
+    {
+      "jp": "",
+      "en": "MITACHI",
+      "link": "https://www.sanko-mitachi.com/",
+      "imageSrc": "/images/category/category4/makers/mitachi.webp"
+    },
+    {
+      "jp": "",
+      "en": "NITTO KOHKI",
+      "link": "https://www.nitto-kohki.co.jp/",
+      "imageSrc": "/images/category/category4/makers/nitto.jpg"
+    },
+    {
+      "jp": "",
+      "en": "DAIDO KOGYO",
+      "link": "https://www.daidokogyo-kk.co.jp/en/",
+      "imageSrc": "/images/category/category4/makers/daido.png"
+    },
+    {
+      "jp": "",
+      "en": "FUKAGAWA",
+      "link": "https://www.ductnet.com/products/machine/",
+      "imageSrc": "/images/category/category4/makers/fukagawa.jpg"
+    },
+    {
+      "jp": "",
+      "en": "NAOTOKU",
+      "link": "https://www.naotoku.com/oldmachine.html",
+      "imageSrc": "/images/category/category4/makers/naotoku.webp"
+    },
+    {
+      "jp": "",
+      "en": "MORIMITU",
+      "link": "https://morimitu.co.jp/",
+      "imageSrc": "/images/category/category4/makers/morimitu.png"
     }
   ],
   "purchaseItems": [
