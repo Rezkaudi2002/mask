@@ -5,6 +5,6 @@ import category4 from './category4.json'
 import category5 from './category5.json'
 
 
-const categories = [category1, category2, category3, category4, category5 ]
+const categories = [category1, category2, category3, category4, category5]
 
 export default categories
