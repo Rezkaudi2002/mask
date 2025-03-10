@@ -19,15 +19,15 @@ const index = ({ categoryData }: IIndexProps) => {
     <>
       <CategoryHero categoryName={categoryData.title} />
       <CategoryProducts
-        categoryName={categoryData.title}
+        categoryName={categoryData.title.replace(/\n/g, '')}
         products={categoryData?.items}
       />
       <CategoryPurchaseResults
-        categoryName={categoryData.title}
+        categoryName={categoryData.title.replace(/\n/g, '')}
         purchaseItems={categoryData?.purchaseItems}
       />
       <MajorList
-        categoryName={categoryData.title}
+        categoryName={categoryData.title.replace(/\n/g, '')}
         companies={categoryData?.makers}
       />
       <Flow />
