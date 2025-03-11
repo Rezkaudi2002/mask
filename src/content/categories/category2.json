@@ -66,6 +66,26 @@
       "id": 13,
       "title": "Snap-on スナップオン . 工具",
       "image": "/images_db/item22.jpg"
+    },
+    {
+      "id": 14,
+      "title": "フロンガス回収機",
+      "image": "/images_db/item209.jpg"
+    },
+    {
+      "id": 15,
+      "title": "サンドブラスト機",
+      "image": "/images_db/item210.jpg"
+    },
+    {
+      "id": 16,
+      "title": "油圧プレス",
+      "image": "/images_db/item211.jpg"
+    },
+    {
+      "id": 17,
+      "title": "塗装ブース",
+      "image": "/images_db/item212.png"
     }
   ],
   "makers": [
