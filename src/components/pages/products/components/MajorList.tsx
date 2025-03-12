@@ -36,9 +36,9 @@ const MajorList = ({ categoryName, companies }: IMajorListProps) => {
             <Image
               src={item.imageSrc}
               alt={item.en}
-              width={200}
-              height={200}
-              loading="lazy"
+              width={250}
+              height={250}
+              unoptimized
               className="w-full h-full object-contain"
             />
           </Link>
