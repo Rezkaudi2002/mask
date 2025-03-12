@@ -91,123 +91,171 @@
   "makers": [
     {
       "jp": "",
-      "en": "max-ltd",
-      "link": "https://www.max-ltd.co.jp",
-      "imageSrc": "/images/category/category7/makers/max-ltd.jpg"
+      "en": "itabasi",
+      "link": "http://itabasi.com",
+      "imageSrc": "/images/category/category6/makers/itabasi.png"
     },
     {
       "jp": "",
-      "en": "si-mark",
-      "link": "https://si-mark.co.jp/products/",
-      "imageSrc": "/images/category/category7/makers/si-mark.svg"
+      "en": "shibuya-group",
+      "link": "http://www.shibuya-group.co.jp",
+      "imageSrc": "/images/category/category6/makers/shibuya.jpg"
     },
     {
       "jp": "",
-      "en": "amano",
-      "link": "https://www.amano.co.jp/",
-      "imageSrc": "/images/category/category7/makers/amano.PNG"
+      "en": "mcccorp",
+      "link": "https://mcccorp.co.jp",
+      "imageSrc": "/images/category/category6/makers/mcccorp.webp"
     },
     {
       "jp": "",
-      "en": "anest-iwata",
-      "link": "https://www.anest-iwata.co.jp/",
-      "imageSrc": "/images/category/category7/makers/anest-iwata.PNG"
+      "en": "airman",
+      "link": "https://www.airman.co.jp",
+      "imageSrc": "/images/category/category6/makers/airman.svg"
     },
     {
       "jp": "",
-      "en": "compacttool",
-      "link": "https://www.compacttool.com/product/",
-      "imageSrc": "/images/category/category7/makers/compacttool.webp"
+      "en": "asada",
+      "link": "https://www.asada.co.jp",
+      "imageSrc": "/images/category/category6/makers/asda.svg"
     },
     {
       "jp": "",
-      "en": "deltamachinery",
-      "link": "https://www.deltamachinery.com",
-      "imageSrc": "/images/category/category7/makers/deltamachinery.png"
+      "en": "ccts",
+      "link": "https://www.ccts.co.jp",
+      "imageSrc": "/images/category/category6/makers/cactus.jpg"
     },
     {
       "jp": "",
-      "en": "dewalt",
-      "link": "https://www.dewalt.com",
-      "imageSrc": "/images/category/category7/makers/dewalt.png"
+      "en": "ebara",
+      "link": "https://www.ebara.co.jp",
+      "imageSrc": "/images/category/category6/makers/ebara.png"
     },
     {
       "jp": "",
-      "en": "festool",
-      "link": "https://www.festool.com/products",
-      "imageSrc": "/images/category/category7/makers/festool.webp"
+      "en": "flutech",
+      "link": "https://www.flutech.co.jp",
+      "imageSrc": "/images/category/category6/makers/flutech.jpg"
     },
     {
       "jp": "",
-      "en": "izumi",
-      "link": "https://www.izumi.maxell.co.jp/",
-      "imageSrc": "/images/category/category7/makers/izumi.PNG"
+      "en": "hikoki-powertools",
+      "link": "https://www.hikoki-powertools.jp",
+      "imageSrc": "/images/category/category6/makers/hikoki.jpg"
     },
     {
       "jp": "",
-      "en": "klass-corp",
-      "link": "https://www.klass-corp.co.jp/",
-      "imageSrc": "/images/category/category7/makers/klass-corp.PNG"
+      "en": "honda",
+      "link": "https://www.honda.co.jp/generator/",
+      "imageSrc": "/images/category/category6/makers/honda.png"
     },
     {
       "jp": "",
-      "en": "koki-holdings",
-      "link": "https://www.koki-holdings.co.jp",
-      "imageSrc": "/images/category/category7/makers/koki-holdings.png"
+      "en": "husqvarna",
+      "link": "https://www.husqvarna.com.jp",
+      "imageSrc": "/images/category/category6/makers/husqvarna.png"
     },
     {
       "jp": "",
-      "en": "kyokuto",
-      "link": "https://www.kyokuto.com",
-      "imageSrc": "/images/category/category7/makers/kyokuto.png"
+      "en": "kamekura",
+      "link": "https://www.kamekura.co.jp",
+      "imageSrc": "/images/category/category6/makers/kamekura.png"
     },
     {
       "jp": "",
-      "en": "makita",
-      "link": "https://www.makita.co.jp/product/",
-      "imageSrc": "/images/category/category7/makers/makita.svg"
+      "en": "kawamoto",
+      "link": "https://www.kawamoto.co.jp",
+      "imageSrc": "/images/category/category6/makers/kawamoto.png"
     },
     {
       "jp": "",
-      "en": "triton-japan",
-      "link": "http://www.triton-japan.com",
-      "imageSrc": "/images/category/category7/makers/triton-japan.png"
+      "en": "kobelco-kenki",
+      "link": "https://www.kobelco-kenki.co.jp",
+      "imageSrc": "/images/category/category6/makers/kobelco.png"
     },
     {
       "jp": "",
-      "en": "murakoshi",
-      "link": "https://www.murakoshi.jp/",
-      "imageSrc": "/images/category/category7/makers/murakoshi.PNG"
+      "en": "komatsu",
+      "link": "https://www.komatsu.jp",
+      "imageSrc": "/images/category/category6/makers/komatsu.svg"
     },
     {
       "jp": "",
-      "en": "rupes",
-      "link": "https://www.rupes.com",
-      "imageSrc": "/images/category/category7/makers/rupes.png"
+      "en": "kubota",
+      "link": "https://www.kubota.co.jp/product/",
+      "imageSrc": "/images/category/category6/makers/kubota.png"
     },
     {
       "jp": "",
-      "en": "ryobi-group",
-      "link": "https://www.ryobi-group.co.jp",
-      "imageSrc": "/images/category/category7/makers/ryobi-group.jpg"
+      "en": "mikasas",
+      "link": "https://www.mikasas.jp",
+      "imageSrc": "/images/category/category6/makers/mikasas.png"
     },
     {
       "jp": "",
-      "en": "shinx",
-      "link": "https://www.shinx.co.jp",
-      "imageSrc": "/images/category/category7/makers/shinx.jpg"
+      "en": "mkseiko",
+      "link": "https://www.mkseiko.co.jp",
+      "imageSrc": "/images/category/category6/makers/mkseiko.jpg"
     },
     {
       "jp": "",
-      "en": "uniper",
-      "link": "https://www.uniper.co.jp/",
-      "imageSrc": "/images/category/category7/makers/uniper.PNG"
+      "en": "rex",
+      "link": "https://www.rexind.co.jp/jp/",
+      "imageSrc": "/images/category/category6/makers/rex.png"
     },
     {
       "jp": "",
-      "en": "wagner-group",
-      "link": "https://www.wagner-group.com/jp/",
-      "imageSrc": "/images/category/category7/makers/wagner-group.PNG"
+      "en": "ridgid",
+      "link": "https://www.ridgid.com/jp/ja",
+      "imageSrc": "/images/category/category6/makers/ridgid.png"
+    },
+    {
+      "jp": "",
+      "en": "seiwa",
+      "link": "https://www.seiwa.com",
+      "imageSrc": "/images/category/category6/makers/seiwa.jpeg"
+    },
+    {
+      "jp": "",
+      "en": "super",
+      "link": "https://www.super-ace.co.jp",
+      "imageSrc": "/images/category/category6/makers/super.jpeg"
+    },
+    {
+      "jp": "",
+      "en": "technoflex",
+      "link": "https://www.tfn.technoflex.co.jp",
+      "imageSrc": "/images/category/category6/makers/technoflex.png"
+    },
+    {
+      "jp": "",
+      "en": "teral",
+      "link": "https://www.teral.net",
+      "imageSrc": "/images/category/category6/makers/teral.png"
+    },
+    {
+      "jp": "",
+      "en": "tsurumipump",
+      "link": "https://www.tsurumipump.co.jp",
+      "imageSrc": "/images/category/category6/makers/tsurumipump.jpeg"
+    },
+    {
+      "jp": "",
+      "en": "yamabiko",
+      "link": "https://www.yamabiko-corp.co.jp/shindaiwa/",
+      "imageSrc": "/images/category/category6/makers/yamabiko.png"
+    },
+    {
+      "jp": "",
+      "en": "yanma",
+      "link": "https://www.yanmar.com/jp/",
+      "imageSrc": "/images/category/category6/makers/yanma.png"
+    },
+    {
+      "jp": "",
+      "en": "zaohnet",
+      "link": "https://www.zaohnet.co.jp/products/",
+      "imageSrc": "/images/category/category6/makers/zaohnet.jpg"
     }
   ],
   "purchaseItems": [
