@@ -101,6 +101,16 @@
       "id": 20,
       "title": "エアコンプレッサ",
       "image": "/images_db/item78.jpg"
+    },
+    {
+      "id": 21,
+      "title": "パワートロウェル",
+      "image": "/images_db/item211.png"
+    },
+    {
+      "id": 22,
+      "title": "油圧式多機能工具",
+      "image": "/images_db/item212.jpg"
     }
   ],
   "makers": [
@@ -172,9 +182,9 @@
     },
     {
       "jp": "",
-      "en": "kyokuto",
-      "link": "https://www.kyokuto.com",
-      "imageSrc": "/images/category/category7/makers/kyokuto.png"
+      "en": "klass",
+      "link": "https://www.klass-corp.co.jp/products",
+      "imageSrc": "/images/category/category7/makers/klass.jpg"
     },
     {
       "jp": "",

@@ -86,6 +86,16 @@
       "id": 17,
       "title": "アルミ矢板 . アルミブリッジ",
       "image": "/images_db/item56.jpg"
+    },
+    {
+      "id": 18,
+      "title": "コンクリートクラッシャー",
+      "image": "/images_db/item209.png"
+    },
+    {
+      "id": 19,
+      "title": "転圧機械",
+      "image": "/images_db/item210.jpg"
     }
   ],
   "makers": [

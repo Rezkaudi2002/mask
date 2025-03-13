@@ -70,22 +70,22 @@
     {
       "id": 14,
       "title": "フロンガス回収機",
-      "image": "/images_db/item209.jpg"
+      "image": "/images_db/item213.jpg"
     },
     {
       "id": 15,
       "title": "サンドブラスト機",
-      "image": "/images_db/item210.jpg"
+      "image": "/images_db/item214.jpg"
     },
     {
       "id": 16,
       "title": "油圧プレス",
-      "image": "/images_db/item211.jpg"
+      "image": "/images_db/item215.jpg"
     },
     {
       "id": 17,
       "title": "塗装ブース",
-      "image": "/images_db/item212.png"
+      "image": "/images_db/item216.png"
     }
   ],
   "makers": [
