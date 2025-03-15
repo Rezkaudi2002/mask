@@ -56,6 +56,7 @@ const PurchasedItems = () => {
         "発電機・溶接機・コンプレッサ",
         "管工事機械・工具",
         "住宅工事工具・大工機械",
+        "梱包機・包装機",
       ].includes(selectedCategory) && (
         <div className="w-full mt-10 md:mt-12 flex justify-center">
           <Link
