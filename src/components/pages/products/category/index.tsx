@@ -9,6 +9,7 @@ import Inquiry from "@/components/common/sections/Inquiry";
 import MajorList from "../components/MajorList";
 import HadisReason from "../components/HadisReason";
 import { TCategory } from "@/types/category.type";
+import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
 
 interface IIndexProps {
   categoryData: TCategory;
@@ -19,15 +20,15 @@ const index = ({ categoryData }: IIndexProps) => {
     <>
       <CategoryHero categoryName={categoryData.title} />
       <CategoryProducts
-        categoryName={categoryData.title.replace(/\n/g, '')}
+        categoryName={categoryData.title.replace(/\n/g, "")}
         products={categoryData?.items}
       />
       <CategoryPurchaseResults
-        categoryName={categoryData.title.replace(/\n/g, '')}
+        categoryName={categoryData.title.replace(/\n/g, "")}
         purchaseItems={categoryData?.purchaseItems}
       />
       <MajorList
-        categoryName={categoryData.title.replace(/\n/g, '')}
+        categoryName={categoryData.title.replace(/\n/g, "")}
         companies={categoryData?.makers}
       />
       <Flow />
@@ -38,6 +39,7 @@ const index = ({ categoryData }: IIndexProps) => {
       <PurchaseProcess />
       <Inquiry />
       <ContactBanner />
+      <ContactFixedBanner />
     </>
   );
 };

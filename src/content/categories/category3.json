@@ -23,11 +23,6 @@
       "image": "/images_db/item26.jpg"
     },
     {
-      "id": 27,
-      "title": "籾すり機（もみすり機）",
-      "image": "/images_db/item27.png"
-    },
-    {
       "id": 28,
       "title": "稲刈り機",
       "image": "/images_db/item28.jpeg"
@@ -43,24 +38,34 @@
       "image": "/images_db/item30.jpg"
     },
     {
-      "id": 32,
-      "title": "ホイールローダー",
-      "image": "/images_db/item32.jpg"
-    },
-    {
       "id": 33,
       "title": "ハーベスター 自動脱穀機",
       "image": "/images_db/item33.jpg"
     },
     {
-      "id": 34,
-      "title": "トラクター",
-      "image": "/images_db/item34.jpg"
-    },
-    {
       "id": 36,
       "title": "コンバイン",
       "image": "/images_db/item36.jpg"
+    },
+    {
+      "id": 37,
+      "title": "トラクター",
+      "image": "/images_db/item217.jpg"
+    },
+    {
+      "id": 38,
+      "title": "ホイールローダー",
+      "image": "/images_db/item218.jpg"
+    },
+    {
+      "id": 39,
+      "title": "業務用精米機",
+      "image": "/images_db/item219.png"
+    },
+    {
+      "id": 40,
+      "title": "籾すり機（もみすり機）",
+      "image": "/images_db/item220.jpg"
     }
   ],
   "makers": [

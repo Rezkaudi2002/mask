@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 // components
-import ContactBtn from "../components/ContactBtn";
-import PointerIcon from "../components/PointerIcon";
+import ContactBtn from "@/components/pages/home/components/ContactBtn";
+import PointerIcon from "@/components/pages/home/components/PointerIcon";
 
 // data
 import ContactDetails from "@/content/home/ContactDetails.json";
@@ -18,7 +18,7 @@ const ContactFixedBanner: React.FC = () => {
         src={"/images/home-page/banner-bg.png"}
         alt="hero-background-hadis"
         fill
-        loading='lazy'
+        loading="lazy"
       />
 
       <div className="flex flex-wrap items-center justify-center w-full h-full gap-2 px-4 lg:px-20">
@@ -27,7 +27,7 @@ const ContactFixedBanner: React.FC = () => {
           label={ContactDetails.phoneNumber.label}
           href={ContactDetails.phoneNumber.href}
           variant="red"
-          className="text-3xl w-full "
+          className="text-3xl w-full"
         >
           <PointerIcon />
         </ContactBtn>
