@@ -56,16 +56,17 @@ const PurchasedItems = () => {
         "発電機・溶接機・コンプレッサ",
         "管工事機械・工具",
         "住宅工事工具・大工機械",
+        "プリンター・ミシン・DIY用機器"
       ].includes(selectedCategory) && (
-        <div className="w-full mt-10 md:mt-12 flex justify-center">
-          <Link
-            href={`/products/${selectedCategory}`}
-            className="block w-full md:w-[50%] lg:w-[30%] px-[16px] py-[11px] lg:p-[15px] text-center text-[14px] lg:text-[18px] leading-[18px] lg:leading-[24px] font-noto font-semibold border-[2px] border-[#990E1C] text-white gradient-red text-shadow-red"
-          >
-            もっと見る
-          </Link>
-        </div>
-      )}
+          <div className="w-full mt-10 md:mt-12 flex justify-center">
+            <Link
+              href={`/products/${selectedCategory}`}
+              className="block w-full md:w-[50%] lg:w-[30%] px-[16px] py-[11px] lg:p-[15px] text-center text-[14px] lg:text-[18px] leading-[18px] lg:leading-[24px] font-noto font-semibold border-[2px] border-[#990E1C] text-white gradient-red text-shadow-red"
+            >
+              もっと見る
+            </Link>
+          </div>
+        )}
     </section>
   );
 };
