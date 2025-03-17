@@ -121,6 +121,16 @@
       "id": 24,
       "title": "3Dプリンター",
       "image": "/images_db/item130.jpg"
+    },
+    {
+      "id": 26,
+      "title": "版画プレス機",
+      "image": "/images_db/item222.jpg"
+    },
+    {
+      "id": 27,
+      "title": "電動断裁機",
+      "image": "/images_db/item223.jpg"
     }
   ],
   "makers": [

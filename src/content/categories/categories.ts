@@ -6,8 +6,9 @@ import category5 from './category5.json'
 import category6 from './category6.json'
 import category7 from './category7.json'
 import category8 from './category8.json'
+import category9 from './category9.json'
 
 
-const categories = [category1, category2, category3, category4, category5, category6, category7, category8]
+const categories = [category1, category2, category3, category4, category5, category6, category7, category8, category9]
 
 export default categories
