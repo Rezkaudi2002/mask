@@ -1,13 +1,12 @@
 // data
 import categories from "@/content/categories/categories";
 
-export const getCategoryByTitle = async (title: string): Promise<CategoryType | undefined> => {
+export const getCategoryByTitle = (title: string): CategoryType | undefined => {
+    return categories.find((item) => item.title === decodeURI(title));
+};
 
-    const data = categories.find((item) => item.title === decodeURI(title));
-
-    if (!data) return undefined; // Ensure undefined is returned if not found
-
-    return data
+export const getCategoryById = (id: string): CategoryType | undefined => {
+    return categories.find((item) => item.id === id);
 };
 
 export const getAllCategories = () => {
