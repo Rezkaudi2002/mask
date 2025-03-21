@@ -1,17 +1,16 @@
 import { Metadata } from "next";
-import NotFound from "@/app/not-found";
 import CategoryPage from "@/components/pages/products/category/index";
-import categories from "@/content/categories/categories";
 
 // services
-import { getCategoryByTitle } from "@/services/category";
+import { getCategoryById } from "@/services/category";
 
 // baseUrl
 import { baseUrl } from "@/utils/baseUrl";
+import { notFound } from "next/navigation";
 
 interface IPageProps {
   params: Promise<{
-    category: string;
+    categoryId: string;
   }>;
 }
 
@@ -19,9 +18,9 @@ interface IPageProps {
 export async function generateMetadata({
   params,
 }: IPageProps): Promise<Metadata> {
-  const { category } = await params;
 
-  const data = await getCategoryByTitle(category);
+  const { categoryId } = await params;
+  const data = getCategoryById(categoryId);
 
   if (!data) {
     return {
@@ -35,40 +34,34 @@ export async function generateMetadata({
 
       openGraph: {
         type: "article",
-        url: `${baseUrl}/products/${data?.title}`,
+        url: `${baseUrl}/products/${data?.id}`,
         title: data?.title,
         // description: data?.metaDescription,
         siteName: "機械工具買取ハディズ",
-        images: [{ url: `${baseUrl}${data?.imageSrc}` }],
+        images: [{ url: data?.imageSrc }],
       },
 
       twitter: {
         card: "summary_large_image",
         title: data?.title,
         // description: data?.metaDescription,
-        images: `${baseUrl}${data?.imageSrc}`,
+        images: data?.imageSrc,
       },
 
       alternates: {
-        canonical: `${baseUrl}/products/${data?.title}`,
+        canonical: `${baseUrl}/products/${data?.id}`,
       },
     };
   }
 }
 
 const page = async ({ params }: IPageProps) => {
-  const { category } = await params;
 
-  if (!category) {
-    return <NotFound />;
-  }
+  const { categoryId } = await params;
+  const categoryData = getCategoryById(categoryId);
 
-  const categoryDecoded = decodeURIComponent(category);
-  const categoryData = categories.find((c) => c.title.replace(/\n/g, '') === categoryDecoded);
-  const products = categoryData?.items;
-
-  if (!categoryData || !products || products?.length === 0) {
-    return <NotFound />;
+  if (!categoryData) {
+    return notFound()
   }
 
   return <CategoryPage categoryData={categoryData} />;

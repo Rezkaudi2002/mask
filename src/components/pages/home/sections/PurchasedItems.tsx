@@ -1,14 +1,19 @@
 "use client";
-import data from "@/content/home/purchasedItems.json";
+
+import Link from "next/link";
 import Image from "next/image";
+
 import PurchaseItemsCard from "../components/PurchaseItemsCard";
 import PurchaseItemsCategoryCard from "../components/PurchaseItemsCategoryCard";
+
 import { useFilterItems } from "@/hooks/useFilterItems";
-import Link from "next/link";
+
+import { getAllCategories } from "@/services/category";
 
 const PurchasedItems = () => {
-  const { filteredItems, selectedCategory, setSelectedCategory } =
-    useFilterItems();
+  const { filteredItems, selectedCategory, setSelectedCategory } = useFilterItems();
+  const categoriesData = getAllCategories()
+
   return (
     <section
       id="purchased-items"
@@ -29,9 +34,10 @@ const PurchasedItems = () => {
       </h2>
       {/* filter */}
       <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] mb-[24px] md:mb-[28px] lg:mb-[32px] w-full flex flex-wrap justify-center gap-2">
-        {data.filter.map((filterItem) => (
+        {categoriesData.map((filterItem) => (
           <PurchaseItemsCategoryCard
             key={filterItem.id}
+            id={filterItem.id}
             title={filterItem.title}
             activeCategory={selectedCategory}
             changeCategory={setSelectedCategory}

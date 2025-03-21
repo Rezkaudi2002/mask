@@ -60,7 +60,7 @@ interface BlogPost {
 }
 
 interface CategoryType {
-    id: number;
+    id: string;
     title: string;
     imageSrc: string;
 
