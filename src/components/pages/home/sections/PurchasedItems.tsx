@@ -48,7 +48,7 @@ const PurchasedItems = () => {
         ))}
       </div>
       {/* show more button */}
-      {selectedCategory === "自動車整備機械・自動車板金機械" && (
+      {selectedCategory === "自動車整備機械" && (
         <div className="w-full mt-10 md:mt-12 flex justify-center">
           <Link
             href={`/products/${selectedCategory}`}
