@@ -9,13 +9,12 @@ import { TFormData } from "@/types/formData.type";
 export async function POST(req: Request) {
   const body: TFormData = await req.json();
 
+
   const clientEmail = body.email
   const clientName = body.name
 
-  // const adminEmail = process.env.GMAIL_USER
-  const adminEmail = "audirezk@gmail.com"
-
-
+  const adminEmail = process.env.GMAIL_USER
+  // const adminEmail = "audirezk@gmail.com"
 
 
   try {
@@ -51,9 +50,7 @@ export async function POST(req: Request) {
   } catch (error) {
 
     return NextResponse.json(
-      {
-        message: error instanceof Error ? error.message : "Error sending email",
-      },
+      { message: error instanceof Error ? error.message : "Error sending email", },
       { status: 500 }
     );
   }
