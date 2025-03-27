@@ -28,6 +28,7 @@ interface VideoContent extends BlogItemBase {
 }
 interface FAQContent extends BlogItemBase {
     type: "faq";
+    description?: string;
     items: {
         id: string;
         question: string;
@@ -56,4 +57,28 @@ interface BlogPost {
     description: string;
     metaDescription: string;
     subContent: BlogSubContent[];
+}
+
+interface CategoryType {
+    id: string;
+    title: string;
+    imageSrc: string;
+
+    items: {
+        id: number;
+        title: string;
+        image: string;
+    }[];
+
+    makers: {
+        jp: string;
+        en: string;
+        link: string;
+        imageSrc: string;
+    }[];
+
+    purchaseItems: {
+        title: string;
+        imageSrc: string;
+    }[];
 }
