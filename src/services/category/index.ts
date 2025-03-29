@@ -2,7 +2,7 @@
 import categories from "@/content/categories/categories";
 
 export const getCategoryByTitle = (title: string): CategoryType | undefined => {
-    return categories.find((item) => item.title === decodeURI(title));
+    return categories.find((item) => item.title.split('\n').join("") === decodeURI(title));
 };
 
 export const getCategoryById = (id: string): CategoryType | undefined => {
