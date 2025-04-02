@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           className="w-[70px] h-[45px] lg:w-[101px] lg:h-[64px] relative block"
         >
           <Image
-            src="/images/hadis-logo.png"
+            src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/hadis-logo.png"
             alt="Hadis Company Logo"
             fill
             unoptimized

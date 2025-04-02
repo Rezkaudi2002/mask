@@ -21,7 +21,7 @@ const PurchasedItems = () => {
       aria-labelledby="purchased-items-heading"
     >
       <Image
-        src="/images/home-page/bg-items.jpg"
+        src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/bg-items.jpg"
         alt="banner-right-bg"
         fill
         loading="lazy"

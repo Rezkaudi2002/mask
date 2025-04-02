@@ -13,7 +13,7 @@ import ResultSlider from "../components/ResultSlider";
 
 const PurchaseResults = () => {
   return (
-    <section className="py-[50px] lg:py-[120px] bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto relative">
+    <section className="py-[50px] lg:py-[120px] bg-[url(https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/dot-bg-results.svg)] bg-auto font-noto relative">
       <h2 className="mb-[40px] lg:mb-[50px] text-[30px] lg:text-[60px] leading-[45px] lg:leading-[90px] text-[#D51A16] text-center font-black">
         買取実績
       </h2>
