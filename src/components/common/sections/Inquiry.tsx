@@ -208,7 +208,7 @@ const Inquiry = () => {
                 aria-label="Delete Product"
               >
                 <Image
-                  src="/images/icons/trash.svg"
+                  src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/trash.svg"
                   alt="Delete"
                   width={11}
                   height={11}
@@ -294,7 +294,7 @@ const Inquiry = () => {
             <>
               送信する
               <Image
-                src="/images/icons/arrow-right-red.svg"
+                src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"
                 alt="arrow-right-red"
                 width={32}
                 height={32}

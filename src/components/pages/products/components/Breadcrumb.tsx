@@ -16,7 +16,9 @@ const Breadcrumb = ({ title, category }: IBreadcrumbProps) => {
       </Link>
       <Image
         className="inline-block mx-2"
-        src={"/images/icons/right-arrow.svg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/right-arrow.svg"
+        }
         width={16}
         height={16}
         alt="right arrow icon"
@@ -26,7 +28,9 @@ const Breadcrumb = ({ title, category }: IBreadcrumbProps) => {
       </Link>
       <Image
         className="inline-block mx-2"
-        src={"/images/icons/right-arrow.svg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/right-arrow.svg"
+        }
         width={16}
         height={16}
         alt="right arrow icon"

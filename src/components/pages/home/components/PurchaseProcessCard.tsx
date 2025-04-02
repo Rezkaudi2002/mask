@@ -30,7 +30,7 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
             loading="lazy"
             src={data.imageSrc}
             alt={data.title}
-            />
+          />
           <Image
             unoptimized
             loading="lazy"
@@ -64,7 +64,9 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
           width={41}
           height={49}
           loading="lazy"
-          src={"/images/icons/next-step-arrow.svg"}
+          src={
+            "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/next-step-arrow.svg"
+          }
           alt="next-step-arrow-hadis"
         />
       )}

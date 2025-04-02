@@ -20,7 +20,7 @@ const PurchaseResults = () => {
       {/* sliders buttons */}
       <div className="custom-prev absolute top-[65%] translate-y-[-65%] left-1 lg:left-[5%] z-10 w-[40px] lg:w-[52px] h-[40px] lg:h-[52px] gradient-navigation rounded-full border-0 text-white flex justify-center items-center cursor-pointer">
         <Image
-          src="/images/icons/arrow-navigation.svg"
+          src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-navigation.svg"
           alt="right-arrow"
           width={24}
           height={12}
@@ -30,7 +30,7 @@ const PurchaseResults = () => {
       </div>
       <div className="custom-next absolute top-[65%] translate-y-[-65%] right-1 lg:right-[5%] z-10 w-[40px] lg:w-[52px] h-[40px] lg:h-[52px] gradient-navigation rounded-full border-0 text-white flex justify-center items-center cursor-pointer">
         <Image
-          src="/images/icons/arrow-navigation.svg"
+          src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-navigation.svg"
           alt="right-arrow"
           width={24}
           height={12}

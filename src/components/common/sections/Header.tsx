@@ -80,7 +80,7 @@ const Header: React.FC = () => {
               >
                 <span>{item.label}</span>
                 <Image
-                  src={"/images/icons/arrow-right-red.svg"}
+                  src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"}
                   alt="arrow right hadis"
                   width={20}
                   height={20}
@@ -101,7 +101,7 @@ const Header: React.FC = () => {
         >
           {activeMenu ? (
             <Image
-              src={"/images/icons/close.svg"}
+              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/close.svg"}
               alt="menu-hadis"
               width={24}
               height={24}
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
             />
           ) : (
             <Image
-              src={"/images/icons/menu.svg"}
+              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/menu.svg"}
               alt="menu-hadis"
               width={24}
               height={24}
