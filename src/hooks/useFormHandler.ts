@@ -27,7 +27,7 @@ const initialFormData: TFormData = {
   productsList: [
     {
       product_details: "",
-      product_condition: "not_selected",
+      product_condition: "",
       images: new Array(3).fill(null),
     },
   ],
@@ -98,7 +98,7 @@ export const useFormHandler = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (formData.city === "not_selected") {
+    if (formData.city === "選択してください") {
       Toast.fire({ icon: "warning", title: "都道府県を選択してください。" });
       return;
     }
@@ -106,7 +106,7 @@ export const useFormHandler = () => {
     const hasInvalidProductCondition = formData.productsList.some(
       (product) =>
         !product.product_condition ||
-        product.product_condition === "not_selected"
+        product.product_condition === "選択してください"
     );
 
     if (hasInvalidProductCondition) {
