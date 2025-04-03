@@ -10,7 +10,7 @@ const ReviewsReceived: React.FC = () => {
         className=" absolute -z-10 top-0 left-0 object-cover"
         fill
         loading="lazy"
-        src={"/images/home-page/flow-bg.png"}
+        src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/flow-bg.jpeg"}
         alt="hero-background-hadis"
       />
       
