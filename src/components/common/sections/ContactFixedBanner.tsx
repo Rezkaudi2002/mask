@@ -15,7 +15,7 @@ const ContactFixedBanner: React.FC = () => {
     >
       <Image
         className=" -z-10 absolute top-0 left-0 object-cover"
-        src={"/images/home-page/banner-bg.png"}
+        src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/banner-bg.png"}
         alt="hero-background-hadis"
         fill
         loading="lazy"

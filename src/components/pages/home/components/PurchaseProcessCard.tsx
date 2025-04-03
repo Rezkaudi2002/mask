@@ -30,13 +30,13 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
             loading="lazy"
             src={data.imageSrc}
             alt={data.title}
-            />
+          />
           <Image
             unoptimized
             loading="lazy"
             className=" absolute -z-10 bottom-0 right-0 pl-[10px] pt-[10px] lg:pl-[23px] lg:pt-[23px]"
             fill
-            src={"/images/home-page/dotted-bg-block.png"}
+            src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/dotted-bg-block.png"}
             alt="dotted-bg-block"
           />
         </div>
@@ -64,7 +64,9 @@ const PurchaseProcessCard: React.FC<IPurchaseProcessCard> = ({
           width={41}
           height={49}
           loading="lazy"
-          src={"/images/icons/next-step-arrow.svg"}
+          src={
+            "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/next-step-arrow.svg"
+          }
           alt="next-step-arrow-hadis"
         />
       )}

@@ -28,7 +28,7 @@ const Inquiry = () => {
   return (
     <section
       id="inquiry"
-      className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(/images/home-page/dot-bg-results.svg)] bg-auto font-noto"
+      className="py-[50px] lg:py-[60px] px-[20px] lg:px-0 bg-[url(https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/dot-bg-results.svg)] bg-auto font-noto"
     >
       <div>
         <h2 className="text-[30px] md:text-[40px] lg:text-[60px] leading-[45px] md:leading-[60px] lg:leading-[90px] font-black bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center">
@@ -208,7 +208,7 @@ const Inquiry = () => {
                 aria-label="Delete Product"
               >
                 <Image
-                  src="/images/icons/trash.svg"
+                  src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/trash.svg"
                   alt="Delete"
                   width={11}
                   height={11}
@@ -294,7 +294,7 @@ const Inquiry = () => {
             <>
               送信する
               <Image
-                src="/images/icons/arrow-right-red.svg"
+                src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"
                 alt="arrow-right-red"
                 width={32}
                 height={32}

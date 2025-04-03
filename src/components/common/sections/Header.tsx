@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           className="w-[70px] h-[45px] lg:w-[101px] lg:h-[64px] relative block"
         >
           <Image
-            src="/images/hadis-logo.png"
+            src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/hadis-logo.png"
             alt="Hadis Company Logo"
             fill
             unoptimized
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
               >
                 <span>{item.label}</span>
                 <Image
-                  src={"/images/icons/arrow-right-red.svg"}
+                  src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"}
                   alt="arrow right hadis"
                   width={20}
                   height={20}
@@ -101,7 +101,7 @@ const Header: React.FC = () => {
         >
           {activeMenu ? (
             <Image
-              src={"/images/icons/close.svg"}
+              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/close.svg"}
               alt="menu-hadis"
               width={24}
               height={24}
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
             />
           ) : (
             <Image
-              src={"/images/icons/menu.svg"}
+              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/menu.svg"}
               alt="menu-hadis"
               width={24}
               height={24}

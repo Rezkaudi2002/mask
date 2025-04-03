@@ -1,3 +1,4 @@
+import { getCategoryByTitle } from "@/services/category";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,6 +8,7 @@ interface IBreadcrumbProps {
 }
 
 const Breadcrumb = ({ title, category }: IBreadcrumbProps) => {
+  const categoryId = getCategoryByTitle(category as string)?.id;
   return (
     <div className="text-[#999999] font-normal text-xs lg:text-sm">
       <Link href={"/products"} className=" inline-block">
@@ -14,17 +16,21 @@ const Breadcrumb = ({ title, category }: IBreadcrumbProps) => {
       </Link>
       <Image
         className="inline-block mx-2"
-        src={"/images/icons/right-arrow.svg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/right-arrow.svg"
+        }
         width={16}
         height={16}
         alt="right arrow icon"
       />
-      <Link href={`/products/${category}`}>
+      <Link href={`/products/${categoryId}`}>
         <span>{category}</span>
       </Link>
       <Image
         className="inline-block mx-2"
-        src={"/images/icons/right-arrow.svg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/right-arrow.svg"
+        }
         width={16}
         height={16}
         alt="right arrow icon"

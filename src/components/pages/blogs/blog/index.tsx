@@ -22,7 +22,9 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
               <span>ホーム</span>
               <Image
                 className="inline-block mx-2"
-                src={"/images/icons/right-arrow.svg"}
+                src={
+                  "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/right-arrow.svg"
+                }
                 width={16}
                 height={16}
                 loading="lazy"
