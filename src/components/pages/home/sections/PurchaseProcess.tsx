@@ -42,7 +42,9 @@ const PurchaseProcess: React.FC = () => {
       <Image
         className=" absolute -z-10 top-0 left-0 object-cover"
         fill
-        src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/flow-bg.jpeg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
+        }
         alt="hero-background-hadis"
         loading="lazy"
       />
