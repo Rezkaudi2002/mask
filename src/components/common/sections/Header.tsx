@@ -31,7 +31,7 @@ const Header: React.FC = () => {
             alt="Hadis Company Logo"
             fill
             unoptimized
-            priority
+            loading="eager"
           />
         </Link>
 
@@ -64,6 +64,7 @@ const Header: React.FC = () => {
                   alt={item.name}
                   width={40}
                   height={40}
+                  loading="eager"
                 />
               </Link>
             ))}
@@ -79,11 +80,13 @@ const Header: React.FC = () => {
               >
                 <span>{item.label}</span>
                 <Image
-                  src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"}
+                  src={
+                    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-right-red.svg"
+                  }
                   alt="arrow right hadis"
                   width={20}
                   height={20}
-                  priority
+                  loading="eager"
                 />
               </Link>
             ))}
@@ -100,27 +103,32 @@ const Header: React.FC = () => {
         >
           {activeMenu ? (
             <Image
-              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/close.svg"}
+              src={
+                "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/close.svg"
+              }
               alt="menu-hadis"
               width={24}
               height={24}
-              priority
+              loading="eager"
             />
           ) : (
             <Image
-              src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/menu.svg"}
+              src={
+                "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/menu.svg"
+              }
               alt="menu-hadis"
               width={24}
               height={24}
-              priority
+              loading="eager"
             />
           )}
         </div>
 
         {/* mobile menu */}
         <div
-          className={`bg-white w-full space-y-10 h-[100vh] fixed overflow-y-auto top-16 left-0 z-50 py-7 px-5 lg:hidden transition-transform duration-300 ${activeMenu ? "translate-x-0" : "translate-x-[-100%]"
-            }`}
+          className={`bg-white w-full space-y-10 h-[100vh] fixed overflow-y-auto top-16 left-0 z-50 py-7 px-5 lg:hidden transition-transform duration-300 ${
+            activeMenu ? "translate-x-0" : "translate-x-[-100%]"
+          }`}
         >
           <ul className="flex items-start flex-col justify-center gap-10 font-bold text-sm text-[#111111]">
             {navbarLinksData?.navbarItems?.map((item) => (
@@ -175,7 +183,8 @@ const Header: React.FC = () => {
                   width={40}
                   height={40}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
-                  quality={50}
+                  quality={100}
+                  loading="eager"
                 />
               </Link>
             ))}
