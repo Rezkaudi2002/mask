@@ -18,7 +18,6 @@ const ContactFixedBanner: React.FC = () => {
         src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/banner-bg.png"}
         alt="hero-background-hadis"
         fill
-        loading="lazy"
       />
 
       <div className="flex flex-wrap items-center justify-center w-full h-full gap-2 px-4 lg:px-20">

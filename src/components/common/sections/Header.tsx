@@ -64,7 +64,6 @@ const Header: React.FC = () => {
                   alt={item.name}
                   width={40}
                   height={40}
-                  loading="lazy"
                 />
               </Link>
             ))}
@@ -176,7 +175,6 @@ const Header: React.FC = () => {
                   width={40}
                   height={40}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
-                  loading="lazy"
                   quality={50}
                 />
               </Link>

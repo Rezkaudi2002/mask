@@ -39,7 +39,6 @@ const Hero: React.FC = () => {
               alt="Company's legacy image"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
-              loading="lazy"
             />
           </div>
           {/* image 2 */}
@@ -49,7 +48,6 @@ const Hero: React.FC = () => {
               alt="Hero promotional banner with details"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
-              loading="lazy"
               quality={100}
             />
           </div>
