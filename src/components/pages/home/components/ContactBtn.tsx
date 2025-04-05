@@ -57,7 +57,7 @@ const ContactBtn: React.FC<ContactBtnProps> = ({
         alt={`${variant} contact icon`}
         width={32}
         height={32}
-        loading="lazy"
+        loading="eager"
       />
       <span className="text-nowrap overflow-hidden hidden lg:block">
         {label}
@@ -70,7 +70,7 @@ const ContactBtn: React.FC<ContactBtnProps> = ({
         alt={`Arrow pointing right, styled in ${variant}`}
         width={32}
         height={32}
-        loading="lazy"
+        loading="eager"
       />
     </Link>
   );

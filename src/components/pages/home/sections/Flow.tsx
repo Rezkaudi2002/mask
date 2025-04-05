@@ -3,15 +3,18 @@ import FlowCard from "../components/FlowCard";
 
 const flowItems = [
   {
-    imageSrc: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask1.png",
+    imageSrc:
+      "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask1.png",
     title: "しばらく使っていなくて動くかわからない",
   },
   {
-    imageSrc: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask2.png",
+    imageSrc:
+      "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask2.png",
     title: "大型重量物で自分で動かすことができない",
   },
   {
-    imageSrc: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask3.png",
+    imageSrc:
+      "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/mask3.png",
     title: "期日までに現金化したい",
   },
 ];
@@ -27,10 +30,10 @@ const Flow: React.FC = () => {
     <section className="relative w-full py-[50px] lg:py-20 text-center px-4">
       <Image
         className="absolute -z-10 top-0 left-0 object-cover"
-        src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/flow-bg.jpeg"
+        src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
         alt="Background image for flow section"
         fill
-        loading='lazy'
+        loading="lazy"
       />
 
       <h3 className="font-black text-xl lg:text-2xl">お持ちの工具・機械で</h3>
