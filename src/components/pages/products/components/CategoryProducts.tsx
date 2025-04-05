@@ -1,9 +1,9 @@
-import { TProduct } from "@/types/product.type";
+import { TItem } from "@/types/item.type";
 import PurchaseItemsCard from "../../home/components/PurchaseItemsCard";
 import Image from "next/image";
 
 interface ICategoryProductsProps {
-  products?: TProduct[];
+  products?: TItem[];
   categoryName: string;
 }
 
@@ -16,7 +16,9 @@ const CategoryProducts = ({
       <Image
         className=" absolute -z-10 top-0 left-0 object-cover"
         fill
-        src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
+        }
         alt="hero-background-hadis"
         loading="lazy"
       />
