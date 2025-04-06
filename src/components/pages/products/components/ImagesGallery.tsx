@@ -1,8 +1,13 @@
-interface IImagesGalleryProps {}
+import { TImage } from "@/types/product.type";
 
-const ImagesGallery = ({}: IImagesGalleryProps) => {
+interface IImagesGalleryProps {
+  images: TImage[];
+}
+
+const ImagesGallery = ({ images }: IImagesGalleryProps) => {
   return (
     <section>
+      
     </section>
   );
 };
