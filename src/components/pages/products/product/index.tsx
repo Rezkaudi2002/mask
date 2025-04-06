@@ -1,5 +1,5 @@
-import { TItem } from "@/types/item.type";
-import ProductDetails from "../components/ProductDetails";
+// import { TItem } from "@/types/item.type";
+// import ProductDetails from "../components/ProductDetails";
 import ProductHero from "../components/ProductHero";
 import Breadcrumb from "../components/Breadcrumb";
 import ImagesGallery from "../components/ImagesGallery";

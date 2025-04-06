@@ -1,4 +1,4 @@
-import { TMaker } from "@/types/category.type";
+import { TMaker } from "@/types/maker.type";
 import Image from "next/image";
 import Link from "next/link";
 
