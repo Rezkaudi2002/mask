@@ -22,7 +22,7 @@ const ImagesGallery = ({ images }: IImagesGalleryProps) => {
   const { selectedImageIndex, setSelectedImageIndex, handlePrev, handleNext } =
     useImageGallery(imagesCount);
   return (
-    <section className="py-8">
+    <section className="my-8">
       {/* Main Image with Navigation */}
       <div className="relative flex flex-col items-center mb-8 mx-auto w-full md:max-w-[80%] lg:max-w-[50%]">
         <NavigationButton
