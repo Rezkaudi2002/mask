@@ -2,7 +2,8 @@
 
 import { TImage } from "@/types/product.type";
 import Image from "next/image";
-import { useState } from "react";
+import NavigationButton from "./NavigationButton";
+import { useImageGallery } from "@/hooks/useImagesGallery";
 
 // Import Swiper React components and modules
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,33 +18,20 @@ interface IImagesGalleryProps {
 }
 
 const ImagesGallery = ({ images }: IImagesGalleryProps) => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
+  const imagesCount = images.length;
+  const { selectedImageIndex, setSelectedImageIndex, handlePrev, handleNext } =
+    useImageGallery(imagesCount);
   return (
     <section className="py-8">
-      {/* Main Image with Caption */}
-      <div className="relative flex flex-col items-center mb-8 mx-auto w-full max-w-[50%]">
-        <div
-          className={`custom-prev absolute top-[50%] translate-y-[-50%] left-1 lg:left-[5%] z-10 w-[40px] lg:w-[52px] h-[40px] lg:h-[52px] gradient-navigation rounded-full border-0 text-white flex justify-center items-center ${
-            selectedImageIndex > 0
-              ? "opacity-100 cursor-pointer"
-              : "opacity-50 cursor-not-allowed"
-          }`}
-          onClick={() =>
-            selectedImageIndex > 0 && setSelectedImageIndex((prev) => prev - 1)
-          }
-        >
-          <Image
-            src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-navigation.svg"
-            alt="left-arrow"
-            width={24}
-            height={12}
-            loading="lazy"
-            className="rotate-180 w-[24px] lg:w-[31px] h-[12px] lg:h-[15px]"
-          />
-        </div>
+      {/* Main Image with Navigation */}
+      <div className="relative flex flex-col items-center mb-8 mx-auto w-full md:max-w-[80%] lg:max-w-[50%]">
+        <NavigationButton
+          direction="prev"
+          onClick={handlePrev}
+          disabled={selectedImageIndex === 0}
+        />
 
-        <div className="border-[#B81122] border-2 rounded-lg overflow-hidden p-8 bg-[#fff7f8] shadow-md min-h-[650px] flex flex-col items-center justify-center relative">
+        <div className="w-[70%] lg:w-fit min-h-[420px] md:min-h-[600px] lg:min-h-[650px] border-[#B81122] border-2 rounded-lg overflow-hidden p-3 lg:p-8 bg-[#fff7f8] shadow-md flex flex-col items-center justify-center relative">
           <Image
             src={images[selectedImageIndex].imageSrc}
             width={350}
@@ -51,31 +39,16 @@ const ImagesGallery = ({ images }: IImagesGalleryProps) => {
             alt={`${images[selectedImageIndex].title} image product`}
             className="max-w-full h-auto self-center"
           />
-          <p className="absolute bottom-3 text-center text-[#B81122] font-semibold">
+          <p className="absolute bottom-3 text-center text-[#B81122] text-[14px] font-semibold">
             {images[selectedImageIndex].title}
           </p>
         </div>
 
-        <div
-          className={`custom-next absolute top-[50%] translate-y-[-50%] right-1 lg:right-[5%] z-10 w-[40px] lg:w-[52px] h-[40px] lg:h-[52px] gradient-navigation rounded-full border-0 text-white flex justify-center items-center ${
-            selectedImageIndex < images.length - 1
-              ? "opacity-100 cursor-pointer"
-              : "opacity-50 cursor-not-allowed"
-          }`}
-          onClick={() =>
-            selectedImageIndex < images.length - 1 &&
-            setSelectedImageIndex((prev) => prev + 1)
-          }
-        >
-          <Image
-            src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/arrow-navigation.svg"
-            alt="right-arrow"
-            width={24}
-            height={12}
-            loading="lazy"
-            className="w-[24px] lg:w-[31px] h-[12px] lg:h-[15px]"
-          />
-        </div>
+        <NavigationButton
+          direction="next"
+          onClick={handleNext}
+          disabled={selectedImageIndex === images.length - 1}
+        />
       </div>
 
       {/* Thumbnails Carousel */}
