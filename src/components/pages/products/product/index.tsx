@@ -5,6 +5,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import ImagesGallery from "../components/ImagesGallery";
 import { TProduct } from "@/types/product.type";
 import ProductDetails from "../components/ProductDetails";
+import Cards from "../components/Cards";
 // import ContactBanner from "../../home/sections/ContactBanner";
 // import PurchaseProcess from "../../home/sections/PurchaseProcess";
 // import BusinessPolicy from "../../home/sections/BusinessPolicy";
@@ -24,6 +25,7 @@ const index = ({ product }: IIndexProps) => {
         description={product.description}
       />
       <ImagesGallery images={product.imagesGallery} />
+      <Cards kinds={product.kinds} merit={product.merit} tips={product.tips} />
       {/* <ContactBanner />
       <PurchaseProcess />
       <BusinessPolicy />

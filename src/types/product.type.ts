@@ -6,6 +6,9 @@ export type TProduct = {
   category: string;
   subTitle: string;
   description: string;
+  kinds: string[];
+  merit: string[];
+  tips: string[];
   imagesGallery: TImage[]
   makers: TMaker[]
 }
