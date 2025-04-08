@@ -91,7 +91,7 @@ const ImageUpload = ({
                 <Image
                   src={image}
                   alt="Uploaded"
-                  loading="lazy"
+                  loading="eager"
                   width={300}
                   height={150}
                   className="w-full h-full object-contain"
@@ -106,7 +106,7 @@ const ImageUpload = ({
                     alt="Upload Icon"
                     width={40}
                     height={40}
-                    loading="lazy"
+                    loading="eager"
                   />
                 </label>
               )}
@@ -137,7 +137,7 @@ const ImageUpload = ({
                   alt="Edit"
                   width={11}
                   height={11}
-                  loading="lazy"
+                  loading="eager"
                 />
               </button>
               <button
@@ -151,7 +151,7 @@ const ImageUpload = ({
                   alt="Delete"
                   width={11}
                   height={11}
-                  loading="lazy"
+                  loading="eager"
                 />
               </button>
             </div>

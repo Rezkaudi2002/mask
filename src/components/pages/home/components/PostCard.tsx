@@ -22,7 +22,7 @@ const PostCard = ({
         width={352}
         height={200}
         unoptimized
-        loading="lazy"
+        loading="eager"
         className="w-full h-[200px] object-cover"
       />
       <h3 className="my-4 lg:mb-[22px] text-[20px] leading-[30px] text-[#B81122] font-black text-start truncate">

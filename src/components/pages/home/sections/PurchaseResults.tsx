@@ -24,7 +24,7 @@ const PurchaseResults = () => {
           alt="right-arrow"
           width={24}
           height={12}
-          loading="lazy"
+          loading="eager"
           className="rotate-180 w-[24px] lg:w-[31px] h-[12px] lg:h-[15px]"
         />
       </div>
@@ -34,7 +34,7 @@ const PurchaseResults = () => {
           alt="right-arrow"
           width={24}
           height={12}
-          loading="lazy"
+          loading="eager"
           className="w-[24px] lg:w-[31px] h-[12px] lg:h-[15px]"
         />
       </div>

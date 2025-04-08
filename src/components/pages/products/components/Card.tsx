@@ -19,6 +19,7 @@ const Card = ({ title, data }: ICardProps) => {
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/icons/red-correct.svg"
               width={20}
               height={20}
+              loading="eager"
               alt="red-correct"
             />
             <p className="text-[#111111] text-[14px]">{item}</p>

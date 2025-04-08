@@ -46,7 +46,7 @@ const PurchaseProcess: React.FC = () => {
           "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
         }
         alt="hero-background-hadis"
-        loading="lazy"
+        loading="eager"
       />
 
       <h2 className="font-black text-3xl lg:text-6xl text-[#D51A16]">

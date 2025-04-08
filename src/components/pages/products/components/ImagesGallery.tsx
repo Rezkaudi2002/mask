@@ -36,6 +36,7 @@ const ImagesGallery = ({ images }: IImagesGalleryProps) => {
             src={images[selectedImageIndex].imageSrc}
             width={350}
             height={350}
+            loading="eager"
             alt={`${images[selectedImageIndex].title} image product`}
             className="max-w-full h-auto self-center"
           />
