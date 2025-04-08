@@ -1,16 +1,21 @@
 import { TItem } from "@/types/item.type";
 import PurchaseItemsCard from "../../home/components/PurchaseItemsCard";
 import Image from "next/image";
+import { getProducts } from "@/services/products";
 
 interface ICategoryProductsProps {
   products?: TItem[];
   categoryName: string;
+  categoryId: string;
 }
 
 const CategoryProducts = ({
   products,
   categoryName,
+  categoryId
 }: ICategoryProductsProps) => {
+  const productsData = getProducts();
+  console.log(productsData);
   return (
     <section className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[80px]">
       <Image
@@ -34,7 +39,12 @@ const CategoryProducts = ({
       <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
         {products?.map((item) => (
           <div className="w-[47%] md:w-[30%] lg:w-[22%]" key={item.id}>
-            <PurchaseItemsCard image={item.image} title={item.title} />
+            <PurchaseItemsCard
+              image={item.image}
+              title={item.title}
+              categoryId={categoryId}
+              haveDetails={productsData.some((e) => e.title === item.title)}
+            />
           </div>
         ))}
       </div>
