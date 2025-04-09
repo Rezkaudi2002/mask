@@ -8,7 +8,7 @@ interface ICardsProps {
 
 const Cards = ({ kinds, merit, tips }: ICardsProps) => {
   return (
-    <section className="grid gap-6 px-4 md:px-8 lg:grid-cols-3 lg:px-[10%] mt-14">
+    <section className="py-[50px] grid gap-6 px-4 md:px-8 lg:grid-cols-3 lg:px-[10%] mt-14">
       {/* Card 1: Kinds */}
       <Card title="種類" data={kinds} />
 
