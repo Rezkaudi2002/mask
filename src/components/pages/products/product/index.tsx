@@ -1,5 +1,3 @@
-// import { TItem } from "@/types/item.type";
-// import ProductDetails from "../components/ProductDetails";
 import ProductHero from "../components/ProductHero";
 import Breadcrumb from "../components/Breadcrumb";
 import ImagesGallery from "../components/ImagesGallery";
@@ -7,10 +5,10 @@ import { TProduct } from "@/types/product.type";
 import ProductDetails from "../components/ProductDetails";
 import Cards from "../components/Cards";
 import MajorList from "../components/MajorList";
-// import ContactBanner from "../../home/sections/ContactBanner";
-// import PurchaseProcess from "../../home/sections/PurchaseProcess";
-// import BusinessPolicy from "../../home/sections/BusinessPolicy";
-// import CompanyProfile from "../../home/sections/CompanyProfile";
+import ContactBanner from "../../home/sections/ContactBanner";
+import PurchaseProcess from "../../home/sections/PurchaseProcess";
+import BusinessPolicy from "../../home/sections/BusinessPolicy";
+import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
 
 interface IIndexProps {
   product: TProduct;
@@ -27,11 +25,11 @@ const index = ({ product }: IIndexProps) => {
       />
       <ImagesGallery images={product.imagesGallery} />
       <Cards kinds={product.kinds} merit={product.merit} tips={product.tips} />
-      <MajorList title={product.title} companies={product.makers}/>
-      {/* <ContactBanner />
+      <MajorList title={product.title} companies={product.makers} />
+      <ContactBanner />
+      <ContactFixedBanner />
       <PurchaseProcess />
       <BusinessPolicy />
-      <CompanyProfile /> */}
     </>
   );
 };
