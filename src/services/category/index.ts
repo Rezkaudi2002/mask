@@ -9,6 +9,11 @@ export const getCategoryById = (id: string): CategoryType | undefined => {
     return categories.find((item) => item.id === id);
 };
 
+export const getCategoryTitleById = (id: string): string | undefined => {
+    const category = categories.find((item) => item.id === id);
+    return category?.title;
+}
+
 export const getAllCategories = () => {
     return categories
 }

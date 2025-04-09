@@ -14,7 +14,7 @@ const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
         src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/banner-full-bg.jpeg"
         alt="banner-background-hadis"
         fill
-        loading="lazy"
+        loading="eager"
       />
       {/* Right image */}
       <div className="hidden md:block md:w-[48%] relative md:h-auto">
@@ -22,7 +22,7 @@ const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
           src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/right-bg-banner.jpeg"
           alt="banner-right-bg"
           fill
-          loading="lazy"
+          loading="eager"
           className="object-cover"
         />
       </div>

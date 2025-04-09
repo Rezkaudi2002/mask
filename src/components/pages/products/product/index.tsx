@@ -1,9 +1,15 @@
+// import { TItem } from "@/types/item.type";
+// import ProductDetails from "../components/ProductDetails";
+import ProductHero from "../components/ProductHero";
+import Breadcrumb from "../components/Breadcrumb";
+import ImagesGallery from "../components/ImagesGallery";
 import { TProduct } from "@/types/product.type";
 import ProductDetails from "../components/ProductDetails";
-import ContactBanner from "../../home/sections/ContactBanner";
-import PurchaseProcess from "../../home/sections/PurchaseProcess";
-import BusinessPolicy from "../../home/sections/BusinessPolicy";
-import CompanyProfile from "../../home/sections/CompanyProfile";
+import Cards from "../components/Cards";
+// import ContactBanner from "../../home/sections/ContactBanner";
+// import PurchaseProcess from "../../home/sections/PurchaseProcess";
+// import BusinessPolicy from "../../home/sections/BusinessPolicy";
+// import CompanyProfile from "../../home/sections/CompanyProfile";
 
 interface IIndexProps {
   product: TProduct;
@@ -12,11 +18,18 @@ interface IIndexProps {
 const index = ({ product }: IIndexProps) => {
   return (
     <>
-      <ProductDetails product={product} />
-      <ContactBanner />
+      <ProductHero productTitle={product.title} />
+      <Breadcrumb title={product.title} category={product.category} />
+      <ProductDetails
+        subTitle={product.subTitle}
+        description={product.description}
+      />
+      <ImagesGallery images={product.imagesGallery} />
+      <Cards kinds={product.kinds} merit={product.merit} tips={product.tips} />
+      {/* <ContactBanner />
       <PurchaseProcess />
       <BusinessPolicy />
-      <CompanyProfile />
+      <CompanyProfile /> */}
     </>
   );
 };

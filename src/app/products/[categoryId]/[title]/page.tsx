@@ -1,7 +1,8 @@
-import NotFound from "@/app/not-found";
 import ProductPage from "@/components/pages/products/product/index";
 import { Metadata } from "next";
-import { getCategoryById } from "@/services/category";
+import { getCategoryById, getCategoryTitleById } from "@/services/category";
+import { getProductByTitle } from "@/services/products";
+import { notFound } from "next/navigation";
 
 interface IProductPageProps {
   params: Promise<{ title: string; categoryId: string }>;
@@ -29,22 +30,21 @@ export async function generateMetadata({
 
 const Page = async ({ params }: IProductPageProps) => {
   const { title, categoryId } = await params;
-  const decodedTitle = decodeURIComponent(title);
-  const categoryData = await getCategoryById(categoryId);
+  // const decodedTitle = decodeURIComponent(title);
+  // const categoryData = await getCategoryById(categoryId);
 
-  if (
-    !decodedTitle ||
-    !categoryId ||
-    !categoryData ||
-    !categoryData.items ||
-    !categoryData.items.find((item) => item.title === decodedTitle)
-  ) {
-    return <NotFound />;
+  const categoryTitle = getCategoryTitleById(categoryId);
+  console.log(categoryTitle);
+  const productData = getProductByTitle(title, categoryTitle);
+
+  if (!productData) {
+    return notFound();
   }
+  console.log(productData);
 
-  const productData = categoryData.items.find(
-    (item) => item.title === decodedTitle
-  )!;
+  // const productData = categoryData.items.find(
+  //   (item) => item.title === decodedTitle
+  // )!;
   return <ProductPage product={productData} />;
 };
 

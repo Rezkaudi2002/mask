@@ -21,6 +21,7 @@ const index = ({ categoryData }: IIndexProps) => {
       <CategoryHero categoryName={categoryData.title} />
       <CategoryProducts
         categoryName={categoryData.title.replace(/\n/g, "")}
+        categoryId={categoryData.id}
         products={categoryData?.items}
       />
       <CategoryPurchaseResults

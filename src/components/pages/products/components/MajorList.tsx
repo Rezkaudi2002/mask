@@ -1,4 +1,4 @@
-import { TMaker } from "@/types/category.type";
+import { TMaker } from "@/types/maker.type";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,9 +13,11 @@ const MajorList = ({ categoryName, companies }: IMajorListProps) => {
       <Image
         className=" absolute -z-10 top-0 left-0 object-cover"
         fill
-        src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"}
+        src={
+          "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
+        }
         alt="hero-background-hadis"
-        loading="lazy"
+        loading="eager"
       />
       {/* Content */}
       <h2 className="bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] leading-[36px] lg:text-[65px] lg:leading-[90px] font-black">

@@ -27,7 +27,7 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                 }
                 width={16}
                 height={16}
-                loading="lazy"
+                loading="eager"
                 alt="right arrow icon"
               />
             </Link>
@@ -43,7 +43,7 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
                 src={data.imageSrc}
                 alt={data.title}
                 fill
-                loading="lazy"
+                loading="eager"
               />
             </div>
             {data.description.split("\n").map((item, index) => (
