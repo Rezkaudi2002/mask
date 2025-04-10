@@ -9,13 +9,11 @@ import PurchaseItemsCategoryCard from "../components/PurchaseItemsCategoryCard";
 import { useFilterItems } from "@/hooks/useFilterItems";
 
 import { getAllCategories } from "@/services/category";
-import { getProducts } from "@/services/products";
 
 const PurchasedItems = () => {
   const { filteredItems, selectedCategory, setSelectedCategory } =
     useFilterItems();
   const categoriesData = getAllCategories();
-  const productsData = getProducts();
 
   return (
     <section
@@ -56,7 +54,6 @@ const PurchasedItems = () => {
               image={item.image}
               title={item.title}
               categoryId={selectedCategory}
-              haveDetails={productsData.some((e) => e.title === item.title)}
             />
           </div>
         ))}

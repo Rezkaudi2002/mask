@@ -1,3 +1,4 @@
+import { useHaveDetails } from "@/hooks/useHaveDetails";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,15 +6,14 @@ interface IPurchaseItemsCardProps {
   title: string;
   categoryId?: string;
   image: string;
-  haveDetails?: boolean;
 }
 
 const PurchaseItemsCard = ({
   title,
   categoryId,
   image,
-  haveDetails,
 }: IPurchaseItemsCardProps) => {
+  const haveDetails = useHaveDetails(title);
   return (
     <Link
       href={haveDetails ? `/products/${categoryId}/${title}` : ""}
