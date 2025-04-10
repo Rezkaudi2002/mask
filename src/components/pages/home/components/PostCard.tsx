@@ -28,7 +28,7 @@ const PostCard = ({
       <h3 className="my-4 lg:mb-[22px] text-[20px] leading-[30px] text-[#B81122] font-black text-start truncate">
         {title}
       </h3>
-      <p className="text-[16px] leading-[32px] line-clamp-2">{description}</p>
+      <p className="text-[16px] leading-[32px] line-clamp-2" dangerouslySetInnerHTML={{ __html: description }} />
     </Link>
   );
 };
