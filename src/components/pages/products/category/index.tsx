@@ -29,7 +29,7 @@ const index = ({ categoryData }: IIndexProps) => {
         purchaseItems={categoryData?.purchaseItems}
       />
       <MajorList
-        categoryName={categoryData.title.replace(/\n/g, "")}
+        title={categoryData.title.replace(/\n/g, "")}
         companies={categoryData?.makers}
       />
       <Flow />
