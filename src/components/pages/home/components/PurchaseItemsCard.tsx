@@ -14,14 +14,11 @@ const PurchaseItemsCard = ({
   image,
 }: IPurchaseItemsCardProps) => {
   const haveDetails = useHaveDetails(title);
-  return (
-    <Link
-      href={haveDetails ? `/products/${categoryId}/${title}` : ""}
-      className={`block p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] border-[#B81122] rounded-[4px] bg-white relative ${
-        haveDetails ? "cursor-pointer" : "cursor-default"
-      }`}
-    >
-      {haveDetails === true && (
+
+  // Common content to avoid duplication
+  const content = (
+    <>
+      {haveDetails && (
         <span className="absolute right-2 bottom-[60px] bg-green-600 p-1 text-[8px] text-white rounded-sm">
           詳細あり
         </span>
@@ -48,7 +45,21 @@ const PurchaseItemsCard = ({
           />
         )}
       </p>
+    </>
+  );
+
+  // Conditional rendering: Link if haveDetails, div otherwise
+  return haveDetails ? (
+    <Link
+      href={`/products/${categoryId}/${title}`}
+      className="block p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] border-[#B81122] rounded-[4px] bg-white relative cursor-pointer"
+    >
+      {content}
     </Link>
+  ) : (
+    <div className="block p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] border-[#B81122] rounded-[4px] bg-white relative cursor-default">
+      {content}
+    </div>
   );
 };
 
