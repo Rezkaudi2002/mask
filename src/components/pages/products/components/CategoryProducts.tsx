@@ -15,7 +15,7 @@ const CategoryProducts = ({
   categoryId
 }: ICategoryProductsProps) => {
   const productsData = getProducts();
-  console.log(productsData);
+  
   return (
     <section className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[80px]">
       <Image
