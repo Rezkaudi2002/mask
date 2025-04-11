@@ -50,7 +50,11 @@ const PurchasedItems = () => {
       <div className="flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
         {filteredItems.slice(0, 8).map((item) => (
           <div className="w-[47%] md:w-[30%] lg:w-[22%]" key={item.id}>
-            <PurchaseItemsCard image={item.image} title={item.title} />
+            <PurchaseItemsCard
+              image={item.image}
+              title={item.title}
+              categoryId={selectedCategory}
+            />
           </div>
         ))}
       </div>

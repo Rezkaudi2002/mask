@@ -1,7 +1,6 @@
 import { TItem } from "@/types/item.type";
 import PurchaseItemsCard from "../../home/components/PurchaseItemsCard";
 import Image from "next/image";
-import { getProducts } from "@/services/products";
 
 interface ICategoryProductsProps {
   products?: TItem[];
@@ -12,10 +11,9 @@ interface ICategoryProductsProps {
 const CategoryProducts = ({
   products,
   categoryName,
-  categoryId
+  categoryId,
 }: ICategoryProductsProps) => {
-  const productsData = getProducts();
-  console.log(productsData);
+
   return (
     <section className="relative py-[50px] md:py-[80px] lg:py-[120px] px-5 md:px-[50px] lg:px-[80px]">
       <Image
@@ -43,7 +41,6 @@ const CategoryProducts = ({
               image={item.image}
               title={item.title}
               categoryId={categoryId}
-              haveDetails={productsData.some((e) => e.title === item.title)}
             />
           </div>
         ))}
