@@ -9,6 +9,7 @@ import ContactBanner from "../../home/sections/ContactBanner";
 import PurchaseProcess from "../../home/sections/PurchaseProcess";
 import BusinessPolicy from "../../home/sections/BusinessPolicy";
 import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
+import PurchaseService from "../components/PurchaseService";
 
 interface IIndexProps {
   product: TProduct;
@@ -23,7 +24,15 @@ const index = ({ product }: IIndexProps) => {
         subTitle={product.subTitle}
         description={product.description}
       />
-      <ImagesGallery images={product.imagesGallery} />
+      <ImagesGallery images={product.webImagesGallery} />
+      <PurchaseService
+        servicesTitle={product.servicesTitle}
+        servicesDescription={product.servicesDescription}
+        dismantling={product.dismantling}
+        transportation={product.transportation}
+        whyChooseUs={product.whyChooseUs}
+      />
+      <ImagesGallery images={product.cameraImagesGallery} />
       <Cards kinds={product.kinds} merit={product.merit} tips={product.tips} />
       <MajorList title={product.title} companies={product.makers} />
       <ContactBanner />
