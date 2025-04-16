@@ -20,7 +20,7 @@
     "設置スペースの確認 – 設置に必要な天井の高さや床の強度を考慮する。",
     "耐荷重と安全性能 – 取り扱う車両の重量に対応できるか確認。"
   ],
-  "imagesGallery": [
+  "cameraImagesGallery": [
     {
       "title": "BANZAI バンザイ★ゲートリフト・スリムⅡ★GLY-40★  ★能力4t",
       "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/%E8%87%AA%E5%8B%95%E8%BB%8A%E6%95%B4%E5%82%99%E6%A9%9F%E6%A2%B0/%E6%95%B4%E5%82%99%E3%83%AA%E3%83%95%E3%83%88/images_gallery/BANZAI+%E3%83%90%E3%83%B3%E3%82%B6%E3%82%A4%E2%98%85%E3%82%B2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%95%E3%83%88%E3%83%BB%E3%82%B9%E3%83%AA%E3%83%A0%E2%85%A1%E2%98%85GLY-40%E2%98%85++%E2%98%85%E8%83%BD%E5%8A%9B4t.jpg"
@@ -64,7 +64,9 @@
     {
       "title": "ビシャモン★1柱リフト★WNI25★荷重2,500kg★自動車整備 板金",
       "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/整備リフト/images_gallery/ビシャモン★1柱リフト★WNI25★荷重2,500kg★自動車整備 板金.jpg"
-    },
+    }
+  ],
+  "webImagesGallery": [
     {
       "title": "自動車整備 リフト(1)",
       "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/整備リフト/images_gallery/自動車整備 リフト(1).jpg"

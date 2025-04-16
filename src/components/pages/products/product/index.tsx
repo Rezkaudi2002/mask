@@ -23,8 +23,9 @@ const index = ({ product }: IIndexProps) => {
         subTitle={product.subTitle}
         description={product.description}
       />
-      <ImagesGallery images={product.imagesGallery} />
+      <ImagesGallery images={product.cameraImagesGallery} />
       <Cards kinds={product.kinds} merit={product.merit} tips={product.tips} />
+      <ImagesGallery images={product.webImagesGallery} />
       <MajorList title={product.title} companies={product.makers} />
       <ContactBanner />
       <ContactFixedBanner />
