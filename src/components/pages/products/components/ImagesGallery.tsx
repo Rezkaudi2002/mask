@@ -15,9 +15,11 @@ import "swiper/css/navigation";
 
 interface IImagesGalleryProps {
   images: TImage[];
+  purchaseeProductTitle?: string[] | null;
+  title?: string[] | null;
 }
 
-const ImagesGallery = ({ images }: IImagesGalleryProps) => {
+const ImagesGallery = ({ images, purchaseeProductTitle, title }: IImagesGalleryProps) => {
   const imagesCount = images.length;
   const { selectedImageIndex, setSelectedImageIndex, handlePrev, handleNext } =
     useImageGallery(imagesCount);
@@ -30,6 +32,12 @@ const ImagesGallery = ({ images }: IImagesGalleryProps) => {
           onClick={handlePrev}
           disabled={selectedImageIndex === 0}
         />
+
+        {purchaseeProductTitle && (
+          <p className="mt-2 mb-5 lg:mt-4 text-[20px] lg:text-[40px] leading-[30px] lg:leading-[60px] font-black text-center bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent">
+           {title}{purchaseeProductTitle}
+          </p>
+        )}
 
         <div className="w-[70%] lg:w-fit min-h-[420px] md:min-h-[600px] lg:min-h-[650px] border-[#B81122] border-2 rounded-lg overflow-hidden p-3 lg:p-8 bg-[#fff7f8] shadow-md flex flex-col items-center justify-center relative">
           <Image

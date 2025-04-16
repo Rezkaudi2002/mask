@@ -14,6 +14,7 @@ export type TProduct = {
   kinds: string[];
   merit: string[];
   tips: string[];
+  purchaseeProductTitle: string[];
   cameraImagesGallery: TImage[]
   webImagesGallery: TImage[]
   makers: TMaker[]
