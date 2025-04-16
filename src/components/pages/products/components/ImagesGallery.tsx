@@ -40,9 +40,6 @@ const ImagesGallery = ({ images }: IImagesGalleryProps) => {
             alt={`${images[selectedImageIndex].title} image product`}
             className="max-w-full h-auto self-center"
           />
-          <p className="absolute bottom-3 text-center text-[#B81122] text-[14px] font-semibold">
-            {images[selectedImageIndex].title}
-          </p>
         </div>
 
         <NavigationButton
