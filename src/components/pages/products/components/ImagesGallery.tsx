@@ -15,8 +15,8 @@ import "swiper/css/navigation";
 
 interface IImagesGalleryProps {
   images: TImage[];
-  purchaseeProductTitle?: string[] | null;
-  title?: string[] | null;
+  purchaseeProductTitle?: string | null;
+  title?: string | null;
 }
 
 const ImagesGallery = ({ images, purchaseeProductTitle, title }: IImagesGalleryProps) => {
