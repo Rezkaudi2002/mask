@@ -36,7 +36,14 @@ const PurchaseServices = ({
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#B81122] mb-8">
             {servicesTitle}
           </h2>
-          <p className="mb-8">{servicesDescription}</p>
+          <p className="mb-8 leading-7">
+            {servicesDescription.split("\n").map((desc, index) => (
+              <span key={index}>
+                {desc}
+                <br />
+              </span>
+            ))}
+          </p>
           <div className="space-y-4">
             {services.map((service, index) => (
               <ServiceCard
