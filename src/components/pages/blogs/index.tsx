@@ -26,7 +26,7 @@ const Index = () => {
             ハディズのブログ
           </h1>
           <div className="w-full flex items-center justify-center gap-8 flex-wrap">
-            {currentBlogs.map((item) => (
+            {currentBlogs.reverse().map((item) => (
               <PostCard
                 className="max-w-[352px]"
                 key={item.id}
