@@ -1,0 +1,144 @@
+{
+  "id": 2,
+  "title": "タイヤチェンジャー",
+  "subTitle": "整備リフトとは？",
+  "description": "整備リフトは、自動車やオートバイの点検・修理・メンテナンス作業を行う際に、車両を持ち上げるための機械です。作業の効率化、安全性向上に役立ちます。",
+  "category": "自動車整備機械",
+  "servicesTitle": "中古油圧式整備リフトの買取サービス",
+  "purchaseeProductTitle": "の買取実績",
+  "servicesDescription": "お使いにならなくなったカーリフトをお持ちですか？\nハディズでは、あらゆる種類の中古油圧式カーリフトを買取しています。大型機械の搬出も、経験豊富なスタッフにお任せください。正当な価格査定、迅速なお支払いをお約束します。",
+  "dismantling": {
+    "title": "解体",
+    "icon": "🔧",
+    "content": [
+      "当社の専門技術者が、お客様の施設で安全かつ効率的に解体作業を行います。",
+      "専門チームが専用ツールを使用して解体作業を行います。",
+      "電気系統と機械系統を正確かつ安全に取り扱います。",
+      "お客様や技術スタッフの介入は必要ありません。"
+    ]
+  },
+  "transportation": {
+    "title": "輸送",
+    "icon": "🚚",
+    "content": [
+      "適切な機材と経験豊富なスタッフによる安全な輸送サービスを提供します。",
+      "リフトのサイズと種類に応じた輸送トラックと吊り上げ装置を提供します。",
+      "輸送中の積み込みと完全な安全確保を担当します。",
+      "リフトは安全に吊り上げられ、現場に迷惑をかけることなく積み込まれます。"
+    ]
+  },
+  "whyChooseUs": {
+    "title": "ハディズが選ばれる理由",
+    "icon": "🏆",
+    "content": [
+      "豊富な経験: 日本国内外での長年の経験があります。",
+      "迅速な対応: 査定から買取まで迅速に対応し、お客様の時間を無駄にしません。",
+      "専門的サービス: 解体、搬出、輸送に必要な工具や車両を保有しており、お客様のご負担はありません。",
+      "全国対応: 日本全国どこでも対応可能です。"
+    ]
+  },
+  "kinds": [
+    "2柱リフト - 車の下部整備に最適",
+    "4柱リフト - 安定性が高く、大型車両向け",
+    "シザーリフト - コンパクトでタイヤ交換に便利",
+    "埋め込み式リフト - 設置コストは高いが省スペース"
+  ],
+  "merit": [
+    "作業効率の向上 – 車両を持ち上げることで、下回りの作業がしやすくなる。",
+    "安全性の確保 – ジャッキに比べて安定性が高く、事故のリスクを低減",
+    "スペースの有効活用 – 小規模なガレージでも設置できるコンパクトなモデルも存在。"
+  ],
+  "tips": [
+    "作業内容に適したタイプを選ぶ – 一般的な整備なら2柱リフト、車検作業なら4柱リフトなど。",
+    "設置スペースの確認 – 設置に必要な天井の高さや床の強度を考慮する。",
+    "耐荷重と安全性能 – 取り扱う車両の重量に対応できるか確認。"
+  ],
+  "cameraImagesGallery": [
+    {
+      "title": "CORCHI★タイヤチェンジャー★A2002S★200-345V",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/CORCHI★タイヤチェンジャー★A2002S★200-345V.jpg"
+    },
+    {
+      "title": "EIWA エイワ★タイヤチェンジャー★WING iR20GT",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/EIWA エイワ★タイヤチェンジャー★WING iR20GT.jpg"
+    },
+    {
+      "title": "IYASAKA イヤサカ★HESHBON ヘスボン★  ★ダイモスタイヤチェンジャー★HJT-380★最大24インチ",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/IYASAKA イヤサカ★HESHBON ヘスボン★  ★ダイモスタイヤチェンジャー★HJT-380★最大24インチ.jpg"
+    },
+    {
+      "title": "タイヤチェンジャー★ユーロスター★EU39NA★  ★TECO 36 S ti★サポートアーム付 UPH4(A28)★50Hz",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/タイヤチェンジャー★ユーロスター★EU39NA★  ★TECO 36 S ti★サポートアーム付 UPH4(A28)★50Hz.jpg"
+    },
+    {
+      "title": "手動式タイヤチェンジャー★ビードブレーカー ビード落とし★タイヤ交換",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/手動式タイヤチェンジャー★ビードブレーカー ビード落とし★タイヤ交換.jpg"
+    }
+  ],
+  "webImagesGallery": [
+    {
+      "title": "タイヤチェンジャー(1)",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/タイヤチェンジャー(1).jpg"
+    },
+    {
+      "title": "タイヤチェンジャー(2)",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/タイヤチェンジャー(2).jpg"
+    },
+    {
+      "title": "タイヤチェンジャー",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/タイヤチェンジャー.jpg"
+    },
+    {
+      "title": "SKTOKI タイヤチェンジャー",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/SKTOKI タイヤチェンジャー.jpg"
+    },
+    {
+      "title": "EXCEED-IotaPro タイヤチェンジャー",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/EXCEED-IotaPro タイヤチェンジャー.jpg"
+    }
+  ],
+  "makers": [
+    {
+      "jp": "",
+      "en": "altia",
+      "link": "https://altia.co.jp/kikous/tc_sw/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/altia.png"
+    },
+    {
+      "jp": "",
+      "en": "banzai",
+      "link": "https://www.banzai.co.jp/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/banzai.png"
+    },
+    {
+      "jp": "",
+      "en": "circuit-eiwa",
+      "link": "https://circuit-eiwa.co.jp/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/circuit-eiwa.jpg"
+    },
+    {
+      "jp": "",
+      "en": "iyasaka",
+      "link": "https://www.iyasaka.co.jp/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/iyasaka.png"
+    },
+    {
+      "jp": "",
+      "en": "kowa-seiki",
+      "link": "https://www.kowa-seiki.co.jp/product/prod-05/2381/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/kowa-seiki.jpg"
+    },
+    {
+      "jp": "",
+      "en": "onodani",
+      "link": "https://www.onodani.co.jp/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/onodani.png"
+    },
+    {
+      "jp": "",
+      "en": "snapon",
+      "link": "https://www.snapon.co.jp/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/makers/snapon.gif"
+    }
+  ]
+}

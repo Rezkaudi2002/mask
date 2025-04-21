@@ -19,10 +19,49 @@ interface IImagesGalleryProps {
   title?: string | null;
 }
 
-const ImagesGallery = ({ images, purchaseeProductTitle, title }: IImagesGalleryProps) => {
+const ImagesGallery = ({
+  images,
+  purchaseeProductTitle,
+  title,
+}: IImagesGalleryProps) => {
   const imagesCount = images.length;
   const { selectedImageIndex, setSelectedImageIndex, handlePrev, handleNext } =
     useImageGallery(imagesCount);
+
+  // Helper function to calculate slides to show
+  const calculateSlidesToShow = (maxSlides: number, totalImages: number) => {
+    // If we have more images than maxSlides, show maxSlides
+    if (totalImages > maxSlides) {
+      return maxSlides;
+    }
+    // If we have exactly maxSlides or fewer, show at least 1 less to ensure navigation works
+    return Math.max(1, totalImages - 1);
+  };
+
+  // Responsive breakpoints configuration
+  const breakpoints = {
+    320: {
+      // Mobile
+      slidesPerView: calculateSlidesToShow(2, imagesCount),
+      spaceBetween: 8,
+    },
+    640: {
+      // Small tablets
+      slidesPerView: calculateSlidesToShow(3, imagesCount),
+      spaceBetween: 16,
+    },
+    768: {
+      // Tablets
+      slidesPerView: calculateSlidesToShow(4, imagesCount),
+      spaceBetween: 16,
+    },
+    1024: {
+      // Desktop
+      slidesPerView: calculateSlidesToShow(6, imagesCount),
+      spaceBetween: 32,
+    },
+  };
+
   return (
     <section className="my-8">
       {/* Main Image with Navigation */}
@@ -35,7 +74,8 @@ const ImagesGallery = ({ images, purchaseeProductTitle, title }: IImagesGalleryP
 
         {purchaseeProductTitle && (
           <p className="mt-2 mb-5 lg:mt-4 text-[20px] lg:text-[40px] leading-[30px] lg:leading-[60px] font-black text-center bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent">
-           {title}{purchaseeProductTitle}
+            {title}
+            {purchaseeProductTitle}
           </p>
         )}
 
@@ -58,45 +98,42 @@ const ImagesGallery = ({ images, purchaseeProductTitle, title }: IImagesGalleryP
       </div>
 
       {/* Thumbnails Carousel */}
-      <div className="w-[80%] mx-auto">
-        <Swiper
-          modules={[Navigation]}
-          spaceBetween={8}
-          slidesPerView={6}
-          breakpoints={{
-            320: { slidesPerView: 4, spaceBetween: 8 },
-            640: { slidesPerView: 4, spaceBetween: 16 },
-            768: { slidesPerView: 6, spaceBetween: 16 },
-            1024: { slidesPerView: 6, spaceBetween: 32 },
-          }}
-          navigation={{
-            nextEl: ".custom-next",
-            prevEl: ".custom-prev",
-          }}
-          className="swiper-container"
-        >
-          {images.map((image, index) => (
-            <SwiperSlide key={image.title}>
-              <div
-                className={`flex justify-center items-center cursor-pointer group overflow-hidden transition duration-200 ease-in-out ${
-                  selectedImageIndex === index
-                    ? "border-[#B81122] border-2 rounded-md bg-[#fff7f8]"
-                    : "border-2 border-gray-200 rounded-md"
-                }`}
-                onClick={() => setSelectedImageIndex(index)}
-              >
-                <Image
-                  src={image.imageSrc}
-                  width={100}
-                  height={100}
-                  alt={`${image.title} thumbnail`}
-                  className="w-[100px] h-[100px] object-contain group-hover:scale-110 transition duration-200 ease-in-out"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      {imagesCount > 1 && (
+        <div className="w-[80%] mx-auto">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={32}
+            slidesPerView={calculateSlidesToShow(6, imagesCount)}
+            breakpoints={breakpoints}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+            className="swiper-container"
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={image.title}>
+                <div
+                  className={`flex justify-center items-center cursor-pointer group overflow-hidden transition duration-200 ease-in-out ${
+                    selectedImageIndex === index
+                      ? "border-[#B81122] border-2 rounded-md bg-[#fff7f8]"
+                      : "border-2 border-gray-200 rounded-md"
+                  }`}
+                  onClick={() => setSelectedImageIndex(index)}
+                >
+                  <Image
+                    src={image.imageSrc}
+                    width={100}
+                    height={100}
+                    alt={`${image.title} thumbnail`}
+                    className="w-[100px] h-[100px] object-contain group-hover:scale-110 transition duration-200 ease-in-out"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      )}
     </section>
   );
 };
