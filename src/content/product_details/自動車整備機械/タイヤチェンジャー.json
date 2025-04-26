@@ -1,8 +1,8 @@
 {
   "id": 2,
   "title": "タイヤチェンジャー",
-  "subTitle": "整備リフトとは？",
-  "description": "整備リフトは、自動車やオートバイの点検・修理・メンテナンス作業を行う際に、車両を持ち上げるための機械です。作業の効率化、安全性向上に役立ちます。",
+  "subTitle": "タイヤチェンジャーとは？",
+  "description": "タイヤチェンジャーは、自動車やバイクのタイヤをホイールから取り外したり、取り付けたりするための専用機械です。スムーズなタイヤ交換を可能にし、作業効率や安全性の向上に貢献します。",
   "category": "自動車整備機械",
   "servicesTitle": "中古タイヤチェンジャーの買取サービス",
   "purchaseeProductTitle": "の買取実績",
@@ -73,6 +73,10 @@
     {
       "title": "手動式タイヤチェンジャー★ビードブレーカー ビード落とし★タイヤ交換",
       "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/手動式タイヤチェンジャー★ビードブレーカー ビード落とし★タイヤ交換.jpg"
+    },
+    {
+      "title":"☆Wheel Master ホイールマスター★タイヤチェンジャー★898WMTISP★サポートアーム付☆",
+      "imageSrc":"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/タイヤチェンジャー/images_gallery/☆Wheel Master ホイールマスター★タイヤチェンジャー★898WMTISP★サポートアーム付☆.jpg"
     }
   ],
   "webImagesGallery": [
