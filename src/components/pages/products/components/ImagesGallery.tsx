@@ -17,12 +17,14 @@ interface IImagesGalleryProps {
   images: TImage[];
   purchaseeProductTitle?: string | null;
   title?: string | null;
+  isCameraImages?: boolean;
 }
 
 const ImagesGallery = ({
   images,
   purchaseeProductTitle,
   title,
+  isCameraImages,
 }: IImagesGalleryProps) => {
   const imagesCount = images.length;
   const { selectedImageIndex, setSelectedImageIndex, handlePrev, handleNext } =
@@ -88,6 +90,11 @@ const ImagesGallery = ({
             alt={`${images[selectedImageIndex].title} image product`}
             className="max-w-full h-auto self-center"
           />
+          {isCameraImages && (
+            <p className="absolute bottom-3 text-center text-[#B81122] text-[14px] font-semibold">
+              {images[selectedImageIndex].title}
+            </p>
+          )}
         </div>
 
         <NavigationButton
