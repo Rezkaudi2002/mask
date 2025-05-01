@@ -23,6 +23,7 @@ export type TProduct = {
 export type TImage = {
   title: string,
   imageSrc: string
+  isCenter?: boolean
 }
 
 export type TService = {
