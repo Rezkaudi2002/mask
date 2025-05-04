@@ -8,9 +8,7 @@ export type TProduct = {
   servicesTitle: string,
   servicesDescription: string;
   description: string;
-  dismantling: TService
-  transportation: TService
-  whyChooseUs: TService
+  questions: TQuestion[];
   kinds: string[];
   merit: string[];
   tips: string[];
@@ -26,8 +24,8 @@ export type TImage = {
   isCenter?: boolean
 }
 
-export type TService = {
-  title: string;
-  icon: string;
-  content: string[];
+export type TQuestion = {
+  id: number;
+  question: string;
+  answer: string;
 }
