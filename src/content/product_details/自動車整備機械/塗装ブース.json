@@ -1,0 +1,128 @@
+{
+  "id": 4,
+  "title": "塗装ブース",
+  "subTitle": "整備リフトとは？",
+  "description": "整備リフトは、自動車やオートバイの点検・修理・メンテナンス作業を行う際に、車両を持ち上げるための機械です。作業の効率化、安全性向上に役立ちます。",
+  "category": "自動車整備機械",
+  "servicesTitle": "中古油圧式整備リフトの買取サービス",
+  "purchaseeProductTitle": "の買取実績",
+  "servicesDescription": "お使いにならなくなったカーリフトをお持ちですか？\nハディズでは、あらゆる種類の中古油圧式カーリフトを買取しています。大型機械の搬出も、経験豊富なスタッフにお任せください。正当な価格査定、迅速なお支払いをお約束します。",
+  "questions": [
+    {
+      "id": 1,
+      "question": "配線はそのままでも大丈夫ですか？",
+      "answer": "はい、当社の技術スタッフが安全に取り外し作業を行います。"
+    },
+    {
+      "id": 2,
+      "question": "大きくてそのまま出すことができませんが、搬出可能ですか？",
+      "answer": "はい、問題ありません。必要な工具を持参し、当社のスタッフが分解・取り外し作業を行います。"
+    },
+    {
+      "id": 3,
+      "question": "オイルはそのままでも大丈夫ですか？",
+      "answer": "はい、当社のスタッフが抜き取り作業を行い、適切に処分いたします。"
+    },
+    {
+      "id": 4,
+      "question": "現地にフォークリフトやクレーンがないのですが、買取可能ですか？",
+      "answer": "はい、必要に応じてリフトや専用の機材・道具を持参し、パワーゲート付きトラックまたはユニック車でお伺いいたします。"
+    },
+    {
+      "id": 5,
+      "question": "積み込みの手伝いが必要ですか？",
+      "answer": "いいえ、お客様のお手伝いは不要です。搬出から積み込みまで当社のスタッフが対応します。"
+    },
+    {
+      "id": 6,
+      "question": "遠方でも買取に来てくれますか？",
+      "answer": "はい、日本各地で整備リフトの買取実績があります。"
+    }
+  ],
+  "kinds": [
+    "2柱リフト - 車の下部整備に最適",
+    "4柱リフト - 安定性が高く、大型車両向け",
+    "シザーリフト - コンパクトでタイヤ交換に便利",
+    "埋め込み式リフト - 設置コストは高いが省スペース"
+  ],
+  "merit": [
+    "作業効率の向上 – 車両を持ち上げることで、下回りの作業がしやすくなる。",
+    "安全性の確保 – ジャッキに比べて安定性が高く、事故のリスクを低減",
+    "スペースの有効活用 – 小規模なガレージでも設置できるコンパクトなモデルも存在。"
+  ],
+  "tips": [
+    "作業内容に適したタイプを選ぶ – 一般的な整備なら2柱リフト、車検作業なら4柱リフトなど。",
+    "設置スペースの確認 – 設置に必要な天井の高さや床の強度を考慮する。",
+    "耐荷重と安全性能 – 取り扱う車両の重量に対応できるか確認。"
+  ],
+  "cameraImagesGallery": [
+    {
+      "title": "BIC TOOL★イオンシャワーブース★WX-700★  ★自動車板金 塗装",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/BIC TOOL★イオンシャワーブース★WX-700★  ★自動車板金 塗装.jpg"
+    },
+    {
+      "title": "plo プロ★スプレーブース 塗装ブース★ST-300HR",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/plo プロ★スプレーブース 塗装ブース★ST-300HR.jpg"
+    },
+    {
+      "title": "ペイントブース 塗装ブース",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/ペイントブース 塗装ブース.jpg"
+    }
+  ],
+  "webImagesGallery": [
+    {
+      "title": "塗装ブース(1)",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/塗装ブース(1).jpg"
+    },
+    {
+      "title": "塗装ブース(2)",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/塗装ブース(2).jpg"
+    },
+    {
+      "title": "塗装ブース1",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/塗装ブース.jpg"
+    },
+    {
+      "title": "塗装ブース",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/images_gallery/塗装ブース.png"
+    }
+  ],
+  "makers": [
+    {
+      "jp": "",
+      "en": "andex",
+      "link": "https://www.andex.co.jp/works/works-119/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/andex.svg"
+    },
+    {
+      "jp": "",
+      "en": "banzai",
+      "link": "https://www.banzai.co.jp/products/search/body/painting_and_drying_booth",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/banzai.png"
+    },
+    {
+      "jp": "",
+      "en": "bictool",
+      "link": "http://www.bictool.com/product22.html",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/bictool.jpg"
+    },
+    {
+      "jp": "",
+      "en": "cubicsystem",
+      "link": "http://www.cubicsystem.co.jp/tosou",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/cubicsystem.png"
+    },
+    {
+      "jp": "",
+      "en": "maru-t",
+      "link": "https://www.maru-t.co.jp/auto_paint/",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/maru-t.jpg"
+    },
+    {
+      "jp": "",
+      "en": "triens",
+      "link": "https://www.triens.jp/special-order",
+      "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/products/自動車整備機械/塗装ブース/makers/triens.jpeg"
+    }
+  ]
+}
