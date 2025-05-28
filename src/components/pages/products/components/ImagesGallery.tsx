@@ -81,7 +81,7 @@ const ImagesGallery = ({
           </p>
         )}
 
-       <div
+      <div
   className={`w-[70%] lg:w-fit min-h-[420px] md:min-h-[600px] lg:min-h-[650px] border-[#B81122] border-2 rounded-lg overflow-hidden p-3 lg:p-8 bg-[#fff7f8] shadow-md flex flex-col items-center justify-center mx-auto relative ${
     images[selectedImageIndex].isCenter
       ? ""
@@ -104,6 +104,7 @@ const ImagesGallery = ({
     </p>
   )}
 </div>
+
 
 
         <NavigationButton
