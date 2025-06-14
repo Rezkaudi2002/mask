@@ -52,7 +52,7 @@ interface ListContent extends BlogItemBase {
     bottomDescription?: string;
 }
 
-type BlogSubContent = SimpleContent | FAQContent | ImageContent | ListContent | VideoContent;
+type BlogSubContent = SimpleContent | FAQContent | ImageContent | ListContent | VideoContent | TableContent;
 
 interface BlogPost {
     id: string;
