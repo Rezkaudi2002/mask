@@ -10,22 +10,25 @@ const Hero: React.FC = () => {
       >
         {/* Background wrapper to ensure correct positioning */}
         <div className="absolute inset-0 -z-30">
-          {/* Mobile Background */}
+          {/* Mobile Background - Optimized for LCP */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
             alt="Company's legacy image"
             sizes="100vw"
-            quality={100}
+            quality={75} // Reduced from 100 to 75 for mobile optimization
             fill
             priority
             className="object-cover object-center block lg:hidden"
+            style={{
+              willChange: 'transform', // Optimize for mobile rendering
+            }}
           />
           {/* Desktop Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
             alt="Company's legacy image"
             sizes="100vw"
-            quality={100}
+            quality={100} // Keep high quality for desktop
             fill
             priority
             className="object-cover lg:object-right-top hidden lg:block"
