@@ -11,11 +11,8 @@ import { baseUrl } from "@/utils/baseUrl";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: 'swap',
-  preload: true,
-  fallback: ['system-ui', 'arial'],
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "700", "900"], // Include the font weights you need
 });
 
 // metadata

@@ -15,6 +15,8 @@
 .gradient-red {
   background: linear-gradient(to right bottom, #b81122 50%, #ac0c1c 50%);
   border: 2px solid #990e1c;
+  /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #AD0D1D; */
   text-shadow: 2px 2px 0 #990e1c, -2px 2px 0 #990e1c, -2px -2px 0 #990e1c,
     2px -2px 0 #990e1c;
 }
@@ -22,6 +24,8 @@
 .gradient-green {
   background: linear-gradient(to right bottom, #50cb68 50%, #49bf60 50%);
   border: 2px solid #43b058;
+  /* -webkit-text-stroke-width: 2px; */
+  /* -webkit-text-stroke-color: #4AC061; */
   text-shadow: 2px 2px 0 #4ac061, -2px 2px 0 #4ac061, -2px -2px 0 #4ac061,
     2px -2px 0 #4ac061;
 }
@@ -29,6 +33,8 @@
 .gradient-blue {
   background: linear-gradient(to right bottom, #0194f7 50%, #008ae6 50%);
   border: 2px solid #017fd4;
+  /* -webkit-text-stroke-width: 2px; */
+  /* -webkit-text-stroke-color: #017FD4; */
   text-shadow: 2px 2px 0 #017fd4, -2px 2px 0 #017fd4, -2px -2px 0 #017fd4,
     2px -2px 0 #017fd4;
 }
@@ -36,38 +42,3 @@
 .gradient-navigation {
   background: linear-gradient(to right bottom, #b81122 50%, #ac0c1c 50%);
 }
-
-/* Mobile Performance Optimizations */
-@media (max-width: 768px) {
-  * {
-    will-change: auto;
-  }
-  
-  .gradient-red,
-  .gradient-green,
-  .gradient-blue,
-  .gradient-navigation {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    contain: layout style paint;
-  }
-  
-  img {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 400px;
-  }
-  
-  section {
-    contain: layout style;
-  }
-  
-  .card {
-    contain: layout style;
-  }
-  
-  main {
-    contain: layout;
-  }
-}
-
-
