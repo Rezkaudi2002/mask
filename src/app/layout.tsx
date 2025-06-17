@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     description:
-      "中古機械،電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。",
+      "中古機械、電動工具の高額買取ならハディズへ。ハディズでは、業務用機器の買取を「全国対応」で行っています。",
     title: "中古機械、電動工具の高額買取のハディズ",
     images: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/main-ogp.jpg",
   },
@@ -85,24 +85,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth ">
-      <head>
-        {/* Preload critical mobile background image for LCP optimization */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
-          media="(max-width: 1023px)"
-          fetchPriority="high"
-        />
-        {/* Preload desktop background image */}
-        <link
-          rel="preload"
-          as="image"
-          href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
-          media="(min-width: 1024px)"
-          fetchPriority="high"
-        />
-      </head>
       <GoogleTagManager gtmId="G-id" />
       <body className={`${notoSansJP.variable} font-noto`}>
         <main>
@@ -114,4 +96,3 @@ export default function RootLayout({
     </html>
   );
 }
-
