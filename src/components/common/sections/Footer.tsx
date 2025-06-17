@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
 
         {/* copyright */}
         <span className="text-xs text-[#CA999B]">
-          Copyright © ハディズ All rights reserved.test2
+          Copyright © ハディズ All rights reserved.test4
         </span>
       </div>
     </footer>
