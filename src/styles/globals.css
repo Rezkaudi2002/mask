@@ -37,22 +37,36 @@
   background: linear-gradient(to right bottom, #b81122 50%, #ac0c1c 50%);
 }
 
+/* Mobile Performance Optimizations */
 @media (max-width: 768px) {
+  * {
+    will-change: auto;
+  }
+  
   .gradient-red,
   .gradient-green,
   .gradient-blue,
   .gradient-navigation {
     transform: translateZ(0);
     backface-visibility: hidden;
+    contain: layout style paint;
   }
   
   img {
     content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
+    contain-intrinsic-size: 1px 400px;
   }
   
   section {
     contain: layout style;
+  }
+  
+  .card {
+    contain: layout style;
+  }
+  
+  main {
+    contain: layout;
   }
 }
 
