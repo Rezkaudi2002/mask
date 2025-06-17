@@ -91,9 +91,10 @@ const ImageUpload = ({
                 <Image
                   src={image}
                   alt="Uploaded"
-                  loading="eager"
-                  width={300}
-                  height={150}
+                  loading="lazy"
+                  width={225}
+                  height={140}
+                  sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 225px"
                   className="w-full h-full object-contain"
                 />
               ) : (
@@ -106,10 +107,10 @@ const ImageUpload = ({
                     alt="Upload Icon"
                     width={40}
                     height={40}
-                    loading="eager"
+                    loading="lazy"
                   />
                 </label>
-              )}
+               )}
             </div>
 
             {/* Input is now correctly referenced with an ID */}
@@ -137,12 +138,12 @@ const ImageUpload = ({
                   alt="Edit"
                   width={11}
                   height={11}
-                  loading="eager"
+                  loading="lazy"
                 />
               </button>
               <button
                 type="button"
-                onClick={() => handleDelete(imageIndex)}
+                onClick={( ) => handleDelete(imageIndex)}
                 className="w-[24px] h-[24px] border border-[#DCDCDC] bg-white rounded-full flex items-center justify-center"
                 aria-label="Delete image"
               >
@@ -151,12 +152,12 @@ const ImageUpload = ({
                   alt="Delete"
                   width={11}
                   height={11}
-                  loading="eager"
+                  loading="lazy"
                 />
               </button>
             </div>
           </div>
-        ))}
+         ))}
       </div>
     </div>
   );
