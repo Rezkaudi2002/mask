@@ -13,9 +13,9 @@ const Hero: React.FC = () => {
           {/* Mobile Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
-            alt="Company\\'s legacy image"
+            alt="Company's legacy image"
             sizes="100vw"
-            quality={75}
+            quality={100}
             fill
             priority
             className="object-cover object-center block lg:hidden"
@@ -23,9 +23,9 @@ const Hero: React.FC = () => {
           {/* Desktop Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
-            alt="Company\\'s legacy image"
+            alt="Company's legacy image"
             sizes="100vw"
-            quality={75}
+            quality={100}
             fill
             priority
             className="object-cover lg:object-right-top hidden lg:block"
@@ -36,11 +36,10 @@ const Hero: React.FC = () => {
           <div className="text-hero relative xl:w-[810px] xl:h-[64px] w-[335px] h-[38px] sm:h-[50px] lg:h-[70px] z-10">
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
-              alt="Company\\'s legacy image"
-              sizes="(max-width: 768px ) 100vw, (max-width: 1200px) 50vw, 1200px"
+              alt="Company's legacy image"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
               priority
-              quality={80}
             />
           </div>
           {/* image 2 */}
@@ -48,10 +47,10 @@ const Hero: React.FC = () => {
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-2.webp"
               alt="Hero promotional banner with details"
-              sizes="(max-width: 768px ) 100vw, (max-width: 1200px) 50vw, 1200px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
               priority
-              quality={80}
+              quality={100}
             />
           </div>
 
