@@ -10,25 +10,23 @@ const Hero: React.FC = () => {
       >
         {/* Background wrapper to ensure correct positioning */}
         <div className="absolute inset-0 -z-30">
-          {/* Mobile Background - Optimized for LCP */}
-          <Image
-            src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
-            alt="Company's legacy image"
-            sizes="100vw"
-            quality={75} // Reduced from 100 to 75 for mobile optimization
-            fill
-            priority
-            className="object-cover object-center block lg:hidden"
+          {/* Mobile Background - Ultimate optimization with fallback */}
+          <div 
+            className="absolute inset-0 block lg:hidden"
             style={{
-              willChange: 'transform', // Optimize for mobile rendering
+              background: 'linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%)', // Fallback gradient
+              backgroundImage: 'url("https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              willChange: 'transform',
             }}
           />
           {/* Desktop Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
             alt="Company's legacy image"
-            sizes="100vw"
-            quality={100} // Keep high quality for desktop
+            sizes="(min-width: 1024px) 100vw, 1px"
+            quality={85}
             fill
             priority
             className="object-cover lg:object-right-top hidden lg:block"
@@ -40,7 +38,7 @@ const Hero: React.FC = () => {
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
               alt="Company's legacy image"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+              sizes="(max-width: 768px) 335px, (max-width: 1200px) 50vw, 810px"
               fill
               priority
             />
@@ -50,10 +48,10 @@ const Hero: React.FC = () => {
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-2.webp"
               alt="Hero promotional banner with details"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+              sizes="(max-width: 768px) 340px, (max-width: 1200px) 50vw, 810px"
               fill
               priority
-              quality={100}
+              quality={90}
             />
           </div>
 
@@ -85,3 +83,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
