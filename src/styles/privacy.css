@@ -1,13 +1,13 @@
 /* Modal Container */
 .privacy-modal {
-  width: min(90%, 600px);
-  max-height: 80vh;
+  width: min(95%, 600px);
+  max-height: 85vh;
   overflow-y: auto;
-  border-radius: 12px;
+  border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
-  padding: 15px;
+  padding: 12px;
 }
 
 .privacy-modal.swal2-show {
