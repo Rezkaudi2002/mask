@@ -1,29 +1,23 @@
-import type { NextConfig } from "next";
+import type { Config } from "tailwindcss";
 
-const nextConfig: NextConfig = {
-  reactStrictMode: true,
-  images: {
-    formats: ['image/avif', 'image/webp'],
-    domains: ['mac-hadis.s3.ap-northeast-1.amazonaws.com'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'mac-hadis.s3.ap-northeast-1.amazonaws.com',
-        pathname: '**',
+export default {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        noto: ["var(--font-noto-sans-jp)", "sans-serif"], // Use the variable here
       },
-      {
-        protocol: 'https',
-        hostname: 'mac-hadis.com',
-        pathname: '**',
+      colors: {
+        "light-red": "#D51A16",
+        "dark-red": "#B81122",
       },
-    ],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+      textShadow: {
+        red: "-2px -2px 0 #4AC061, 2px -2px 0 #4AC061, -2px 2px 0 #4AC061, 2px 2px 0 #4AC061",
+      },
+    },
   },
-  compress: true,
-  optimizeFonts: true,
-  swcMinify: true,
-};
-
-export default nextConfig;
+} satisfies Config;
