@@ -22,8 +22,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   compress: true,
-  optimizeFonts: true,
-  swcMinify: true,
 };
 
 export default nextConfig;
