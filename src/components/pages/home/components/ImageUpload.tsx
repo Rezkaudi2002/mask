@@ -91,7 +91,7 @@ const ImageUpload = ({
                 <Image
                   src={image}
                   alt="Uploaded"
-                  loading="lazy"
+                  loading="eager"
                   width={225}
                   height={140}
                   sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 225px"
