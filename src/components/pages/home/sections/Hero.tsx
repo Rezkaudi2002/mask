@@ -13,21 +13,23 @@ const Hero: React.FC = () => {
           {/* Mobile Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
-            alt="Company's legacy image"
+            alt="" // Alt text is empty as the image is decorative
             sizes="100vw"
             quality={75}
             fill
             priority
+            placeholder="blur" // Adds a blur-up effect for better perceived performance
             className="object-cover object-center block lg:hidden"
           />
           {/* Desktop Background */}
           <Image
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
-            alt="Company's legacy image"
+            alt="" // Alt text is empty as the image is decorative
             sizes="100vw"
             quality={75}
             fill
             priority
+            placeholder="blur" // Adds a blur-up effect for better perceived performance
             className="object-cover lg:object-right-top hidden lg:block"
           />
         </div>
@@ -36,7 +38,7 @@ const Hero: React.FC = () => {
           <div className="text-hero relative xl:w-[810px] xl:h-[64px] w-[335px] h-[38px] sm:h-[50px] lg:h-[70px] z-10">
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
-              alt="Company's legacy image"
+              alt="Company's legacy image" // Keep or improve this alt text
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
               priority
