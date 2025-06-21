@@ -18,6 +18,8 @@ const Hero: React.FC = () => {
             quality={60}
             fill
             priority
+            loading="eager"
+            fetchPriority="high"
             className="object-cover object-center block lg:hidden"
           />
           {/* Desktop Background */}
@@ -28,6 +30,8 @@ const Hero: React.FC = () => {
             quality={60}
             fill
             priority
+            loading="eager"
+            fetchPriority="high"
             className="object-cover lg:object-right-top hidden lg:block"
           />
         </div>
@@ -37,7 +41,7 @@ const Hero: React.FC = () => {
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
               alt="Company's legacy image"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+              sizes="(max-width: 768px ) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
               priority
             />
@@ -47,7 +51,7 @@ const Hero: React.FC = () => {
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-2.webp"
               alt="Hero promotional banner with details"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
+              sizes="(max-width: 768px ) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
               priority
               quality={60}
