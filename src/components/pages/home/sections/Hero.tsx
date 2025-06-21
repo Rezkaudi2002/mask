@@ -15,7 +15,6 @@ const Hero: React.FC = () => {
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
             alt="Company's legacy image"
             sizes="100vw"
-            quality={100}
             fill
             priority
             className="object-cover object-center block lg:hidden"
@@ -25,21 +24,21 @@ const Hero: React.FC = () => {
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
             alt="Company's legacy image"
             sizes="100vw"
-            quality={100}
             fill
             priority
             className="object-cover lg:object-right-top hidden lg:block"
           />
         </div>
         <div className="flex lg:w-1/2 2xl:min-w-[1000px] items-start 2xl:items-center justify-center h-full 2xl:h-3/4 space-y-2 lg:space-y-7 flex-col pt-7 2xl:pt-20 sm:pl-12 pb-4">
-          {/* image 1  */}
+          {/* image 1 */}
           <div className="text-hero relative xl:w-[810px] xl:h-[64px] w-[335px] h-[38px] sm:h-[50px] lg:h-[70px] z-10">
             <Image
               src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
               alt="Company's legacy image"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
-              priority
+              // The background is the LCP, so this image is less critical to preload.
+              // We remove `priority` to let the background image load first without competition.
             />
           </div>
           {/* image 2 */}
@@ -49,8 +48,8 @@ const Hero: React.FC = () => {
               alt="Hero promotional banner with details"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
               fill
-              priority
-              quality={100}
+              // We remove `priority` and `quality` for the same reasons as above.
+              // The browser will still load it quickly, but the LCP image gets top priority.
             />
           </div>
 
