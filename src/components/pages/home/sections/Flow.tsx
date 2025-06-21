@@ -33,7 +33,8 @@ const Flow: React.FC = () => {
         src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/flow-bg.jpeg"
         alt="Background image for flow section"
         fill
-        loading="eager"
+        sizes="100vw"
+        priority
       />
 
       <h3 className="font-black text-xl lg:text-2xl">お持ちの工具・機械で</h3>
@@ -45,27 +46,26 @@ const Flow: React.FC = () => {
         <span className="block sm:inline">ありませんか？</span>
       </h2>
 
-      {/* Flow Cards */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 mt-12">
+ {/* Flow Cards */}
+       <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 mt-12">
         {flowItems.map(({ imageSrc, title }, index) => (
           <FlowCard key={index} imageSrc={imageSrc} title={title} />
         ))}
       </div>
 
-      {/* Flow Title Image */}
-      <div className="mt-10 flex flex-col items-center justify-center gap-4">
+ {/* Flow Title Image */}
+       <div className="mt-10 flex flex-col items-center justify-center gap-4">
         <span className="h-0 w-0 border-x-[13px] border-b-[20px] md:border-x-[20px] md:border-b-[30px] border-x-transparent rotate-180 border-b-[#B81122]"></span>
         <Image
           src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/flow-section/flow-title.png"
           alt="hadis image"
           width={670}
           height={76}
-          loading="eager"
         />
       </div>
 
-      {/* Description */}
-      <div className="mt-4">
+  {/* Description */}
+        <div className="mt-4">
         {flowDescription.map((description, index) => (
           <p
             key={index}
