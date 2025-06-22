@@ -110,10 +110,9 @@ const ImageUpload = ({
                     loading="lazy"
                   />
                 </label>
-               )}
+              )}
             </div>
 
-            {/* Input is now correctly referenced with an ID */}
             <input
               id={`file-input-${productIndex}-${imageIndex}`}
               type="file"
@@ -143,7 +142,7 @@ const ImageUpload = ({
               </button>
               <button
                 type="button"
-                onClick={( ) => handleDelete(imageIndex)}
+                onClick={() => handleDelete(imageIndex)}
                 className="w-[24px] h-[24px] border border-[#DCDCDC] bg-white rounded-full flex items-center justify-center"
                 aria-label="Delete image"
               >
@@ -157,10 +156,10 @@ const ImageUpload = ({
               </button>
             </div>
           </div>
-         ))}
+        ))}
       </div>
     </div>
   );
 };
 
-export default ImageUpload;
+export default React.memo(ImageUpload);
