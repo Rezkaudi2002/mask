@@ -70,7 +70,6 @@ export const useFormHandler = () => {
     index?: number
   ) => {
     const { name, value } = e.target;
-
     setFormData((prevData) => ({
       ...prevData,
       productsList: prevData.productsList.map((product, i) =>
@@ -97,25 +96,21 @@ export const useFormHandler = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (formData.city === "選択してください") {
+    if (!formData.city || formData.city === "選択してください" || formData.city === "") {
       Toast.fire({ icon: "warning", title: "都道府県を選択してください。" });
       return;
     }
-
     const hasInvalidProductCondition = formData.productsList.some(
       (product) =>
         !product.product_condition ||
-        product.product_condition === "選択してください"
+        product.product_condition === "選択してください" ||
+        product.product_condition === ""
     );
-
     if (hasInvalidProductCondition) {
       Toast.fire({ icon: "warning", title: "商品の状態を選択してください。" });
       return;
     }
-
     setIsSubmitting(true);
-
     Swal.fire({
       title: "送信しています...",
       html: "そのままお待ちください。",
@@ -124,28 +119,25 @@ export const useFormHandler = () => {
         Swal.showLoading();
       },
     });
-
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
       if (!response.ok) {
         throw new Error(
           "サーバーエラーが発生しました。もう一度お試しください。"
         );
       }
       setFormData(initialFormData);
-
       setAgreePrivacy(false);
       Swal.close();
       await Swal.fire({
         icon: "success",
         title: "送信が完了しました",
         html: `メールを送信しました。<br />確認メールをお送りしましたので、<br />ご確認ください。<br /> <br />
-          <button id="close-modal" class="close-button">x</button>`,
+           <button id="close-modal" class="close-button">x</button>`,
         showConfirmButton: false,
         customClass: {
           popup: "custom-popup",
@@ -161,7 +153,6 @@ export const useFormHandler = () => {
       });
     } catch (error: unknown) {
       Swal.close();
-
       const errMsg = error instanceof Error ? error.message : "Unknown error";
       Swal.fire({
         icon: "error",

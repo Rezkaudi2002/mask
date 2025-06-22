@@ -3,19 +3,14 @@
 import Image from "next/image";
 import PrivacyPolicy from "@/components/pages/home/components/PrivacyPolicy";
 import { useFormHandler } from "@/hooks/useFormHandler";
-
-// import fields
 import RadioGroup from "../../pages/home/components/RadioGroup";
 import InputField from "../../pages/home/components/InputField";
 import SelectField from "../../pages/home/components/SelectField";
 import ImageUpload from "../../pages/home/components/ImageUpload";
-
-// import options
 import usageOptions from "@/content/home/usageOptions";
 import japanRegions from "@/content/home/japanRegions";
 import conditionOptions from "@/content/home/conditionOptions";
 import confirmationOptions from "@/content/home/confirmationOptions";
-
 import { Product } from "@/types/formData.type";
 
 const MAX_PRODUCTS = 3;
@@ -65,12 +60,10 @@ const Inquiry = () => {
           営業目的での利用はお断りします
         </p>
       </div>
-
       <form
         className="space-y-6 max-w-[900px] md:mx-auto"
         onSubmit={handleSubmit}
       >
-        {/* Input Fields */}
         <InputField
           id="name"
           name="name"
@@ -98,8 +91,6 @@ const Inquiry = () => {
           required
           onChange={handleInputChange}
         />
-
-        {/* Radio Groups */}
         <RadioGroup
           name="phonePermission"
           inlineLabels
@@ -144,8 +135,6 @@ const Inquiry = () => {
           setClick={setClick}
           options={confirmationOptions}
         />
-
-        {/* Select Fields */}
         <SelectField
           id="city"
           name="city"
@@ -164,8 +153,6 @@ const Inquiry = () => {
           value={formData.product_info}
           onChange={handleInputChange}
         />
-
-        {/* Products List */}
         {formData.productsList.map((product, index) => (
           <div key={index} className="bg-[#fcf7f7] px-1 py-2 border">
             {index !== 0 && (
@@ -184,7 +171,6 @@ const Inquiry = () => {
                 />
               </button>
             )}
-
             <InputField
               id={`productDetails-${index}`}
               name="product_details"
@@ -194,7 +180,6 @@ const Inquiry = () => {
               value={product.product_details}
               onChange={(e) => handleProductInputChange(e, index)}
             />
-
             <SelectField
               id={`productCondition-${index}`}
               name="product_condition"
@@ -204,7 +189,6 @@ const Inquiry = () => {
               onChange={(e) => handleProductInputChange(e, index)}
               options={conditionOptions}
             />
-
             <ImageUpload
               label="買取商品の写真があればこちらに添付してください。"
               setImages={handleImageChange}
@@ -213,14 +197,10 @@ const Inquiry = () => {
             />
           </div>
         ))}
-
-        {/* Add Product Button */}
         <AddProductButton
           addProduct={addProduct}
           productsList={formData.productsList}
         />
-
-        {/* Textarea */}
         <textarea
           id="additionalNotes"
           name="additional_notes"
@@ -229,14 +209,10 @@ const Inquiry = () => {
           className="py-[9px] px-[16px] w-full h-[100px] border-[1px] border-[#D1D5DB] rounded-md text-[14px] leading-[23px] font-normal"
           onChange={handleInputChange}
         />
-
-        {/* Privacy Policy */}
         <PrivacyPolicy
           setAgreePrivacy={setAgreePrivacy}
           agreePrivacy={agreePrivacy}
         />
-
-        {/* Submit Button */}
         <button
           disabled={isDisabled}
           type="submit"
