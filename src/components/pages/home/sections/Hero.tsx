@@ -13,22 +13,20 @@ const Hero: React.FC = () => {
           alt="Company's legacy image"
           fill
           priority
-          quality={85}
+          quality={60}
           sizes="100vw"
           className="object-cover object-center block lg:hidden"
-          placeholder="blur"
-          blurDataURL="data:image/webp;base64,UklGRkQAAABXRUJQVlA4IC4AAAAwAgCdASoBAAEALwCdASoBAAEALwCdA..." // ضع قيمة blurDataURL حقيقية أو احذفها
+          loading="eager"
         />
         <Image
           src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
           alt="Company's legacy image"
           fill
           priority
-          quality={85}
+          quality={60}
           sizes="100vw"
           className="object-cover lg:object-right-top hidden lg:block"
-          placeholder="blur"
-          blurDataURL="data:image/webp;base64,UklGRkQAAABXRUJQVlA4IC4AAAAwAgCdASoBAAEALwCdASoBAAEALwCdA..." // ضع قيمة blurDataURL حقيقية أو احذفها
+          loading="eager"
         />
       </div>
       <div className="flex lg:w-1/2 2xl:min-w-[1000px] items-start 2xl:items-center justify-center h-full 2xl:h-3/4 space-y-2 lg:space-y-7 flex-col pt-7 2xl:pt-20 sm:pl-12 pb-4">
@@ -37,7 +35,7 @@ const Hero: React.FC = () => {
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-1.webp"
             alt="Company's legacy image"
             fill
-            quality={75}
+            quality={50}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
             loading="lazy"
             className="object-contain"
@@ -48,7 +46,7 @@ const Hero: React.FC = () => {
             src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-2.webp"
             alt="Hero promotional banner with details"
             fill
-            quality={75}
+            quality={50}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
             loading="lazy"
             className="object-contain"
