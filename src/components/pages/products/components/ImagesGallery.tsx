@@ -81,31 +81,29 @@ const ImagesGallery = ({
           </p>
         )}
 
-      <div
-  className={`w-[70%] lg:w-fit min-h-[420px] md:min-h-[600px] lg:min-h-[650px] border-[#B81122] border-2 rounded-lg overflow-hidden p-3 lg:p-8 bg-[#fff7f8] shadow-md flex flex-col items-center justify-center mx-auto relative ${
-    images[selectedImageIndex].isCenter
-      ? ""
-      : isCameraImages
-      ? "min-h-[580px]"
-      : ""
-  }`}
->
-  <Image
-    src={images[selectedImageIndex].imageSrc}
-    width={350}
-    height={350}
-    loading="eager"
-    alt={`${images[selectedImageIndex].title} image product`}
-    className="max-w-full h-auto self-center"
-  />
-  {isCameraImages && (
-    <p className="absolute bottom-3 text-center text-[#B81122] text-[14px] font-semibold hidden md:block">
-      {images[selectedImageIndex].title}
-    </p>
-  )}
-</div>
-
-
+        <div
+          className={`w-[70%] lg:w-fit flex flex-col items-center justify-center mx-auto relative ${
+            images[selectedImageIndex].isCenter
+              ? ""
+              : isCameraImages
+              ? ""
+              : ""
+          }`}
+        >
+          <Image
+            src={images[selectedImageIndex].imageSrc}
+            width={350}
+            height={350}
+            loading="eager"
+            alt={`${images[selectedImageIndex].title} image product`}
+            className="max-w-full h-auto self-center"
+          />
+          {isCameraImages && (
+            <p className="mt-2 text-center text-[#B81122] text-[14px] font-semibold hidden md:block">
+              {images[selectedImageIndex].title}
+            </p>
+          )}
+        </div>
 
         <NavigationButton
           direction="next"
