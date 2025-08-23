@@ -13,22 +13,22 @@ import { baseUrl } from "@/utils/baseUrl";
 const notoSansJP = localFont({
   src: [
     {
-      path: "./fonts/noto-sans-jp-400.woff2",
+      path: "./fonts/noto-sans-jp-japanese-400-normal.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/noto-sans-jp-500.woff2",
+      path: "./fonts/noto-sans-jp-japanese-500-normal.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/noto-sans-jp-700.woff2",
+      path: "./fonts/noto-sans-jp-japanese-700-normal.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./fonts/noto-sans-jp-900.woff2",
+      path: "./fonts/noto-sans-jp-japanese-900-normal.ttf",
       weight: "900",
       style: "normal",
     },
