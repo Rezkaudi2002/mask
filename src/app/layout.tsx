@@ -33,7 +33,10 @@ const notoSansJP = localFont({
       style: "normal",
     },
   ],
+  preload: true,
+  display: 'swap',
   variable: "--font-noto-sans-jp",
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Arial', 'sans-serif'],
 });
 
 // metadata
@@ -105,7 +108,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="scroll-smooth ">
+    <html lang="ja" className="scroll-smooth">
+      <head>
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com" />
+        <link rel="dns-prefetch" href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com" />
+
+        {/* Preload critical images */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background.webp"
+          type="image/webp"
+          media="(min-width: 1024px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/hero-section/hero-background-mobile.webp"
+          type="image/webp"
+          media="(max-width: 1023px)"
+        />
+      </head>
       <GoogleTagManager gtmId="G-id" />
       <body className={`${notoSansJP.variable} font-noto`}>
         <main>
