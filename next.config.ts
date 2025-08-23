@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -86,6 +87,14 @@ const nextConfig: NextConfig = {
           },
         },
       };
+
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+        })
+      );
+
     }
 
     return config;
