@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Noto_Sans_JP } from "next/font/google";
+import localFont from "next/font/local";
 import "@/styles/globals.css";
 // sections
 import Header from "@/components/common/sections/Header";
@@ -9,10 +9,31 @@ import Footer from "@/components/common/sections/Footer";
 // baseUrl
 import { baseUrl } from "@/utils/baseUrl";
 
-const notoSansJP = Noto_Sans_JP({
+// Define local font
+const notoSansJP = localFont({
+  src: [
+    {
+      path: "./fonts/noto-sans-jp-400.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/noto-sans-jp-500.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/noto-sans-jp-700.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/noto-sans-jp-900.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-noto-sans-jp",
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "700", "900"], // Include the font weights you need
 });
 
 // metadata
@@ -84,7 +105,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth ">
+    <html lang="ja" className="scroll-smooth ">
       <GoogleTagManager gtmId="G-id" />
       <body className={`${notoSansJP.variable} font-noto`}>
         <main>
