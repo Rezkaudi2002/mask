@@ -10,7 +10,7 @@ const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
   return (
     <section className="font-noto object-cover relative flex flex-row-reverse">
       <Image
-        className="-z-10 absolute top-0 left-0 opacity-25"
+        className=" absolute top-0 left-0 opacity-25"
         src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/home-page/backgrounds/banner-full-bg.jpeg"
         alt="banner-background-hadis"
         fill
