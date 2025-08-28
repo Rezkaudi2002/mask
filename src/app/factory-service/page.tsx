@@ -55,7 +55,7 @@ const FactoryService = () => {
   const equipment = [
     {
       id: 1,
-      title: "工作機械（NC旋盤、マシニングセンター、フライス盤）",
+      title: "工作機械（NC旋盤、マシニングセンター）",
       image:
         "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E5%B7%A5%E4%BD%9C%E6%A9%9F%E6%A2%B0%EF%BC%88NC%E6%97%8B%E7%9B%A4%E3%80%81%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%81%E3%83%95%E3%83%A9%E3%82%A4%E3%82%B9%E7%9B%A4%EF%BC%89.png",
     },
@@ -191,7 +191,7 @@ const FactoryService = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8 lg:px-10 h-full text-center">
           <div className="grid grid-cols-12 gap-6 items-center min-h-[80vh]">
-            <div className="col-span-12 md:col-span-8 lg:col-span-7">
+            <div className="col-span-12 md:col-span-8 lg:col-span-8">
               <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
                 工場整理・閉鎖支援サービス
               </h1>
