@@ -1,7 +1,9 @@
 "use client";
+import MapKanto from "@/components/pages/factory-service/components/KantoMap";
 import ContactBanner from "@/components/pages/home/sections/ContactBanner";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+// Import the new map component
 
 const FactoryService = () => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
@@ -171,39 +173,24 @@ const FactoryService = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-800 leading-relaxed">
       {/* Hero Section */}
-      {/* Hero Section */}
       <section
         className="relative overflow-hidden text-white min-h-[80vh]"
         style={{
           backgroundImage: `
-      linear-gradient(to right, rgb(153, 27, 27), rgb(127, 29, 29), transparent),
-      url("https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/factory-hero.png")
-    `,
+          linear-gradient(to right, rgb(153, 27, 27), rgb(127, 29, 29), transparent),
+          url("https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/factory-hero.png")
+        `,
           backgroundSize: "auto",
           backgroundPosition: "left",
         }}
       >
         {/* Background photo on the right */}
         <div className="absolute inset-y-0 right-0 w-[40%] md:w-[35%] lg:w-[40%]">
-          <div className="relative h-full w-full">
-            {/* <Image
-              src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/factory-hero.png"
-              alt="現場スタッフ"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 35vw, 30vw"
-            /> */}
-          </div>
+          <div className="relative h-full w-full"></div>
         </div>
 
-        {/* 🔴 Gradient overlay spanning ENTIRE hero (from left to right, over photo too) */}
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-red-800 via-red-900 to-transparent"></div> */}
-
-        {/* Content container */}
         <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8 lg:px-10 h-full text-center">
           <div className="grid grid-cols-12 gap-6 items-center min-h-[80vh]">
-            {/* Left text area */}
             <div className="col-span-12 md:col-span-8 lg:col-span-7">
               <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
                 工場整理・閉鎖支援サービス
@@ -220,13 +207,6 @@ const FactoryService = () => {
           </div>
         </div>
       </section>
-
-      {/* Main Image Placeholder */}
-      {/* <div className="fs-container max-w-6xl mx-auto px-5 -mt-12 relative z-10">
-        <div className="bg-pink-100 border-2 border-dashed border-red-800 rounded-lg h-96 flex items-center justify-center">
-          <span className="text-red-800 text-xl font-bold">画像をここに配置</span>
-        </div>
-      </div> */}
 
       {/* Problems Section */}
       <section className="bg-white py-20">
@@ -263,71 +243,71 @@ const FactoryService = () => {
 
       {/* Reasons Section */}
       <section className="bg-gray-100 py-20">
-  <div className="fs-container max-w-6xl mx-auto px-5">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold text-red-800 mb-4">
-        工場の移転・閉鎖廃業による片付けのご依頼理由
-      </h2>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-      {reasons.map((reason, index) => (
-        <div
-          key={index}
-          data-animate={`reason-${index}`}
-          className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:transform hover:-translate-y-2 hover:shadow-xl ${
-            isVisible[`reason-${index}`]
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-5"
-          }`}
-        >
-          <div className="bg-yellow-400 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
-            {index + 1}
+        <div className="fs-container max-w-6xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-red-800 mb-4">
+              工場の移転・閉鎖廃業による片付けのご依頼理由
+            </h2>
           </div>
-          <p>{reason}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {reasons.map((reason, index) => (
+              <div
+                key={index}
+                data-animate={`reason-${index}`}
+                className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:transform hover:-translate-y-2 hover:shadow-xl ${
+                  isVisible[`reason-${index}`]
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-5"
+                }`}
+              >
+                <div className="bg-yellow-400 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
+                  {index + 1}
+                </div>
+                <p>{reason}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-xl text-gray-600 mb-4">
+              このような方へご依頼頂いております
+            </p>
+            <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
+            {[
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
+                alt: "step1",
+              },
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
+                alt: "step2",
+              },
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
+                alt: "step3",
+              },
+            ].map(({ src, alt }, i) => (
+              <div
+                key={i}
+                className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
+                  priority={i === 0}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-
-    <div className="text-center">
-      <p className="text-xl text-gray-600 mb-4">このような方へご依頼頂いております</p>
-      <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
-    </div>
-
-    {/* Image grid */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
-      {[
-        {
-          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
-          alt: "step1",
-        },
-        {
-          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
-          alt: "step2",
-        },
-        {
-          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
-          alt: "step3",
-        },
-      ].map(({ src, alt }, i) => (
-        <div
-          key={i}
-          className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
-        >
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
-            priority={i === 0}
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Service Content Section */}
       <section className="bg-white py-20">
@@ -362,12 +342,6 @@ const FactoryService = () => {
                   </div>
                 ))}
               </div>
-
-              {/* <div className="bg-pink-100 border-2 border-dashed border-red-800 rounded-lg h-64 flex items-center justify-center mb-8">
-                <span className="text-red-800 text-xl font-bold">
-                  画像をここに配置
-                </span>
-              </div> */}
 
               <h4 className="text-red-800 text-xl font-bold mb-5">
                 撤去作業の特徴
@@ -436,7 +410,6 @@ const FactoryService = () => {
           </div>
 
           <div className="relative py-10">
-            {/* Timeline line - hidden on mobile */}
             <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-yellow-400 md:transform md:-translate-x-1/2"></div>
 
             {processSteps.map((step, index) => (
@@ -456,7 +429,6 @@ const FactoryService = () => {
                   </div>
                 </div>
 
-                {/* Timeline marker */}
                 <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-10 h-10 bg-red-800 text-white rounded-full flex items-center justify-center font-bold z-10">
                   {index + 1}
                 </div>
@@ -477,12 +449,8 @@ const FactoryService = () => {
             <p className="text-xl">
               関東全域（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）
             </p>
-            <div className="bg-pink-100 border-2 border-dashed border-red-800 rounded-lg h-72 max-w-2xl mx-auto mt-8 flex items-center justify-center">
-              <span className="text-red-800 text-xl font-bold">
-                地図をここに配置
-              </span>
-            </div>
           </div>
+          <MapKanto className="max-w-4xl mx-auto" />
         </div>
       </section>
 
@@ -602,7 +570,7 @@ const FactoryService = () => {
             <h4 className="text-yellow-300 text-xl font-bold mb-2">受付時間</h4>
             <p>平日 10:00～18:00 / 土曜 10:00～18:00</p>
           </div> */}
-        <ContactBanner />
+      <ContactBanner />
       <section className="bg-gradient-to-br from-red-800 to-red-900 text-white py-10">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
           <p className="text-lg leading-relaxed">
