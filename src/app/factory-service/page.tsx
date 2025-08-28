@@ -1,4 +1,5 @@
 "use client";
+import ContactBanner from "@/components/pages/home/sections/ContactBanner";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -533,7 +534,7 @@ const FactoryService = () => {
           <h2 className="text-4xl font-bold mb-6">お問い合わせ</h2>
           <h3 className="text-yellow-300 text-2xl mb-8">まずは無料相談から</h3>
 
-          <div className="max-w-3xl mx-auto mb-10">
+          <div className="max-w-3xl mx-auto">
             <p className="text-lg leading-relaxed mb-4">
               「工場を閉鎖することになったが、どうすればいいか分からない」
               <br />
@@ -545,8 +546,10 @@ const FactoryService = () => {
               どんなご相談でも結構です。経験豊富なスタッフが丁寧にお答えいたします。
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-10">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-10">
             <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition-colors hover:transform hover:-translate-y-2">
               <div className="text-4xl mb-4">📞</div>
               <h4 className="text-xl font-bold mb-2">お電話でのご相談</h4>
@@ -562,22 +565,22 @@ const FactoryService = () => {
               <h4 className="text-xl font-bold mb-2">LINEでのご相談</h4>
               <p>[LINE ID]</p>
             </div>
-          </div>
+          </div> 
 
           <div className="mb-10">
             <h4 className="text-yellow-300 text-xl font-bold mb-2">受付時間</h4>
             <p>平日 10:00～18:00 / 土曜 10:00～18:00</p>
-          </div>
-
-          <div className="pt-10 border-t border-white/20">
-            <p className="text-lg leading-relaxed">
-              工場の整理・閉鎖は、多くの企業様にとって初めての経験です。
-              <br />
-              ハディズは、お客様の立場に立って、最適な解決策をご提案いたします。
-              <br />
-              まずはお気軽にご相談ください。
-            </p>
-          </div>
+          </div> */}
+        <ContactBanner />
+      <section className="bg-gradient-to-br from-red-800 to-red-900 text-white py-10">
+        <div className="fs-container max-w-6xl mx-auto px-5 text-center">
+          <p className="text-lg leading-relaxed">
+            工場の整理・閉鎖は、多くの企業様にとって初めての経験です。
+            <br />
+            ハディズは、お客様の立場に立って、最適な解決策をご提案いたします。
+            <br />
+            まずはお気軽にご相談ください。
+          </p>
         </div>
       </section>
 
