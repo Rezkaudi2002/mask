@@ -263,40 +263,71 @@ const FactoryService = () => {
 
       {/* Reasons Section */}
       <section className="bg-gray-100 py-20">
-        <div className="fs-container max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800 mb-4">
-              工場の移転・閉鎖廃業による片付けのご依頼理由
-            </h2>
-          </div>
+  <div className="fs-container max-w-6xl mx-auto px-5">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-red-800 mb-4">
+        工場の移転・閉鎖廃業による片付けのご依頼理由
+      </h2>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-            {reasons.map((reason, index) => (
-              <div
-                key={index}
-                data-animate={`reason-${index}`}
-                className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:transform hover:-translate-y-2 hover:shadow-xl ${
-                  isVisible[`reason-${index}`]
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-5"
-                }`}
-              >
-                <div className="bg-yellow-400 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
-                  {index + 1}
-                </div>
-                <p>{reason}</p>
-              </div>
-            ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+      {reasons.map((reason, index) => (
+        <div
+          key={index}
+          data-animate={`reason-${index}`}
+          className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:transform hover:-translate-y-2 hover:shadow-xl ${
+            isVisible[`reason-${index}`]
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-5"
+          }`}
+        >
+          <div className="bg-yellow-400 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
+            {index + 1}
           </div>
-
-          <div className="text-center">
-            <p className="text-xl text-gray-600 mb-4">
-              このような方へご依頼頂いております
-            </p>
-            <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
-          </div>
+          <p>{reason}</p>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="text-center">
+      <p className="text-xl text-gray-600 mb-4">このような方へご依頼頂いております</p>
+      <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
+    </div>
+
+    {/* Image grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
+      {[
+        {
+          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
+          alt: "step1",
+        },
+        {
+          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
+          alt: "step2",
+        },
+        {
+          src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
+          alt: "step3",
+        },
+      ].map(({ src, alt }, i) => (
+        <div
+          key={i}
+          className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
+        >
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
+            priority={i === 0}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Service Content Section */}
       <section className="bg-white py-20">
