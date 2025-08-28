@@ -53,34 +53,40 @@ const FactoryService = () => {
     {
       id: 1,
       title: "工作機械（NC旋盤、マシニングセンター、フライス盤）",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E5%B7%A5%E4%BD%9C%E6%A9%9F%E6%A2%B0%EF%BC%88NC%E6%97%8B%E7%9B%A4%E3%80%81%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%81%E3%83%95%E3%83%A9%E3%82%A4%E3%82%B9%E7%9B%A4%EF%BC%89.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E5%B7%A5%E4%BD%9C%E6%A9%9F%E6%A2%B0%EF%BC%88NC%E6%97%8B%E7%9B%A4%E3%80%81%E3%83%9E%E3%82%B7%E3%83%8B%E3%83%B3%E3%82%B0%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%81%E3%83%95%E3%83%A9%E3%82%A4%E3%82%B9%E7%9B%A4%EF%BC%89.png",
     },
     {
       id: 2,
       title: "プレス機械・板金機械",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%83%97%E3%83%AC%E3%82%B9%E6%A9%9F%E6%A2%B0%E3%83%BB%E6%9D%BF%E9%87%91%E6%A9%9F%E6%A2%B0.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%83%97%E3%83%AC%E3%82%B9%E6%A9%9F%E6%A2%B0%E3%83%BB%E6%9D%BF%E9%87%91%E6%A9%9F%E6%A2%B0.png",
     },
     {
       id: 3,
       title: "産業用ロボット・自動化設備",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E7%94%A3%E6%A5%AD%E7%94%A8%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E7%94%A3%E6%A5%AD%E7%94%A8%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%83%BB%E8%87%AA%E5%8B%95%E5%8C%96%E8%A8%AD%E5%82%99.png",
     },
     {
       id: 4,
       title: "検査・測定機器",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E6%A4%9C%E6%9F%BB%E3%83%BB%E6%B8%AC%E5%AE%9A%E6%A9%9F%E5%99%A8.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E6%A4%9C%E6%9F%BB%E3%83%BB%E6%B8%AC%E5%AE%9A%E6%A9%9F%E5%99%A8.png",
     },
     {
       id: 5,
       title: "コンプレッサー・発電機",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%B5%E3%83%BC%E3%83%BB%E7%99%BA%E9%9B%BB%E6%A9%9F.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%82%B3%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%B5%E3%83%BC%E3%83%BB%E7%99%BA%E9%9B%BB%E6%A9%9F.png",
     },
     {
       id: 6,
       title: "フォークリフト・クレーン",
-      image: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%95%E3%83%88%E3%83%BB%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%B3.png"
+      image:
+        "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Equipments/%E3%83%95%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%95%E3%83%88%E3%83%BB%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%B3.png",
     },
-  ]
+  ];
 
   const strengths = [
     {
@@ -166,16 +172,16 @@ const FactoryService = () => {
       {/* Hero Section */}
       {/* Hero Section */}
       <section
-  className="relative overflow-hidden text-white min-h-[80vh]"
-  style={{
-    backgroundImage: `
+        className="relative overflow-hidden text-white min-h-[80vh]"
+        style={{
+          backgroundImage: `
       linear-gradient(to right, rgb(153, 27, 27), rgb(127, 29, 29), transparent),
       url("https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/factory-hero.png")
     `,
-    backgroundSize: "auto",
-    backgroundPosition: "left",
-  }}
->
+          backgroundSize: "auto",
+          backgroundPosition: "left",
+        }}
+      >
         {/* Background photo on the right */}
         <div className="absolute inset-y-0 right-0 w-[40%] md:w-[35%] lg:w-[40%]">
           <div className="relative h-full w-full">
@@ -310,19 +316,26 @@ const FactoryService = () => {
                 {equipment.map((item) => (
                   <div
                     key={item.id}
-                    className="bg-white p-4 rounded-lg border-l-4 border-yellow-400 transition-all hover:border-red-800 hover:transform hover:translate-x-2"
+                    className="p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] border-[#B81122] rounded-[4px] bg-white relative flex justify-center items-center"
                   >
-                    <Image alt={item.title} src={item.image} width={200} height={200}/>
-                    {item.title}
+                    <Image
+                      alt={item.title}
+                      src={item.image}
+                      width={200}
+                      height={200}
+                    />
+                    <p className="max-h-[100px] px-[10px] lg:px-[6px] py-[7px] lg:py-[12px] absolute bottom-0 left-0 w-full bg-[#B81122] text-white font-semibold text-[12px] lg:text-[15px] leading-[27px] lg:leading-[30px] overflow-hidden text-ellipsis line-clamp-2 text-center flex justify-center items-center">
+                      {item.title}
+                    </p>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-pink-100 border-2 border-dashed border-red-800 rounded-lg h-64 flex items-center justify-center mb-8">
+              {/* <div className="bg-pink-100 border-2 border-dashed border-red-800 rounded-lg h-64 flex items-center justify-center mb-8">
                 <span className="text-red-800 text-xl font-bold">
                   画像をここに配置
                 </span>
-              </div>
+              </div> */}
 
               <h4 className="text-red-800 text-xl font-bold mb-5">
                 撤去作業の特徴
