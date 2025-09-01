@@ -4,6 +4,14 @@ import MapKanto from "@/components/pages/factory-service/components/KantoMap";
 import ContactBanner from "@/components/pages/home/sections/ContactBanner";
 import Image from "next/image";
 import React, { useEffect, useId, useState } from "react";
+// import Swiper core and required modules
+import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const FactoryService: React.FC = () => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
@@ -47,6 +55,26 @@ const FactoryService: React.FC = () => {
     "昔の工場だから道路幅が狭くて大型車（搬入車）が出入できない",
     "短期間で片付けなくてはいけない",
     "重量物（2階を含む）が多いが、自分でなんとかすることが出来ない",
+  ];
+
+  const reasonesImage = [
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step4.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step5.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step6.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step7.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step8.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step9.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step10.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step11.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step12.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step13.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step14.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step15.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step16.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step17.jpg",
   ];
 
   const equipment = [
@@ -177,18 +205,18 @@ const FactoryService: React.FC = () => {
         />
 
         <div className="w-[74%] lg:w-[55%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-factory-sky absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-white h-full md:h-fit flex items-center">
-            <div className="col-span-12 md:col-span-8 lg:col-span-8">
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-                工場整理・閉鎖支援サービス
-              </h1>
-              <p className="text-lg md:text-2xl text-factory-yellow mb-6">
-                機械撤去から清掃まで、廃業・移転を完全サポート
-              </p>
-              <p className="text-base md:text-lg/relaxed max-w-3xl mx-auto">
-                ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
-                長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
-                お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
-              </p>
+          <div className="col-span-12 md:col-span-8 lg:col-span-8">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+              工場整理・閉鎖支援サービス
+            </h1>
+            <p className="text-lg md:text-2xl text-factory-yellow mb-6">
+              機械撤去から清掃まで、廃業・移転を完全サポート
+            </p>
+            <p className="text-base md:text-lg/relaxed max-w-3xl mx-auto">
+              ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
+              長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
+              お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
+            </p>
           </div>
         </div>
       </section>
@@ -263,35 +291,58 @@ const FactoryService: React.FC = () => {
             <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
-            {[
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
-                alt: "step1",
-              },
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
-                alt: "step2",
-              },
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
-                alt: "step3",
-              },
-            ].map(({ src, alt }, i) => (
-              <div
-                key={i}
-                className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
-              >
-                <Image
-                  src={src}
-                  alt={alt}
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
-                  priority={i === 0}
-                />
-              </div>
-            ))}
+          {/* slider */}
+          <div className="relative mt-10">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={16}
+              slidesPerView={3.5}
+              loop
+              centeredSlides
+              // preloads neighbors for smoother UX
+              lazyPreloadPrevNext={2}
+              // keep your existing selectors
+              navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                320: { slidesPerView: 1.3, spaceBetween: 8 },
+                640: { slidesPerView: 2, spaceBetween: 16 },
+                768: { slidesPerView: 3.5, spaceBetween: 16 },
+                1024: { slidesPerView: 3.5, spaceBetween: 32 },
+              }}
+              className="!pb-10"
+            >
+              {reasonesImage.map((src, i) => (
+                <SwiperSlide key={src}>
+                  <div className="relative h-[400px] overflow-hidden rounded-xl bg-gray-200">
+                    <Image
+                      src={src}
+                      alt={`作業ステップ ${i + 1}`}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Custom nav buttons (match your selectors) */}
+            <button
+              className="custom-prev absolute -left-3 md:-left-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 backdrop-blur px-2.5 py-2 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-factory-teal"
+              aria-label="前へ"
+              type="button"
+            >
+              ‹
+            </button>
+            <button
+              className="custom-next absolute -right-3 md:-right-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 backdrop-blur px-2.5 py-2 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-factory-teal"
+              aria-label="次へ"
+              type="button"
+            >
+              ›
+            </button>
           </div>
         </div>
       </section>
