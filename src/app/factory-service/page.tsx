@@ -1,16 +1,25 @@
 "use client";
-import MapKanto from "@/components/pages/factory-service/components/KantoMap";
+import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
+// import MapKanto from "@/components/pages/factory-service/components/KantoMap";
 import ContactBanner from "@/components/pages/home/sections/ContactBanner";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
-// Import the new map component
+import React, { useEffect, useId, useState } from "react";
+// import Swiper core and required modules
+import { Navigation, Pagination } from "swiper/modules";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-const FactoryService = () => {
+const FactoryService: React.FC = () => {
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
-  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
+  const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+  const faqIdBase = useId();
 
   useEffect(() => {
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
     };
@@ -19,23 +28,19 @@ const FactoryService = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute("data-animate");
-          if (id) {
-            setIsVisible((prev) => ({ ...prev, [id]: true }));
-          }
+          if (id) setIsVisible((prev) => ({ ...prev, [id]: true }));
         }
       });
     }, observerOptions);
 
-    // Observe elements
     const elementsToObserve = document.querySelectorAll("[data-animate]");
     elementsToObserve.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
-  const toggleFAQ = (index: number) => {
-    setActiveFAQ(activeFAQ === index ? null : index);
-  };
+  const toggleFAQ = (index: number) =>
+    setActiveFAQ((curr) => (curr === index ? null : index));
 
   const problems = [
     "工場を閉鎖したいが、何から手をつければいいか分からない",
@@ -50,6 +55,26 @@ const FactoryService = () => {
     "昔の工場だから道路幅が狭くて大型車（搬入車）が出入できない",
     "短期間で片付けなくてはいけない",
     "重量物（2階を含む）が多いが、自分でなんとかすることが出来ない",
+  ];
+
+  const reasonesImage = [
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step4.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step5.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step6.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step7.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step8.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step9.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step10.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step11.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step12.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step13.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step14.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step15.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step16.jpg",
+    "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step17.jpg",
   ];
 
   const equipment = [
@@ -111,10 +136,7 @@ const FactoryService = () => {
       title: "4. 柔軟な対応力",
       content: "営業中の部分撤去 / 段階的な撤去 / 緊急対応",
     },
-    {
-      title: "5. 安全・安心の作業",
-      content: "安全管理の徹底 / 守秘義務契約",
-    },
+    { title: "5. 安全・安心の作業", content: "安全管理の徹底 / 守秘義務契約" },
   ];
 
   const processSteps = [
@@ -128,10 +150,7 @@ const FactoryService = () => {
       content:
         "専門スタッフが現地にお伺いし、現地の確認と機械設備や在庫品の査定を行います。",
     },
-    {
-      title: "STEP 3: お見積もり",
-      content: "お見積もりを作成します。",
-    },
+    { title: "STEP 3: お見積もり", content: "お見積もりを作成します。" },
     {
       title: "STEP 4: ご契約・スケジュール調整",
       content:
@@ -173,37 +192,31 @@ const FactoryService = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans text-gray-800 leading-relaxed">
       {/* Hero Section */}
-      <section
-        className="relative overflow-hidden text-white min-h-[80vh]"
-        style={{
-          backgroundImage: `
-          linear-gradient(to right, rgb(153, 27, 27), rgb(127, 29, 29), transparent),
-          url("https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/factory-hero.png")
-        `,
-          backgroundSize: "auto",
-          backgroundPosition: "left",
-        }}
-      >
-        {/* Background photo on the right */}
-        <div className="absolute inset-y-0 right-0 w-[40%] md:w-[35%] lg:w-[40%]">
-          <div className="relative h-full w-full"></div>
-        </div>
+      <section className="relative overflow-hidden text-white min-h-[80vh]">
+        <Image
+          src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/facotry-hero.png"
+          alt="Company's legacy image"
+          sizes="100vw"
+          quality={100}
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover lg:object-right-top block"
+        />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8 lg:px-10 h-full text-center">
-          <div className="grid grid-cols-12 gap-6 items-center min-h-[80vh]">
-            <div className="col-span-12 md:col-span-8 lg:col-span-8">
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-                工場整理・閉鎖支援サービス
-              </h1>
-              <p className="text-lg md:text-2xl text-yellow-300 mb-6">
-                機械撤去から清掃まで、廃業・移転を完全サポート
-              </p>
-              <p className="text-base md:text-lg/relaxed max-w-3xl">
-                ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
-                長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
-                お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
-              </p>
-            </div>
+        <div className="w-[74%] lg:w-[55%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-factory-sky absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-white h-full md:h-fit flex items-center">
+          <div className="col-span-12 md:col-span-8 lg:col-span-8">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+              工場整理・閉鎖支援サービス
+            </h1>
+            <p className="text-lg md:text-2xl text-factory-yellow mb-6">
+              機械撤去から清掃まで、廃業・移転を完全サポート
+            </p>
+            <p className="text-base md:text-lg/relaxed max-w-3xl mx-auto">
+              ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
+              長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
+              お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
+            </p>
           </div>
         </div>
       </section>
@@ -212,7 +225,7 @@ const FactoryService = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800 mb-4">
+            <h2 className="text-4xl font-bold text-factory-teal mb-4">
               工場整理の課題を解決します
             </h2>
             <p className="text-xl text-gray-600">
@@ -220,14 +233,14 @@ const FactoryService = () => {
             </p>
           </div>
 
-          <div className="bg-pink-100 rounded-xl p-10 mb-8">
+          <div className="rounded-xl p-10 mb-8 bg-factory-sky50">
             {problems.map((problem, index) => (
               <div
                 key={index}
                 className="flex items-start mb-5 last:mb-0 animate-fade-in-left"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-red-800 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div className="text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0 bg-factory-sky">
                   !
                 </div>
                 <p className="text-lg">{problem}</p>
@@ -235,8 +248,10 @@ const FactoryService = () => {
             ))}
           </div>
 
-          <div className="bg-yellow-400 text-red-800 p-8 rounded-lg text-center text-xl font-bold shadow-lg">
-            ハディズなら、これらすべての課題をワンストップで解決いたします。
+          <div className="bg-factory-yellow text-factory-teal">
+            <div className="p-8 rounded-lg text-center text-xl font-bold shadow-lg">
+              ハディズなら、これらすべての課題をワンストップで解決いたします。
+            </div>
           </div>
         </div>
       </section>
@@ -245,7 +260,7 @@ const FactoryService = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800 mb-4">
+            <h2 className="text-4xl font-bold text-factory-teal mb-4">
               工場の移転・閉鎖廃業による片付けのご依頼理由
             </h2>
           </div>
@@ -255,13 +270,13 @@ const FactoryService = () => {
               <div
                 key={index}
                 data-animate={`reason-${index}`}
-                className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:transform hover:-translate-y-2 hover:shadow-xl ${
+                className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:-translate-y-2 hover:shadow-xl ${
                   isVisible[`reason-${index}`]
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5"
                 }`}
               >
-                <div className="bg-yellow-400 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4 bg-factory-yellow text-factory-teal">
                   {index + 1}
                 </div>
                 <p>{reason}</p>
@@ -276,35 +291,58 @@ const FactoryService = () => {
             <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
-            {[
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
-                alt: "step1",
-              },
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
-                alt: "step2",
-              },
-              {
-                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
-                alt: "step3",
-              },
-            ].map(({ src, alt }, i) => (
-              <div
-                key={i}
-                className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
-              >
-                <Image
-                  src={src}
-                  alt={alt}
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
-                  priority={i === 0}
-                />
-              </div>
-            ))}
+          {/* slider */}
+          <div className="relative mt-10">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={16}
+              slidesPerView={3.5}
+              loop
+              centeredSlides
+              // preloads neighbors for smoother UX
+              lazyPreloadPrevNext={2}
+              // keep your existing selectors
+              navigation={{ nextEl: ".custom-next", prevEl: ".custom-prev" }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                320: { slidesPerView: 1.3, spaceBetween: 8 },
+                640: { slidesPerView: 2, spaceBetween: 16 },
+                768: { slidesPerView: 3.5, spaceBetween: 16 },
+                1024: { slidesPerView: 3.5, spaceBetween: 32 },
+              }}
+              className="!pb-10"
+            >
+              {reasonesImage.map((src, i) => (
+                <SwiperSlide key={src}>
+                  <div className="relative h-[400px] overflow-hidden rounded-xl bg-gray-200">
+                    <Image
+                      src={src}
+                      alt={`作業ステップ ${i + 1}`}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* Custom nav buttons (match your selectors) */}
+            <button
+              className="custom-prev absolute -left-3 md:-left-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 backdrop-blur px-2.5 py-2 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-factory-teal"
+              aria-label="前へ"
+              type="button"
+            >
+              ‹
+            </button>
+            <button
+              className="custom-next absolute -right-3 md:-right-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 backdrop-blur px-2.5 py-2 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-factory-teal"
+              aria-label="次へ"
+              type="button"
+            >
+              ›
+            </button>
           </div>
         </div>
       </section>
@@ -313,22 +351,24 @@ const FactoryService = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800">サービス内容</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              サービス内容
+            </h2>
           </div>
 
           <div className="mb-15">
-            <div className="bg-red-800 text-white p-6 rounded-t-lg">
+            <div className="text-white p-6 rounded-t-lg bg-factory-sky">
               <h3 className="text-2xl font-bold">機械設備買取・撤去</h3>
             </div>
-            <div className="bg-gray-50 border-2 border-red-800 border-t-0 p-8 rounded-b-lg">
-              <h4 className="text-red-800 text-xl font-bold mb-5">
+            <div className="bg-gray-50 border-2 border-t-0 p-8 rounded-b-lg border-factory-sky">
+              <h4 className="text-xl font-bold mb-5 text-factory-teal">
                 高価買取対象設備
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 {equipment.map((item) => (
                   <div
                     key={item.id}
-                    className="p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] border-[#B81122] rounded-[4px] bg-white relative flex justify-center items-center"
+                    className="p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] rounded-[4px] bg-white relative flex justify-center items-center border-factory-teal"
                   >
                     <Image
                       alt={item.title}
@@ -336,14 +376,14 @@ const FactoryService = () => {
                       width={200}
                       height={200}
                     />
-                    <p className="max-h-[100px] px-[10px] lg:px-[6px] py-[7px] lg:py-[12px] absolute bottom-0 left-0 w-full bg-[#B81122] text-white font-semibold text-[12px] lg:text-[15px] leading-[27px] lg:leading-[30px] overflow-hidden text-ellipsis line-clamp-2 text-center flex justify-center items-center">
+                    <p className="max-h-[100px] px-[10px] lg:px-[6px] py-[7px] lg:py-[12px] absolute bottom-0 left-0 w-full text-white font-semibold text-[12px] lg:text-[15px] leading-[27px] lg:leading-[30px] overflow-hidden text-ellipsis line-clamp-2 text-center flex justify-center items-center bg-factory-teal">
                       {item.title}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <h4 className="text-red-800 text-xl font-bold mb-5">
+              <h4 className="text-xl font-bold mb-5 text-factory-teal">
                 撤去作業の特徴
               </h4>
               <div className="space-y-3">
@@ -370,10 +410,12 @@ const FactoryService = () => {
       </section>
 
       {/* Strengths Section */}
-      <section className="bg-pink-100 py-20">
+      <section className="py-20 bg-factory-sky50">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800">ハディズの強み</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              ハディズの強み
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
@@ -381,13 +423,13 @@ const FactoryService = () => {
               <div
                 key={index}
                 data-animate={`strength-${index}`}
-                className={`bg-white p-8 rounded-lg relative border-l-4 border-red-800 transition-all duration-700 ${
+                className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${
                   isVisible[`strength-${index}`]
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-5"
-                }`}
+                } border-factory-sky`}
               >
-                <h3 className="text-red-800 text-xl font-bold mb-3">
+                <h3 className="text-xl font-bold mb-3 text-factory-teal">
                   {strength.title}
                 </h3>
                 <p>{strength.content}</p>
@@ -395,7 +437,7 @@ const FactoryService = () => {
             ))}
           </div>
 
-          <div className="bg-red-800 text-white p-8 rounded-lg text-center">
+          <div className="text-white p-8 rounded-lg text-center bg-factory-sky">
             <h3 className="text-2xl font-bold mb-4">無料サービス</h3>
             <p className="text-xl">現地調査・見積もり / 買取査定</p>
           </div>
@@ -406,11 +448,11 @@ const FactoryService = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800">作業の流れ</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">作業の流れ</h2>
           </div>
 
           <div className="relative py-10">
-            <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-yellow-400 md:transform md:-translate-x-1/2"></div>
+            <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-factory-yellow md:-translate-x-1/2"></div>
 
             {processSteps.map((step, index) => (
               <div key={index} className="relative mb-12 flex items-center">
@@ -421,15 +463,15 @@ const FactoryService = () => {
                       : "md:ml-auto md:pl-8"
                   }`}
                 >
-                  <div className="bg-white border-2 border-yellow-400 rounded-lg p-8 shadow-md ml-12 md:ml-0">
-                    <h3 className="text-red-800 text-xl font-bold mb-3">
+                  <div className="bg-white border-2 rounded-lg p-8 shadow-md ml-12 md:ml-0 border-factory-yellow">
+                    <h3 className="text-xl font-bold mb-3 text-factory-teal">
                       {step.title}
                     </h3>
                     <p>{step.content}</p>
                   </div>
                 </div>
 
-                <div className="absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 w-10 h-10 bg-red-800 text-white rounded-full flex items-center justify-center font-bold z-10">
+                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-10 h-10 text-white rounded-full flex items-center justify-center font-bold z-10 bg-factory-sky">
                   {index + 1}
                 </div>
               </div>
@@ -439,11 +481,13 @@ const FactoryService = () => {
       </section>
 
       {/* Area Section */}
-      <section className="bg-gray-100 py-20">
+      {/* <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-red-800 mb-8">対応エリア</h2>
-            <h3 className="text-red-800 text-2xl font-bold mb-5">
+            <h2 className="text-4xl font-bold mb-8 text-factory-teal">
+              対応エリア
+            </h2>
+            <h3 className="text-2xl font-bold mb-5 text-factory-teal">
               重点対応エリア
             </h3>
             <p className="text-xl">
@@ -452,43 +496,85 @@ const FactoryService = () => {
           </div>
           <MapKanto className="max-w-4xl mx-auto" />
         </div>
+      </section> */}
+      <section className="bg-gray-100 py-20">
+        <div className="fs-container max-w-6xl mx-auto px-5">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold mb-8 text-factory-teal">
+              対応エリア
+            </h2>
+            <h3 className="text-2xl font-bold mb-5 text-factory-teal">
+              重点対応エリア
+            </h3>
+            <p className="text-xl">
+              関東全域（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）
+            </p>
+          </div>
+
+          {/* Image instead of Map */}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative h-[300px] md:h-[420px] lg:h-[500px] rounded-xl overflow-hidden shadow-md border border-factory-teal/20">
+              <Image
+                src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/kant.jpeg"}
+                alt="関東エリアのイメージ"
+                fill
+                sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 800px"
+                className="object-contain bg-white"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* FAQ Section */}
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800">よくあるご質問</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              よくあるご質問
+            </h2>
           </div>
 
           <div className="space-y-5">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
-              >
-                <button
-                  className="w-full bg-red-800 text-white p-6 text-left flex justify-between items-center hover:bg-red-900 transition-colors"
-                  onClick={() => toggleFAQ(index)}
+            {faqs.map((faq, index) => {
+              const expanded = activeFAQ === index;
+              const panelId = `${faqIdBase}-panel-${index}`;
+              const btnId = `${faqIdBase}-button-${index}`;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden"
                 >
-                  <span className="font-semibold">{faq.question}</span>
-                  <span
-                    className={`text-2xl transition-transform ${
-                      activeFAQ === index ? "transform rotate-45" : ""
+                  <button
+                    id={btnId}
+                    className="w-full text-white p-6 text-left flex justify-between items-center transition-colors bg-factory-sky hover:bg-factory-teal"
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={expanded}
+                    aria-controls={panelId}
+                  >
+                    <span className="font-semibold">{faq.question}</span>
+                    <span
+                      className={`text-2xl transition-transform ${
+                        expanded ? "rotate-45" : ""
+                      }`}
+                    >
+                      +
+                    </span>
+                  </button>
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={btnId}
+                    className={`bg-gray-50 transition-all duration-300 overflow-hidden ${
+                      expanded ? "max-h-96 p-6" : "max-h-0"
                     }`}
                   >
-                    +
-                  </span>
-                </button>
-                <div
-                  className={`bg-gray-50 transition-all duration-300 overflow-hidden ${
-                    activeFAQ === index ? "max-h-96 p-6" : "max-h-0"
-                  }`}
-                >
-                  <p>{faq.answer}</p>
+                    <p>{faq.answer}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -497,14 +583,14 @@ const FactoryService = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-red-800">
+            <h2 className="text-4xl font-bold text-factory-teal">
               工場整理成功のポイント
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-pink-100 p-8 rounded-lg">
-              <h3 className="text-red-800 text-xl font-bold mb-4">
+            <div className="p-8 rounded-lg bg-factory-sky50">
+              <h3 className="text-xl font-bold mb-4 text-factory-teal">
                 早めの相談が成功の鍵
               </h3>
               <ul className="space-y-2">
@@ -513,8 +599,8 @@ const FactoryService = () => {
                 <li>• 余裕を持ったスケジュール調整</li>
               </ul>
             </div>
-            <div className="bg-pink-100 p-8 rounded-lg">
-              <h3 className="text-red-800 text-xl font-bold mb-4">
+            <div className="p-8 rounded-lg bg-factory-sky50">
+              <h3 className="text-xl font-bold mb-4 text-factory-teal">
                 信頼できるパートナー選び
               </h3>
               <ul className="space-y-2">
@@ -528,10 +614,12 @@ const FactoryService = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gradient-to-br from-red-800 to-red-900 text-white py-20">
+      <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
           <h2 className="text-4xl font-bold mb-6">お問い合わせ</h2>
-          <h3 className="text-yellow-300 text-2xl mb-8">まずは無料相談から</h3>
+          <h3 className="text-2xl mb-8 text-factory-yellow">
+            まずは無料相談から
+          </h3>
 
           <div className="max-w-3xl mx-auto">
             <p className="text-lg leading-relaxed mb-4">
@@ -548,30 +636,9 @@ const FactoryService = () => {
         </div>
       </section>
 
-      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-10">
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition-colors hover:transform hover:-translate-y-2">
-              <div className="text-4xl mb-4">📞</div>
-              <h4 className="text-xl font-bold mb-2">お電話でのご相談</h4>
-              <p>[電話番号]</p>
-            </div>
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition-colors hover:transform hover:-translate-y-2">
-              <div className="text-4xl mb-4">✉️</div>
-              <h4 className="text-xl font-bold mb-2">メールでのお問い合わせ</h4>
-              <p>[メールアドレス]</p>
-            </div>
-            <div className="bg-white/10 p-8 rounded-lg hover:bg-white/20 transition-colors hover:transform hover:-translate-y-2">
-              <div className="text-4xl mb-4">💬</div>
-              <h4 className="text-xl font-bold mb-2">LINEでのご相談</h4>
-              <p>[LINE ID]</p>
-            </div>
-          </div> 
+      <ContactBanner applyFactoryTheme />
 
-          <div className="mb-10">
-            <h4 className="text-yellow-300 text-xl font-bold mb-2">受付時間</h4>
-            <p>平日 10:00～18:00 / 土曜 10:00～18:00</p>
-          </div> */}
-      <ContactBanner />
-      <section className="bg-gradient-to-br from-red-800 to-red-900 text-white py-10">
+      <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-10">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
           <p className="text-lg leading-relaxed">
             工場の整理・閉鎖は、多くの企業様にとって初めての経験です。
@@ -582,6 +649,9 @@ const FactoryService = () => {
           </p>
         </div>
       </section>
+
+      {/* fixed contact banner */}
+      <ContactFixedBanner />
 
       <style jsx>{`
         @keyframes fade-in-left {
