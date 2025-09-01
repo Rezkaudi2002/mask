@@ -1,4 +1,5 @@
 "use client";
+import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
 import MapKanto from "@/components/pages/factory-service/components/KantoMap";
 import ContactBanner from "@/components/pages/home/sections/ContactBanner";
 import Image from "next/image";
@@ -582,6 +583,9 @@ const FactoryService = () => {
           </p>
         </div>
       </section>
+
+      {/* fixed contact banner */}
+      <ContactFixedBanner/>
 
       <style jsx>{`
         @keyframes fade-in-left {
