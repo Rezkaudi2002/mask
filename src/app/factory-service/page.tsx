@@ -31,7 +31,8 @@ const FactoryService: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const toggleFAQ = (index: number) => setActiveFAQ((curr) => (curr === index ? null : index));
+  const toggleFAQ = (index: number) =>
+    setActiveFAQ((curr) => (curr === index ? null : index));
 
   const problems = [
     "工場を閉鎖したいが、何から手をつければいいか分からない",
@@ -88,27 +89,76 @@ const FactoryService: React.FC = () => {
   ];
 
   const strengths = [
-    { title: "1. 一括対応で手間削減", content: "買取・撤去・清掃まですべて当社で対応。（不用品の回収は行っておりません）" },
-    { title: "2. コスト最適化", content: "買取可能な設備は適正価格で買取し、処分費用から相殺。トータルコストを削減します。" },
-    { title: "3. 豊富な実績", content: "創業以来、様々な工場整理を手がけ、あらゆる業種・規模に対応してきました。" },
-    { title: "4. 柔軟な対応力", content: "営業中の部分撤去 / 段階的な撤去 / 緊急対応" },
+    {
+      title: "1. 一括対応で手間削減",
+      content:
+        "買取・撤去・清掃まですべて当社で対応。（不用品の回収は行っておりません）",
+    },
+    {
+      title: "2. コスト最適化",
+      content:
+        "買取可能な設備は適正価格で買取し、処分費用から相殺。トータルコストを削減します。",
+    },
+    {
+      title: "3. 豊富な実績",
+      content:
+        "創業以来、様々な工場整理を手がけ、あらゆる業種・規模に対応してきました。",
+    },
+    {
+      title: "4. 柔軟な対応力",
+      content: "営業中の部分撤去 / 段階的な撤去 / 緊急対応",
+    },
     { title: "5. 安全・安心の作業", content: "安全管理の徹底 / 守秘義務契約" },
   ];
 
   const processSteps = [
-    { title: "STEP 1: お問い合わせ・ご相談", content: "まずはお電話またはメール、LINE等からご相談ください。概要をお聞かせいただきます。" },
-    { title: "STEP 2: 現地調査・買取査定", content: "専門スタッフが現地にお伺いし、現地の確認と機械設備や在庫品の査定を行います。" },
+    {
+      title: "STEP 1: お問い合わせ・ご相談",
+      content:
+        "まずはお電話またはメール、LINE等からご相談ください。概要をお聞かせいただきます。",
+    },
+    {
+      title: "STEP 2: 現地調査・買取査定",
+      content:
+        "専門スタッフが現地にお伺いし、現地の確認と機械設備や在庫品の査定を行います。",
+    },
     { title: "STEP 3: お見積もり", content: "お見積もりを作成します。" },
-    { title: "STEP 4: ご契約・スケジュール調整", content: "ご納得いただけましたら、お客様のご都合に合わせて作業日程を決定します。" },
-    { title: "STEP 5: 撤去・搬出作業", content: "安全を最優先に、計画的に撤去・搬出作業を実施します。" },
-    { title: "STEP 6: 完了確認・お支払い", content: "お客様立会いのもと完了確認を行い、精算させていただきます。" },
+    {
+      title: "STEP 4: ご契約・スケジュール調整",
+      content:
+        "ご納得いただけましたら、お客様のご都合に合わせて作業日程を決定します。",
+    },
+    {
+      title: "STEP 5: 撤去・搬出作業",
+      content: "安全を最優先に、計画的に撤去・搬出作業を実施します。",
+    },
+    {
+      title: "STEP 6: 完了確認・お支払い",
+      content: "お客様立会いのもと完了確認を行い、精算させていただきます。",
+    },
   ];
 
   const faqs = [
-    { question: "Q: 稼働中の工場でも部分的な整理は可能ですか？", answer: "A: はい、可能です。営業に支障がないよう、エリアを区切って段階的に作業を進めることができます。" },
-    { question: "Q: 土日の作業は可能ですか？", answer: "A: 基本的には平日営業となりますが、平日が難しい場合は休日作業にも対応いたしますのでご相談ください。" },
-    { question: "Q: 見積もり後のキャンセルは可能ですか？", answer: "A: もちろん可能です。お見積りは無料ですので、じっくりご検討ください。" },
-    { question: "Q: 機械の買取価格はどのように決まりますか？", answer: "A: 機種・年式・稼働状況・需要などを総合的に判断し、適正価格をご提示します。" },
+    {
+      question: "Q: 稼働中の工場でも部分的な整理は可能ですか？",
+      answer:
+        "A: はい、可能です。営業に支障がないよう、エリアを区切って段階的に作業を進めることができます。",
+    },
+    {
+      question: "Q: 土日の作業は可能ですか？",
+      answer:
+        "A: 基本的には平日営業となりますが、平日が難しい場合は休日作業にも対応いたしますのでご相談ください。",
+    },
+    {
+      question: "Q: 見積もり後のキャンセルは可能ですか？",
+      answer:
+        "A: もちろん可能です。お見積りは無料ですので、じっくりご検討ください。",
+    },
+    {
+      question: "Q: 機械の買取価格はどのように決まりますか？",
+      answer:
+        "A: 機種・年式・稼働状況・需要などを総合的に判断し、適正価格をご提示します。",
+    },
   ];
 
   return (
@@ -123,11 +173,10 @@ const FactoryService: React.FC = () => {
           fill
           priority
           fetchPriority="high"
-          className="object-cover lg:object-right-top hidden lg:block"
+          className="object-cover lg:object-right-top block"
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-5 md:px-8 lg:px-10 h-full text-center">
-          <div className="grid grid-cols-12 gap-6 items-center min-h-[80vh]">
+        <div className="w-[74%] lg:w-[55%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-factory-sky absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-white h-full md:h-fit flex items-center">
             <div className="col-span-12 md:col-span-8 lg:col-span-8">
               <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
                 工場整理・閉鎖支援サービス
@@ -140,7 +189,6 @@ const FactoryService: React.FC = () => {
                 長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
                 お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
               </p>
-            </div>
           </div>
         </div>
       </section>
@@ -149,8 +197,12 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal mb-4">工場整理の課題を解決します</h2>
-            <p className="text-xl text-gray-600">こんなお悩みはありませんか？</p>
+            <h2 className="text-4xl font-bold text-factory-teal mb-4">
+              工場整理の課題を解決します
+            </h2>
+            <p className="text-xl text-gray-600">
+              こんなお悩みはありませんか？
+            </p>
           </div>
 
           <div className="rounded-xl p-10 mb-8 bg-factory-sky50">
@@ -180,7 +232,9 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal mb-4">工場の移転・閉鎖廃業による片付けのご依頼理由</h2>
+            <h2 className="text-4xl font-bold text-factory-teal mb-4">
+              工場の移転・閉鎖廃業による片付けのご依頼理由
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
@@ -189,7 +243,9 @@ const FactoryService: React.FC = () => {
                 key={index}
                 data-animate={`reason-${index}`}
                 className={`bg-white p-8 rounded-lg shadow-md transition-all duration-700 hover:-translate-y-2 hover:shadow-xl ${
-                  isVisible[`reason-${index}`] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                  isVisible[`reason-${index}`]
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-5"
                 }`}
               >
                 <div className="w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4 bg-factory-yellow text-factory-teal">
@@ -201,18 +257,39 @@ const FactoryService: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-xl text-gray-600 mb-4">このような方へご依頼頂いております</p>
+            <p className="text-xl text-gray-600 mb-4">
+              このような方へご依頼頂いております
+            </p>
             <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">
             {[
-              { src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg", alt: "step1" },
-              { src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg", alt: "step2" },
-              { src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg", alt: "step3" },
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step1.jpeg",
+                alt: "step1",
+              },
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step2.jpeg",
+                alt: "step2",
+              },
+              {
+                src: "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/Reasons/step3.jpeg",
+                alt: "step3",
+              },
             ].map(({ src, alt }, i) => (
-              <div key={i} className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden">
-                <Image src={src} alt={alt} fill className="object-cover object-center" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw" priority={i === 0} />
+              <div
+                key={i}
+                className="relative w-full h-64 md:h-72 lg:h-80 rounded-lg overflow-hidden"
+              >
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
+                  priority={i === 0}
+                />
               </div>
             ))}
           </div>
@@ -223,7 +300,9 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">サービス内容</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              サービス内容
+            </h2>
           </div>
 
           <div className="mb-15">
@@ -231,14 +310,21 @@ const FactoryService: React.FC = () => {
               <h3 className="text-2xl font-bold">機械設備買取・撤去</h3>
             </div>
             <div className="bg-gray-50 border-2 border-t-0 p-8 rounded-b-lg border-factory-sky">
-              <h4 className="text-xl font-bold mb-5 text-factory-teal">高価買取対象設備</h4>
+              <h4 className="text-xl font-bold mb-5 text-factory-teal">
+                高価買取対象設備
+              </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 {equipment.map((item) => (
                   <div
                     key={item.id}
                     className="p-[20px_24px_60px_24px] lg:p-[25px_58px_65px_58px] min-h-[240px] lg:min-h-[258px] border-[2px] rounded-[4px] bg-white relative flex justify-center items-center border-factory-teal"
                   >
-                    <Image alt={item.title} src={item.image} width={200} height={200} />
+                    <Image
+                      alt={item.title}
+                      src={item.image}
+                      width={200}
+                      height={200}
+                    />
                     <p className="max-h-[100px] px-[10px] lg:px-[6px] py-[7px] lg:py-[12px] absolute bottom-0 left-0 w-full text-white font-semibold text-[12px] lg:text-[15px] leading-[27px] lg:leading-[30px] overflow-hidden text-ellipsis line-clamp-2 text-center flex justify-center items-center bg-factory-teal">
                       {item.title}
                     </p>
@@ -246,7 +332,9 @@ const FactoryService: React.FC = () => {
                 ))}
               </div>
 
-              <h4 className="text-xl font-bold mb-5 text-factory-teal">撤去作業の特徴</h4>
+              <h4 className="text-xl font-bold mb-5 text-factory-teal">
+                撤去作業の特徴
+              </h4>
               <div className="space-y-3">
                 <div className="flex items-center">
                   <span className="text-green-600 mr-3">✓</span>
@@ -274,7 +362,9 @@ const FactoryService: React.FC = () => {
       <section className="py-20 bg-factory-sky50">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">ハディズの強み</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              ハディズの強み
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
@@ -283,10 +373,14 @@ const FactoryService: React.FC = () => {
                 key={index}
                 data-animate={`strength-${index}`}
                 className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${
-                  isVisible[`strength-${index}`] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                  isVisible[`strength-${index}`]
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-5"
                 } border-factory-sky`}
               >
-                <h3 className="text-xl font-bold mb-3 text-factory-teal">{strength.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-factory-teal">
+                  {strength.title}
+                </h3>
                 <p>{strength.content}</p>
               </div>
             ))}
@@ -306,14 +400,22 @@ const FactoryService: React.FC = () => {
             <h2 className="text-4xl font-bold text-factory-teal">作業の流れ</h2>
           </div>
 
-        <div className="relative py-10">
+          <div className="relative py-10">
             <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-factory-yellow md:-translate-x-1/2"></div>
 
             {processSteps.map((step, index) => (
               <div key={index} className="relative mb-12 flex items-center">
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:text-right md:pr-8" : "md:ml-auto md:pl-8"}`}>
+                <div
+                  className={`w-full md:w-5/12 ${
+                    index % 2 === 0
+                      ? "md:text-right md:pr-8"
+                      : "md:ml-auto md:pl-8"
+                  }`}
+                >
                   <div className="bg-white border-2 rounded-lg p-8 shadow-md ml-12 md:ml-0 border-factory-yellow">
-                    <h3 className="text-xl font-bold mb-3 text-factory-teal">{step.title}</h3>
+                    <h3 className="text-xl font-bold mb-3 text-factory-teal">
+                      {step.title}
+                    </h3>
                     <p>{step.content}</p>
                   </div>
                 </div>
@@ -331,9 +433,15 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-8 text-factory-teal">対応エリア</h2>
-            <h3 className="text-2xl font-bold mb-5 text-factory-teal">重点対応エリア</h3>
-            <p className="text-xl">関東全域（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）</p>
+            <h2 className="text-4xl font-bold mb-8 text-factory-teal">
+              対応エリア
+            </h2>
+            <h3 className="text-2xl font-bold mb-5 text-factory-teal">
+              重点対応エリア
+            </h3>
+            <p className="text-xl">
+              関東全域（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）
+            </p>
           </div>
           <MapKanto className="max-w-4xl mx-auto" />
         </div>
@@ -343,7 +451,9 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">よくあるご質問</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              よくあるご質問
+            </h2>
           </div>
 
           <div className="space-y-5">
@@ -352,7 +462,10 @@ const FactoryService: React.FC = () => {
               const panelId = `${faqIdBase}-panel-${index}`;
               const btnId = `${faqIdBase}-button-${index}`;
               return (
-                <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-md overflow-hidden"
+                >
                   <button
                     id={btnId}
                     className="w-full text-white p-6 text-left flex justify-between items-center transition-colors bg-factory-sky hover:bg-factory-teal"
@@ -361,13 +474,21 @@ const FactoryService: React.FC = () => {
                     aria-controls={panelId}
                   >
                     <span className="font-semibold">{faq.question}</span>
-                    <span className={`text-2xl transition-transform ${expanded ? "rotate-45" : ""}`}>+</span>
+                    <span
+                      className={`text-2xl transition-transform ${
+                        expanded ? "rotate-45" : ""
+                      }`}
+                    >
+                      +
+                    </span>
                   </button>
                   <div
                     id={panelId}
                     role="region"
                     aria-labelledby={btnId}
-                    className={`bg-gray-50 transition-all duration-300 overflow-hidden ${expanded ? "max-h-96 p-6" : "max-h-0"}`}
+                    className={`bg-gray-50 transition-all duration-300 overflow-hidden ${
+                      expanded ? "max-h-96 p-6" : "max-h-0"
+                    }`}
                   >
                     <p>{faq.answer}</p>
                   </div>
@@ -382,12 +503,16 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">工場整理成功のポイント</h2>
+            <h2 className="text-4xl font-bold text-factory-teal">
+              工場整理成功のポイント
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 rounded-lg bg-factory-sky50">
-              <h3 className="text-xl font-bold mb-4 text-factory-teal">早めの相談が成功の鍵</h3>
+              <h3 className="text-xl font-bold mb-4 text-factory-teal">
+                早めの相談が成功の鍵
+              </h3>
               <ul className="space-y-2">
                 <li>• 計画的な撤去でコスト削減</li>
                 <li>• 機械の価値が下がる前に買取</li>
@@ -395,7 +520,9 @@ const FactoryService: React.FC = () => {
               </ul>
             </div>
             <div className="p-8 rounded-lg bg-factory-sky50">
-              <h3 className="text-xl font-bold mb-4 text-factory-teal">信頼できるパートナー選び</h3>
+              <h3 className="text-xl font-bold mb-4 text-factory-teal">
+                信頼できるパートナー選び
+              </h3>
               <ul className="space-y-2">
                 <li>• 実績と経験の確認</li>
                 <li>• 許可・資格の保有</li>
@@ -410,15 +537,21 @@ const FactoryService: React.FC = () => {
       <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
           <h2 className="text-4xl font-bold mb-6">お問い合わせ</h2>
-          <h3 className="text-2xl mb-8 text-factory-yellow">まずは無料相談から</h3>
+          <h3 className="text-2xl mb-8 text-factory-yellow">
+            まずは無料相談から
+          </h3>
 
           <div className="max-w-3xl mx-auto">
             <p className="text-lg leading-relaxed mb-4">
-              「工場を閉鎖することになったが、どうすればいいか分からない」<br />
-              「概算でいいので、費用を知りたい」<br />
+              「工場を閉鎖することになったが、どうすればいいか分からない」
+              <br />
+              「概算でいいので、費用を知りたい」
+              <br />
               「買取可能な設備があるか確認したい」
             </p>
-            <p className="text-xl">どんなご相談でも結構です。経験豊富なスタッフが丁寧にお答えいたします。</p>
+            <p className="text-xl">
+              どんなご相談でも結構です。経験豊富なスタッフが丁寧にお答えいたします。
+            </p>
           </div>
         </div>
       </section>
@@ -428,8 +561,10 @@ const FactoryService: React.FC = () => {
       <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-10">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
           <p className="text-lg leading-relaxed">
-            工場の整理・閉鎖は、多くの企業様にとって初めての経験です。<br />
-            ハディズは、お客様の立場に立って、最適な解決策をご提案いたします。<br />
+            工場の整理・閉鎖は、多くの企業様にとって初めての経験です。
+            <br />
+            ハディズは、お客様の立場に立って、最適な解決策をご提案いたします。
+            <br />
             まずはお気軽にご相談ください。
           </p>
         </div>
@@ -440,10 +575,18 @@ const FactoryService: React.FC = () => {
 
       <style jsx>{`
         @keyframes fade-in-left {
-          from { opacity: 0; transform: translateX(-20px); }
-          to { opacity: 1; transform: translateX(0); }
+          from {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
-        .animate-fade-in-left { animation: fade-in-left 0.5s ease forwards; }
+        .animate-fade-in-left {
+          animation: fade-in-left 0.5s ease forwards;
+        }
       `}</style>
     </div>
   );
