@@ -6,7 +6,13 @@ import ContactBtn from "../components/ContactBtn";
 // data
 import ContactDetails from "@/content/home/ContactDetails.json";
 
-const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
+const ContactBanner = ({
+  showFormBtn = true,
+  applyFactoryTheme = false,
+}: {
+  showFormBtn?: boolean;
+  applyFactoryTheme?: boolean;
+}) => {
   return (
     <section className="font-noto object-cover relative flex flex-row-reverse">
       <Image
@@ -37,8 +43,14 @@ const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
         </h2>
 
         {/* Show this only on screens 600px and above */}
-        <h2 className="font-noto bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] hidden sm:block">
-          ラクラク査定はハディズにお任せ♪
+        <h2
+          className={`font-noto bg-gradient-to-r  bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] hidden sm:block ${
+            applyFactoryTheme
+              ? "from-factory-sky to-factory-teal"
+              : "from-light-red to-dark-red"
+          }`}
+        >
+          ラクラク無料査定
         </h2>
         {/* communication information */}
         <div className="flex justify-center flex-wrap space-y-4 lg:space-y-[24px]">
@@ -48,7 +60,7 @@ const ContactBanner = ({ showFormBtn = true }: { showFormBtn?: boolean }) => {
               mobileLabel={ContactDetails.phoneNumber.label}
               label={ContactDetails.phoneNumber.label}
               href={ContactDetails.phoneNumber.href}
-              variant="red"
+              variant={applyFactoryTheme ? "sky" : "red"}
               className="text-[32px] lg:text-[40px] h-20 w-full  sm:w-full"
             />
             {showFormBtn && (

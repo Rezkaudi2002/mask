@@ -423,7 +423,7 @@ const FactoryService: React.FC = () => {
         </div>
       </section>
 
-      <ContactBanner />
+      <ContactBanner applyFactoryTheme />
 
       <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-10">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
