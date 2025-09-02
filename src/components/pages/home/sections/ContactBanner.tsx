@@ -77,7 +77,7 @@ const ContactBanner = ({
                 label={ContactDetails.support.label}
                 href={ContactDetails.support.href}
                 variant="blue"
-                className="text-xl w-full sm:w-full lg:flex-1 sm:px-3"
+                className="text-lg w-full sm:w-full lg:flex-1 sm:px-3"
               />
             )}
             <ContactBtn
@@ -85,7 +85,7 @@ const ContactBanner = ({
               label={ContactDetails.line.label}
               href={ContactDetails.line.href}
               variant="green"
-              className="text-xl w-full sm:w-full lg:flex-1 sm:px-3"
+              className="text-lg w-full sm:w-full lg:flex-1 sm:px-3"
             />
           </div>
         </div>

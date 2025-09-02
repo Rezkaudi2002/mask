@@ -190,34 +190,21 @@ const FactoryService: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-800 leading-relaxed">
+    <div className="min-h-screen bg-factory-sky font-sans text-gray-800 leading-relaxed">
       {/* Hero Section */}
-      <section className="relative overflow-hidden text-white min-h-[80vh]">
-        <Image
-          src="https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/facotry-hero.png"
-          alt="Company's legacy image"
-          sizes="100vw"
-          quality={100}
-          fill
-          priority
-          fetchPriority="high"
-          className="object-cover lg:object-right-top block"
-        />
-
-        <div className="w-[74%] lg:w-[55%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-factory-sky absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-white h-full md:h-fit flex items-center">
-          <div className="col-span-12 md:col-span-8 lg:col-span-8">
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
-              工場整理・閉鎖支援サービス
-            </h1>
-            <p className="text-lg md:text-2xl text-factory-yellow mb-6">
-              機械撤去から清掃まで、廃業・移転を完全サポート
-            </p>
-            <p className="text-base md:text-lg/relaxed max-w-3xl mx-auto">
-              ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
-              長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
-              お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
-            </p>
-          </div>
+      <section className="relative grid place-items-center text-white min-h-[80vh]">
+        <div className="px-4 lg:px-10 text-center max-w-3xl">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+            工場整理・閉鎖支援サービス
+          </h1>
+          <p className="text-lg md:text-2xl text-factory-yellow mb-6">
+            機械撤去から清掃まで、廃業・移転を完全サポート
+          </p>
+          <p className="text-base md:text-lg/relaxed mx-auto">
+            ハディズは、工場の閉鎖・移転・廃業に伴うあらゆる作業を一括でお引き受けいたします。
+            長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
+            お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
+          </p>
         </div>
       </section>
 
@@ -503,9 +490,6 @@ const FactoryService: React.FC = () => {
             <h2 className="text-4xl font-bold mb-8 text-factory-teal">
               対応エリア
             </h2>
-            <h3 className="text-2xl font-bold mb-5 text-factory-teal">
-              重点対応エリア
-            </h3>
             <p className="text-xl">
               関東全域（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）
             </p>
@@ -515,7 +499,9 @@ const FactoryService: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-[300px] md:h-[420px] lg:h-[500px] rounded-xl overflow-hidden shadow-md border border-factory-teal/20">
               <Image
-                src={"https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/kant.jpeg"}
+                src={
+                  "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/facotry-services/kanto.jpg"
+                }
                 alt="関東エリアのイメージ"
                 fill
                 sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 800px"
@@ -523,7 +509,7 @@ const FactoryService: React.FC = () => {
                 loading="eager"
               />
             </div>
-          </div>
+        </div>
         </div>
       </section>
 
