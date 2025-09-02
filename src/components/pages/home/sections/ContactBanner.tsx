@@ -36,10 +36,8 @@ const ContactBanner = ({
       {/* left section */}
       <div className="px-5 py-[50px] xl:p-[75px] md:w-[52%] xl:pl-[80px] space-y-4 lg:max-h-[415px]">
         {/* Show this only on screens smaller than 600px */}
-        <h2 className="font-noto bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden">
-          ラクラク査定は
-          <br />
-          ハディズにお任せ♪
+        <h2 className={`font-noto bg-gradient-to-r bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden ${applyFactoryTheme ? "from-factory-sky to-factory-teal" : "from-light-red to-dark-red"}`}>
+          ラクラク無料査定
         </h2>
 
         {/* Show this only on screens 600px and above */}
