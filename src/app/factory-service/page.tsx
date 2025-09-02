@@ -509,7 +509,7 @@ const FactoryService: React.FC = () => {
                 loading="eager"
               />
             </div>
-          </div>
+        </div>
         </div>
       </section>
 
