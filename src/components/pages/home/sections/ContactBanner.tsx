@@ -36,16 +36,20 @@ const ContactBanner = ({
       {/* left section */}
       <div className="px-5 py-[50px] xl:p-[75px] md:w-[52%] xl:pl-[80px] space-y-4 lg:max-h-[415px]">
         {/* Show this only on screens smaller than 600px */}
-        <h2 className={`font-noto bg-gradient-to-r bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden ${applyFactoryTheme ? "from-factory-sky to-factory-teal" : "from-light-red to-dark-red"}`}>
+        <h2
+          className={`font-noto bg-gradient-to-r bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden ${
+            applyFactoryTheme
+              ? "bg-white"
+              : "from-light-red to-dark-red"
+          }`}
+        >
           ラクラク無料査定
         </h2>
 
         {/* Show this only on screens 600px and above */}
         <h2
           className={`font-noto bg-gradient-to-r  bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] hidden sm:block ${
-            applyFactoryTheme
-              ? "from-factory-sky to-factory-teal"
-              : "from-light-red to-dark-red"
+            applyFactoryTheme ? "bg-white" : "from-light-red to-dark-red"
           }`}
         >
           ラクラク無料査定
@@ -62,7 +66,11 @@ const ContactBanner = ({
               className="text-[32px] lg:text-[40px] h-20 w-full  sm:w-full"
             />
             {showFormBtn && (
-              <p className="text-[14px] leading-[21px] mt-1 font-normal w-fit">
+              <p
+                className={`text-[14px] leading-[21px] mt-1 font-normal w-fit ${
+                  applyFactoryTheme ? "text-white" : "text-black"
+                }`}
+              >
                 営業時間：10:00 〜 18:00
               </p>
             )}
