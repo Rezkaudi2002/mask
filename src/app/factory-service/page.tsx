@@ -196,7 +196,7 @@ const FactoryService: React.FC = () => {
         <div className="px-4 lg:px-10 text-center w-full max-w-3xl">
           <h1
             className={`
-            text-3xl md:text-5xl font-extrabold leading-tight mb-4 text-balance
+            text-xl md:text-5xl font-extrabold leading-tight mb-4 text-balance
             break-keep [overflow-wrap:normal] [word-break:keep-all]
             max-[640px]:break-words max-[640px]:[overflow-wrap:anywhere]
           `}
@@ -232,7 +232,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal mb-4">
+            <h2 className="text-3xl font-bold text-factory-teal mb-4">
               工場整理の課題を解決します
             </h2>
             <p className="text-xl text-gray-600">
@@ -267,7 +267,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal mb-4">
+            <h2 className="text-3xl font-bold text-factory-teal mb-4">
               工場の移転・閉鎖廃業による片付けのご依頼理由
             </h2>
           </div>
@@ -358,7 +358,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">
+            <h2 className="text-3xl font-bold text-factory-teal">
               サービス内容
             </h2>
           </div>
@@ -420,7 +420,7 @@ const FactoryService: React.FC = () => {
       <section className="py-20 bg-factory-sky50">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">
+            <h2 className="text-3xl font-bold text-factory-teal">
               ハディズの強み
             </h2>
           </div>
@@ -455,7 +455,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">作業の流れ</h2>
+            <h2 className="text-3xl font-bold text-factory-teal">作業の流れ</h2>
           </div>
 
           <div className="relative py-10">
@@ -507,7 +507,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-8 text-factory-teal">
+            <h2 className="text-3xl font-bold mb-8 text-factory-teal">
               対応エリア
             </h2>
             <p className="text-xl">
@@ -537,7 +537,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-gray-100 py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">
+            <h2 className="text-3xl font-bold text-factory-teal">
               よくあるご質問
             </h2>
           </div>
@@ -589,7 +589,7 @@ const FactoryService: React.FC = () => {
       <section className="bg-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-factory-teal">
+            <h2 className="text-3xl font-bold text-factory-teal">
               工場整理成功のポイント
             </h2>
           </div>
@@ -622,7 +622,7 @@ const FactoryService: React.FC = () => {
       {/* Contact Section */}
       <section className="bg-gradient-to-br from-factory-sky to-factory-teal text-white py-20">
         <div className="fs-container max-w-6xl mx-auto px-5 text-center">
-          <h2 className="text-4xl font-bold mb-6">お問い合わせ</h2>
+          <h2 className="text-3xl font-bold mb-6">お問い合わせ</h2>
           <h3 className="text-2xl mb-8 text-factory-yellow">
             まずは無料相談から
           </h3>
