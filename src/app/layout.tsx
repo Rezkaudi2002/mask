@@ -130,7 +130,7 @@ export default function RootLayout({
           media="(max-width: 1023px)"
         />
       </head>
-      <GoogleTagManager gtmId="G-id" />
+      <GoogleTagManager gtmId="GTM-W9W78KMS" />
       <body className={`${notoSansJP.variable} font-noto`}>
         <main>
           <Header />
