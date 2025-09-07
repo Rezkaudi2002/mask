@@ -36,7 +36,7 @@ const ContactBanner = ({
       {/* left section */}
       <div className="px-5 py-[50px] xl:p-[75px] md:w-[52%] xl:pl-[80px] space-y-4 lg:max-h-[415px]">
         {/* Modern Badge */}
-        <div className="absolute top-2 left-2 z-10 text-red-600">
+        <div className={`absolute top-2 left-2 z-10 ${applyFactoryTheme ? "text-white": "text-red-600"}`}>
           <svg
             className="w-20 md:w-24 h-auto"
             viewBox="0 0 100 100"
