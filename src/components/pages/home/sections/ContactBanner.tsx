@@ -94,7 +94,7 @@ const ContactBanner = ({
 
         {/* Show this only on screens smaller than 600px */}
         <h2
-          className={`font-noto bg-gradient-to-r bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden ${
+          className={`font-noto !mt-8 bg-gradient-to-r bg-clip-text text-transparent text-center text-[32px] md:text-[36px] font-black leading-[48px] md:leading-[54px] block sm:hidden ${
             applyFactoryTheme ? "bg-white" : "from-light-red to-dark-red"
           }`}
         >
