@@ -18,6 +18,22 @@ export type TProduct = {
   makers: TMaker[]
 }
 
+export type TNewProduct = {
+  id: number;
+  title: string;
+  category: string;
+  titleInHero: string;
+  subTitleInHero: string;
+  types: string[]
+  purchaseProductTitle: string;
+  webImagesGallery: TImage[]
+  makers: TMaker[];
+  cameraImagesGallery: TImage[]
+  information: string[];
+  questions: TQuestion[];
+  servicesDescription: string;
+}
+
 export type TImage = {
   title: string,
   imageSrc: string
