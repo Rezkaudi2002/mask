@@ -2,10 +2,10 @@ import Image from "next/image";
 
 interface IProductHeroProps {
   productTitle: string;
-  subTitle: string;
+  // subTitle: string;
 }
 
-const ProductHero = ({ productTitle, subTitle }: IProductHeroProps) => {
+const ProductHero = ({ productTitle }: IProductHeroProps) => {
   return (
     <section className="relative px-4 w-full h-[510px] lg:h-[640px] 2xl:h-[calc(100vh-64px)] sm:bg-right-top overflow-hidden">
       {/* Background wrapper */}
@@ -24,16 +24,16 @@ const ProductHero = ({ productTitle, subTitle }: IProductHeroProps) => {
       </div>
       {/* content wrapper */}
       <div className="w-[74%] lg:w-[65%] p-3 px-3 lg:p-10 space-y-2 lg:space-y-4 bg-[#ffffffbf] absolute left-[40%] lg:left-[5%] top-[50%] translate-x-[-50%] lg:translate-x-0 translate-y-[-50%] text-[#B81122]">
-        <h2 className="text-[24px] leading-[36px] lg:text-[48px] lg:leading-[90px] font-bold text-left lg:text-center">
+        <h2 className="text-[24px] leading-[36px] lg:text-[36px] lg:leading-[90px] font-bold text-left lg:text-center">
           {productTitle.split("\n").map((item, index) => (
             <span className=" block" key={index}>
               {item}
             </span>
           ))}
         </h2>
-        <p className="text-[18px] leading-[36px] lg:text-[36px] lg:leading-[90px] font-semibold text-left lg:text-center">
+        {/* <p className="text-[18px] leading-[36px] lg:text-[36px] lg:leading-[90px] font-semibold text-left lg:text-center">
           {subTitle}
-        </p>
+        </p> */}
 
         {/* details */}
         <div className="flex w-full items-start xl:items-center justify-center gap-2 flex-col lg:flex-row text-white flex-wrap">

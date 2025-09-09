@@ -27,7 +27,7 @@ const index = ({ product }: IIndexProps) => {
     <>
       <ProductHero
         productTitle={product.titleInHero}
-        subTitle={product.subTitleInHero}
+        // subTitle={product.subTitleInHero}
       />
       <Breadcrumb title={product.title} category={product.category} />
       <Types types={product.types} />
