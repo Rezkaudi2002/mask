@@ -10,13 +10,13 @@ import { TNewProduct } from "@/types/product.type";
 // import MajorList from "../components/MajorList";
 import ContactBanner from "../../home/sections/ContactBanner";
 import PurchaseProcess from "../../home/sections/PurchaseProcess";
-import BusinessPolicy from "../../home/sections/BusinessPolicy";
 import ContactFixedBanner from "@/components/common/sections/ContactFixedBanner";
 import PurchaseService from "../new-components/PurchaseServices";
 import Types from "../new-components/Types";
 import Information from "../new-components/Information";
 import Questions from "../new-components/Questions";
 import Makers from "../new-components/Makers";
+import PurchasedItems from "../../home/sections/PurchasedItems";
 
 interface IIndexProps {
   product: TNewProduct;
@@ -49,7 +49,8 @@ const index = ({ product }: IIndexProps) => {
       <ContactBanner />
       <ContactFixedBanner />
       <PurchaseProcess />
-      <BusinessPolicy />
+      {/* <BusinessPolicy /> */}
+      <PurchasedItems />
     </>
   );
 };
