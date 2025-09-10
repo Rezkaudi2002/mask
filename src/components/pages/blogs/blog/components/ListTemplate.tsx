@@ -22,7 +22,7 @@ const ListTemplate: React.FC<IListTemplate> = ({ content }) => {
                 <p className="font-normal text-base leading-8  mb-5" key={index} dangerouslySetInnerHTML={{ __html: item }} />
             ))}
 
-            {content.subTitle && <h3 className="font-black text-[18px]">{content.subTitle}</h3>}
+            {content.subTitle && <h3 className="font-black text-[16px]">{content.subTitle}</h3>}
             <ul className={`space-y-6 my-10 ml-10 ${content.listType === "number" ? "list-decimal" : content.listType === "dot" ? "list-disc" : "list-none"}`}>
                 {content.items.slice(0, show ? content.items.length + 1 : 5)?.map((item, index) => (
                     <li key={index}>
