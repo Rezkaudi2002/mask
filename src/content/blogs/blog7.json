@@ -175,7 +175,7 @@
       "type": "list",
       "listType": "number",
       "subTitle": "Citations:",
-      "withPaginated": true,
+      "withPagination": true,
       "items": [
         {
           "id": "1",
