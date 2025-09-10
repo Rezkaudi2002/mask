@@ -6,7 +6,7 @@ interface IInformationProps {
 
 const Information = ({ information }: IInformationProps) => {
   return (
-    <section className="max-w-4xl mx-auto py-12 px-4 sm:px-6 bg-gradient-to-br from-[#fff7f7] to-[#ffeaea] rounded-xl shadow-lg">
+    <section className="max-w-4xl mx-auto py-12 px-4 sm:px-6 bg-gradient-to-br from-[#fff7f7] to-[#ffeaea] rounded-xl shadow-lg mt-10 lg:mt-12">
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#B81122] mb-8">
         高価買取のポイント
       </h2>

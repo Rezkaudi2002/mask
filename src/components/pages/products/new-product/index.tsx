@@ -5,6 +5,7 @@
 import ProductHero from "../new-components/ProductHero";
 import Breadcrumb from "../components/Breadcrumb";
 import ImagesGallery from "../new-components/ImagesGallery";
+import CameraImagesSlider from "@/components/common/sections/CameraImagesSlider";
 import { TNewProduct } from "@/types/product.type";
 // import ProductDetails from "../components/ProductDetails";
 // import MajorList from "../components/MajorList";
@@ -34,11 +35,10 @@ const index = ({ product }: IIndexProps) => {
       <ImagesGallery images={product.webImagesGallery} />
       {/* <MajorList title={product.title} companies={product.makers} /> */}
       <Makers companies={product.makers} />
-      <ImagesGallery
-        images={product.cameraImagesGallery}
-        purchaseProductTitle={product.purchaseProductTitle}
-        title={product.title}
-        isCameraImages
+      {/* Camera images as slider of image+title */}
+      <CameraImagesSlider
+        sectionTitle={`${product.title}${product.purchaseProductTitle ?? ""}`}
+        items={product.cameraImagesGallery}
       />
       <Information information={product.information} />
       <Questions questions={product.questions} />
