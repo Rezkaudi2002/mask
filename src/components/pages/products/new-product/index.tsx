@@ -2,7 +2,6 @@
   ! IMPORTANT NOTE: 
   ! this component is used to display the new product page when get a confirmation we well replace the old product page with this one
 */
-import ProductHero from "../new-components/ProductHero";
 import Breadcrumb from "../components/Breadcrumb";
 import ImagesGallery from "../new-components/ImagesGallery";
 import CameraImagesSlider from "@/components/common/sections/CameraImagesSlider";
@@ -18,6 +17,7 @@ import Information from "../new-components/Information";
 import Questions from "../new-components/Questions";
 import Makers from "../new-components/Makers";
 import PurchasedItems from "../../home/sections/PurchasedItems";
+import ProductHero from "../components/ProductHero";
 
 interface IIndexProps {
   product: TNewProduct;
@@ -26,10 +26,7 @@ interface IIndexProps {
 const index = ({ product }: IIndexProps) => {
   return (
     <>
-      <ProductHero
-        productTitle={product.titleInHero}
-        // subTitle={product.subTitleInHero}
-      />
+      <ProductHero productTitle={product.title} />
       <Breadcrumb title={product.title} category={product.category} />
       <Types types={product.types} />
       <ImagesGallery images={product.webImagesGallery} />
