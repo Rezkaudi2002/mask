@@ -5,5 +5,5 @@ export const isTProduct = (product: TProduct | TNewProduct): product is TProduct
 };
 
 export const isNewProduct = (product: TProduct | TNewProduct): product is TNewProduct => {
-  return "titleInHero" in product;
+  return "title" in product;
 };

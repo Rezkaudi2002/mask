@@ -22,8 +22,6 @@ export type TNewProduct = {
   id: number;
   title: string;
   category: string;
-  titleInHero: string;
-  subTitleInHero: string;
   types: string[]
   purchaseProductTitle: string;
   webImagesGallery: TImage[]
