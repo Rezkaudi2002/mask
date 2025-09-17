@@ -42,55 +42,6 @@ const nextConfig: NextConfig = {
     scrollRestoration: true,
   },
 
-  // Webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      // Enable module concatenation
-      config.optimization.concatenateModules = true;
-
-      // Split chunks for better caching
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // Vendor chunk
-          vendor: {
-            name: 'vendor',
-            chunks: 'all',
-            test: /node_modules/,
-            priority: 20,
-          },
-          // Common chunk
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            priority: 10,
-            reuseExistingChunk: true,
-            enforce: true,
-          },
-          // Separate heavy libraries
-          swiper: {
-            test: /[\\/]node_modules[\\/](swiper)[\\/]/,
-            name: 'swiper',
-            priority: 30,
-            chunks: 'all',
-          },
-          sweetalert: {
-            test: /[\\/]node_modules[\\/](sweetalert2)[\\/]/,
-            name: 'sweetalert',
-            priority: 30,
-            chunks: 'all',
-          },
-        },
-      };
-    }
-
-    return config;
-  },
-
   // Headers for caching
   async headers() {
     return [
