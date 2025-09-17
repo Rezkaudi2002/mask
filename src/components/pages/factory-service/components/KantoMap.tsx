@@ -193,9 +193,8 @@ const MapKanto: React.FC<MapKantoProps> = ({ className }) => {
       {/* Load Google Maps JS once after hydration */}
       <Script
         id="google-maps"
-        src={`https://maps.googleapis.com/maps/api/js?key=${
-          apiKey ?? ""
-        }&callback=initKantoMap&language=ja`}
+        src={`https://maps.googleapis.com/maps/api/js?key=${apiKey ?? ""
+          }&callback=initKantoMap&language=ja`}
         strategy="afterInteractive"
       />
     </div>
