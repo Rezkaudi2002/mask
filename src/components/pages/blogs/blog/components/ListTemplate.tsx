@@ -1,4 +1,3 @@
-import ShowMoreBtn from "@/components/common/components/ShowMoreBtn";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -7,7 +6,9 @@ interface IListTemplate {
 }
 
 const ListTemplate: React.FC<IListTemplate> = ({ content }) => {
-    const [show, setShow] = useState(false);
+    const withPagination: boolean = !!content.withPagination
+
+    const [show, setShow] = useState(!withPagination);
 
     const handleShowMore = () => {
         setShow(prev => !prev)

@@ -55,7 +55,7 @@ const TableTemplate: React.FC<ITableTemplate> = ({ content }) => {
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {content.rows.map((row, rowIndex) => (
+            {content.rows.map(row => (
               <tr key={row.id}
                 className="hover:bg-gray-50 transition-colors duration-150">
                 {row.columns.map((col, colIndex) => (

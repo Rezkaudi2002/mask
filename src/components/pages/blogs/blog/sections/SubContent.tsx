@@ -7,6 +7,7 @@ import ImageTemplate from "../components/ImageTemplate";
 import VideoTemplate from "../components/VideoTemplate";
 import ListTemplate from "../components/ListTemplate";
 import TableTemplate from "../components/TableTemplate";
+import ImageListTemplate from "../components/ImageListTemplate";
 
 interface ISubContent {
   content: BlogSubContent;
@@ -33,6 +34,8 @@ const SubContent: React.FC<ISubContent> = ({ content, mainTitle }) => {
             return <FAQTemplate content={content} />;
           case "table":
             return <TableTemplate content={content} />;
+          case "imageList":
+            return <ImageListTemplate content={content} />;
           default:
             return null;
         }
