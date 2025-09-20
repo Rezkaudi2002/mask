@@ -55,6 +55,48 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
         <div className="container max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
 
+            {/* Sidebar */}
+            <aside className="lg:col-span-4">
+              <div className="sticky top-20">
+
+                {/* Table of Contents Card */}
+                <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
+                  <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <span className="mr-2">📋</span>
+                    目次
+                  </h3>
+                  <nav>
+                    <ul className="space-y-2">
+                      {data.subContent
+                        .filter(item => item.title && item.type !== 'image' && item.type !== 'video')
+                        .map((item, index) => (
+                          <li key={index}>
+                            <a href={`#${item.title}`}
+                              className="block text-sm text-gray-600 hover:text-red-600 py-2 pl-4 border-l-2 border-transparent hover:border-red-600 transition-all duration-200">
+                              {item.title}
+                            </a>
+                          </li>
+                        ))}
+                    </ul>
+                  </nav>
+                </div>
+
+                {/* Quick Contact Card */}
+                <div className="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-xl p-6 text-center">
+                  <h3 className="text-lg font-bold mb-4">
+                    無料査定・相談受付中
+                  </h3>
+                  <p className="text-sm mb-6 opacity-90">
+                    専門スタッフがお客様の状況に合わせて最適なソリューションをご提案
+                  </p>
+                  <Link href="/satei"
+                    className="block bg-white text-red-600 py-3 px-6 rounded-lg font-bold text-sm hover:shadow-lg transition-all duration-200">
+                    今すぐ相談する
+                  </Link>
+                </div>
+              </div>
+            </aside>
+
             {/* Main Content */}
             <main className="lg:col-span-8">
               <div className="bg-white">
@@ -110,47 +152,6 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
               </div>
             </main>
 
-            {/* Sidebar */}
-            <aside className="lg:col-span-4">
-              <div className="sticky top-20">
-
-                {/* Table of Contents Card */}
-                <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-8">
-                  <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
-                    <span className="mr-2">📋</span>
-                    目次
-                  </h3>
-                  <nav>
-                    <ul className="space-y-2">
-                      {data.subContent
-                        .filter(item => item.title && item.type !== 'image' && item.type !== 'video')
-                        .map((item, index) => (
-                          <li key={index}>
-                            <a href={`#${item.title}`}
-                              className="block text-sm text-gray-600 hover:text-red-600 py-2 pl-4 border-l-2 border-transparent hover:border-red-600 transition-all duration-200">
-                              {item.title}
-                            </a>
-                          </li>
-                        ))}
-                    </ul>
-                  </nav>
-                </div>
-
-                {/* Quick Contact Card */}
-                <div className="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-xl p-6 text-center">
-                  <h3 className="text-lg font-bold mb-4">
-                    無料査定・相談受付中
-                  </h3>
-                  <p className="text-sm mb-6 opacity-90">
-                    専門スタッフがお客様の状況に合わせて最適なソリューションをご提案
-                  </p>
-                  <Link href="/satei"
-                    className="block bg-white text-red-600 py-3 px-6 rounded-lg font-bold text-sm hover:shadow-lg transition-all duration-200">
-                    今すぐ相談する
-                  </Link>
-                </div>
-              </div>
-            </aside>
           </div>
         </div>
       </div>

@@ -34,9 +34,7 @@ const ImageListTemplate: React.FC<IImageListTemplate> = ({ content }) => {
                     pagination={{ clickable: true }}
                     breakpoints={{
                         320: { slidesPerView: 1.3, spaceBetween: 8 },
-                        640: { slidesPerView: 2, spaceBetween: 16 },
-                        768: { slidesPerView: 3.5, spaceBetween: 16 },
-                        1024: { slidesPerView: 3.5, spaceBetween: 32 },
+                        640: { slidesPerView: 2, spaceBetween: 16 }
                     }}
                     className="!pb-10"
                 >
