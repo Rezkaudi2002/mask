@@ -46,7 +46,7 @@ const ImageListTemplate: React.FC<IImageListTemplate> = ({ content }) => {
                                     alt={item.alt}
                                     fill
                                     sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                                    className="object-cover"
+                                    className="object-contain"
                                     loading="lazy"
                                 />
                             </div>
