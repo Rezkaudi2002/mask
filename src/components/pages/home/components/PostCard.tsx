@@ -38,8 +38,7 @@ const PostCard = ({
         <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-red-600 transition-colors">
           {title}
         </h3>
-        <p className="text-gray-600 text-sm leading-relaxed line-clamp-3"
-          dangerouslySetInnerHTML={{ __html: description }} />
+        <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">{description}</p>
 
         {/* Read More Link */}
         <div className="mt-4 flex items-center text-red-600 font-semibold text-sm group-hover:gap-2 transition-all">

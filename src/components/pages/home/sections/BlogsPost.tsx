@@ -23,7 +23,7 @@ const BlogsPost = () => {
               key={blog.id}
               title={blog.title}
               imageSrc={blog.imageSrc}
-              description={blog.description}
+              description={blog.metaDescription}
               date={blog.date}
             />
           ))}
