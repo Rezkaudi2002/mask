@@ -50,6 +50,8 @@ const Index: React.FC<IBlogPage> = ({ data }) => {
         </div>
       </section>
 
+      <ContactBanner />
+
       {/* Main Content Wrapper */}
       <div className="bg-white py-12 lg:py-16">
         <div className="container max-w-7xl mx-auto px-4 lg:px-8">
