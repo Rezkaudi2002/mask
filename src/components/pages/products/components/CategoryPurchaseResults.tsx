@@ -3,11 +3,13 @@ import PurchaseCategoryCard from "./PurchaseCategoryCard";
 
 interface ICategoryPurchaseResultsProps {
   categoryName: string;
+  isCategory?: boolean;
   purchaseItems?: TPurchaseItem[];
 }
 
 const CategoryPurchaseResults = ({
   categoryName,
+  isCategory = false,
   purchaseItems,
 }: ICategoryPurchaseResultsProps) => {
   return (
@@ -16,7 +18,7 @@ const CategoryPurchaseResults = ({
         {categoryName}
       </h2>
       <p className="mt-2 lg:mt-4 text-[20px] lg:text-[40px] leading-[30px] lg:leading-[60px] font-black text-center bg-gradient-to-r from-light-red to-dark-red bg-clip-text text-transparent">
-        の買取実績
+        {isCategory ? "の買取実績" : ""}
       </p>
       <div className="mt-[40px] md:mt-[45px] lg:mt-[50px] flex flex-wrap justify-between md:justify-center gap-[17px] lg:gap-8">
         {purchaseItems?.map((item, index) => (

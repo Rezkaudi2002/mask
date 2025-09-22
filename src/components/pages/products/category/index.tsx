@@ -26,6 +26,7 @@ const index = ({ categoryData }: IIndexProps) => {
       />
       <CategoryPurchaseResults
         categoryName={categoryData.title.replace(/\n/g, "")}
+        isCategory
         purchaseItems={categoryData?.purchaseItems}
       />
       <MajorList
