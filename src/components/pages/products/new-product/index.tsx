@@ -17,7 +17,7 @@ import Questions from "../new-components/Questions";
 import Makers from "../new-components/Makers";
 import PurchasedItems from "../../home/sections/PurchasedItems";
 import ProductHero from "../components/ProductHero";
-import CategoryPurchaseResults from "../components/CategoryPurchaseResults";
+import { PurchaseRecords } from "@/components/common/sections/PurchaseRecords";
 
 interface IIndexProps {
   product: TNewProduct;
@@ -37,8 +37,8 @@ const index = ({ product }: IIndexProps) => {
         sectionTitle={`${product.title}${product.purchaseProductTitle ?? ""}`}
         items={product.cameraImagesGallery}
       /> */}
-      <CategoryPurchaseResults
-        categoryName={`${product.title}${product.purchaseProductTitle ?? ""}`}
+      <PurchaseRecords
+        label={`${product.title}${product.purchaseProductTitle ?? ""}`}
         purchaseItems={product.cameraImagesGallery}
       />
       <Information information={product.information} />
