@@ -7,6 +7,38 @@
   "date": "2025/09/15",
   "subContent": [
     {
+      "id": "6",
+      "title": "画像リスト",
+      "type": "imageList",
+      "items": [
+        {
+          "id": "1",
+          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_1.jpg",
+          "alt": "鈑金機械 建築板金 屋根★ロール成形機"
+        },
+        {
+          "id": "2",
+          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_2.jpg",
+          "alt": "建築板金 鈑金機械 屋根★ロール成形機"
+        },
+        {
+          "id": "3",
+          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_3.jpg",
+          "alt": "城進機械工業★ハゼ折り機★建築板金 鈑金機械 屋根 ダクト"
+        },
+        {
+          "id": "4",
+          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_4.jpg",
+          "alt": "フカガワ★共板フランジ成型機★TFD-207 MHSI★#20～#26★鈑金 ダクト"
+        },
+        {
+          "id": "5",
+          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_5.jpg",
+          "alt": "平井機械店★プレス切断機★ハゼ折り 加工"
+        }
+      ]
+    },
+    {
       "id": "1",
       "title": "使わなくなるケースは少なくありません",
       "topDescription": "しかし、優れた設備であっても <strong>使わなくなるケースは少なくありません</strong>。例えば以下のような理由で、ロール成形機やハゼ折り機が不要になることがあります:",
@@ -84,38 +116,6 @@
       "title": "まとめ：ロール成形機・ハゼ折り機の売却はハディズへ",
       "description": "使わなくなったロール成形機やハゼ折り機をお持ちの方は、<strong>高価買取の実績豊富なハディズへぜひご相談ください</strong>。国内外のマーケットに精通した当社なら、お客様の大切な機械をできる限り高く評価・買取いたします。ご依頼いただければ、査定から搬出・運搬、代金のお支払いまでスムーズに対応いたしますので、煩雑な手続きや重労働の心配も不要です。\n\n「売れるか分からない」と思っていた機械に意外な価値が見いだせるかもしれません。専門業者による買取という選択肢を活用し、不要設備を賢く現金化しましょう。当社スタッフ一同、丁寧かつ迅速な対応でお客様の売却をお手伝いいたします。\n\n<strong>ロール成形機・ハゼ折り機の売却をご検討中の方は、安心と信頼のハディズへお気軽にお問い合わせください。</strong>",
       "type": "simple"
-    },
-    {
-      "id": "6",
-      "title": "画像リスト",
-      "type": "imageList",
-      "items": [
-        {
-          "id": "1",
-          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_1.jpg",
-          "alt": ""
-        },
-        {
-          "id": "2",
-          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_2.jpg",
-          "alt": ""
-        },
-        {
-          "id": "3",
-          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_3.jpg",
-          "alt": ""
-        },
-        {
-          "id": "4",
-          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_4.jpg",
-          "alt": ""
-        },
-        {
-          "id": "5",
-          "imageSrc": "https://mac-hadis.s3.ap-northeast-1.amazonaws.com/blogs/%E3%83%AD%E3%83%BC%E3%83%AB%E6%88%90%E5%BD%A2%E6%A9%9F%E3%83%BB%E3%83%8F%E3%82%BC%E6%8A%98%E3%82%8A%E6%A9%9F%E3%82%92%E5%A3%B2%E3%82%8A%E3%81%9F%E3%81%84%E6%96%B9%E3%81%B8%EF%BD%9C%E9%AB%98%E4%BE%A1%E8%B2%B7%E5%8F%96%E3%81%AA%E3%82%89%E3%83%8F%E3%83%87%E3%82%A3%E3%82%BA%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8A%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AB/blog14_5.jpg",
-          "alt": ""
-        }
-      ]
     }
   ]
 }
