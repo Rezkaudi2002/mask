@@ -136,7 +136,14 @@ const FactoryService: React.FC = () => {
       title: "4. 柔軟な対応力",
       content: "営業中の部分撤去 / 段階的な撤去 / 緊急対応",
     },
-    { title: "5. 安全・安心の作業", content: "安全管理の徹底 / 守秘義務契約" },
+    {
+      title: "5. 安全・安心の作業",
+      content: "安全管理の徹底 / 守秘義務契約",
+    },
+    {
+      title: "6. 搬出困難な場所も対応",
+      content: "2階、道幅が狭い、段差があるなど、搬出が難しい場所でも対応可能",
+    },
   ];
 
   const processSteps = [
@@ -225,6 +232,16 @@ const FactoryService: React.FC = () => {
             長年の経験と実績により、機械設備の適正な買取から、最終清掃まで、
             お客様の負担を最小限に抑えながら、スムーズな工場整理を実現します。
           </p>
+
+          <p
+            className={`
+            text-base md:text-lg/relaxed mx-auto
+            break-keep [overflow-wrap:normal] [word-break:keep-all]
+            max-[640px]:break-words max-[640px]:[overflow-wrap:anywhere]
+          `}
+          >
+            弁護士様/事業主様/不動産会社様　お気軽にご相談ください
+          </p>
         </div>
       </section>
 
@@ -272,7 +289,39 @@ const FactoryService: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+          {/* Strengths Section */}
+          <div className="fs-container max-w-6xl mx-auto px-5">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-factory-teal">
+                ハディズの強み
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+              {strengths.map((strength, index) => (
+                <div
+                  key={index}
+                  data-animate={`strength-${index}`}
+                  className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${
+                    isVisible[`strength-${index}`]
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-5"
+                  } border-factory-sky`}
+                >
+                  <h3 className="text-xl font-bold mb-3 text-factory-teal">
+                    {strength.title}
+                  </h3>
+                  <p>{strength.content}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-white p-8 rounded-lg text-center bg-factory-sky mb-8">
+              <h3 className="text-2xl font-bold mb-4">無料サービス</h3>
+              <p className="text-xl">現地調査・見積もり / 買取査定</p>
+            </div>
+          </div>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
             {reasons.map((reason, index) => (
               <div
                 key={index}
@@ -289,14 +338,9 @@ const FactoryService: React.FC = () => {
                 <p>{reason}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <div className="text-center">
-            <p className="text-xl text-gray-600 mb-4">
-              このような方へご依頼頂いております
-            </p>
-            <p className="text-xl">弁護士様 / 事業主様 / 不動産会社様</p>
-          </div>
+
 
           {/* slider */}
           <div className="relative mt-10">
@@ -412,41 +456,6 @@ const FactoryService: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Strengths Section */}
-      <section className="py-20 bg-factory-sky50">
-        <div className="fs-container max-w-6xl mx-auto px-5">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-factory-teal">
-              ハディズの強み
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
-            {strengths.map((strength, index) => (
-              <div
-                key={index}
-                data-animate={`strength-${index}`}
-                className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${
-                  isVisible[`strength-${index}`]
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-5"
-                } border-factory-sky`}
-              >
-                <h3 className="text-xl font-bold mb-3 text-factory-teal">
-                  {strength.title}
-                </h3>
-                <p>{strength.content}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-white p-8 rounded-lg text-center bg-factory-sky">
-            <h3 className="text-2xl font-bold mb-4">無料サービス</h3>
-            <p className="text-xl">現地調査・見積もり / 買取査定</p>
           </div>
         </div>
       </section>
