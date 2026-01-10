@@ -36,17 +36,19 @@ const AddProductButton = ({
 const Inquiry = () => {
   const {
     formData,
+    agreePrivacy,
+    handleSubmit,
     isSubmitting,
+    click,
+    setClick,
     handleInputChange,
     handleImageChange,
-    handleSubmit,
     addProduct,
     deleteProduct,
     handleProductInputChange,
-    agreePrivacy,
     setAgreePrivacy,
-    click,
-    setClick,
+    status,
+    errorMessage,
   } = useFormHandler();
 
   const isDisabled = isSubmitting || !agreePrivacy;
@@ -70,6 +72,23 @@ const Inquiry = () => {
         className="space-y-6 max-w-[900px] md:mx-auto"
         onSubmit={handleSubmit}
       >
+        {status === "success" && (
+          <div
+            className="p-4 mb-4 text-green-700 bg-green-100 rounded-lg"
+            role="alert"
+          >
+            <span className="font-medium">送信完了!</span>{" "}
+            お問い合わせありがとうございます。
+          </div>
+        )}
+        {status === "error" && errorMessage && (
+          <div
+            className="p-4 mb-4 text-red-700 bg-red-100 rounded-lg"
+            role="alert"
+          >
+            <span className="font-medium">エラー!</span> {errorMessage}
+          </div>
+        )}
         {/* Input Fields */}
         <InputField
           id="name"
@@ -240,8 +259,9 @@ const Inquiry = () => {
         <button
           disabled={isDisabled}
           type="submit"
-          className={`w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red ${isDisabled ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+          className={`w-[90%] lg:w-[60%] py-[12px] mx-auto text-[24px] leading-[36px] text-center text-white font-black rounded flex items-start justify-center gap-x-4 gradient-red ${
+            isDisabled ? "opacity-50 cursor-not-allowed" : ""
+          }`}
           onClick={() => setClick(true)}
         >
           {isSubmitting ? (
