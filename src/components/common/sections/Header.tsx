@@ -62,6 +62,7 @@ const Header: React.FC = () => {
                 href={item.href}
                 title={`Navigate to ${item.name}`}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={item.iconSrc}
@@ -183,6 +184,7 @@ const Header: React.FC = () => {
                 href={item.href}
                 title={`Navigate to ${item.name}`}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={item.iconSrc}

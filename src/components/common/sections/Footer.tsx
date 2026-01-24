@@ -52,6 +52,7 @@ const Footer: React.FC = () => {
                 key={item.id}
                 href={item.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 title={`Navigate to ${item.name}`}
               >
                 <Image
@@ -67,6 +68,7 @@ const Footer: React.FC = () => {
                 key={item.id}
                 href={item.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 title={`Navigate to ${item.name}`}
               >
                 <Image
