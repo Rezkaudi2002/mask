@@ -97,11 +97,10 @@ export const ReasonsSection = () => {
             <div
               key={index}
               data-animate={`strength-${index}`}
-              className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${
-                isVisible[`strength-${index}`]
+              className={`bg-white p-8 rounded-lg relative border-l-4 transition-all duration-700 ${isVisible[`strength-${index}`]
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-5"
-              } border-factory-sky`}
+                } border-factory-sky`}
             >
               <h3 className="text-xl font-bold mb-3 text-factory-teal">
                 {strength.title}
