@@ -9,6 +9,8 @@ import Footer from "@/components/common/sections/Footer";
 // baseUrl
 import { baseUrl } from "@/utils/baseUrl";
 
+import { OrganizationSchema, WebsiteSchema } from '@/components/seo/schemas';
+
 // Define local font
 const notoSansJP = localFont({
   src: [
@@ -113,6 +115,10 @@ export default function RootLayout({
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com" />
         <link rel="dns-prefetch" href="https://mac-hadis.s3.ap-northeast-1.amazonaws.com" />
+
+        {/* ✅ 追加: Structured Data */}
+        <OrganizationSchema />
+        <WebsiteSchema />
 
         {/* Preload critical images */}
         <link

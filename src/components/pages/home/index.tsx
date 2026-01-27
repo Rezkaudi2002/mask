@@ -22,9 +22,14 @@ const FrequentlyAskedQuestions = dynamic(
 const CompanyProfile = dynamic(() => import("./sections/CompanyProfile"));
 const Inquiry = dynamic(() => import("@/components/common/sections/Inquiry"));
 
+import { LocalBusinessSchema } from '@/components/seo/schemas';
+
 const Index = () => {
   return (
     <>
+      {/* ✅ 追加: Structured Data */}
+      <LocalBusinessSchema />
+
       <Hero />
       <ContactFixedBanner />
       <Flow />
