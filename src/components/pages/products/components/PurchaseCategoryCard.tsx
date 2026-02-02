@@ -1,14 +1,11 @@
 import Image from "next/image";
 
-interface IPurchaseRecordsCardProps {
+interface IPurchaseCategoryCardProps {
   image: string;
   title: string;
 }
 
-export const PurchaseRecordsCard = ({
-  image,
-  title,
-}: IPurchaseRecordsCardProps) => {
+const PurchaseCategoryCard = ({ title, image }: IPurchaseCategoryCardProps) => {
   return (
     <div className="w-[47%] md:w-[30%] lg:w-[22%]">
       <div className="min-h-[240px] lg:min-h-[258px] bg-white relative">
@@ -28,3 +25,5 @@ export const PurchaseRecordsCard = ({
     </div>
   );
 };
+
+export default PurchaseCategoryCard;

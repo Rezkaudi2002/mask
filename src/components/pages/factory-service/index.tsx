@@ -1,3 +1,4 @@
+'use client'
 import { AreaSection } from "./components/AreaSection";
 import { ContactSection } from "./components/ContactSection";
 import { HeroSection } from "./components/HeroSection";

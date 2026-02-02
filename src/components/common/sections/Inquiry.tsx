@@ -199,7 +199,6 @@ const Inquiry = () => {
                   alt="Delete"
                   width={11}
                   height={11}
-                  loading="eager"
                 />
               </button>
             )}
@@ -274,7 +273,6 @@ const Inquiry = () => {
                 alt="arrow-right-red"
                 width={32}
                 height={32}
-                loading="eager"
               />
             </>
           )}

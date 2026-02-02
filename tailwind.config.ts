@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        noto: ["var(--font-noto-sans-jp)", "sans-serif"], // Use the variable here
+        noto: ["var(--font-noto-sans-jp)", "sans-serif"],
       },
       keyframes: {
         "fade-in-left": {
